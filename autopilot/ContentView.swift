@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct ContentView : View {
     @State var searchText = ""
     
@@ -17,6 +18,8 @@ struct ContentView : View {
                     // Conditional on what to show
                     // CollectionViewCards
                     // Profile
+                
+                // TODO: Send the height needed for tab bar, then add to current height
                     SlideOverCard {
                         VStack {
                             // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
@@ -24,18 +27,48 @@ struct ContentView : View {
                             SearchBar(text: $searchText)
                             // Tab Bar here
                             HStack {
-                                    VStack {
-                                        Image(systemName: "person.circle")
-                                            .resizable()
-                                            .aspectRatio(contentMode: .fit)
-                                            .frame(width: geometry.size.width/5, height: geometry.size.height/28)
-                                            .padding(.top, 10)
-                                        
-                                        Text("Profile")
-                                            .font(.footnote)
-                                    }
-                                    .frame(width: geometry.size.width, height: geometry.size.height/8)
-                                         .background(Color("TabBarBackground").shadow(radius: 2))
+                                VStack {
+                                    Image(systemName: "person.circle.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                        .symbolRenderingMode(.multicolor)
+                                        .foregroundColor(.blue)
+                                    
+                                    Text("Profile")
+                                        .font(.footnote)
+                                }
+                                .padding(.horizontal, -4)
+                                
+                                VStack {
+                                    Image(systemName: "heart.circle.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                        .symbolRenderingMode(.multicolor)
+                                    
+                                    Text("For you")
+                                        .font(.footnote)
+                                }
+                                .padding(.horizontal, -4)
+                                
+                                VStack {
+                                    Image(systemName: "bubble.left.circle.fill")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                        .symbolRenderingMode(.multicolor)
+                                        .foregroundColor(.green)
+                                    
+                                    Text("Chat")
+                                        .font(.footnote)
+                                }
+                                .padding(.horizontal, -4)
+                                
+                                
+                                
+                                    
+                                         
                                 
                                 Spacer()
                                 
@@ -43,6 +76,11 @@ struct ContentView : View {
                                 
                                 
                             }
+                            .padding(.top, -20.0)
+                            .frame(width: geometry.size.width, height: geometry.size.height/8)
+                            // not working for some reason
+                            .background(Color("TabBarBackground").shadow(radius: 2))
+                            
                             
                             Spacer()
                         }
@@ -64,3 +102,4 @@ struct ContentView : View {
     }
     
     
+

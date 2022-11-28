@@ -21,6 +21,7 @@
 		52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2F8293530060061A712 /* BackgroundView.swift */; };
 		52A2B2FB293530C80061A712 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FA293530C80061A712 /* Test.swift */; };
 		52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FC293535BE0061A712 /* SearchBar.swift */; };
+		52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FE293543A80061A712 /* TabBarIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		52A2B2F8293530060061A712 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		52A2B2FA293530C80061A712 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		52A2B2FC293535BE0061A712 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		52A2B2FE293543A80061A712 /* TabBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				52A2B2C4293527B50061A712 /* autopilotApp.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
+				52A2B300293543EC0061A712 /* TabBar */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B2F729352F7E0061A712 /* SlideOver */,
 				52A2B2C8293527B70061A712 /* Assets.xcassets */,
@@ -154,6 +157,14 @@
 				52A2B2F529352F6C0061A712 /* Handle.swift */,
 			);
 			path = SlideOver;
+			sourceTree = "<group>";
+		};
+		52A2B300293543EC0061A712 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				52A2B2FE293543A80061A712 /* TabBarIcon.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
+				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
 				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,
