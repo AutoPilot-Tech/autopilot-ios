@@ -20,6 +20,7 @@
 		52A2B2F629352F6C0061A712 /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2F529352F6C0061A712 /* Handle.swift */; };
 		52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2F8293530060061A712 /* BackgroundView.swift */; };
 		52A2B2FB293530C80061A712 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FA293530C80061A712 /* Test.swift */; };
+		52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FC293535BE0061A712 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		52A2B2F529352F6C0061A712 /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
 		52A2B2F8293530060061A712 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		52A2B2FA293530C80061A712 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		52A2B2FC293535BE0061A712 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 		52A2B2F729352F7E0061A712 /* SlideOver */ = {
 			isa = PBXGroup;
 			children = (
+				52A2B2FC293535BE0061A712 /* SearchBar.swift */,
 				52A2B2F329352EDE0061A712 /* SlideOverCard.swift */,
 				52A2B2F529352F6C0061A712 /* Handle.swift */,
 			);
@@ -284,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
+				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
