@@ -14,7 +14,8 @@ struct ContentView : View {
     var body: some View {
         GeometryReader { geometry in
             ZStack(alignment: Alignment.top) {
-                    BackgroundView()
+                BackgroundView()
+                    .ignoresSafeArea()
                 VStack {
                     
                 }
