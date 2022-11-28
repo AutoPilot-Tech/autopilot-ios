@@ -20,7 +20,7 @@ struct SlideOverCard<Content: View> : View {
             .onEnded(onDragEnded)
         
         return Group {
-            Handle()
+//            Handle()
             self.content()
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
