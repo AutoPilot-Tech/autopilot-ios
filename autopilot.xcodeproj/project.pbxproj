@@ -16,6 +16,10 @@
 		52A2B2DB293527B70061A712 /* autopilotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2DA293527B70061A712 /* autopilotTests.swift */; };
 		52A2B2E5293527B70061A712 /* autopilotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2E4293527B70061A712 /* autopilotUITests.swift */; };
 		52A2B2E7293527B70061A712 /* autopilotUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2E6293527B70061A712 /* autopilotUITestsLaunchTests.swift */; };
+		52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2F329352EDE0061A712 /* SlideOverCard.swift */; };
+		52A2B2F629352F6C0061A712 /* Handle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2F529352F6C0061A712 /* Handle.swift */; };
+		52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2F8293530060061A712 /* BackgroundView.swift */; };
+		52A2B2FB293530C80061A712 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FA293530C80061A712 /* Test.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		52A2B2E0293527B70061A712 /* autopilotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = autopilotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52A2B2E4293527B70061A712 /* autopilotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autopilotUITests.swift; sourceTree = "<group>"; };
 		52A2B2E6293527B70061A712 /* autopilotUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = autopilotUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52A2B2F329352EDE0061A712 /* SlideOverCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCard.swift; sourceTree = "<group>"; };
+		52A2B2F529352F6C0061A712 /* Handle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handle.swift; sourceTree = "<group>"; };
+		52A2B2F8293530060061A712 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		52A2B2FA293530C80061A712 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 		52A2B2B8293527B50061A712 = {
 			isa = PBXGroup;
 			children = (
+				52A2B2FA293530C80061A712 /* Test.swift */,
 				52A2B2C3293527B50061A712 /* autopilot */,
 				52A2B2D9293527B70061A712 /* autopilotTests */,
 				52A2B2E3293527B70061A712 /* autopilotUITests */,
@@ -100,6 +109,8 @@
 			children = (
 				52A2B2C4293527B50061A712 /* autopilotApp.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
+				52A2B2F8293530060061A712 /* BackgroundView.swift */,
+				52A2B2F729352F7E0061A712 /* SlideOver */,
 				52A2B2C8293527B70061A712 /* Assets.xcassets */,
 				52A2B2CD293527B70061A712 /* Persistence.swift */,
 				52A2B2CF293527B70061A712 /* autopilot.xcdatamodeld */,
@@ -131,6 +142,15 @@
 				52A2B2E6293527B70061A712 /* autopilotUITestsLaunchTests.swift */,
 			);
 			path = autopilotUITests;
+			sourceTree = "<group>";
+		};
+		52A2B2F729352F7E0061A712 /* SlideOver */ = {
+			isa = PBXGroup;
+			children = (
+				52A2B2F329352EDE0061A712 /* SlideOverCard.swift */,
+				52A2B2F529352F6C0061A712 /* Handle.swift */,
+			);
+			path = SlideOver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,7 +286,11 @@
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
+				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
+				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
+				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
+				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
