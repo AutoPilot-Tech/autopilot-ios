@@ -6,18 +6,15 @@
 //
 
 import SwiftUI
-import MapKit
 
-struct MapView : UIViewRepresentable {
-    func makeUIView(context: Context) -> MKMapView {
-        MKMapView(frame: .zero)
+struct BackgroundView: View {
+    var body: some View {
+        Text("Background Gradient")
     }
-    
-    func updateUIView(_ view: MKMapView, context: Context) {
-        let coordinate = CLLocationCoordinate2D(
-            latitude: -33.523065, longitude: 151.394551)
-        let span = MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
-        let region = MKCoordinateRegion(center: coordinate, span: span)
-        view.setRegion(region, animated: true)
+}
+
+struct BackgroundView_Previews: PreviewProvider {
+    static var previews: some View {
+        BackgroundView()
     }
 }

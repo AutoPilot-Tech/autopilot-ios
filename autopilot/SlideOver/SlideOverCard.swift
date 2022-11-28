@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SlideOverCard<Content: View> : View {
     @GestureState private var dragState = DragState.inactive
-    @State var position = CardPosition.top
+    @State var position = CardPosition.bottom
     
     var content: () -> Content
     var body: some View {
@@ -96,8 +96,8 @@ struct SlideOverCard_Previews: PreviewProvider {
     static var previews: some View {
         SlideOverCard( content: {
             VStack {
-                Text("Maitland Bay")
-                    .font(.headline)
+                Handle()
+                SearchBar(text: .constant("Search Autopilot..."))
                 Spacer()
             }
         })
