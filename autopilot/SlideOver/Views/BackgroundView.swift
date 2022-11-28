@@ -15,7 +15,7 @@ struct BackgroundView: View {
             Spacer()
             ZStack {
                 Circle()
-                    .fill(Color(red: 246, green: 250, blue: 0))
+                    .fill(.black)
                     .blur(radius: 10)
                     .offset(x:animate ? 10 : 130,y:animate ? 20 : 160)
                     .rotation3DEffect(.degrees(animate ? 30 : 0), axis: (x: animate ? 0 : 0.5, y: animate ? 0.2 : 0.7, z: animate ? 0.4 : 0))
@@ -30,7 +30,7 @@ struct BackgroundView: View {
                     .offset(x: animate ? -60 : 20,y: animate ? 5 : 140)
                     .rotation3DEffect(.degrees(animate ? 20 : 50), axis: (x: animate ? 0 : 0, y: animate ? 0.4 : 0.2, z: animate ? 0.9 : 0.3))
                 Capsule()
-                    .fill(.white)
+                    .fill(.purple.opacity(0.5))
                     .blur(radius: 40)
                     .offset(x: animate ? 60 : 0,y: animate ? -10 : 140)
                     .rotation3DEffect(.degrees(animate ? -30 : 0), axis: (x: animate ? 0.6 : 0.1, y: animate ? 0.2 : 0.3, z: animate ? 0.1 : 0.4))
@@ -81,7 +81,7 @@ struct BackgroundView: View {
                 .cornerRadius(15)
                 .shadow(color: Color.black.opacity(0.25), radius: 25, x: 0, y: 20)
                 .onAppear() {
-                    withAnimation(.easeInOut(duration: 4).repeatForever(autoreverses: true)) {
+                    withAnimation(.easeInOut(duration: 3.5).repeatForever(autoreverses: true)) {
                         animate.toggle()
                     }
                 }

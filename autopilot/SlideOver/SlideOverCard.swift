@@ -24,12 +24,13 @@ struct SlideOverCard<Content: View> : View {
             self.content()
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        .background(Color.white)
+        .background(Color.white.opacity(0.7))
         .cornerRadius(10.0)
-        .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 10.0)
+        .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 14.0)
         .offset(y: self.position.rawValue + self.dragState.translation.height)
         .animation(self.dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
         .gesture(drag)
+        
     }
     
     private func onDragEnded(drag: DragGesture.Value) {
