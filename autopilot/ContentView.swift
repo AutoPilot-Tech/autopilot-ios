@@ -15,10 +15,13 @@ struct ContentView : View {
         GeometryReader { geometry in
             ZStack(alignment: Alignment.top) {
                     BackgroundView()
+                VStack {
+                    
+                }
                     // Conditional on what to show
                     // CollectionViewCards
                     // Profile
-                
+//                ChatView()
                 // TODO: Send the height needed for tab bar, then add to current height
                     SlideOverCard {
                         VStack {

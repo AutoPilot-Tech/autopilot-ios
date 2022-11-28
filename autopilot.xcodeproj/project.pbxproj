@@ -22,6 +22,11 @@
 		52A2B2FB293530C80061A712 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FA293530C80061A712 /* Test.swift */; };
 		52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FC293535BE0061A712 /* SearchBar.swift */; };
 		52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B2FE293543A80061A712 /* TabBarIcon.swift */; };
+		52A2B302293553A50061A712 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B301293553A50061A712 /* ChatView.swift */; };
+		52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B3052935541B0061A712 /* MessageInputView.swift */; };
+		52A2B3092935548B0061A712 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B3082935548B0061A712 /* Message.swift */; };
+		52A2B30B293554DB0061A712 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B30A293554DB0061A712 /* MessageView.swift */; };
+		52A2B30D293555370061A712 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B30C293555370061A712 /* ChatBubble.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,11 @@
 		52A2B2FA293530C80061A712 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		52A2B2FC293535BE0061A712 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		52A2B2FE293543A80061A712 /* TabBarIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarIcon.swift; sourceTree = "<group>"; };
+		52A2B301293553A50061A712 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		52A2B3052935541B0061A712 /* MessageInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInputView.swift; sourceTree = "<group>"; };
+		52A2B3082935548B0061A712 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		52A2B30A293554DB0061A712 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		52A2B30C293555370061A712 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,10 +121,10 @@
 		52A2B2C3293527B50061A712 /* autopilot */ = {
 			isa = PBXGroup;
 			children = (
+				52A2B307293554790061A712 /* Models */,
 				52A2B2C4293527B50061A712 /* autopilotApp.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
 				52A2B300293543EC0061A712 /* TabBar */,
-				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B2F729352F7E0061A712 /* SlideOver */,
 				52A2B2C8293527B70061A712 /* Assets.xcassets */,
 				52A2B2CD293527B70061A712 /* Persistence.swift */,
@@ -155,6 +165,7 @@
 				52A2B2FC293535BE0061A712 /* SearchBar.swift */,
 				52A2B2F329352EDE0061A712 /* SlideOverCard.swift */,
 				52A2B2F529352F6C0061A712 /* Handle.swift */,
+				52A2B303293553A90061A712 /* Views */,
 			);
 			path = SlideOver;
 			sourceTree = "<group>";
@@ -165,6 +176,34 @@
 				52A2B2FE293543A80061A712 /* TabBarIcon.swift */,
 			);
 			path = TabBar;
+			sourceTree = "<group>";
+		};
+		52A2B303293553A90061A712 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52A2B2F8293530060061A712 /* BackgroundView.swift */,
+				52A2B304293553B40061A712 /* Messages */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52A2B304293553B40061A712 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				52A2B301293553A50061A712 /* ChatView.swift */,
+				52A2B3052935541B0061A712 /* MessageInputView.swift */,
+				52A2B30A293554DB0061A712 /* MessageView.swift */,
+				52A2B30C293555370061A712 /* ChatBubble.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		52A2B307293554790061A712 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52A2B3082935548B0061A712 /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,14 +337,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
+				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
+				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
+				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
+				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
+				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
