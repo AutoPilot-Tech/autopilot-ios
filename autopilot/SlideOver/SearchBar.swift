@@ -15,7 +15,7 @@ struct SearchBar: View {
             TextField("What do you want to do?", text: $text)
                 .padding(8)
                 .padding(.horizontal, 24)
-                .background(Color(.systemGray6))
+                .background(.white.opacity(0.7))
                 .cornerRadius(8)
                 .overlay(
                     HStack {
