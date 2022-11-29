@@ -27,6 +27,10 @@
 		52A2B3092935548B0061A712 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B3082935548B0061A712 /* Message.swift */; };
 		52A2B30B293554DB0061A712 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B30A293554DB0061A712 /* MessageView.swift */; };
 		52A2B30D293555370061A712 /* ChatBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2B30C293555370061A712 /* ChatBubble.swift */; };
+		52A8D7062935842200460525 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8D7052935842200460525 /* UserProfileView.swift */; };
+		52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8D7072935851400460525 /* ProfileHeaderView.swift */; };
+		52A8D70A2935851B00460525 /* ProfileActionButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8D7092935851B00460525 /* ProfileActionButtonView.swift */; };
+		52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A8D70B2935852800460525 /* FilterButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +74,10 @@
 		52A2B3082935548B0061A712 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		52A2B30A293554DB0061A712 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		52A2B30C293555370061A712 /* ChatBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBubble.swift; sourceTree = "<group>"; };
+		52A8D7052935842200460525 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		52A8D7072935851400460525 /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		52A8D7092935851B00460525 /* ProfileActionButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileActionButtonView.swift; sourceTree = "<group>"; };
+		52A8D70B2935852800460525 /* FilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +189,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52A8D7022935831A00460525 /* Profile */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B304293553B40061A712 /* Messages */,
 			);
@@ -204,6 +213,17 @@
 				52A2B3082935548B0061A712 /* Message.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		52A8D7022935831A00460525 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				52A8D7052935842200460525 /* UserProfileView.swift */,
+				52A8D7072935851400460525 /* ProfileHeaderView.swift */,
+				52A8D7092935851B00460525 /* ProfileActionButtonView.swift */,
+				52A8D70B2935852800460525 /* FilterButtonView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,14 +360,18 @@
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
+				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
+				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
+				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
 				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
+				52A8D70A2935851B00460525 /* ProfileActionButtonView.swift in Sources */,
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
 				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,

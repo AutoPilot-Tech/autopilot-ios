@@ -13,83 +13,91 @@ struct ContentView : View {
     
     var body: some View {
         GeometryReader { geometry in
-            ZStack(alignment: Alignment.top) {
-                BackgroundView()
-                    .ignoresSafeArea()
-                VStack {
-                    
-                }
-                    // Conditional on what to show
-                    // CollectionViewCards
-                    // Profile
-//                ChatView()
+                NavigationView {
                 // TODO: Send the height needed for tab bar, then add to current height
-                    SlideOverCard {
-                        VStack {
-                            // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
-                            Handle()
-                            SearchBar(text: $searchText)
-                            // Tab Bar here
-                            HStack {
+                    Group {
+                        ZStack {
+                            BackgroundView()
+                            SlideOverCard {
                                 VStack {
-                                    Image(systemName: "person.circle.fill")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                        .symbolRenderingMode(.multicolor)
-                                        .foregroundColor(.blue)
+                                    // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
+                                    Handle()
+                                    SearchBar(text: $searchText)
+                                    // Tab Bar here
+                                    HStack {
+                                        NavigationLink(destination: UserProfileView()) {
+                                            VStack {
+                                                Image(systemName: "person.circle.fill")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                    .symbolRenderingMode(.multicolor)
+                                                    .foregroundColor(.blue)
+                                                
+                                                Text("Profile")
+                                                    .font(.footnote)
+                                            }
+                                            .padding(.horizontal, -4)
+                                        }
+                                        
+                                        NavigationLink(destination: ContentView()) {
+                                            VStack {
+                                                Image(systemName: "heart.circle.fill")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                    .symbolRenderingMode(.multicolor)
+                                                
+                                                Text("For you")
+                                                    .font(.footnote)
+                                            }
+                                            .padding(.horizontal, -4)
+                                        }
+                                        
+                                        NavigationLink(destination: ChatView()) {
+                                            VStack {
+                                                Image(systemName: "bubble.left.circle.fill")
+                                                    .resizable()
+                                                    .aspectRatio(contentMode: .fit)
+                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                    .symbolRenderingMode(.multicolor)
+                                                    .foregroundColor(.green)
+                                                
+                                                Text("Chat")
+                                                    .font(.footnote)
+                                            }
+                                            .padding(.horizontal, -4)
+                                        }
+                                        
+                                        
+                                        
+                                        
+                                            
+                                                 
+                                        
+                                        Spacer()
+                                        
+                                        
+                                        
+                                        
+                                    }
+                                    .padding(.top, -20.0)
+                                    .frame(width: geometry.size.width, height: geometry.size.height/8)
+                                    // not working for some reason
+                                    .background(Color("TabBarBackground").shadow(radius: 2))
                                     
-                                    Text("Profile")
-                                        .font(.footnote)
+                                    
+                                    Spacer()
                                 }
-                                .padding(.horizontal, -4)
-                                
-                                VStack {
-                                    Image(systemName: "heart.circle.fill")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                        .symbolRenderingMode(.multicolor)
-                                    
-                                    Text("For you")
-                                        .font(.footnote)
-                                }
-                                .padding(.horizontal, -4)
-                                
-                                VStack {
-                                    Image(systemName: "bubble.left.circle.fill")
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                        .symbolRenderingMode(.multicolor)
-                                        .foregroundColor(.green)
-                                    
-                                    Text("Chat")
-                                        .font(.footnote)
-                                }
-                                .padding(.horizontal, -4)
-                                
-                                
-                                
-                                    
-                                         
-                                
-                                Spacer()
-                                
-                                
-                                
-                                
                             }
-                            .padding(.top, -20.0)
-                            .frame(width: geometry.size.width, height: geometry.size.height/8)
-                            // not working for some reason
-                            .background(Color("TabBarBackground").shadow(radius: 2))
-                            
-                            
-                            Spacer()
                         }
+                        
                     }
+                    
+
                 }
+                
+                
             .edgesIgnoringSafeArea(.vertical)
         }
         

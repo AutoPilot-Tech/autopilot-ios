@@ -11,14 +11,18 @@ struct ChatView: View {
     @State var messageText: String = ""
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 12) {
-                ForEach(MOCK_MESSAGES) { message in
-                    MessageView(message: message)
+                VStack {
+                    ScrollView {
+                        VStack(alignment: .leading, spacing: 12) {
+                            ForEach(MOCK_MESSAGES) { message in
+                                MessageView(message: message)
+                            }
+                        }
+                    }
+                    MessageInputView(messageText: $messageText)
+                        .padding()
+                    
                 }
-            }
-        }
-        
     }
 }
 

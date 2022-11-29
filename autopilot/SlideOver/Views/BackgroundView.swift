@@ -76,12 +76,12 @@ struct BackgroundView: View {
 //                        .multilineTextAlignment(.center)
 //                }.foregroundColor(.white)
                 
-            }.frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height + 50)
+            }.frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height + 200)
                 .clipped()
                 .cornerRadius(15)
                 .shadow(color: Color.black.opacity(0.25), radius: 25, x: 0, y: 20)
                 .onAppear() {
-                    withAnimation(.easeInOut(duration: 3.5).repeatForever(autoreverses: true)) {
+                    withAnimation(.easeInOut(duration: 5).repeatForever(autoreverses: true)) {
                         animate.toggle()
                     }
                 }
