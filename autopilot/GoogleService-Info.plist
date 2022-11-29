@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>505442309499-956helickgdo6jm5de8b9jmi54q1f8j9.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.505442309499-956helickgdo6jm5de8b9jmi54q1f8j9</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCZF4Wm2qVpR-oT2xjnJPIVRvhHLcsR39w</string>
+	<key>GCM_SENDER_ID</key>
+	<string>505442309499</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.matthewmolinar.autopilot</string>
+	<key>PROJECT_ID</key>
+	<string>autopilotswiftui</string>
+	<key>STORAGE_BUCKET</key>
+	<string>autopilotswiftui.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:505442309499:ios:71aaf80f9e955b890159de</string>
+</dict>
+</plist>

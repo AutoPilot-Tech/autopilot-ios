@@ -37,6 +37,7 @@
 		52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4524D2935EEF400406D3F /* CustomTextField.swift */; };
 		52F452502935EEFD00406D3F /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4524F2935EEFD00406D3F /* TextArea.swift */; };
 		52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F452512935F2C500406D3F /* CustomSecureField.swift */; };
+		52F452542935FAD500406D3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52F452532935FAD500406D3F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		52F4524D2935EEF400406D3F /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		52F4524F2935EEFD00406D3F /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		52F452512935F2C500406D3F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		52F452532935FAD500406D3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 		52A2B2C3293527B50061A712 /* autopilot */ = {
 			isa = PBXGroup;
 			children = (
+				52F452532935FAD500406D3F /* GoogleService-Info.plist */,
 				52A2B307293554790061A712 /* Models */,
 				52A2B2C4293527B50061A712 /* autopilotApp.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
@@ -340,6 +343,8 @@
 				Base,
 			);
 			mainGroup = 52A2B2B8293527B50061A712;
+			packageReferences = (
+			);
 			productRefGroup = 52A2B2C2293527B50061A712 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +363,7 @@
 			files = (
 				52A2B2CC293527B70061A712 /* Preview Assets.xcassets in Resources */,
 				52A2B2C9293527B70061A712 /* Assets.xcassets in Resources */,
+				52F452542935FAD500406D3F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
