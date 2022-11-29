@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ProfileActionButtonView: View {
     let isCurrentUser: Bool
+    @EnvironmentObject var viewModel: AuthViewModel
+    
     var body: some View {
         
         if isCurrentUser {
@@ -21,7 +23,9 @@ struct ProfileActionButtonView: View {
             .cornerRadius(20)
         } else {
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    viewModel.signOut()
+                }, label: {
                     Text("Follow")
                         .frame(width: 180, height: 40)
                         .background(Color.blue)

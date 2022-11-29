@@ -13,7 +13,7 @@ struct RegistrationView: View {
     @State var fullname = ""
     @State var username = ""
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
-    @ObservedObject var viewModel = AuthViewModel()
+    @EnvironmentObject var viewModel: AuthViewModel
 
     
     

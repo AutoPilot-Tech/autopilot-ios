@@ -13,6 +13,8 @@ struct autopilotApp: App {
     let persistenceController = PersistenceController.shared
     
     
+    
+    
     init() {
         FirebaseApp.configure()
     }

@@ -15,7 +15,7 @@ struct ContentView : View {
     
     var body: some View {
         Group {
-            if isLoggedIn {
+            if (viewModel.userSession != nil) {
                 NavigationView {
                 // TODO: Send the height needed for tab bar, then add to current height
                     Group {
@@ -137,6 +137,8 @@ struct ContentView : View {
                 
                 
             .edgesIgnoringSafeArea(.vertical)
+            } else {
+                LoginView()
             }
             
         }
