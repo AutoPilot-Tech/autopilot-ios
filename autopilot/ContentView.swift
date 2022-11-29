@@ -25,6 +25,17 @@ struct ContentView : View {
                                     SearchBar(text: $searchText)
                                     // Tab Bar here
                                     HStack {
+                                        
+                                        Text("Recommended")
+                                            .font(.subheadline)
+                                            .foregroundColor(.gray)
+                                        .padding()
+                                        Spacer()
+                                        
+                                    }
+                                        
+
+                                    HStack {
                                         NavigationLink(destination: UserProfileView()) {
                                             VStack {
                                                 Image(systemName: "person.circle.fill")
@@ -39,6 +50,7 @@ struct ContentView : View {
                                             }
                                             .padding(.horizontal, -4)
                                         }
+                                        
                                         
                                         NavigationLink(destination: ContentView()) {
                                             VStack {
@@ -81,7 +93,7 @@ struct ContentView : View {
                                         
                                         
                                     }
-                                    .padding(.top, -20.0)
+                                    .padding(.top, -60.0)
                                     .frame(width: geometry.size.width, height: geometry.size.height/8)
                                     // not working for some reason
                                     .background(Color("TabBarBackground").shadow(radius: 2))
