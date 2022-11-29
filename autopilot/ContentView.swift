@@ -49,7 +49,7 @@ struct ContentView : View {
                                                 
 
                                             HStack {
-                                                NavigationLink(destination: UserProfileView()) {
+                                                NavigationLink(destination: ChatView()) {
                                                     VStack {
                                                         Image(systemName: "play.circle.fill")
                                                             .resizable()

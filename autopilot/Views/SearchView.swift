@@ -19,7 +19,10 @@ struct SearchView: View {
             VStack(alignment: .leading) {
                 ForEach(viewModel.users) { user in
                     HStack { Spacer() }
-                    UserCell(user: user)
+                    
+                    NavigationLink(destination: UserProfileView(user: user)) {
+                        UserCell(user: user)
+                    }
                 }
             }.padding(.leading)
         }
