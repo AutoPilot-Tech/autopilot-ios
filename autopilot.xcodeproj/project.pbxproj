@@ -50,6 +50,10 @@
 		71D2D4F72936B851004229B3 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 71D2D4F62936B851004229B3 /* Kingfisher */; };
 		71D2D4F92936B885004229B3 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D4F82936B885004229B3 /* SearchViewModel.swift */; };
 		71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D4FB2936B9DB004229B3 /* Constants.swift */; };
+		71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D4FE2936CCB7004229B3 /* ArcCell.swift */; };
+		71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5002936CCC9004229B3 /* ArcDetailView.swift */; };
+		71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5022936CCD7004229B3 /* ArcActionsView.swift */; };
+		71D2D5052936CCFE004229B3 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5042936CCFE004229B3 /* Arc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +115,10 @@
 		71234FB6293696A800B2FEDC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		71D2D4F82936B885004229B3 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		71D2D4FB2936B9DB004229B3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		71D2D4FE2936CCB7004229B3 /* ArcCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCell.swift; sourceTree = "<group>"; };
+		71D2D5002936CCC9004229B3 /* ArcDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcDetailView.swift; sourceTree = "<group>"; };
+		71D2D5022936CCD7004229B3 /* ArcActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcActionsView.swift; sourceTree = "<group>"; };
+		71D2D5042936CCFE004229B3 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +175,7 @@
 		52A2B2C3293527B50061A712 /* autopilot */ = {
 			isa = PBXGroup;
 			children = (
+				71D2D4FD2936C9AD004229B3 /* Arcs */,
 				71D2D4FA2936B9BB004229B3 /* Utils */,
 				52A2B303293553A90061A712 /* Views */,
 				71234FAD2936715600B2FEDC /* ViewModel */,
@@ -261,6 +270,7 @@
 			children = (
 				52A2B3082935548B0061A712 /* Message.swift */,
 				71234FB0293688C700B2FEDC /* User.swift */,
+				71D2D5042936CCFE004229B3 /* Arc.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -300,6 +310,16 @@
 				71D2D4FB2936B9DB004229B3 /* Constants.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		71D2D4FD2936C9AD004229B3 /* Arcs */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D4FE2936CCB7004229B3 /* ArcCell.swift */,
+				71D2D5002936CCC9004229B3 /* ArcDetailView.swift */,
+				71D2D5022936CCD7004229B3 /* ArcActionsView.swift */,
+			);
+			path = Arcs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,13 +466,17 @@
 			files = (
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
+				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
+				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */,
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,
 				71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */,
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
+				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
+				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
