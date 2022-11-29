@@ -18,6 +18,7 @@ struct ChatView: View {
                                 MessageView(message: message)
                             }
                         }
+                        .navigationTitle("Matthew")
                     }
                     MessageInputView(messageText: $messageText)
                         .padding()
