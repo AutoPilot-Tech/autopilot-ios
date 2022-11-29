@@ -22,7 +22,7 @@ struct RegistrationView: View {
             BackgroundView()
             VStack {
                 
-                Image("owl_2")
+                Image("plus_photo")
                     .resizable()
                     .background(Color.black.opacity(0))
                     .scaledToFill()
