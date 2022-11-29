@@ -120,6 +120,20 @@ struct ContentView : View {
                                                 
                                             }
                                             .padding(.top, -65)
+                                            NavigationLink(destination: ChatView()) {
+                                                VStack {
+                                                    Image(systemName: "eye.trianglebadge.exclamationmark.fill")
+                                                        .resizable()
+                                                        .aspectRatio(contentMode: .fit)
+                                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                        .symbolRenderingMode(.multicolor)
+                                                        .foregroundColor(.green)
+                                                    
+                                                    Text("God View")
+                                                        .font(.footnote)
+                                                }
+                                                .padding(.horizontal, -4)
+                                            }
                                             Spacer()
                                         }
                                     }

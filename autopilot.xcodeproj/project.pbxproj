@@ -44,6 +44,7 @@
 		71234FAC29366EEE00B2FEDC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FAB29366EEE00B2FEDC /* FirebaseStorage */; };
 		71234FAF2936716800B2FEDC /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FAE2936716800B2FEDC /* AuthViewModel.swift */; };
 		71234FB1293688C700B2FEDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FB0293688C700B2FEDC /* User.swift */; };
+		71234FB329368FC000B2FEDC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FB229368FC000B2FEDC /* UserCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		52F452532935FAD500406D3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71234FAE2936716800B2FEDC /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		71234FB229368FC000B2FEDC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 				52F4524D2935EEF400406D3F /* CustomTextField.swift */,
 				52F4524F2935EEFD00406D3F /* TextArea.swift */,
 				52F452512935F2C500406D3F /* CustomSecureField.swift */,
+				71234FB229368FC000B2FEDC /* UserCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
 				52F4524A2935EC0700406D3F /* LoginView.swift in Sources */,
+				71234FB329368FC000B2FEDC /* UserCell.swift in Sources */,
 				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
 				52A8D70A2935851B00460525 /* ProfileActionButtonView.swift in Sources */,
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
