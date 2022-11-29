@@ -12,6 +12,7 @@ struct RegistrationView: View {
     @State var password = ""
     @State var fullname = ""
     @State var username = ""
+    @State var showImagePicker = false
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @EnvironmentObject var viewModel: AuthViewModel
 
@@ -22,13 +23,21 @@ struct RegistrationView: View {
             BackgroundView()
             VStack {
                 
-                Image("plus_photo")
-                    .resizable()
-                    .background(Color.black.opacity(0))
-                    .scaledToFill()
-                    .frame(width: 220, height: 100)
-                    .padding(.top, 220)
-                    .padding(.bottom)
+                Button(action: {
+                    showImagePicker.toggle()
+                }, label: {
+                    Image("plus_photo")
+                        .resizable()
+                        .background(Color.black.opacity(0))
+                        .scaledToFill()
+                        .frame(width: 220, height: 100)
+                        .padding(.top, 220)
+                        .padding(.bottom)
+                }).sheet(isPresented: $showImagePicker, content: {
+                    Text("picker")
+                })
+                
+                
                 
                 VStack(spacing: 20) {
                     CustomTextField(text: $email, placeholder: Text("Email"), imageName: "envelope")
