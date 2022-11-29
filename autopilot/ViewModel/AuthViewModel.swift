@@ -7,14 +7,32 @@
 
 import SwiftUI
 import Firebase
+import FirebaseAuth
 
 
 class AuthViewModel: ObservableObject {
+    @Published var userSession: FirebaseAuth.User?
+    @Published var isAuthenticating = false
+    @Published var error: Error?
+    @Published var user: User?
     
-    func login() {
+    
+    init() {
+        userSession = Auth.auth().currentUser
         
+    }
+    
+    func login(withEmail email:String, password: String) {
         
-
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            if let error = error {
+                print("DEBUG: Failed to login: \(error.localizedDescription)")
+                return
+            }
+            
+            print("DEBUG: Successfully logged in")
+            
+        }
     }
     
     //            guard let imageData = profileImage.jpegData(compressionQuality: 0.3) else { return }
