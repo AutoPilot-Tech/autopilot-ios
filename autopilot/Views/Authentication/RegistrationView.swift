@@ -34,7 +34,7 @@ struct RegistrationView: View {
                         .padding(.top, 220)
                         .padding(.bottom)
                 }).sheet(isPresented: $showImagePicker, content: {
-                    Text("picker")
+                    ImagePicker()
                 })
                 
                 

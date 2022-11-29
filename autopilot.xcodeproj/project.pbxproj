@@ -46,6 +46,7 @@
 		71234FB1293688C700B2FEDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FB0293688C700B2FEDC /* User.swift */; };
 		71234FB329368FC000B2FEDC /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FB229368FC000B2FEDC /* UserCell.swift */; };
 		71234FB52936926C00B2FEDC /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FB42936926C00B2FEDC /* SearchView.swift */; };
+		71234FB7293696A800B2FEDC /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FB6293696A800B2FEDC /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71234FB229368FC000B2FEDC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		71234FB42936926C00B2FEDC /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		71234FB6293696A800B2FEDC /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				52F452512935F2C500406D3F /* CustomSecureField.swift */,
 				71234FB229368FC000B2FEDC /* UserCell.swift */,
 				71234FB42936926C00B2FEDC /* SearchView.swift */,
+				71234FB6293696A800B2FEDC /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
 				52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */,
 				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,
+				71234FB7293696A800B2FEDC /* ImagePicker.swift in Sources */,
 				71234FAF2936716800B2FEDC /* AuthViewModel.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,
 			);
