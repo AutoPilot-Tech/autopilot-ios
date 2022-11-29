@@ -10,11 +10,13 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var text: String
     
+    let placeholder: String
+    
     var body: some View {
         HStack {
-            TextField("What do you want to do?", text: $text)
+            TextField("", text: $text)
                 .placeholder(when: text.isEmpty) {
-                    Text("What do you want to do?").foregroundColor(.gray)
+                    Text(placeholder).foregroundColor(.gray)
                 }
                 .foregroundColor(Color(.systemGray))
                 .padding(8)
@@ -33,11 +35,11 @@ struct SearchBar: View {
     }
 }
 
-struct SearchBar_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchBar(text: .constant("Search..."))
-    }
-}
+//struct SearchBar_Previews: PreviewProvider {
+//    static var previews: some View {
+//        SearchBar(text: .constant("Search..."), placeholder: .constant("Hi"))
+//    }
+//}
 
 extension View {
     func placeholder<Content: View>(

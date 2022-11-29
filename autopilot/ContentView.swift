@@ -31,7 +31,7 @@ struct ContentView : View {
                                             
                                             // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
                                             Handle()
-                                            SearchBar(text: $searchText)
+                                            SearchBar(text: $searchText, placeholder: "What do you want to do?")
                                             // Tab Bar here
                                             HStack {
                                                 

@@ -13,7 +13,7 @@ struct SearchView: View {
     
     var body: some View {
         ScrollView {
-            SearchBar(text: $searchText)
+            SearchBar(text: $searchText, placeholder: "Search for a user...")
                 .padding()
             
             VStack(alignment: .leading) {

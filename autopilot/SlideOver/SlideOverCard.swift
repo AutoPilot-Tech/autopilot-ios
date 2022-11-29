@@ -123,7 +123,7 @@ struct SlideOverCard_Previews: PreviewProvider {
         SlideOverCard( content: {
             VStack {
                 Handle()
-                SearchBar(text: .constant("Search Autopilot..."))
+                SearchBar(text: .constant("Search Autopilot..."), placeholder: "What do you want to do?")
                 Spacer()
             }
         })
