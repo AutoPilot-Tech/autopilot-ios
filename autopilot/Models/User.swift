@@ -13,11 +13,13 @@ struct User: Identifiable {
     let username: String
     let fullname: String
     let email: String
+    let profileImageUrl: String
     
     init(dictionary: [String: Any]) {
         self.id = dictionary["uid"] as? String ?? ""
         self.username = dictionary["username"] as? String ?? ""
         self.email = dictionary["email"] as? String ?? ""
+        self.profileImageUrl = dictionary["email"] as? String ?? ""
         self.fullname = dictionary["fullname"] as? String ?? ""
     }
 }

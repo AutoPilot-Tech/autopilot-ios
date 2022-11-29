@@ -89,7 +89,8 @@ struct RegistrationView: View {
                 
                 
                 Button(action: {
-                    viewModel.registerUser(email: email, password: password, username: username, fullname: fullname)
+                    guard let image = selectedUIImage else { return }
+                    viewModel.registerUser(email: email, password: password, username: username, fullname: fullname, profileImage: image)
                 }, label: {
                     Text("Sign Up")
                         .font(.headline)
