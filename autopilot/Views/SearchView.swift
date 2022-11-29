@@ -18,7 +18,7 @@ struct SearchView: View {
             VStack(alignment: .leading) {
                 ForEach(0..<10) { _ in
                     HStack { Spacer() }
-                    UserCell()
+                    UserCell(user: <#User#>)
                 }
             }.padding(.leading)
         }
