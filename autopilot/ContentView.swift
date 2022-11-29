@@ -120,7 +120,7 @@ struct ContentView : View {
                                                 
                                             }
                                             .padding(.top, -65)
-                                            NavigationLink(destination: ChatView()) {
+                                            NavigationLink(destination: SearchView()) {
                                                 VStack {
                                                     Image(systemName: "eye.trianglebadge.exclamationmark.fill")
                                                         .resizable()
