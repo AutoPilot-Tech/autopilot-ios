@@ -13,6 +13,7 @@ struct RegistrationView: View {
     @State var fullname = ""
     @State var username = ""
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @ObservedObject var viewModel = AuthViewModel()
 
     
     
@@ -55,7 +56,9 @@ struct RegistrationView: View {
                 .padding(.horizontal, 32)
                 
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    viewModel.registerUser(email: email, password: password, username: username, fullname: fullname)
+                }, label: {
                     Text("Sign Up")
                         .font(.headline)
                         .foregroundColor(.white)
