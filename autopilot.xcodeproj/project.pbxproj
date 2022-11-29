@@ -43,6 +43,7 @@
 		71234FAA29366EEE00B2FEDC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA929366EEE00B2FEDC /* FirebaseFunctions */; };
 		71234FAC29366EEE00B2FEDC /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FAB29366EEE00B2FEDC /* FirebaseStorage */; };
 		71234FAF2936716800B2FEDC /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FAE2936716800B2FEDC /* AuthViewModel.swift */; };
+		71234FB1293688C700B2FEDC /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71234FB0293688C700B2FEDC /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		52F452512935F2C500406D3F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		52F452532935FAD500406D3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		71234FAE2936716800B2FEDC /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				52A2B3082935548B0061A712 /* Message.swift */,
+				71234FB0293688C700B2FEDC /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -419,6 +422,7 @@
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */,
+				71234FB1293688C700B2FEDC /* User.swift in Sources */,
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
