@@ -10,6 +10,8 @@ import SwiftUI
 struct SlideOverCard<Content: View> : View {
     @GestureState private var dragState = DragState.inactive
     @State var position = CardPosition.bottom
+    @State var labelNumber = 1
+
     
     var content: () -> Content
     var body: some View {
@@ -19,17 +21,40 @@ struct SlideOverCard<Content: View> : View {
             }
             .onEnded(onDragEnded)
         
-        return Group {
-//            Handle()
-            self.content()
+        return ZStack {
+            VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {}, label: {
+                            Image("batman")
+                                .resizable()
+                                .scaledToFill()
+                                .clipShape(Circle())                           .overlay(NotificationNumLabel(number: $labelNumber))
+                                .frame(width: 56, height: 56)
+                                
+                        
+                    })
+                        .padding()
+                        .offset(y: self.position.rawValue + self.dragState.translation.height)
+                        .animation(self.dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
+                    
+                    
+                    
+                }
+                Group {
+                    self.content()
+                }
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
+                .background(Color.white.opacity(0.7))
+                .cornerRadius(10.0)
+                .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 14.0)
+                .offset(y: self.position.rawValue + self.dragState.translation.height)
+                .animation(self.dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
+            .gesture(drag)
+            }
+            
+            
         }
-        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-        .background(Color.white.opacity(0.7))
-        .cornerRadius(10.0)
-        .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 14.0)
-        .offset(y: self.position.rawValue + self.dragState.translation.height)
-        .animation(self.dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
-        .gesture(drag)
         
     }
     
@@ -65,9 +90,9 @@ struct SlideOverCard<Content: View> : View {
 }
 
 enum CardPosition: CGFloat {
-    case top = 500
-    case middle = 600
-    case bottom = 650
+    case top = 475
+    case middle = 500
+    case bottom = 550
 }
 
 enum DragState {

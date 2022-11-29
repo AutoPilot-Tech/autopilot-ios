@@ -11,7 +11,9 @@ struct ChatView: View {
     @State var messageText: String = ""
 
     var body: some View {
+        
                 VStack {
+                    
                     ScrollView {
                         VStack(alignment: .leading, spacing: 12) {
                             ForEach(MOCK_MESSAGES) { message in

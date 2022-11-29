@@ -13,9 +13,13 @@ struct SearchBar: View {
     var body: some View {
         HStack {
             TextField("What do you want to do?", text: $text)
+                .placeholder(when: text.isEmpty) {
+                    Text("What do you want to do?").foregroundColor(.gray)
+                }
+                .foregroundColor(Color(.systemGray))
                 .padding(8)
                 .padding(.horizontal, 24)
-                .background(.white.opacity(0.7))
+                .background(.white)
                 .cornerRadius(8)
                 .overlay(
                     HStack {
@@ -32,5 +36,18 @@ struct SearchBar: View {
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
         SearchBar(text: .constant("Search..."))
+    }
+}
+
+extension View {
+    func placeholder<Content: View>(
+        when shouldShow: Bool,
+        alignment: Alignment = .leading,
+        @ViewBuilder placeholder: () -> Content) -> some View {
+
+        ZStack(alignment: alignment) {
+            placeholder().opacity(shouldShow ? 1 : 0)
+            self
+        }
     }
 }

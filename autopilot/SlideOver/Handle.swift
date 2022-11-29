@@ -12,7 +12,7 @@ struct Handle : View {
     var body: some View {
         RoundedRectangle(cornerRadius: handleThickness / 2.0)
             .frame(width: 40, height: handleThickness)
-            .foregroundColor(Color.secondary)
+            .foregroundColor(Color.gray)
             .padding(5)
     }
 }
