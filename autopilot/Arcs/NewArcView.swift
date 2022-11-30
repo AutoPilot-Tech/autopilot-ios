@@ -10,7 +10,7 @@ import Kingfisher
 
 struct NewArcView: View {
     @Binding var isPresented: Bool
-    @State var captionText: String = ""
+    @State var titleText: String = ""
     @ObservedObject var viewModel = UploadArcViewModel()
     
     var body: some View {
@@ -27,7 +27,7 @@ struct NewArcView: View {
                     }
                     
                     
-                    TextArea("What Arc are you in?", text: $captionText)
+                    TextArea("What Arc are you in?", text: $titleText)
                     
                     Spacer()
                 }
@@ -37,7 +37,7 @@ struct NewArcView: View {
                         .foregroundColor(.blue)
                 },
                                     trailing: Button(action: {
-                    viewModel.uploadArc()
+                    viewModel.uploadArc(title: titleText)
                 }) {
                     Text("Continue")
                         .padding(.horizontal)
