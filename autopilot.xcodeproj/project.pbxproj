@@ -57,6 +57,7 @@
 		71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5072936D7A0004229B3 /* FeedView.swift */; };
 		71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5092936D9A1004229B3 /* GodView.swift */; };
 		71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */; };
+		71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D50E2936DFFA004229B3 /* NewArcView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,7 @@
 		71D2D5072936D7A0004229B3 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		71D2D5092936D9A1004229B3 /* GodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodView.swift; sourceTree = "<group>"; };
 		71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodFilterButtonView.swift; sourceTree = "<group>"; };
+		71D2D50E2936DFFA004229B3 /* NewArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArcView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -325,6 +327,7 @@
 				71D2D4FE2936CCB7004229B3 /* ArcCell.swift */,
 				71D2D5002936CCC9004229B3 /* ArcDetailView.swift */,
 				71D2D5022936CCD7004229B3 /* ArcActionsView.swift */,
+				71D2D50E2936DFFA004229B3 /* NewArcView.swift */,
 			);
 			path = Arcs;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
+				71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */,
 				52F4524C2935EC0D00406D3F /* RegistrationView.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,

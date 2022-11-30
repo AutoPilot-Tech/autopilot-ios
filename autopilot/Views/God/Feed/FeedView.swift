@@ -13,6 +13,8 @@ import SwiftUI
 
 // ONLY FOR GOD MODE. Employees and VIP only.
 struct FeedView: View {
+    @State var isSHowingNewArcView = false
+    
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView {
@@ -23,7 +25,7 @@ struct FeedView: View {
                 }
             }
             
-            Button(action: { }, label: {
+            Button(action: { isSHowingNewArcView.toggle() }, label: {
                 Image(systemName: "plus")
                                 .resizable()
                                 .renderingMode(.template)
@@ -34,6 +36,9 @@ struct FeedView: View {
                         .foregroundColor(.white)
                         .clipShape(Circle())
                         .padding()
+                        .fullScreenCover(isPresented: $isSHowingNewArcView) {
+                            NewArcView(isPresented: $isSHowingNewArcView)
+                        }
 //
             
         }
