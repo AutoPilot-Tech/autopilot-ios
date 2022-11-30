@@ -18,6 +18,8 @@ class AuthViewModel: ObservableObject {
     @EnvironmentObject var viewModel: AuthViewModel
     @Published var user: User?
     
+    static let shared = AuthViewModel() // share the user property across the application
+    
     
     init() {
         userSession = Auth.auth().currentUser
