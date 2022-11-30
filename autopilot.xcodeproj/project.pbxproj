@@ -67,6 +67,12 @@
 		71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D524293715E8004229B3 /* ConversationsViewModel.swift */; };
 		71D2D52729371C31004229B3 /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52629371C31004229B3 /* NewMessageView.swift */; };
 		71D2D529293721AE004229B3 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D528293721AE004229B3 /* LazyView.swift */; };
+		71D2D52B29372A9B004229B3 /* ArcCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52A29372A9B004229B3 /* ArcCard.swift */; };
+		71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52C29376AD5004229B3 /* CustomBlurView.swift */; };
+		71D2D52F29377443004229B3 /* GlassMorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52E29377443004229B3 /* GlassMorphicCard.swift */; };
+		71D2D53129378250004229B3 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53029378250004229B3 /* SnapCarousel.swift */; };
+		71D2D533293783C9004229B3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D532293783C9004229B3 /* CarouselViewModel.swift */; };
+		71D2D53529378A6E004229B3 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53429378A6E004229B3 /* PlanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +151,12 @@
 		71D2D524293715E8004229B3 /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 		71D2D52629371C31004229B3 /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
 		71D2D528293721AE004229B3 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
+		71D2D52A29372A9B004229B3 /* ArcCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCard.swift; sourceTree = "<group>"; };
+		71D2D52C29376AD5004229B3 /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
+		71D2D52E29377443004229B3 /* GlassMorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassMorphicCard.swift; sourceTree = "<group>"; };
+		71D2D53029378250004229B3 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
+		71D2D532293783C9004229B3 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		71D2D53429378A6E004229B3 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +347,7 @@
 				71D2D5162936F486004229B3 /* ProfileViewModel.swift */,
 				71D2D51C293702A2004229B3 /* ChatViewModel.swift */,
 				71D2D524293715E8004229B3 /* ConversationsViewModel.swift */,
+				71D2D532293783C9004229B3 /* CarouselViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,6 +357,9 @@
 			children = (
 				71D2D4FB2936B9DB004229B3 /* Constants.swift */,
 				71D2D528293721AE004229B3 /* LazyView.swift */,
+				71D2D52C29376AD5004229B3 /* CustomBlurView.swift */,
+				71D2D52E29377443004229B3 /* GlassMorphicCard.swift */,
+				71D2D53029378250004229B3 /* SnapCarousel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -355,6 +371,7 @@
 				71D2D5002936CCC9004229B3 /* ArcDetailView.swift */,
 				71D2D5022936CCD7004229B3 /* ArcActionsView.swift */,
 				71D2D50E2936DFFA004229B3 /* NewArcView.swift */,
+				71D2D52A29372A9B004229B3 /* ArcCard.swift */,
 			);
 			path = Arcs;
 			sourceTree = "<group>";
@@ -363,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				71D2D5072936D7A0004229B3 /* FeedView.swift */,
+				71D2D53429378A6E004229B3 /* PlanView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -523,6 +541,7 @@
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
 				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
+				71D2D533293783C9004229B3 /* CarouselViewModel.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
@@ -533,6 +552,7 @@
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,
 				71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */,
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
+				71D2D53129378250004229B3 /* SnapCarousel.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
 				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
@@ -542,9 +562,11 @@
 				71D2D529293721AE004229B3 /* LazyView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
+				71D2D52F29377443004229B3 /* GlassMorphicCard.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
+				71D2D53529378A6E004229B3 /* PlanView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
@@ -557,6 +579,7 @@
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
 				71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */,
 				52F4524A2935EC0700406D3F /* LoginView.swift in Sources */,
+				71D2D52B29372A9B004229B3 /* ArcCard.swift in Sources */,
 				71234FB329368FC000B2FEDC /* UserCell.swift in Sources */,
 				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
 				52A8D70A2935851B00460525 /* ProfileActionButtonView.swift in Sources */,
@@ -566,6 +589,7 @@
 				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,
 				71234FB7293696A800B2FEDC /* ImagePicker.swift in Sources */,
 				71234FAF2936716800B2FEDC /* AuthViewModel.swift in Sources */,
+				71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,
 				71D2D51B2936FD8A004229B3 /* ConversationCell.swift in Sources */,
 			);

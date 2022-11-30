@@ -62,7 +62,7 @@ struct BackgroundView: View {
                     
                 
                 
-            }.frame(width: UIScreen.main.bounds.width,height: UIScreen.main.bounds.height + 200)
+            }.frame(width: UIScreen.main.bounds.width-100,height: UIScreen.main.bounds.height+100)
                 .onAppear() {
                     animate.toggle()
                 }
