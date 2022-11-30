@@ -8,9 +8,7 @@ import SwiftUI
 
 struct MadeForYou: View {
     @State private var animate = false
-    int[] location = new int[2]
-    MadeForYou.getLocationOnScreen(location)
-    
+    // TODO: make the animation only witin this views bounds
     var body: some View {
         VStack {
             GeometryReader { geo in
