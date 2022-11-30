@@ -9,34 +9,40 @@ import SwiftUI
 
 struct ProfileActionButtonView: View {
     let isCurrentUser: Bool
+    let profileViewModel: ProfileViewModel
     @EnvironmentObject var viewModel: AuthViewModel
     
     var body: some View {
         
         if isCurrentUser {
-            Button(action: {}, label: {
-                Text("Edit Profile")
-                    .frame(width: 360, height: 40)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-            })
-            .cornerRadius(20)
-        } else {
             HStack {
-                Button(action: {
-                    viewModel.signOut()
-                }, label: {
-                    Text("Follow")
+                Button(action: {}, label: {
+                    Text("Edit Profile")
                         .frame(width: 180, height: 40)
                         .background(Color.blue)
                         .foregroundColor(.white)
                 })
                 .cornerRadius(20)
+                
+                Button(action: {
+                    viewModel.signOut()
+                }, label: {
+                    Text("Sign Out")
+                        .frame(width: 180, height: 40)
+                        .background(Color.red)
+                        .foregroundColor(.white)
+                })
+                .cornerRadius(20)
+            }
+            
+        } else {
+            HStack {
+                
 
                 
                 Button(action: {}, label: {
                     Text("Message")
-                        .frame(width: 180, height: 40)
+                        .frame(width: 360, height: 40)
                         .background(Color.purple)
                         .foregroundColor(.white)
                 })
@@ -48,8 +54,3 @@ struct ProfileActionButtonView: View {
     }
 }
 
-struct ProfileActionButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileActionButtonView(isCurrentUser: false)
-    }
-}

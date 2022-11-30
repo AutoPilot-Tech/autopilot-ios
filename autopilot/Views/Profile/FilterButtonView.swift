@@ -8,14 +8,12 @@
 import SwiftUI
 
 enum AutopilotFilterOptions: Int, CaseIterable {
-    case workouts
-    case tasks
+    case arcs
     case awards
     
     var title: String {
         switch self {
-        case .workouts: return "Workouts"
-        case .tasks: return "Tasks"
+        case .arcs: return "Arcs"
         case .awards: return "Awards"
         }
     }

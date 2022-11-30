@@ -10,11 +10,13 @@ import SwiftUI
 enum GodFilterOptions: Int, CaseIterable {
     case arcs
     case users
+    case chats
     
     var title: String {
         switch self {
         case .arcs: return "Arcs"
         case .users: return "Users"
+        case .chats: return "Chats"
         }
     }
 }

@@ -60,6 +60,9 @@
 		71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D50E2936DFFA004229B3 /* NewArcView.swift */; };
 		71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */; };
 		71D2D5152936EE2B004229B3 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5142936EE2B004229B3 /* FeedViewModel.swift */; };
+		71D2D5172936F486004229B3 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5162936F486004229B3 /* ProfileViewModel.swift */; };
+		71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5182936FD2D004229B3 /* ConversationsView.swift */; };
+		71D2D51B2936FD8A004229B3 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D51A2936FD8A004229B3 /* ConversationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +134,9 @@
 		71D2D50E2936DFFA004229B3 /* NewArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArcView.swift; sourceTree = "<group>"; };
 		71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadArcViewModel.swift; sourceTree = "<group>"; };
 		71D2D5142936EE2B004229B3 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		71D2D5162936F486004229B3 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		71D2D5182936FD2D004229B3 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
+		71D2D51A2936FD8A004229B3 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -274,6 +280,8 @@
 				52A2B3052935541B0061A712 /* MessageInputView.swift */,
 				52A2B30A293554DB0061A712 /* MessageView.swift */,
 				52A2B30C293555370061A712 /* ChatBubble.swift */,
+				71D2D5182936FD2D004229B3 /* ConversationsView.swift */,
+				71D2D51A2936FD8A004229B3 /* ConversationCell.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -315,6 +323,7 @@
 				71D2D4F82936B885004229B3 /* SearchViewModel.swift */,
 				71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */,
 				71D2D5142936EE2B004229B3 /* FeedViewModel.swift */,
+				71D2D5162936F486004229B3 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -513,6 +522,7 @@
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
 				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
 				71D2D5152936EE2B004229B3 /* FeedViewModel.swift in Sources */,
+				71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */,
 				71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
@@ -526,6 +536,7 @@
 				52F4524C2935EC0D00406D3F /* RegistrationView.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
+				71D2D5172936F486004229B3 /* ProfileViewModel.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
 				71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */,
@@ -540,6 +551,7 @@
 				71234FB7293696A800B2FEDC /* ImagePicker.swift in Sources */,
 				71234FAF2936716800B2FEDC /* AuthViewModel.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,
+				71D2D51B2936FD8A004229B3 /* ConversationCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

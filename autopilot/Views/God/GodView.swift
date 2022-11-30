@@ -17,8 +17,11 @@ struct GodView: View {
                 .navigationTitle("God View")
             if selectedFilter == .arcs {
                 FeedView()
-            } else {
+            } else if selectedFilter == .users {
                 SearchView()
+            } else {
+                ConversationsView()
+                
             }
         }
     }
