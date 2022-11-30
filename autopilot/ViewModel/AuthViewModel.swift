@@ -34,6 +34,7 @@ class AuthViewModel: ObservableObject {
             }
             
             self.userSession = result?.user
+            self.fetchUser()
             
         }
     }
@@ -83,6 +84,7 @@ class AuthViewModel: ObservableObject {
                     Firestore.firestore().collection("users").document(user.uid).setData(data) { _ in
                         print("DEBUG: Uploading data...")
                         self.userSession = user
+                        self.fetchUser()
                         
                     }
                     

@@ -150,7 +150,6 @@ struct ContentView : View {
                         }
                         
                     }
-                    .navigationTitle("Autopilot")
                     .navigationBarItems(trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
                         KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
                             .resizable()

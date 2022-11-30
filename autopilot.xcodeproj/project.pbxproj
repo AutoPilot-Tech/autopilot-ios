@@ -54,6 +54,7 @@
 		71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5002936CCC9004229B3 /* ArcDetailView.swift */; };
 		71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5022936CCD7004229B3 /* ArcActionsView.swift */; };
 		71D2D5052936CCFE004229B3 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5042936CCFE004229B3 /* Arc.swift */; };
+		71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5072936D7A0004229B3 /* FeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,6 +120,7 @@
 		71D2D5002936CCC9004229B3 /* ArcDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcDetailView.swift; sourceTree = "<group>"; };
 		71D2D5022936CCD7004229B3 /* ArcActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcActionsView.swift; sourceTree = "<group>"; };
 		71D2D5042936CCFE004229B3 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
+		71D2D5072936D7A0004229B3 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +241,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71D2D5062936D791004229B3 /* Feed */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
 				52F452482935EBFA00406D3F /* Authentication */,
@@ -320,6 +323,14 @@
 				71D2D5022936CCD7004229B3 /* ArcActionsView.swift */,
 			);
 			path = Arcs;
+			sourceTree = "<group>";
+		};
+		71D2D5062936D791004229B3 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D5072936D7A0004229B3 /* FeedView.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +492,7 @@
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
+				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
