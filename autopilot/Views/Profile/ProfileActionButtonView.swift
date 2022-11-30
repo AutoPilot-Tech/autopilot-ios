@@ -40,7 +40,7 @@ struct ProfileActionButtonView: View {
                 
 
                 
-                NavigationLink(destination: ChatView(user: viewModel.user!)) {
+                NavigationLink(destination: ChatView(user: profileViewModel.user)) {
                         Text("Message")
                             .frame(width: 360, height: 40)
                             .background(Color.purple)

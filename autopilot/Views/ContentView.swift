@@ -55,7 +55,7 @@ struct ContentView : View {
                                                 
 
                                             HStack {
-                                                NavigationLink(destination: ChatView()) {
+                                                NavigationLink(destination: GodView()) {
                                                     VStack {
                                                         Image(systemName: "play.circle.fill")
                                                             .resizable()
@@ -85,7 +85,7 @@ struct ContentView : View {
                                                     .padding(.horizontal, -4)
                                                 }
                                                 
-                                                NavigationLink(destination: ChatView()) {
+                                                NavigationLink(destination: GodView()) {
                                                     VStack {
                                                         Image(systemName: "bubble.left.circle.fill")
                                                             .resizable()

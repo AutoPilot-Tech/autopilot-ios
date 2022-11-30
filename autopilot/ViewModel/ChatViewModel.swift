@@ -36,7 +36,6 @@ struct ChatViewModel {
                     "timestamp": Timestamp(date: Date())]
         
         currentUserRef.setData(data)
-        
         receivingUserRef.document(messageID).setData(data)
         receivingRecentRef.document(currentUid).setData(data)
         currentRecentRef.document(user.id).setData(data)
