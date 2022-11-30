@@ -58,6 +58,7 @@
 		71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5092936D9A1004229B3 /* GodView.swift */; };
 		71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */; };
 		71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D50E2936DFFA004229B3 /* NewArcView.swift */; };
+		71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		71D2D5092936D9A1004229B3 /* GodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodView.swift; sourceTree = "<group>"; };
 		71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodFilterButtonView.swift; sourceTree = "<group>"; };
 		71D2D50E2936DFFA004229B3 /* NewArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArcView.swift; sourceTree = "<group>"; };
+		71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadArcViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +311,7 @@
 			children = (
 				71234FAE2936716800B2FEDC /* AuthViewModel.swift */,
 				71D2D4F82936B885004229B3 /* SearchViewModel.swift */,
+				71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
+				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
 				71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
