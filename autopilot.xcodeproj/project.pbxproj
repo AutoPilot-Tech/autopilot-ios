@@ -64,6 +64,7 @@
 		71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5182936FD2D004229B3 /* ConversationsView.swift */; };
 		71D2D51B2936FD8A004229B3 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D51A2936FD8A004229B3 /* ConversationCell.swift */; };
 		71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D51C293702A2004229B3 /* ChatViewModel.swift */; };
+		71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D524293715E8004229B3 /* ConversationsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -139,6 +140,7 @@
 		71D2D5182936FD2D004229B3 /* ConversationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsView.swift; sourceTree = "<group>"; };
 		71D2D51A2936FD8A004229B3 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		71D2D51C293702A2004229B3 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		71D2D524293715E8004229B3 /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 				71D2D5142936EE2B004229B3 /* FeedViewModel.swift */,
 				71D2D5162936F486004229B3 /* ProfileViewModel.swift */,
 				71D2D51C293702A2004229B3 /* ChatViewModel.swift */,
+				71D2D524293715E8004229B3 /* ConversationsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
+				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */,
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,

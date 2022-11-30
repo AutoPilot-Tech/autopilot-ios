@@ -11,6 +11,7 @@ struct ConversationsView: View {
     // state variable that determines if this view is presented or not
     @State var isShowingNewMessageView = false
     @State var searchText = ""
+    @ObservedObject var viewModel = ConversationsViewModel()
     
     
     var body: some View {
@@ -18,11 +19,10 @@ struct ConversationsView: View {
             ScrollView {
                 SearchBar(text: $searchText, placeholder: "Search chats...")
                 VStack {
-                    ForEach(0..<20) { _ in
-//                        NavigationLink(destination: ChatView(), label: {
-//                            ConversationCell()
-//                        })
-                        ConversationCell()
+                    ForEach(viewModel.recentMessages) { message in
+                        NavigationLink(destination: ChatView(user: message.user), label: {
+                            ConversationCell()
+                        })
                     }
                 }.padding()
             }
