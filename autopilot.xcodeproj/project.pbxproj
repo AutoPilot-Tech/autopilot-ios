@@ -65,6 +65,8 @@
 		71D2D51B2936FD8A004229B3 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D51A2936FD8A004229B3 /* ConversationCell.swift */; };
 		71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D51C293702A2004229B3 /* ChatViewModel.swift */; };
 		71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D524293715E8004229B3 /* ConversationsViewModel.swift */; };
+		71D2D52729371C31004229B3 /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52629371C31004229B3 /* NewMessageView.swift */; };
+		71D2D529293721AE004229B3 /* LazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D528293721AE004229B3 /* LazyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,8 @@
 		71D2D51A2936FD8A004229B3 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		71D2D51C293702A2004229B3 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		71D2D524293715E8004229B3 /* ConversationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewModel.swift; sourceTree = "<group>"; };
+		71D2D52629371C31004229B3 /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
+		71D2D528293721AE004229B3 /* LazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +290,7 @@
 				52A2B30C293555370061A712 /* ChatBubble.swift */,
 				71D2D5182936FD2D004229B3 /* ConversationsView.swift */,
 				71D2D51A2936FD8A004229B3 /* ConversationCell.swift */,
+				71D2D52629371C31004229B3 /* NewMessageView.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -338,6 +343,7 @@
 			isa = PBXGroup;
 			children = (
 				71D2D4FB2936B9DB004229B3 /* Constants.swift */,
+				71D2D528293721AE004229B3 /* LazyView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
 				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
+				71D2D52729371C31004229B3 /* NewMessageView.swift in Sources */,
 				52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */,
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,
 				71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */,
@@ -532,6 +539,7 @@
 				71D2D5152936EE2B004229B3 /* FeedViewModel.swift in Sources */,
 				71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */,
 				71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */,
+				71D2D529293721AE004229B3 /* LazyView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,

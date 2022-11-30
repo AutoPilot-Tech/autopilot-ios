@@ -1,5 +1,5 @@
 //
-//  SearchView.swift
+//  NewMessageView.swift
 //  autopilot
 //
 //  Created by Matthew Molinar on 11/29/22.
@@ -7,9 +7,12 @@
 
 import SwiftUI
 
-struct SearchView: View {
+struct NewMessageView: View {
     @State var searchText = ""
-    @ObservedObject var viewModel = SearchViewModel(config: .search)
+    @Binding var show: Bool
+    @Binding var startChat: Bool
+    @Binding var user: User?
+    @ObservedObject var viewModel = SearchViewModel(config: .newMessage)
     
     var body: some View {
         ScrollView {
@@ -20,17 +23,14 @@ struct SearchView: View {
                 ForEach(searchText.isEmpty ? viewModel.users : viewModel.filteredUsers(searchText)) { user in
                     HStack { Spacer() }
                     
-                    NavigationLink(destination: UserProfileView(user: user)) {
+                    Button(action: {
+                        self.show.toggle()
+                        self.startChat.toggle()
+                        self.user = user
+                    }) {
                         UserCell(user: user)
                     }
                 }
             }.padding(.leading)
         }
-    }
-}
-
-struct SearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        SearchView()
-    }
-}
+    }}
