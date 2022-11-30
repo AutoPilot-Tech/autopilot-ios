@@ -24,6 +24,7 @@ class UploadArcViewModel: ObservableObject {
         docRef.setData(data) { _ in
             print("DEBUG: SUCCESSfully uploaded Arc")
             self.isPresented = false
+            
         }
     }
     

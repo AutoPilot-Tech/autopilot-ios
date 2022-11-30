@@ -14,13 +14,16 @@ import SwiftUI
 // ONLY FOR GOD MODE. Employees and VIP only.
 struct FeedView: View {
     @State var isSHowingNewArcView = false
+    @ObservedObject var viewModel = FeedViewModel()
     
     var body: some View {
         ZStack(alignment: .bottomTrailing) {
             ScrollView {
                 VStack {
-                    ForEach(0..<100) { _ in
-                        ArcCell()
+                    ForEach(viewModel.arcs) { arc in
+                        NavigationLink(destination: ArcDetailView()) {
+                            ArcCell(arc: arc)
+                        }
                     }
                 }
             }
