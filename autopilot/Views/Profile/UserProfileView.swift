@@ -9,7 +9,7 @@ import SwiftUI
 
 struct UserProfileView: View {
 
-    @State var selectedFilter: AutopilotFilterOptions = .awards
+    @State var selectedFilter: AutopilotFilterOptions = .arcs
     let user: User
     @ObservedObject var viewModel: ProfileViewModel
     
@@ -24,6 +24,13 @@ struct UserProfileView: View {
                 ProfileHeaderView(viewModel: viewModel)
                     .padding()
                 FilterButtonView(selectedOption: $selectedFilter)
+                
+                if selectedFilter == .arcs {
+                    ForEach(viewModel.userArcs) { arc in
+                        ArcCell(arc: arc)
+                            .padding()
+                    }
+                }
             }
             
             .navigationTitle(user.fullname)

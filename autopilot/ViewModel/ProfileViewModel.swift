@@ -21,9 +21,7 @@ class ProfileViewModel: ObservableObject {
     func fetchUserArcs() {
         COLLECTION_ARCS.whereField("uid", isEqualTo: user.id).getDocuments { snapshot, _ in
             guard let documents = snapshot?.documents else { return }
-            documents.forEach { document in
-                print("DEBUG: Doc data is \(document.data())")
-            }
+            self.userArcs = documents.map({ Arc(dictionary: $0.data())})
         }
     }
     
