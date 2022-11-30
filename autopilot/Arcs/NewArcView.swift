@@ -11,7 +11,12 @@ import Kingfisher
 struct NewArcView: View {
     @Binding var isPresented: Bool
     @State var titleText: String = ""
-    @ObservedObject var viewModel = UploadArcViewModel()
+    @ObservedObject var viewModel: UploadArcViewModel
+    
+    init(isPresented: Binding<Bool>) {
+        self._isPresented = isPresented
+        self.viewModel = UploadArcViewModel(isPresented: isPresented)
+    }
     
     var body: some View {
         NavigationView {

@@ -9,6 +9,11 @@ import SwiftUI
 import Firebase
 
 class UploadArcViewModel: ObservableObject {
+    @Binding var isPresented: Bool
+    
+    init(isPresented: Binding<Bool>) {
+        self._isPresented = isPresented
+    }
     
     func uploadArc(title: String) {
         guard let user = AuthViewModel.shared.user else { return }
@@ -18,6 +23,7 @@ class UploadArcViewModel: ObservableObject {
         
         docRef.setData(data) { _ in
             print("DEBUG: SUCCESSfully uploaded Arc")
+            self.isPresented = false
         }
     }
     
