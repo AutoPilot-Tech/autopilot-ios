@@ -12,6 +12,8 @@ import Kingfisher
 struct ContentView : View {
     @State var currentIndex: Int = 0
     @State var searchText = ""
+    @State var textfield_val = ""
+    @State var heartFilled = false
     @EnvironmentObject var viewModel: AuthViewModel
     @ObservedObject var arcViewModel = CarouselViewModel()
     @State private var isLoggedIn = true
@@ -31,6 +33,31 @@ struct ContentView : View {
                             Color.white
                                 .ignoresSafeArea()
                             BackgroundView()
+                            CarouselView(itemHeight: 400, views: [
+                            AnyView(
+                                VStack{
+                                    MadeForYou()
+                                
+                            }),
+                            AnyView(ArcCardContent()),
+                            AnyView(ArcCardContent()),
+                            AnyView(ArcCardContent()),
+                            AnyView(
+                                ZStack{
+                                    if heartFilled {
+                                        Image(systemName:"heart")
+                                    } else {
+                                        Image(systemName:"heart.fill")
+                                    }
+                                }
+                            ),
+                            AnyView(
+                                Button(action: {self.heartFilled.toggle()})
+                                {Text("Fill the heart")}
+                            ),
+                            AnyView(Text("last view")),
+                        ])
+                            .padding(.bottom, UIScreen.main.bounds.height / 3)
                             VStack {
                                 SlideOverCard {
                                     ZStack(alignment: .topTrailing) {

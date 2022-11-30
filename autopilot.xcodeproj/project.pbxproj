@@ -71,7 +71,9 @@
 		71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52C29376AD5004229B3 /* CustomBlurView.swift */; };
 		71D2D52F29377443004229B3 /* GlassMorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52E29377443004229B3 /* GlassMorphicCard.swift */; };
 		71D2D533293783C9004229B3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D532293783C9004229B3 /* CarouselViewModel.swift */; };
-		71D2D53729379C1E004229B3 /* CarouselFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53629379C1E004229B3 /* CarouselFeedView.swift */; };
+		71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53829379DF8004229B3 /* CarouselView.swift */; };
+		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
+		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,7 +156,9 @@
 		71D2D52C29376AD5004229B3 /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		71D2D52E29377443004229B3 /* GlassMorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassMorphicCard.swift; sourceTree = "<group>"; };
 		71D2D532293783C9004229B3 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
-		71D2D53629379C1E004229B3 /* CarouselFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFeedView.swift; sourceTree = "<group>"; };
+		71D2D53829379DF8004229B3 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
+		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -369,6 +373,8 @@
 				71D2D5022936CCD7004229B3 /* ArcActionsView.swift */,
 				71D2D50E2936DFFA004229B3 /* NewArcView.swift */,
 				71D2D52A29372A9B004229B3 /* ArcCard.swift */,
+				71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */,
+				71D2D53C2937A916004229B3 /* MadeForYou.swift */,
 			);
 			path = Arcs;
 			sourceTree = "<group>";
@@ -377,7 +383,7 @@
 			isa = PBXGroup;
 			children = (
 				71D2D5072936D7A0004229B3 /* FeedView.swift */,
-				71D2D53629379C1E004229B3 /* CarouselFeedView.swift */,
+				71D2D53829379DF8004229B3 /* CarouselView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -542,7 +548,6 @@
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
-				71D2D53729379C1E004229B3 /* CarouselFeedView.swift in Sources */,
 				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				71D2D52729371C31004229B3 /* NewMessageView.swift in Sources */,
@@ -569,9 +574,11 @@
 				71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */,
 				52F4524C2935EC0D00406D3F /* RegistrationView.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
+				71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
 				71D2D5172936F486004229B3 /* ProfileViewModel.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
+				71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */,
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
 				71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */,
 				52F4524A2935EC0700406D3F /* LoginView.swift in Sources */,
@@ -588,6 +595,7 @@
 				71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,
 				71D2D51B2936FD8A004229B3 /* ConversationCell.swift in Sources */,
+				71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
