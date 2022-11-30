@@ -21,7 +21,7 @@ struct FeedView: View {
             ScrollView {
                 VStack {
                     ForEach(viewModel.arcs) { arc in
-                        NavigationLink(destination: ArcDetailView()) {
+                        NavigationLink(destination: ArcDetailView(arc: arc)) {
                             ArcCell(arc: arc)
                         }
                     }

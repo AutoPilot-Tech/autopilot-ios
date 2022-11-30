@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ArcDetailView: View {
+    var arc: Arc
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
-                Image("batman")
+                KFImage(URL(string: arc.profileImageUrl))
                     .resizable()
                     .scaledToFill()
                     .clipped()
@@ -19,16 +21,16 @@ struct ArcDetailView: View {
                     .cornerRadius(28)
                 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Bruce Wayne")
+                    Text(arc.fullname)
                         .font(.system(size: 14, weight: .semibold))
                     
-                    Text("@batman")
+                    Text("@\(arc.username)")
                         .font(.system(size:14))
                         .foregroundColor(.gray)
                 }
             }
             
-            Text("I am a dog")
+            Text(arc.title)
                 .font(.system(size: 22))
             
             Text("7:22 PM 05/01/2022")
@@ -43,8 +45,3 @@ struct ArcDetailView: View {
     }
 }
 
-struct ArcDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        ArcDetailView()
-    }
-}
