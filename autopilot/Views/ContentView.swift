@@ -31,7 +31,6 @@ struct ContentView : View {
                             Color.white
                                 .ignoresSafeArea()
                             BackgroundView()
-                            PlanView()
                             VStack {
                                 SlideOverCard {
                                     ZStack(alignment: .topTrailing) {

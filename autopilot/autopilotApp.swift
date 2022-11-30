@@ -8,11 +8,15 @@
 import SwiftUI
 import Firebase
 
+public class UIStateModel: ObservableObject {
+    @Published var activeCard: Int = 0
+    @Published var screenDrag: Float = 0.0
+}
+
 @main
 struct autopilotApp: App {
     let persistenceController = PersistenceController.shared
-    
-    
+    @
     
     
     init() {

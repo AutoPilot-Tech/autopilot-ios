@@ -1,5 +1,5 @@
 //
-//  PlanView.swift
+//  CarouselFeedView.swift
 //  autopilot
 //
 //  Created by Matthew Molinar on 11/30/22.
@@ -7,14 +7,9 @@
 
 import SwiftUI
 
-struct PlanView: View {
+struct CarouselFeedView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct PlanView_Previews: PreviewProvider {
-    static var previews: some View {
-        PlanView()
-    }
-}

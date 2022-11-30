@@ -70,9 +70,8 @@
 		71D2D52B29372A9B004229B3 /* ArcCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52A29372A9B004229B3 /* ArcCard.swift */; };
 		71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52C29376AD5004229B3 /* CustomBlurView.swift */; };
 		71D2D52F29377443004229B3 /* GlassMorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52E29377443004229B3 /* GlassMorphicCard.swift */; };
-		71D2D53129378250004229B3 /* SnapCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53029378250004229B3 /* SnapCarousel.swift */; };
 		71D2D533293783C9004229B3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D532293783C9004229B3 /* CarouselViewModel.swift */; };
-		71D2D53529378A6E004229B3 /* PlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53429378A6E004229B3 /* PlanView.swift */; };
+		71D2D53729379C1E004229B3 /* CarouselFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53629379C1E004229B3 /* CarouselFeedView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,9 +153,8 @@
 		71D2D52A29372A9B004229B3 /* ArcCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCard.swift; sourceTree = "<group>"; };
 		71D2D52C29376AD5004229B3 /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		71D2D52E29377443004229B3 /* GlassMorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassMorphicCard.swift; sourceTree = "<group>"; };
-		71D2D53029378250004229B3 /* SnapCarousel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapCarousel.swift; sourceTree = "<group>"; };
 		71D2D532293783C9004229B3 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
-		71D2D53429378A6E004229B3 /* PlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanView.swift; sourceTree = "<group>"; };
+		71D2D53629379C1E004229B3 /* CarouselFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselFeedView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,7 +357,6 @@
 				71D2D528293721AE004229B3 /* LazyView.swift */,
 				71D2D52C29376AD5004229B3 /* CustomBlurView.swift */,
 				71D2D52E29377443004229B3 /* GlassMorphicCard.swift */,
-				71D2D53029378250004229B3 /* SnapCarousel.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -380,7 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				71D2D5072936D7A0004229B3 /* FeedView.swift */,
-				71D2D53429378A6E004229B3 /* PlanView.swift */,
+				71D2D53629379C1E004229B3 /* CarouselFeedView.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -545,6 +542,7 @@
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
+				71D2D53729379C1E004229B3 /* CarouselFeedView.swift in Sources */,
 				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				71D2D52729371C31004229B3 /* NewMessageView.swift in Sources */,
@@ -552,7 +550,6 @@
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,
 				71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */,
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
-				71D2D53129378250004229B3 /* SnapCarousel.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
 				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
@@ -566,7 +563,6 @@
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
-				71D2D53529378A6E004229B3 /* PlanView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
