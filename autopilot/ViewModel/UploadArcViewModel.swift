@@ -10,7 +10,7 @@ import SwiftUI
 class UploadArcViewModel: ObservableObject {
     
     func uploadArc() {
-        
+        print("DEBUG: uploading Arc...")
     }
     
 }

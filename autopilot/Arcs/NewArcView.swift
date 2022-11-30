@@ -11,6 +11,7 @@ import Kingfisher
 struct NewArcView: View {
     @Binding var isPresented: Bool
     @State var captionText: String = ""
+    @ObservedObject var viewModel = UploadArcViewModel()
     
     var body: some View {
         NavigationView {
@@ -35,7 +36,9 @@ struct NewArcView: View {
                     Text("Cancel")
                         .foregroundColor(.blue)
                 },
-                                    trailing: Button(action: {}) {
+                                    trailing: Button(action: {
+                    viewModel.uploadArc()
+                }) {
                     Text("Continue")
                         .padding(.horizontal)
                         .padding(.vertical, 8)
