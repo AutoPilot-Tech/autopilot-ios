@@ -9,13 +9,12 @@ import SwiftUI
 import Kingfisher
 
 struct ArcCell: View {
-    let arc: Arc
     
     
     var body: some View {
             VStack(alignment: .leading) {
                 HStack(alignment: .top, spacing: 12) {
-                    KFImage(URL(string: arc.profileImageUrl))
+                    Image("batman")
                         .resizable()
                         .scaledToFill()
                         .clipped()
@@ -25,18 +24,17 @@ struct ArcCell: View {
                     
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
-                            Text(arc.fullname)
+                            Text("Matthew Molinar")
                                 .font(.system(size: 14, weight: .semibold))
                                 .foregroundColor(.black)
                             
-                            Text("@\(arc.username) •")
+                            Text("@ergwrg •")
                                 .foregroundColor(.gray)
                             
-                            Text(arc.timestampString)
-                                .foregroundColor(.gray)
+                            
                         }
                         
-                        Text(arc.description)
+                        Text("Hi")
                             .foregroundColor(.black)
                     }
                 }

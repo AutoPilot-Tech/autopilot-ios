@@ -55,6 +55,7 @@
 		71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5022936CCD7004229B3 /* ArcActionsView.swift */; };
 		71D2D5052936CCFE004229B3 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5042936CCFE004229B3 /* Arc.swift */; };
 		71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5072936D7A0004229B3 /* FeedView.swift */; };
+		71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5092936D9A1004229B3 /* GodView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		71D2D5022936CCD7004229B3 /* ArcActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcActionsView.swift; sourceTree = "<group>"; };
 		71D2D5042936CCFE004229B3 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		71D2D5072936D7A0004229B3 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		71D2D5092936D9A1004229B3 /* GodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +255,7 @@
 				71234FB229368FC000B2FEDC /* UserCell.swift */,
 				71234FB42936926C00B2FEDC /* SearchView.swift */,
 				71234FB6293696A800B2FEDC /* ImagePicker.swift */,
+				71D2D5092936D9A1004229B3 /* GodView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
+				71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
