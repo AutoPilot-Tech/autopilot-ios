@@ -16,7 +16,7 @@ class AuthViewModel: ObservableObject {
     @Published var isAuthenticating = false
     @Published var error: Error?
     @EnvironmentObject var viewModel: AuthViewModel
-//    @Published var user: User?
+    @Published var user: User?
     
     
     init() {
@@ -106,8 +106,7 @@ class AuthViewModel: ObservableObject {
         
         Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
             guard let data = snapshot?.data() else { return }
-            let user = User(dictionary: data)
-            print("DEBUG: User is \(user.username)")
+            self.user = User(dictionary: data)
         }
     }
 }

@@ -29,6 +29,7 @@ struct Arc: Identifiable {
         self.uid = dictionary["uid"] as? String ?? ""
         self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
         self.title = dictionary["title"] as? String ?? ""
+        self.featuredImageUrl = dictionary["featuredImageUrl"] as? String ?? ""
     }
     
     var timestampString: String {

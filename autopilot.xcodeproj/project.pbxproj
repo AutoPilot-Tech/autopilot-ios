@@ -182,7 +182,6 @@
 				52F452532935FAD500406D3F /* GoogleService-Info.plist */,
 				52A2B307293554790061A712 /* Models */,
 				52A2B2C4293527B50061A712 /* autopilotApp.swift */,
-				52A2B2C6293527B50061A712 /* ContentView.swift */,
 				52A2B300293543EC0061A712 /* TabBar */,
 				52A2B2F729352F7E0061A712 /* SlideOver */,
 				52A2B2C8293527B70061A712 /* Assets.xcassets */,
@@ -240,9 +239,10 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52A2B2F8293530060061A712 /* BackgroundView.swift */,
+				52A2B2C6293527B50061A712 /* ContentView.swift */,
 				52F452482935EBFA00406D3F /* Authentication */,
 				52A8D7022935831A00460525 /* Profile */,
-				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B304293553B40061A712 /* Messages */,
 				52F4524D2935EEF400406D3F /* CustomTextField.swift */,
 				52F4524F2935EEFD00406D3F /* TextArea.swift */,

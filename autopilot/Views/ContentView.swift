@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 
 struct ContentView : View {
     @State var searchText = ""
     @EnvironmentObject var viewModel: AuthViewModel
     @State private var isLoggedIn = true
+    let fakeData = ["email": "fake@email.com",
+                "username": "error",
+                "fullname": "error",
+                "profileImageUrl": "error",
+                "uid": "error"]
     
     var body: some View {
         Group {
@@ -145,6 +151,14 @@ struct ContentView : View {
                         
                     }
                     .navigationTitle("Autopilot")
+                    .navigationBarItems(trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
+                        KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
+                            .resizable()
+                            .scaledToFill()
+                            .clipped()
+                            .frame(width: 32, height: 32)
+                            .cornerRadius(16)
+                    })
                     
 
                 }
