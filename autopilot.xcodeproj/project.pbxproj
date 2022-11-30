@@ -246,7 +246,6 @@
 			isa = PBXGroup;
 			children = (
 				71D2D50B2936D9D0004229B3 /* God */,
-				71D2D5062936D791004229B3 /* Feed */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
 				52F452482935EBFA00406D3F /* Authentication */,
@@ -341,6 +340,7 @@
 		71D2D50B2936D9D0004229B3 /* God */ = {
 			isa = PBXGroup;
 			children = (
+				71D2D5062936D791004229B3 /* Feed */,
 				71D2D5092936D9A1004229B3 /* GodView.swift */,
 				71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */,
 			);

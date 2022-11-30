@@ -126,7 +126,7 @@ struct ContentView : View {
                                                 
                                             }
                                             .padding(.top, -65)
-                                            NavigationLink(destination: SearchView()) {
+                                            NavigationLink(destination: GodView()) {
                                                 VStack {
                                                     Image(systemName: "eye.trianglebadge.exclamationmark.fill")
                                                         .resizable()
