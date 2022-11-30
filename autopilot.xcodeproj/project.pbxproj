@@ -56,6 +56,7 @@
 		71D2D5052936CCFE004229B3 /* Arc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5042936CCFE004229B3 /* Arc.swift */; };
 		71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5072936D7A0004229B3 /* FeedView.swift */; };
 		71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D5092936D9A1004229B3 /* GodView.swift */; };
+		71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,7 @@
 		71D2D5042936CCFE004229B3 /* Arc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arc.swift; sourceTree = "<group>"; };
 		71D2D5072936D7A0004229B3 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		71D2D5092936D9A1004229B3 /* GodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodView.swift; sourceTree = "<group>"; };
+		71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GodFilterButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				71D2D50B2936D9D0004229B3 /* God */,
 				71D2D5062936D791004229B3 /* Feed */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
@@ -255,7 +258,6 @@
 				71234FB229368FC000B2FEDC /* UserCell.swift */,
 				71234FB42936926C00B2FEDC /* SearchView.swift */,
 				71234FB6293696A800B2FEDC /* ImagePicker.swift */,
-				71D2D5092936D9A1004229B3 /* GodView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,6 +336,15 @@
 				71D2D5072936D7A0004229B3 /* FeedView.swift */,
 			);
 			path = Feed;
+			sourceTree = "<group>";
+		};
+		71D2D50B2936D9D0004229B3 /* God */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D5092936D9A1004229B3 /* GodView.swift */,
+				71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */,
+			);
+			path = God;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,6 +516,7 @@
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
+				71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */,
 				52F4524A2935EC0700406D3F /* LoginView.swift in Sources */,
 				71234FB329368FC000B2FEDC /* UserCell.swift in Sources */,
 				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
