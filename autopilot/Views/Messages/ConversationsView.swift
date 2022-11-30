@@ -19,9 +19,10 @@ struct ConversationsView: View {
                 SearchBar(text: $searchText, placeholder: "Search chats...")
                 VStack {
                     ForEach(0..<20) { _ in
-                        NavigationLink(destination: ChatView(), label: {
-                            ConversationCell()
-                        })
+//                        NavigationLink(destination: ChatView(), label: {
+//                            ConversationCell()
+//                        })
+                        ConversationCell()
                     }
                 }.padding()
             }
