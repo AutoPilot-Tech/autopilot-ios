@@ -33,20 +33,45 @@ struct ContentView : View {
                             Color.white
                                 .ignoresSafeArea()
 //                            BackgroundView()
-                            CarouselView(itemHeight: 400, views: [
-                            AnyView(
-                                NavigationLink(destination: ArcModeDetailView()) {
-                                    ArcCardContent()
+//                            CarouselView(itemHeight: 400, views: [
+//                            AnyView(
+//                                NavigationLink(destination: ArcModeDetailView()) {
+//                                    ArcCardContent()
+//
+//                                }
+//
+//                                ),
+//                            AnyView(ArcCardContent()),
+//                            AnyView(ArcCardContent()),
+//                            AnyView(ArcCardContent()),
+//
+//                        ])
+//                            .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                            switch autopilotViewRouter.currentPage {
+                            case .home:
+                                Text("Home")
+                                    .padding(.top, 300)
+                            case .arcDetail:
+                                Text("Arc Detail")
+                                    .padding(.top, 300)
 
-                                }
-                                
-                                ),
-                            AnyView(ArcCardContent()),
-                            AnyView(ArcCardContent()),
-                            AnyView(ArcCardContent()),
-                            
-                        ])
-                            .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                            case .arcMode:
+                                Text("Arc Mode")
+                                    .padding(.top, 300)
+
+                            case .explore:
+                                Text("explore")
+                                    .padding(.top, 300)
+
+                            case .coachChat:
+                                Text("coach chat")
+                                    .padding(.top, 300)
+
+                            case .profile:
+                                Text("profile")
+                                    .padding(.top, 300)
+
+                            }
                             VStack {
                                 SlideOverCard {
                                     ZStack(alignment: .topTrailing) {
@@ -76,7 +101,7 @@ struct ContentView : View {
                                                         
 
                                                     HStack {
-                                                        NavigationLink(destination: FreeFlowArcMode()) {
+//                                                        NavigationLink(destination: FreeFlowArcMode()) {
                                                             VStack {
                                                                 Image(systemName: "play.circle.fill")
                                                                     .resizable()
@@ -89,7 +114,10 @@ struct ContentView : View {
                                                                     .font(.footnote)
                                                             }
                                                             .padding(.horizontal, -4)
-                                                        }
+                                                            .onTapGesture {
+                                                                autopilotViewRouter.currentPage = .arcDetail
+                                                            }
+//                                                        }
                                                         
                                                         
                                                         NavigationLink(destination: GodView()) {
