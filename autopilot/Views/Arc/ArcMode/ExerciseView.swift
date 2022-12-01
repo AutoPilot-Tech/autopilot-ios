@@ -30,7 +30,7 @@ struct ExerciseView: View {
 
                     Spacer()
                     
-                    if let url = Bundle.main.url(forResource: "squat", withExtension: "mp4") {
+                    if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
                         VideoPlayer(player: AVPlayer(url: url))
                             .frame(height: geometry.size.height * 0.45)
                             .padding(.bottom, geometry.size.height * 0.30)
