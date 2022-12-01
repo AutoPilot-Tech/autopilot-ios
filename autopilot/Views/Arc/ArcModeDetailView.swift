@@ -8,26 +8,54 @@
 import SwiftUI
 
 struct ArcModeDetailView: View {
+    
     @State var searchText = ""
 
     var body: some View {
         ZStack {
-            VStack {
-                Button(action: {}) {
-                    Image(systemName: "x.square.fill")
-                }
+            Button(action: {} ) {
                 VStack {
-                    Text("Workout Arc Made For You")
-                    Text("Back/Biceps")
+                    Image(systemName: "play.fill")
+                        .foregroundColor(.white)
+                    Text("Start")
+                        .foregroundColor(.white)
+                        
                 }
                 
-                NavigationLink(destination: ArcModeView()) {
-                    Image(systemName: "play.fill")
-                        .frame(width: 64, height: 64)
-                        .background(.blue)
-                        .clipShape(Circle())
-                    .foregroundColor(.white)
+            }
+            .frame(width: 100, height: 100)
+            .background(.blue)
+            .clipShape(Circle())
+            VStack {
+                HStack {
+                    Button(action: {}) {
+                        Image(systemName: "x.square.fill")
+                            .foregroundColor(.red)
+                    }
+                    .padding(.horizontal, 25)
+                    Spacer()
                 }
+                
+                Spacer()
+                VStack {
+                    Text("35 minutes")
+                    Spacer()
+                    VStack(spacing: 10) {
+                        Text("Day 1")
+                        Text("Back/Biceps")
+                    }
+                    
+                    Spacer()
+                    VStack(spacing: 10) {
+                        Text("What you need:")
+                        Text("Bench, dumbbell")
+
+                    }
+                        .padding(.top, 100)
+                    Spacer()
+                }
+                
+                
             }
             
                 
