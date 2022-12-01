@@ -185,17 +185,23 @@ struct ContentView : View {
                         }
                         
                     }
-                    .navigationBarItems(trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
+                    .navigationBarItems(leading: HStack {
+                        Image(systemName: "heart.circle.fill")
+                            .symbolRenderingMode(.multicolor)
+                            .frame(width: 32, height: 32)
+                        Text("Made For You").bold()
+                            .font(.system(size: 32, weight: .heavy))
+                    }, trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
                         KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
                             .resizable()
                             .scaledToFill()
                             .clipped()
                             .frame(width: 32, height: 32)
                             .cornerRadius(16)
-                    })
+                    } )
                     
                     
-                    .navigationBarTitle(Text("Arcs Made For You"))
+                    
                 }
                 
                 
