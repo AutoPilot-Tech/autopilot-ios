@@ -15,24 +15,7 @@ struct ArcModeView: View {
     var body: some View {
         ZStack {
             Text("Arc Mode")
-            SlideOverCard {
-                ZStack(alignment: .topTrailing) {
-                    
-                    GeometryReader { geometry in
-                        VStack {
-                            
-                            // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
-                            Handle()
-                            
-                            // Tab Bar here
-                            ScrollView {
-                                
-                            }
-                            
-                        }
-                    }
-                }
-            }
+            
         }
     }
 }

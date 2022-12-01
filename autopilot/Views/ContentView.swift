@@ -110,6 +110,7 @@ struct ContentView : View {
                                                                 
                                                                 Text("Focus")
                                                                     .font(.footnote)
+                                                                    .foregroundColor(.blue)
                                                             }
                                                             .padding(.horizontal, -4)
                                                             .onTapGesture {
@@ -117,7 +118,6 @@ struct ContentView : View {
                                                             }
                                                         
                                                         
-                                                        NavigationLink(destination: GodView()) {
                                                             VStack {
                                                                 Image(systemName: "magnifyingglass.circle.fill")
                                                                     .resizable()
@@ -128,11 +128,14 @@ struct ContentView : View {
                                                                 
                                                                 Text("Explore")
                                                                     .font(.footnote)
+                                                                    .foregroundColor(.pink)
                                                             }
                                                             .padding(.horizontal, -4)
-                                                        }
+                                                            .onTapGesture {
+                                                            autopilotViewRouter.currentPage = .explore
+                                                            }
                                                         
-                                                        NavigationLink(destination: ConversationsView()) {
+                                                       
                                                             VStack {
                                                                 Image(systemName: "bubble.left.circle.fill")
                                                                     .resizable()
@@ -143,9 +146,15 @@ struct ContentView : View {
                                                                 
                                                                 Text("Your Coach")
                                                                     .font(.footnote)
+                                                                    .foregroundColor(.green)
+
+                                                                    
                                                             }
                                                             .padding(.horizontal, -4)
-                                                        }
+                                                            .onTapGesture {
+                                                            autopilotViewRouter.currentPage = .coachChat
+                                                            }
+                                                        
                                                         
                                                         
                                                         
@@ -209,13 +218,7 @@ struct ContentView : View {
                         }
                         
                     }
-                    .navigationBarItems(leading: HStack {
-                        Image(systemName: "heart.circle.fill")
-                            .symbolRenderingMode(.multicolor)
-                            .frame(width: 40, height: 40)
-                        Text("Made For You").bold()
-                            .font(.system(size: 32, weight: .heavy))
-                    }, trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
+                    .navigationBarItems( trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
                         KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
                             .resizable()
                             .scaledToFill()
