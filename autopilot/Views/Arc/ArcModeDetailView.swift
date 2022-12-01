@@ -11,8 +11,23 @@ struct ArcModeDetailView: View {
     @State var searchText = ""
 
     var body: some View {
-        VStack {
-            Text("Detail View")
+        ZStack {
+            VStack {
+                VStack {
+                    Text("Workout Arc Made For You")
+                    Text("Back/Biceps")
+                }
+                
+                NavigationLink(destination: ArcModeView()) {
+                    Image(systemName: "play.fill")
+                        .frame(width: 64, height: 64)
+                        .background(.blue)
+                        .clipShape(Circle())
+                    .foregroundColor(.white)
+                }
+            }
+            
+                
             SlideOverCard {
                 ZStack(alignment: .topTrailing) {
                     
@@ -113,6 +128,7 @@ struct ArcModeDetailView: View {
                                 .padding(.top, -65)
                                 NavigationLink(destination: GodView()) {
                                     VStack {
+                                        
                                         Image(systemName: "magnifyingglass.circle")
                                             .resizable()
                                             .aspectRatio(contentMode: .fit)

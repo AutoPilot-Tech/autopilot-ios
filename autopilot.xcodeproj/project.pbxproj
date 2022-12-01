@@ -41,6 +41,7 @@
 		7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4F82938409200BDF888 /* ArcModeDetailView.swift */; };
 		7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */; };
 		7122D4FE2938470A00BDF888 /* FreeFlowArcMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */; };
+		7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FF29384AFA00BDF888 /* ArcModeView.swift */; };
 		71234FA629366EEE00B2FEDC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA529366EEE00B2FEDC /* FirebaseAuth */; };
 		71234FA829366EEE00B2FEDC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA729366EEE00B2FEDC /* FirebaseFirestore */; };
 		71234FAA29366EEE00B2FEDC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA929366EEE00B2FEDC /* FirebaseFunctions */; };
@@ -133,6 +134,7 @@
 		7122D4F82938409200BDF888 /* ArcModeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeDetailView.swift; sourceTree = "<group>"; };
 		7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCardContent.swift; sourceTree = "<group>"; };
 		7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeFlowArcMode.swift; sourceTree = "<group>"; };
+		7122D4FF29384AFA00BDF888 /* ArcModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeView.swift; sourceTree = "<group>"; };
 		71234FAE2936716800B2FEDC /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71234FB229368FC000B2FEDC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -284,6 +286,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7122D50129384B0600BDF888 /* Arc */,
 				71D2D50B2936D9D0004229B3 /* God */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
@@ -344,6 +347,16 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
+		7122D50129384B0600BDF888 /* Arc */ = {
+			isa = PBXGroup;
+			children = (
+				7122D4F82938409200BDF888 /* ArcModeDetailView.swift */,
+				7122D4FF29384AFA00BDF888 /* ArcModeView.swift */,
+				7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */,
+			);
+			path = Arc;
+			sourceTree = "<group>";
+		};
 		71234FAD2936715600B2FEDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,8 +392,6 @@
 				71D2D52A29372A9B004229B3 /* ArcCard.swift */,
 				71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */,
 				71D2D53C2937A916004229B3 /* MadeForYou.swift */,
-				7122D4F82938409200BDF888 /* ArcModeDetailView.swift */,
-				7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */,
 			);
 			path = Arcs;
 			sourceTree = "<group>";
@@ -577,6 +588,7 @@
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
 				7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
+				7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
 				71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */,
