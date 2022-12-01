@@ -12,6 +12,7 @@ struct ArcModeView: View {
     @State private var showOverview = false
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
     @Binding var slideTabShowing: Bool
+    @State private var showingAlert = false
 //    @State private var sh
     
     var body: some View {
@@ -22,9 +23,8 @@ struct ArcModeView: View {
                 HStack {
                     Button(action: {
                         // ask if they are sure they want to do this
-                        
+                        showingAlert = true
                         // Go back home
-                        autopilotViewRouter.currentPage = .home
                     }) {
                         Image(systemName: "x.square.fill")
                     }
@@ -34,6 +34,12 @@ struct ArcModeView: View {
                     Spacer()
                 }
                 .padding(.top, UIScreen.main.bounds.height * 0.12)
+                .alert("Quit workout? Your progress will not be saved.", isPresented: $showingAlert) {
+                    Button("Quit", role: .destructive) {
+                        autopilotViewRouter.currentPage = .home
+                        self.slideTabShowing = true
+                    }
+                }
 
                 
                 Spacer()
