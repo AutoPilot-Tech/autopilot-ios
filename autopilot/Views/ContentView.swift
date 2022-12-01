@@ -64,6 +64,7 @@ struct ContentView : View {
                                                             Text("Recommended")
                                                                 .font(.subheadline)
                                                                 .foregroundColor(.gray)
+                                                                .frame(width: 115)
                                                             .padding()
                                                             BetaTag()
                                                             
@@ -90,15 +91,16 @@ struct ContentView : View {
                                                         }
                                                         
                                                         
-                                                        NavigationLink(destination: ContentView()) {
+                                                        NavigationLink(destination: GodView()) {
                                                             VStack {
-                                                                Image(systemName: "heart.circle.fill")
+                                                                Image(systemName: "magnifyingglass.circle.fill")
                                                                     .resizable()
                                                                     .aspectRatio(contentMode: .fit)
                                                                     .frame(width:geometry.size.width/3, height: geometry.size.height/28)
                                                                     .symbolRenderingMode(.multicolor)
+                                                                    .foregroundColor(.pink)
                                                                 
-                                                                Text("For You")
+                                                                Text("Explore")
                                                                     .font(.footnote)
                                                             }
                                                             .padding(.horizontal, -4)
@@ -137,14 +139,18 @@ struct ContentView : View {
                                                     .frame(width: geometry.size.width, height: geometry.size.height/8)
                                                     HStack {
                                                         
-                                                        Text("Shortcuts")
-                                                            .padding()
-                                                            .font(.subheadline)
-                                                            .foregroundColor(.gray)
+                                                        HStack {
+                                                            Text("Shortcuts")
+                                                                .frame(width: 115)
+                                                                .font(.subheadline)
+                                                                .foregroundColor(.gray)
+                                                            ComingSoon()
+                                                            
+                                                        }
                                                         Spacer()
                                                         
                                                     }
-                                                    .padding(.top, -65)
+                                                    .padding(.top, -50)
                                                     NavigationLink(destination: GodView()) {
                                                         VStack {
                                                             Image(systemName: "magnifyingglass.circle")
@@ -230,6 +236,21 @@ struct BetaTag: View {
             .multilineTextAlignment(.center)
             .padding()
             .frame(width: 50, height: 20)
+            .background(Rectangle().fill(Color.blue.opacity(0.3)).shadow(radius: 3))
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            .font(.system(size: 12, weight: .semibold))
+        
+    }
+}
+
+struct ComingSoon: View {
+    var body: some View {
+        Text("Coming Soon")
+            .fixedSize(horizontal: true, vertical: false)
+            .multilineTextAlignment(.center)
+            .padding()
+            .frame(width: 100, height: 20)
             .background(Rectangle().fill(Color.blue.opacity(0.3)).shadow(radius: 3))
             .foregroundColor(.white)
             .cornerRadius(10)

@@ -39,6 +39,7 @@
 		52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F452512935F2C500406D3F /* CustomSecureField.swift */; };
 		52F452542935FAD500406D3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52F452532935FAD500406D3F /* GoogleService-Info.plist */; };
 		7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4F82938409200BDF888 /* ArcModeDetailView.swift */; };
+		7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */; };
 		71234FA629366EEE00B2FEDC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA529366EEE00B2FEDC /* FirebaseAuth */; };
 		71234FA829366EEE00B2FEDC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA729366EEE00B2FEDC /* FirebaseFirestore */; };
 		71234FAA29366EEE00B2FEDC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA929366EEE00B2FEDC /* FirebaseFunctions */; };
@@ -129,6 +130,7 @@
 		52F452512935F2C500406D3F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		52F452532935FAD500406D3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7122D4F82938409200BDF888 /* ArcModeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeDetailView.swift; sourceTree = "<group>"; };
+		7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCardContent.swift; sourceTree = "<group>"; };
 		71234FAE2936716800B2FEDC /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71234FB229368FC000B2FEDC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				52A2B2FC293535BE0061A712 /* SearchBar.swift */,
 				52A2B2F329352EDE0061A712 /* SlideOverCard.swift */,
 				52A2B2F529352F6C0061A712 /* Handle.swift */,
+				7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */,
 			);
 			path = SlideOver;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
 				71D2D5152936EE2B004229B3 /* FeedViewModel.swift in Sources */,
 				71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */,
+				7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */,
 				71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */,
 				71D2D529293721AE004229B3 /* LazyView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
