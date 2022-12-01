@@ -29,7 +29,7 @@ struct ArcModeView: View {
                 
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
-                        ExerciseView(selectedTab: $selectedTab, index: index)
+                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, index: index)
                     }
                 }
                 .padding(.bottom, UIScreen.main.bounds.height * 0.30)

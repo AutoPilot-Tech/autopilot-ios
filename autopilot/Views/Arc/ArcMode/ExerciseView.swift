@@ -11,6 +11,8 @@ import AVKit
 struct ExerciseView: View {
     @Binding var selectedTab: Int
     @State private var showingAlert = false
+    @ObservedObject var autopilotViewRouter: AutopilotViewRouter
+    @Binding var slideTabShowing: Bool
    
     let index: Int
     let totalTime:TimeInterval = 0
@@ -32,7 +34,10 @@ struct ExerciseView: View {
                                     .symbolRenderingMode(.multicolor)
                             }
                             .alert(isPresented: $showingAlert) {
-                                Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {}))
+                                Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {
+                                    slideTabShowing = true
+                                    autopilotViewRouter.currentPage = .home
+                                }))
                             }
                             .padding(.horizontal)
                             Spacer()
@@ -75,6 +80,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), index: 0)
+        ExerciseView(selectedTab: .constant(1), autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false), index: 0)
     }
 }
