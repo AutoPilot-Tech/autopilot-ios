@@ -58,8 +58,8 @@ struct ContentView : View {
                                 .padding(.top, -UIScreen.main.bounds.height * 0.30)
                                 
                             case .arcDetail:
-                                ArcModeDetailView()
-                                    .padding(.top, UIScreen.main.bounds.height * 0.40)
+                                ArcModeDetailView(autopilotViewRouter: autopilotViewRouter)
+                                   
                                     
 
                             case .arcMode:
