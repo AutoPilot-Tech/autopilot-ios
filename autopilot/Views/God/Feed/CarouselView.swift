@@ -75,12 +75,7 @@ struct CarouselView: View {
                 
                 Spacer()
             }
-            VStack{
-                Spacer()
-                Spacer().frame(height:itemHeight + 50)
-                Text("\(relativeLoc() + 1)/\(views.count)").padding()
-                Spacer()
-            }
+            
         }
     }
     

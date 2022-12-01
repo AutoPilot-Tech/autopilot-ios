@@ -75,7 +75,7 @@ struct ContentView : View {
                                                         
 
                                                     HStack {
-                                                        NavigationLink(destination: GodView()) {
+                                                        NavigationLink(destination: FreeFlowArcMode()) {
                                                             VStack {
                                                                 Image(systemName: "play.circle.fill")
                                                                     .resizable()
