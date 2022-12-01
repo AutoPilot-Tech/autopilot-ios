@@ -22,8 +22,12 @@ struct ArcModeView: View {
         ZStack {
             VStack {
                 Text("Timer")
+                    .padding(.top, UIScreen.main.bounds.height * 0.12)
                 Text("Activity Name")
+                Spacer()
+
                 Text("Video Player")
+                Spacer()
             }
           
             

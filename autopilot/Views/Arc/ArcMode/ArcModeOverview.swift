@@ -25,27 +25,36 @@ struct ArcModeOverview: View {
                     header:
                         Text("Core Exercise Block 1").font(.headline)
                 ) {
+                    ForEach(exercisesSet1, id: \.self) {
+                        exercise in Text(exercise)
+                    }
                     
                 }
                 Section(
                     header:
                         Text("Core Exercise Block 2").font(.headline)
                 ) {
-                    
+                    ForEach(exercisesSet2, id: \.self) {
+                        exercise in Text(exercise)
+                    }
                 }
                 
                 Section(
                     header:
                         Text("Accessory 1").font(.headline)
                 ) {
-                    
+                    ForEach(exercisesSet3, id: \.self) {
+                        exercise in Text(exercise)
+                    }
                 }
                 
                 Section(
                     header:
                         Text("Accessory 2").font(.headline)
                 ) {
-                    
+                    ForEach(exercisesSet4, id: \.self) {
+                        exercise in Text(exercise)
+                    }
                 }
             }
         }
