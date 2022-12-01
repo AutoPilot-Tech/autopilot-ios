@@ -16,6 +16,7 @@ struct ArcModeView: View {
     @State private var showingPopup = false
     @State var timerValue: String = "0:00"
     let interval: TimeInterval = 0
+    @State private var selectedTab = 0
     
 //    @State private var sh
     
@@ -24,9 +25,9 @@ struct ArcModeView: View {
             Color.black
                 .ignoresSafeArea()
             VStack {
-                TabView {
+                TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
-                        ExerciseView(index: index)
+                        ExerciseView(selectedTab: $selectedTab, index: index)
                             .padding(.top, UIScreen.main.bounds.height * 0.05)
                     }
                 }
@@ -91,7 +92,9 @@ struct ArcModeView: View {
                                 ArcModeOverview()
                             }
                             
-                            Button(action: {}) {
+                            Button(action: {
+                                selectedTab += 1
+                            }) {
                                 Image(systemName: "chevron.right.circle.fill")
                                     .resizable()
                                     .frame(width: 32, height: 32)
