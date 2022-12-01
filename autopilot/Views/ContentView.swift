@@ -53,7 +53,7 @@ struct ContentView : View {
                             ),
                             AnyView(Text("last view")),
                         ])
-                            .padding(.bottom, UIScreen.main.bounds.height / 3)
+                            .padding(.bottom, UIScreen.main.bounds.height * 0.20)
                             VStack {
                                 SlideOverCard {
                                     ZStack(alignment: .topTrailing) {
@@ -194,7 +194,8 @@ struct ContentView : View {
                             .cornerRadius(16)
                     })
                     
-                    .navigationTitle("Arcs For You")
+                    
+                    .navigationBarTitle(Text("Arcs Made For You"))
                 }
                 
                 
