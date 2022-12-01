@@ -40,10 +40,12 @@ struct ContentView : View {
                             case .home:
                                 CarouselView(itemHeight: 400, views: [
                                 AnyView(
-                                    NavigationLink(destination: ArcModeDetailView()) {
-                                        ArcCardContent()
-
+                                    
+                                    ArcCardContent().onTapGesture {
+                                        autopilotViewRouter.currentPage = .arcDetail
                                     }
+
+                                    
 
                                     ),
                                 AnyView(ArcCardContent()),
@@ -51,7 +53,7 @@ struct ContentView : View {
                                 AnyView(ArcCardContent()),
 
                             ])
-                                .padding(.top, -UIScreen.main.bounds.height * 0.20)
+                                .padding(.top, -UIScreen.main.bounds.height * 0.30)
                                 
                             case .arcDetail:
                                 ArcModeDetailView()
@@ -65,7 +67,7 @@ struct ContentView : View {
                             case .explore:
                                 VStack {
                                     GodView()
-                                        .padding(.top, UIScreen.main.bounds.height * 0.15)
+                                        .padding(.top, UIScreen.main.bounds.height * 0.14)
                                 }
                                 
 
@@ -86,7 +88,7 @@ struct ContentView : View {
                                                 
                                                 // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
                                                 Handle()
-                                                SearchBar(text: $searchText, placeholder: "What do you want to do?")
+//                                                SearchBar(text: $searchText, placeholder: "What do you want to do?")
                                                 // Tab Bar here
                                                 ScrollView {
                                                     HStack {
