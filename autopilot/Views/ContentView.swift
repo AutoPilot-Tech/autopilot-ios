@@ -15,7 +15,6 @@ struct ContentView : View {
     @State var textfield_val = ""
     @State var heartFilled = false
     @EnvironmentObject var viewModel: AuthViewModel
-    @ObservedObject var arcViewModel = CarouselViewModel()
     @State private var isLoggedIn = true
     let fakeData = ["email": "fake@email.com",
                 "username": "error",
