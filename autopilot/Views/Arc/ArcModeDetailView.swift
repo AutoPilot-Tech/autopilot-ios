@@ -37,7 +37,9 @@ struct ArcModeDetailView: View {
                         Text("Back/Biceps")
                     }
                     Spacer()
-                    Button(action: {} ) {
+                    Button(action: {
+                        autopilotViewRouter.currentPage = .arcMode
+                    } ) {
                         VStack {
                             Image(systemName: "play.fill")
                                 .foregroundColor(.white)

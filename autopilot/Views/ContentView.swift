@@ -63,7 +63,7 @@ struct ContentView : View {
                                     
 
                             case .arcMode:
-                                ArcModeView()
+                                ArcModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                     
 
                             case .explore:
