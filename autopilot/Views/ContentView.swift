@@ -155,14 +155,14 @@ struct ContentView : View {
                                                     .padding(.top, -65)
                                                     NavigationLink(destination: GodView()) {
                                                         VStack {
-                                                            Image(systemName: "eye.trianglebadge.exclamationmark.fill")
+                                                            Image(systemName: "magnifyingglass.circle")
                                                                 .resizable()
                                                                 .aspectRatio(contentMode: .fit)
                                                                 .frame(width:geometry.size.width/3, height: geometry.size.height/28)
                                                                 .symbolRenderingMode(.multicolor)
-                                                                .foregroundColor(.green)
+                                                                .foregroundColor(.pink)
                                                             
-                                                            Text("God View")
+                                                            Text("Explore")
                                                                 .font(.footnote)
                                                         }
                                                         .padding(.horizontal, -4)
