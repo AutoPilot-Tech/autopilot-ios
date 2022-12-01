@@ -14,11 +14,14 @@ struct ArcModeView: View {
     @Binding var slideTabShowing: Bool
     @State private var showingAlert = false
     @State private var showingPopup = false
+    @State var timerValue: String = "0:00"
     
 //    @State private var sh
     
     var body: some View {
         ZStack {
+            Color.black
+                .ignoresSafeArea()
             VStack {
                 TabView {
                     ForEach(0 ..< 4) { index in
@@ -107,6 +110,8 @@ struct ArcModeView: View {
                 Image(systemName: "x.square.fill")
                     .foregroundColor(.red)
             } )
+//            .navigationTitle(timerValue)
+//            .navigationBarTitleDisplayMode(.inline)
             .alert("Are you sure you want to quit this workout?", isPresented: $showingAlert) {
                 Button("Quit", role: .destructive) {
                     self.slideTabShowing = true

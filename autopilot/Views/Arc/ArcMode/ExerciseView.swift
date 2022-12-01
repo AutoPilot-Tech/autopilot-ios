@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ExerciseView: View {
     let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
@@ -13,14 +14,30 @@ struct ExerciseView: View {
     let index: Int
     
     var body: some View {
-        VStack {
-            Text("Timer")
-            Text(exerciseNames[index])
+        ZStack {
+            Color.black
+                .ignoresSafeArea()
+            GeometryReader { geometry in
+                VStack {
+                    
+                    Text("Timer")
+                        .foregroundColor(.white)
+                        
+                    Text(exerciseNames[index])
+                        .foregroundColor(.white)
 
-            Spacer()
-            
-            Text("Video Player")
-            Spacer()
+                    Spacer()
+                    
+                    if let url = Bundle.main.url(forResource: "squat", withExtension: "mp4") {
+                        VideoPlayer(player: AVPlayer(url: url))
+                            .frame(height: geometry.size.height * 0.45)
+                            .padding(.bottom, geometry.size.height * 0.30)
+                    } else {
+                        Text("Couldn't find \(videoNames[index]).mp4").foregroundColor(.red)
+                    }
+                    Spacer()
+                }
+            }
         }
         
     }
