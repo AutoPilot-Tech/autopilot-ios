@@ -74,6 +74,8 @@ struct ExerciseView: View {
                     Spacer()
                 }
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
         
     }
