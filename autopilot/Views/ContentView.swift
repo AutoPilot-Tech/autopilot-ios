@@ -194,7 +194,7 @@ struct ContentView : View {
                             .cornerRadius(16)
                     })
                     
-
+                    .navigationTitle("Arcs For You")
                 }
                 
                 
