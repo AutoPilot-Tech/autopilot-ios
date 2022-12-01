@@ -28,7 +28,7 @@ struct RegistrationView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView()
+//            BackgroundView()
             VStack {
                 
                 Button(action: {

@@ -70,7 +70,6 @@
 		71D2D52B29372A9B004229B3 /* ArcCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52A29372A9B004229B3 /* ArcCard.swift */; };
 		71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52C29376AD5004229B3 /* CustomBlurView.swift */; };
 		71D2D52F29377443004229B3 /* GlassMorphicCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D52E29377443004229B3 /* GlassMorphicCard.swift */; };
-		71D2D533293783C9004229B3 /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D532293783C9004229B3 /* CarouselViewModel.swift */; };
 		71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53829379DF8004229B3 /* CarouselView.swift */; };
 		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
@@ -155,7 +154,6 @@
 		71D2D52A29372A9B004229B3 /* ArcCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCard.swift; sourceTree = "<group>"; };
 		71D2D52C29376AD5004229B3 /* CustomBlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlurView.swift; sourceTree = "<group>"; };
 		71D2D52E29377443004229B3 /* GlassMorphicCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassMorphicCard.swift; sourceTree = "<group>"; };
-		71D2D532293783C9004229B3 /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
 		71D2D53829379DF8004229B3 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 				71D2D5162936F486004229B3 /* ProfileViewModel.swift */,
 				71D2D51C293702A2004229B3 /* ChatViewModel.swift */,
 				71D2D524293715E8004229B3 /* ConversationsViewModel.swift */,
-				71D2D532293783C9004229B3 /* CarouselViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -544,7 +541,6 @@
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
 				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
-				71D2D533293783C9004229B3 /* CarouselViewModel.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,

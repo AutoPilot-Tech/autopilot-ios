@@ -22,7 +22,7 @@ struct MadeForYou: View {
                         .rotation3DEffect(.degrees(animate ? 30 : 0), axis: (x: animate ? 0 : 0.5, y: animate ? 0.2 : 0.7, z: animate ? 0.4 : 0))
                         .animation(Animation.easeInOut(duration: 10).repeatForever(autoreverses: true))
                     RoundedRectangle(cornerRadius: 10)
-                        .fill(.white)
+                        .fill(.red)
                         .blur(radius: 20)
                         .offset(x: animate ? -120 : 10,y :animate ? -100 : 20)
                         .rotation3DEffect(.degrees(animate ? 80 : 20), axis: (x: animate ? 0.4 : 0, y: animate ? 0 : 0.1, z: animate ? 0 : 0.5))

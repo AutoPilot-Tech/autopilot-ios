@@ -15,7 +15,7 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                BackgroundView()
+//                BackgroundView()
                 VStack {
                     
                     Image("owl_2")

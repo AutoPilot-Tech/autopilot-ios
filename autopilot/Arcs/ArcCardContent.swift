@@ -13,7 +13,7 @@ struct ArcCardContent: View {
             VStack {
                 ZStack {
                     Color.white.opacity(0.7)
-                    BackgroundView()
+//                    BackgroundView()
                         .frame(width: geo.size.width, height: geo.size.height * 0.85)
                         
                     VStack {

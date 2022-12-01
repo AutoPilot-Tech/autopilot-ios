@@ -32,13 +32,10 @@ struct ContentView : View {
                         ZStack(alignment: Alignment.top) {
                             Color.white
                                 .ignoresSafeArea()
-                            BackgroundView()
+//                            BackgroundView()
                             CarouselView(itemHeight: 400, views: [
-                            AnyView(
-                                VStack{
-                                    MadeForYou()
-                                
-                            }),
+                            AnyView(ArcCardContent()
+                                ),
                             AnyView(ArcCardContent()),
                             AnyView(ArcCardContent()),
                             AnyView(ArcCardContent()),
