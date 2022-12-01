@@ -26,6 +26,7 @@ struct FeedView: View {
                         }
                     }
                 }
+                .padding()
             }
             
             Button(action: { isSHowingNewArcView.toggle() }, label: {

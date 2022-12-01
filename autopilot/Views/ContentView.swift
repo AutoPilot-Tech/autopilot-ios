@@ -23,6 +23,8 @@ struct ContentView : View {
                 "profileImageUrl": "error",
                 "uid": "error"]
     
+    
+    
     var body: some View {
         Group {
             if (viewModel.userSession != nil) {
@@ -53,6 +55,7 @@ struct ContentView : View {
                                 
                             case .arcDetail:
                                 ArcModeDetailView()
+                                    .padding(.top, UIScreen.main.bounds.height * 0.40)
                                     
 
                             case .arcMode:
@@ -67,8 +70,7 @@ struct ContentView : View {
                                 
 
                             case .coachChat:
-                                ConversationsView()
-                                    
+                                ChatView(user: COACH_MATTHEW)
 
                             case .profile:
                                 UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))
@@ -102,7 +104,16 @@ struct ContentView : View {
                                                         
                                                     }
                                                         
-
+                                                    // Recommended Tabs
+//                                                    switch autopilotViewRouter.currentPage {
+//                                                    case .home:
+//                                                        break
+//                                                    case .explore:
+//                                                        break
+//                                                    case .coachChat:
+//                                                        break
+//
+//                                                    }
                                                     HStack {
                                                             VStack {
                                                                 Image(systemName: "play.circle.fill")
@@ -140,24 +151,24 @@ struct ContentView : View {
                                                             }
                                                         
                                                        
+                                                        NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
                                                             VStack {
-                                                                Image(systemName: "bubble.left.circle.fill")
-                                                                    .resizable()
-                                                                    .aspectRatio(contentMode: .fit)
-                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                    .symbolRenderingMode(.multicolor)
-                                                                    .foregroundColor(.green)
-                                                                
-                                                                Text("Your Coach")
-                                                                    .font(.footnote)
-                                                                    .foregroundColor(.green)
-
+                                                                    Image(systemName: "bubble.left.circle.fill")
+                                                                        .resizable()
+                                                                        .aspectRatio(contentMode: .fit)
+                                                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                        .symbolRenderingMode(.multicolor)
+                                                                        .foregroundColor(.green)
                                                                     
-                                                            }
+                                                                    Text("Your Coach")
+                                                                        .font(.footnote)
+                                                                        .foregroundColor(.green)
+
+                                                                        
+                                                                }
                                                             .padding(.horizontal, -4)
-                                                            .onTapGesture {
-                                                            autopilotViewRouter.currentPage = .coachChat
-                                                            }
+                                                        }
+                                                            
                                                         
                                                         
                                                         

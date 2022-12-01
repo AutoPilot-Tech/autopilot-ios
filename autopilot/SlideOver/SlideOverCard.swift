@@ -25,7 +25,7 @@ struct SlideOverCard<Content: View> : View {
             VStack {
                 HStack {
                     Spacer()
-                    NavigationLink(destination: GodView()) {
+                    NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
                         VStack {
                             Image("batman")
                                 .resizable()
