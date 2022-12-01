@@ -44,6 +44,8 @@
 		7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FF29384AFA00BDF888 /* ArcModeView.swift */; };
 		7122D5062938504700BDF888 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D5052938504700BDF888 /* TimerView.swift */; };
 		7122D50A293860F700BDF888 /* AutopilotViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D509293860F700BDF888 /* AutopilotViewRouter.swift */; };
+		7122D50D2938A59A00BDF888 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D50C2938A59A00BDF888 /* Popup.swift */; };
+		7122D50F2938ACF700BDF888 /* ArcModeOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */; };
 		71234FA629366EEE00B2FEDC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA529366EEE00B2FEDC /* FirebaseAuth */; };
 		71234FA829366EEE00B2FEDC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA729366EEE00B2FEDC /* FirebaseFirestore */; };
 		71234FAA29366EEE00B2FEDC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA929366EEE00B2FEDC /* FirebaseFunctions */; };
@@ -139,6 +141,8 @@
 		7122D4FF29384AFA00BDF888 /* ArcModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeView.swift; sourceTree = "<group>"; };
 		7122D5052938504700BDF888 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		7122D509293860F700BDF888 /* AutopilotViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutopilotViewRouter.swift; sourceTree = "<group>"; };
+		7122D50C2938A59A00BDF888 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
+		7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeOverview.swift; sourceTree = "<group>"; };
 		71234FAE2936716800B2FEDC /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71234FB229368FC000B2FEDC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -366,8 +370,17 @@
 				7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */,
 				7122D4FF29384AFA00BDF888 /* ArcModeView.swift */,
 				7122D5052938504700BDF888 /* TimerView.swift */,
+				7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */,
 			);
 			path = ArcMode;
+			sourceTree = "<group>";
+		};
+		7122D50B2938A57A00BDF888 /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				7122D50C2938A59A00BDF888 /* Popup.swift */,
+			);
+			path = Popup;
 			sourceTree = "<group>";
 		};
 		71234FAD2936715600B2FEDC /* ViewModel */ = {
@@ -387,6 +400,7 @@
 		71D2D4FA2936B9BB004229B3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				7122D50B2938A57A00BDF888 /* Popup */,
 				71D2D4FB2936B9DB004229B3 /* Constants.swift */,
 				71D2D528293721AE004229B3 /* LazyView.swift */,
 				71D2D52C29376AD5004229B3 /* CustomBlurView.swift */,
@@ -583,6 +597,7 @@
 				71D2D52729371C31004229B3 /* NewMessageView.swift in Sources */,
 				52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */,
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,
+				7122D50D2938A59A00BDF888 /* Popup.swift in Sources */,
 				71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */,
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
@@ -604,6 +619,7 @@
 				7122D5062938504700BDF888 /* TimerView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */,
+				7122D50F2938ACF700BDF888 /* ArcModeOverview.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
 				71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */,

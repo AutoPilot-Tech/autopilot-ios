@@ -16,18 +16,7 @@ struct ArcModeDetailView: View {
         ZStack {
             
             VStack {
-                HStack {
-                    Button(action: {
-                        self.slideTabShowing = true
-                        autopilotViewRouter.currentPage = .home
-                        print("ok")
-                    }) {
-                        Image(systemName: "x.square.fill")
-                            .foregroundColor(.red)
-                    }
-                    .padding(.horizontal, 25)
-                    Spacer()
-                }
+                
                 
                 Spacer()
                 VStack {
@@ -68,7 +57,13 @@ struct ArcModeDetailView: View {
             }
             
                 
-            
+            .navigationBarItems( leading: Button(action: {
+                self.slideTabShowing = true
+                autopilotViewRouter.currentPage = .home
+            }) {
+                Image(systemName: "x.square.fill")
+                    .foregroundColor(.red)
+            } )
         }
     }
 }
