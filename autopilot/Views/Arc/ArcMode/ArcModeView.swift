@@ -21,7 +21,10 @@ struct ArcModeView: View {
             VStack {
                 HStack {
                     Button(action: {
+                        // ask if they are sure they want to do this
+                        
                         // Go back home
+                        autopilotViewRouter.currentPage = .home
                     }) {
                         Image(systemName: "x.square.fill")
                     }
