@@ -28,11 +28,12 @@ struct ArcModeView: View {
                     }) {
                         Image(systemName: "x.square.fill")
                     }
-                    .padding(.horizontal)
+                    
                     Spacer()
                     Text("Timer")
                     Spacer()
                 }
+                .padding(.horizontal, 30)
                 .padding(.top, UIScreen.main.bounds.height * 0.12)
                 .alert("Quit workout? Your progress will not be saved.", isPresented: $showingAlert) {
                     Button("Quit", role: .destructive) {

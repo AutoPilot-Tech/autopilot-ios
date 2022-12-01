@@ -20,6 +20,7 @@ struct ArcModeDetailView: View {
                     Button(action: {
                         self.slideTabShowing = true
                         autopilotViewRouter.currentPage = .home
+                        print("ok")
                     }) {
                         Image(systemName: "x.square.fill")
                             .foregroundColor(.red)
