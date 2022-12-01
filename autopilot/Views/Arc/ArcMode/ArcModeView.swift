@@ -17,6 +17,7 @@ struct ArcModeView: View {
     @State var timerValue: String = "0:00"
     let interval: TimeInterval = 0
     @State private var selectedTab = 0
+    @State var lastExercise = false
     
 //    @State private var sh
     

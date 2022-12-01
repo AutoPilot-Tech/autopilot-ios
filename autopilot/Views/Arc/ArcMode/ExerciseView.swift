@@ -13,6 +13,7 @@ struct ExerciseView: View {
     @State private var showingAlert = false
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
     @Binding var slideTabShowing: Bool
+    
    
     let index: Int
     let totalTime:TimeInterval = 0
