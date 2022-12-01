@@ -19,19 +19,21 @@ struct UserProfileView: View {
     }
     var body: some View {
         
-        ScrollView {
             VStack {
                 ProfileHeaderView(viewModel: viewModel)
                     .padding()
                 FilterButtonView(selectedOption: $selectedFilter)
                 
-                if selectedFilter == .arcs {
-                    ForEach(viewModel.userArcs) { arc in
-                        ArcCell(arc: arc)
-                            .padding()
+                ScrollView {
+                    if selectedFilter == .arcs {
+                        ForEach(viewModel.userArcs) { arc in
+                            ArcCell(arc: arc)
+                                .padding()
+                        }
                     }
                 }
-            }
+                
+            
             
             .navigationTitle(user.fullname)
         }
