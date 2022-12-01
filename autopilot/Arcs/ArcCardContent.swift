@@ -22,11 +22,10 @@ struct ArcCardContent: View {
                             .font(.largeTitle)
                         Text("35 min")
                             .foregroundColor(.white)
-                        Button(action: {}) {
-                            Image(systemName: "play.fill")
+                        Image(systemName: "play.fill")
                                 .frame(width: 64, height: 64)
 
-                        }
+                        
                         .background(.blue)
                         .clipShape(Circle())
                         .foregroundColor(.white)
