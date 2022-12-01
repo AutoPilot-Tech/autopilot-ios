@@ -14,7 +14,6 @@ struct GodView: View {
         VStack {
             GodFilterButtonView(selectedOption: $selectedFilter)
             Spacer()
-                .navigationTitle("Explore")
             if selectedFilter == .arcs {
                 FeedView()
             } else if selectedFilter == .users {
