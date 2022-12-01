@@ -20,22 +20,12 @@ struct ArcModeView: View {
     var body: some View {
         ZStack {
             VStack {
-//                Text("Timer")
-//                    .padding(.top, UIScreen.main.bounds.height * 0.12)
                 TabView {
                     ForEach(0 ..< 4) { index in
                         ExerciseView(index: index)
-                            .padding(.top, UIScreen.main.bounds.height * 0.12)
+                            .padding(.top, UIScreen.main.bounds.height * 0.05)
                     }
-                
                 }
-                
-
-
-                Spacer()
-
-                Text("Video Player")
-                Spacer()
             }
           
             
