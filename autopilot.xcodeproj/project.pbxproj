@@ -38,6 +38,7 @@
 		52F452502935EEFD00406D3F /* TextArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F4524F2935EEFD00406D3F /* TextArea.swift */; };
 		52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F452512935F2C500406D3F /* CustomSecureField.swift */; };
 		52F452542935FAD500406D3F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52F452532935FAD500406D3F /* GoogleService-Info.plist */; };
+		7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4F82938409200BDF888 /* ArcModeDetailView.swift */; };
 		71234FA629366EEE00B2FEDC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA529366EEE00B2FEDC /* FirebaseAuth */; };
 		71234FA829366EEE00B2FEDC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA729366EEE00B2FEDC /* FirebaseFirestore */; };
 		71234FAA29366EEE00B2FEDC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA929366EEE00B2FEDC /* FirebaseFunctions */; };
@@ -127,6 +128,7 @@
 		52F4524F2935EEFD00406D3F /* TextArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextArea.swift; sourceTree = "<group>"; };
 		52F452512935F2C500406D3F /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
 		52F452532935FAD500406D3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7122D4F82938409200BDF888 /* ArcModeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeDetailView.swift; sourceTree = "<group>"; };
 		71234FAE2936716800B2FEDC /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71234FB229368FC000B2FEDC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				71D2D52A29372A9B004229B3 /* ArcCard.swift */,
 				71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */,
 				71D2D53C2937A916004229B3 /* MadeForYou.swift */,
+				7122D4F82938409200BDF888 /* ArcModeDetailView.swift */,
 			);
 			path = Arcs;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
+				7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,

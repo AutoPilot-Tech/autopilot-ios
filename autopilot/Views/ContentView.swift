@@ -33,25 +33,17 @@ struct ContentView : View {
                                 .ignoresSafeArea()
 //                            BackgroundView()
                             CarouselView(itemHeight: 400, views: [
-                            AnyView(ArcCardContent()
+                            AnyView(
+                                NavigationLink(destination: ArcModeDetailView()) {
+                                    ArcCardContent()
+
+                                }
+                                
                                 ),
                             AnyView(ArcCardContent()),
                             AnyView(ArcCardContent()),
                             AnyView(ArcCardContent()),
-                            AnyView(
-                                ZStack{
-                                    if heartFilled {
-                                        Image(systemName:"heart")
-                                    } else {
-                                        Image(systemName:"heart.fill")
-                                    }
-                                }
-                            ),
-                            AnyView(
-                                Button(action: {self.heartFilled.toggle()})
-                                {Text("Fill the heart")}
-                            ),
-                            AnyView(Text("last view")),
+                            
                         ])
                             .padding(.bottom, UIScreen.main.bounds.height * 0.20)
                             VStack {
@@ -188,7 +180,7 @@ struct ContentView : View {
                     .navigationBarItems(leading: HStack {
                         Image(systemName: "heart.circle.fill")
                             .symbolRenderingMode(.multicolor)
-                            .frame(width: 32, height: 32)
+                            .frame(width: 40, height: 40)
                         Text("Made For You").bold()
                             .font(.system(size: 32, weight: .heavy))
                     }, trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
@@ -224,6 +216,7 @@ struct ContentView : View {
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()
+                .environmentObject(AuthViewModel())
         }
     }
     
