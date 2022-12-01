@@ -14,8 +14,42 @@ struct ArcModeView: View {
     
     var body: some View {
         ZStack {
-            Text("Arc Mode")
+            Text("Video Player")
+
+            VStack {
+                HStack {
+                    Button(action: {
+                        // Go back home
+                    }) {
+                        Image(systemName: "x.square.fill")
+                    }
+                    .padding(.horizontal)
+                    Spacer()
+                    Text("Timer")
+                    Spacer()
+                }
+                .padding(.top, UIScreen.main.bounds.height * 0.12)
+
+                
+                Spacer()
+            }
             
+            SlideOverCard {
+                VStack {
+                    Handle()
+                    ProgressView("Activity Name", value: 50, total: 100)
+                    HStack {
+                        Text("Weight")
+                        Text("Reps")
+
+                        Text("Overview")
+                        
+                        Text("Next")
+
+                    }
+                    Spacer()
+                }
+            }
         }
     }
 }

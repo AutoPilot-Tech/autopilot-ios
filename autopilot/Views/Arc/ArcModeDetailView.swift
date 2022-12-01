@@ -13,6 +13,9 @@ struct ArcModeDetailView: View {
     var body: some View {
         ZStack {
             VStack {
+                Button(action: {}) {
+                    Image(systemName: "x.square.fill")
+                }
                 VStack {
                     Text("Workout Arc Made For You")
                     Text("Back/Biceps")
@@ -28,7 +31,7 @@ struct ArcModeDetailView: View {
             }
             
                 
-        
+            
         }
     }
 }
