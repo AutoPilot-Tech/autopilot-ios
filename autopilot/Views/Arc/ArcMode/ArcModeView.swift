@@ -14,16 +14,24 @@ struct ArcModeView: View {
     @Binding var slideTabShowing: Bool
     @State private var showingAlert = false
     @State private var showingPopup = false
-    let workoutDateRange = Date()...Date().addingTimeInterval(5*60)
     
 //    @State private var sh
     
     var body: some View {
         ZStack {
             VStack {
-                Text("Timer")
-                    .padding(.top, UIScreen.main.bounds.height * 0.12)
-                Text("Activity Name")
+//                Text("Timer")
+//                    .padding(.top, UIScreen.main.bounds.height * 0.12)
+                TabView {
+                    ForEach(0 ..< 4) { index in
+                        ExerciseView(index: index)
+                            .padding(.top, UIScreen.main.bounds.height * 0.12)
+                    }
+                
+                }
+                
+
+
                 Spacer()
 
                 Text("Video Player")
