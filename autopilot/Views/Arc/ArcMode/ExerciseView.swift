@@ -10,6 +10,7 @@ import AVKit
 
 struct ExerciseView: View {
     @Binding var selectedTab: Int
+    @State private var showingAlert = false
    
     let index: Int
     let totalTime:TimeInterval = 0
@@ -20,13 +21,40 @@ struct ExerciseView: View {
                 .ignoresSafeArea()
             GeometryReader { geometry in
                 VStack {
-                    
-                    Text(Date().addingTimeInterval(totalTime), style: .timer)
-                        .font(.system(size: 40))
-                        .foregroundColor(.white)
+                    Spacer()
+                    ZStack {
+                        HStack {
+                            Button(action: {
+                                showingAlert = true
+                            }) {
+                                Image(systemName: "x.square.fill")
+                                    .foregroundColor(.red)
+                                    .symbolRenderingMode(.multicolor)
+                            }
+                            .alert(isPresented: $showingAlert) {
+                                Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {}))
+                            }
+                            .padding(.horizontal)
+                            Spacer()
+                            
+                            
+                        }
+                        HStack {
+                            Spacer()
+                            VStack {
+                                Text(Date().addingTimeInterval(totalTime), style: .timer)
+                                    .font(.system(size: 40))
+                                .foregroundColor(.white)
+                                Text(Exercise.exercises[index].exerciseName)
+                                    .foregroundColor(.white)
+                            }
+                            Spacer()
+                        }
                         
-                    Text(Exercise.exercises[index].exerciseName)
-                        .foregroundColor(.white)
+                    }
+                    
+                        
+                    
 
                     Spacer()
                     

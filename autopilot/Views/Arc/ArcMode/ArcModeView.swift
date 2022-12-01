@@ -21,16 +21,18 @@ struct ArcModeView: View {
 //    @State private var sh
     
     var body: some View {
-        ZStack {
-            Color.black
-                .ignoresSafeArea()
+        ZStack(alignment: .top) {
+           
+            
+
             VStack {
+                
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
                         ExerciseView(selectedTab: $selectedTab, index: index)
-                            .padding(.top, UIScreen.main.bounds.height * 0.05)
                     }
                 }
+                .padding(.bottom, UIScreen.main.bounds.height * 0.30)
             }
           
             
@@ -108,20 +110,11 @@ struct ArcModeView: View {
                     }
                 }
             }
-            .navigationBarItems( leading: Button(action: {
-                showingAlert = true
-            }) {
-                Image(systemName: "x.square.fill")
-                    .foregroundColor(.red)
-            } )
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
 //            .navigationTitle(timerValue)
 //            .navigationBarTitleDisplayMode(.inline)
-            .alert("Are you sure you want to quit this workout?", isPresented: $showingAlert) {
-                Button("Quit", role: .destructive) {
-                    self.slideTabShowing = true
-                    autopilotViewRouter.currentPage = .home
-                }
-            }
+            
         }
         .popup(isPresented: $showingPopup) {
             ZStack {
