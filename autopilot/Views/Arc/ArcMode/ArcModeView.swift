@@ -25,7 +25,7 @@ struct ArcModeView: View {
                 .ignoresSafeArea()
             VStack {
                 TabView {
-                    ForEach(0 ..< 4) { index in
+                    ForEach(0 ..< Exercise.exercises.count) { index in
                         ExerciseView(index: index)
                             .padding(.top, UIScreen.main.bounds.height * 0.05)
                     }

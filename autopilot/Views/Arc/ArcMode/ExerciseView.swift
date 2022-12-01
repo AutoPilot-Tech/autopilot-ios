@@ -9,8 +9,7 @@ import SwiftUI
 import AVKit
 
 struct ExerciseView: View {
-    let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
-    let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
+   
     let index: Int
     let totalTime:TimeInterval = 0
     
@@ -25,7 +24,7 @@ struct ExerciseView: View {
                         .font(.system(size: 40))
                         .foregroundColor(.white)
                         
-                    Text(exerciseNames[index])
+                    Text(Exercise.exercises[index].exerciseName)
                         .foregroundColor(.white)
 
                     Spacer()
@@ -35,7 +34,7 @@ struct ExerciseView: View {
                             .frame(height: geometry.size.height * 0.45)
                             .padding(.bottom, geometry.size.height * 0.30)
                     } else {
-                        Text("Couldn't find \(videoNames[index]).mp4").foregroundColor(.red)
+                        Text("Couldn't find \(Exercise.exercises[index].videoName).mp4").foregroundColor(.red)
                     }
                     Spacer()
                 }
