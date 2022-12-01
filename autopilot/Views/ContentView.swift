@@ -33,43 +33,42 @@ struct ContentView : View {
                             Color.white
                                 .ignoresSafeArea()
 //                            BackgroundView()
-//                            CarouselView(itemHeight: 400, views: [
-//                            AnyView(
-//                                NavigationLink(destination: ArcModeDetailView()) {
-//                                    ArcCardContent()
-//
-//                                }
-//
-//                                ),
-//                            AnyView(ArcCardContent()),
-//                            AnyView(ArcCardContent()),
-//                            AnyView(ArcCardContent()),
-//
-//                        ])
-//                            .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+
                             switch autopilotViewRouter.currentPage {
                             case .home:
-                                Text("Home")
-                                    .padding(.top, 300)
+                                CarouselView(itemHeight: 400, views: [
+                                AnyView(
+                                    NavigationLink(destination: ArcModeDetailView()) {
+                                        ArcCardContent()
+
+                                    }
+
+                                    ),
+                                AnyView(ArcCardContent()),
+                                AnyView(ArcCardContent()),
+                                AnyView(ArcCardContent()),
+
+                            ])
+                                .padding(.bottom, UIScreen.main.bounds.height * 0.20)
                             case .arcDetail:
-                                Text("Arc Detail")
-                                    .padding(.top, 300)
+                                ArcModeDetailView()
+                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
 
                             case .arcMode:
-                                Text("Arc Mode")
-                                    .padding(.top, 300)
+                                ArcModeView()
+                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
 
                             case .explore:
-                                Text("explore")
-                                    .padding(.top, 300)
+                                GodView()
+                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
 
                             case .coachChat:
-                                Text("coach chat")
-                                    .padding(.top, 300)
+                                ConversationsView()
+                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
 
                             case .profile:
-                                Text("profile")
-                                    .padding(.top, 300)
+                                UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))
+                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
 
                             }
                             VStack {
@@ -101,7 +100,6 @@ struct ContentView : View {
                                                         
 
                                                     HStack {
-//                                                        NavigationLink(destination: FreeFlowArcMode()) {
                                                             VStack {
                                                                 Image(systemName: "play.circle.fill")
                                                                     .resizable()
@@ -117,7 +115,6 @@ struct ContentView : View {
                                                             .onTapGesture {
                                                                 autopilotViewRouter.currentPage = .arcDetail
                                                             }
-//                                                        }
                                                         
                                                         
                                                         NavigationLink(destination: GodView()) {
@@ -135,7 +132,7 @@ struct ContentView : View {
                                                             .padding(.horizontal, -4)
                                                         }
                                                         
-                                                        NavigationLink(destination: GodView()) {
+                                                        NavigationLink(destination: ConversationsView()) {
                                                             VStack {
                                                                 Image(systemName: "bubble.left.circle.fill")
                                                                     .resizable()
