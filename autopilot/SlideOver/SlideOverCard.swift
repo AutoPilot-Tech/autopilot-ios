@@ -47,7 +47,7 @@ struct SlideOverCard<Content: View> : View {
                     self.content()
                 }
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-                .background(Color.white.opacity(0.7))
+                .background(Color.white)
                 .cornerRadius(10.0)
                 .shadow(color: Color(.sRGBLinear, white: 0, opacity: 0.13), radius: 14.0)
                 .offset(y: self.position.rawValue + self.dragState.translation.height)

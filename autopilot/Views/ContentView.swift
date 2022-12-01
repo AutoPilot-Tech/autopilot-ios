@@ -33,7 +33,7 @@ struct ContentView : View {
                             Color.white
                                 .ignoresSafeArea()
 //                            BackgroundView()
-
+                            
                             switch autopilotViewRouter.currentPage {
                             case .home:
                                 CarouselView(itemHeight: 400, views: [
@@ -49,26 +49,30 @@ struct ContentView : View {
                                 AnyView(ArcCardContent()),
 
                             ])
-                                .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                                .padding(.top, -UIScreen.main.bounds.height * 0.20)
+                                
                             case .arcDetail:
                                 ArcModeDetailView()
-                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                                    
 
                             case .arcMode:
                                 ArcModeView()
-                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                                    
 
                             case .explore:
-                                GodView()
-                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                                VStack {
+                                    GodView()
+                                        .padding(.top, UIScreen.main.bounds.height * 0.15)
+                                }
+                                
 
                             case .coachChat:
                                 ConversationsView()
-                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                                    
 
                             case .profile:
                                 UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))
-                                    .padding(.bottom, UIScreen.main.bounds.height * 0.20)
+                                    
 
                             }
                             VStack {
