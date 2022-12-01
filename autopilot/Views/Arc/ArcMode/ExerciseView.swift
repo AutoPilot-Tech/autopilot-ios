@@ -12,6 +12,7 @@ struct ExerciseView: View {
     let videoNames = ["squat", "step-up", "burpee", "sun-salute"]
     let exerciseNames = ["Squat", "Step Up", "Burpee", "Sun Salute"]
     let index: Int
+    let totalTime:TimeInterval = 0
     
     var body: some View {
         ZStack {
@@ -20,7 +21,8 @@ struct ExerciseView: View {
             GeometryReader { geometry in
                 VStack {
                     
-                    Text("Timer")
+                    Text(Date().addingTimeInterval(totalTime), style: .timer)
+                        .font(.system(size: 40))
                         .foregroundColor(.white)
                         
                     Text(exerciseNames[index])

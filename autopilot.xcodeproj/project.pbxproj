@@ -54,6 +54,7 @@
 		7122D5222938C09200BDF888 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7122D5212938BF1100BDF888 /* squat.mp4 */; };
 		7122D5232938C0B100BDF888 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7122D5202938BEF500BDF888 /* step-up.mp4 */; };
 		7122D5242938C0B300BDF888 /* burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7122D51E2938BEED00BDF888 /* burpee.mp4 */; };
+		7122D5262938C7EA00BDF888 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D5252938C7EA00BDF888 /* RatingView.swift */; };
 		71234FA629366EEE00B2FEDC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA529366EEE00B2FEDC /* FirebaseAuth */; };
 		71234FA829366EEE00B2FEDC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA729366EEE00B2FEDC /* FirebaseFirestore */; };
 		71234FAA29366EEE00B2FEDC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 71234FA929366EEE00B2FEDC /* FirebaseFunctions */; };
@@ -159,6 +160,7 @@
 		7122D51E2938BEED00BDF888 /* burpee.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = burpee.mp4; sourceTree = "<group>"; };
 		7122D5202938BEF500BDF888 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
 		7122D5212938BF1100BDF888 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = squat.mp4; path = ../../../../Desktop/Videos/squat.mp4; sourceTree = "<group>"; };
+		7122D5252938C7EA00BDF888 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		71234FAE2936716800B2FEDC /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
 		71234FB0293688C700B2FEDC /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		71234FB229368FC000B2FEDC /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 				7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */,
 				7122D5102938B09D00BDF888 /* SuccessView.swift */,
 				7122D5172938BA8C00BDF888 /* ExerciseView.swift */,
+				7122D5252938C7EA00BDF888 /* RatingView.swift */,
 			);
 			path = ArcMode;
 			sourceTree = "<group>";
@@ -640,6 +643,7 @@
 				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,
 				52A2B2C7293527B50061A712 /* ContentView.swift in Sources */,
 				71D2D52729371C31004229B3 /* NewMessageView.swift in Sources */,
+				7122D5262938C7EA00BDF888 /* RatingView.swift in Sources */,
 				52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */,
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,
 				7122D50D2938A59A00BDF888 /* Popup.swift in Sources */,

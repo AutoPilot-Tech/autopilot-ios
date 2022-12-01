@@ -15,6 +15,7 @@ struct ArcModeView: View {
     @State private var showingAlert = false
     @State private var showingPopup = false
     @State var timerValue: String = "0:00"
+    let interval: TimeInterval = 0
     
 //    @State private var sh
     
@@ -41,7 +42,7 @@ struct ArcModeView: View {
                         Handle()
                         HStack {
                             ZStack {
-                                ProgressView("Activity Name", value: 50, total: 100)
+                                ProgressView("0:00", value: 50, total: 100)
                                 
                             }
                             

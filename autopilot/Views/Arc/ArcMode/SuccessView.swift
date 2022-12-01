@@ -25,7 +25,8 @@ struct SuccessView: View {
             Text("Back/Bicep")
                 .padding(.bottom, 100)
             
-            Text("Feedback")
+            RatingView()
+                
             TextArea("Let Matthew know how you liked your workout...", text: $feedbackText)
                 .frame(height: 200)
             
