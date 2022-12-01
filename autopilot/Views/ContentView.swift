@@ -17,7 +17,7 @@ struct ContentView : View {
     @State var heartFilled = false
     @EnvironmentObject var viewModel: AuthViewModel
     @State private var isLoggedIn = true
-    @State var slideTabShowing = true
+    @State var slideTabShowing = true // Bindable on other views
     let fakeData = ["email": "fake@email.com",
                 "username": "error",
                 "fullname": "error",
@@ -58,7 +58,7 @@ struct ContentView : View {
                                 .padding(.top, -UIScreen.main.bounds.height * 0.30)
                                 
                             case .arcDetail:
-                                ArcModeDetailView(autopilotViewRouter: autopilotViewRouter)
+                                ArcModeDetailView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                    
                                     
 
