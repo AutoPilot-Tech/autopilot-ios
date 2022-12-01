@@ -10,6 +10,7 @@ import Kingfisher
 
 
 struct ContentView : View {
+    @StateObject var autopilotViewRouter: AutopilotViewRouter
     @State var currentIndex: Int = 0
     @State var searchText = ""
     @State var textfield_val = ""
@@ -221,7 +222,7 @@ struct ContentView : View {
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
-            ContentView()
+            ContentView(autopilotViewRouter: AutopilotViewRouter())
                 .environmentObject(AuthViewModel())
         }
     }

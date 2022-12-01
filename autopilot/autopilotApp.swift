@@ -18,14 +18,13 @@ struct autopilotApp: App {
     let persistenceController = PersistenceController.shared
     
     
-    
     init() {
         FirebaseApp.configure()
     }
 
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(AuthViewModel.shared)
+            ContentView(autopilotViewRouter: AutopilotViewRouter.shared).environmentObject(AuthViewModel.shared)
         }
     }
 }

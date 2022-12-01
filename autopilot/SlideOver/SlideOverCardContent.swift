@@ -69,7 +69,7 @@ struct SlideOverCardContent: View {
                                 }
                                 
                                 
-                                NavigationLink(destination: ContentView()) {
+                                NavigationLink(destination: ContentView(autopilotViewRouter: AutopilotViewRouter.shared)) {
                                     VStack {
                                         Image(systemName: "heart.circle.fill")
                                             .resizable()

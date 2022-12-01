@@ -71,7 +71,7 @@ struct ArcModeDetailView: View {
                                     }
                                     
                                     
-                                    NavigationLink(destination: ContentView()) {
+                                    NavigationLink(destination: ContentView(autopilotViewRouter: AutopilotViewRouter())) {
                                         VStack {
                                             Image(systemName: "heart.circle.fill")
                                                 .resizable()
