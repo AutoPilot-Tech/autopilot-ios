@@ -8,8 +8,47 @@
 import SwiftUI
 
 struct ArcModeOverview: View {
+    // Sample data
+    let exercisesSet1 = ["Squat", "Step Up", "Burpee", "Sun salute"]
+    let exercisesSet2 = ["Squat", "Step Up", "Burpee", "Sun salute"]
+
+    let exercisesSet3 = ["Squat", "Step Up", "Burpee", "Sun salute"]
+    let exercisesSet4 = ["Squat", "Step Up", "Burpee", "Sun salute"]
+
     var body: some View {
-        Text("Overview")
+        VStack {
+            Text("Workout Overview")
+                .font(.title)
+                .padding()
+            Form {
+                Section(
+                    header:
+                        Text("Core Exercise Block 1").font(.headline)
+                ) {
+                    
+                }
+                Section(
+                    header:
+                        Text("Core Exercise Block 2").font(.headline)
+                ) {
+                    
+                }
+                
+                Section(
+                    header:
+                        Text("Accessory 1").font(.headline)
+                ) {
+                    
+                }
+                
+                Section(
+                    header:
+                        Text("Accessory 2").font(.headline)
+                ) {
+                    
+                }
+            }
+        }
     }
 }
 

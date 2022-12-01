@@ -20,7 +20,11 @@ struct ArcModeView: View {
     
     var body: some View {
         ZStack {
-            Text("Video Player")
+            VStack {
+                Text("Timer")
+                Text("Activity Name")
+                Text("Video Player")
+            }
           
             
             
