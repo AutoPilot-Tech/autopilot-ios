@@ -18,6 +18,8 @@ struct Arc: Identifiable {
     let featuredImageUrl: String
     let timestamp: Timestamp
     let title: String
+    let training: Bool
+    let overallDuration: Int // seconds
     
     
     init(dictionary: [String: Any]) {
@@ -30,6 +32,8 @@ struct Arc: Identifiable {
         self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
         self.title = dictionary["title"] as? String ?? ""
         self.featuredImageUrl = dictionary["featuredImageUrl"] as? String ?? ""
+        self.training = dictionary["training"] as? Bool ?? true
+        self.overallDuration = dictionary["overallDuration"] as? Int ?? 2700 // 45 minutes default.
     }
     
     var timestampString: String {
