@@ -13,6 +13,7 @@ struct ExerciseView: View {
     @State private var showingAlert = false
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
     @Binding var slideTabShowing: Bool
+    @State private var workoutPaused = false
     
    
     let index: Int
@@ -27,12 +28,17 @@ struct ExerciseView: View {
                     Spacer()
                     ZStack {
                         HStack {
+                            Spacer()
                             Button(action: {
                                 showingAlert = true
                             }) {
-                                Image(systemName: "x.square.fill")
-                                    .foregroundColor(.red)
+                                Image(systemName: "pause.circle.fill")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 32, height: 32)
+                                    .foregroundColor(.gray)
                                     .symbolRenderingMode(.multicolor)
+                                
                             }
                             .alert(isPresented: $showingAlert) {
                                 Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {
@@ -41,7 +47,7 @@ struct ExerciseView: View {
                                 }))
                             }
                             .padding(.horizontal)
-                            Spacer()
+                            .padding(.bottom, 25)
                             
                             
                         }
