@@ -49,7 +49,7 @@ struct ArcModeView: View {
                             .font(.title3)
                         .padding()
                         
-                        HStack(spacing: 50) {
+                        HStack(spacing: 25) {
 //                            Button(action: {
 //                                showingPopup = true
 //                            }) {
@@ -90,7 +90,6 @@ struct ArcModeView: View {
                                 ArcModeOverview()
                             }
                             ProgressView("0:00", value: 50, total: 100)
-                                .padding(.horizontal, -20)
                                     
               
                             Button(action: {
@@ -108,6 +107,69 @@ struct ArcModeView: View {
 
                         }
                         .padding()
+                        .padding(.vertical, 20)
+                        Divider()
+
+                        HStack {
+                            ScrollView {
+                                
+                                VStack {
+                                    Spacer()
+                                    HStack(spacing: 20) {
+                                        VStack {
+                                            Button(action: {}) {
+                                                Image(systemName: "dumbbell")
+                                                
+                                            }
+                                            Spacer()
+                                            Text("Adjust")
+                                            Text("Weight")
+                                        }
+                                        VStack {
+                                            Button(action: {}) {
+                                                Image(systemName: "square.stack.3d.up.fill")
+                                                
+                                                
+                                            }
+                                            Spacer()
+                                            Text("Report")
+                                            Text("Reps")
+                                        }
+                                        VStack {
+                                            Button(action: {}) {
+                                                Image(systemName: "restart.circle.fill")
+                                                
+                                                
+                                            }
+                                            Spacer()
+                                            Text("Restart")
+                                            Text("Set")
+                                        }
+                                        VStack {
+                                            Button(action: {}) {
+                                                Image(systemName: "info.circle.fill")
+                                                
+                                                
+                                            }
+                                            Spacer()
+                                            Text("Read")
+                                            Text("Guide")
+                                        }
+                                        VStack {
+                                            Button(action: {}) {
+                                                Image(systemName: "clock.fill")
+                                                
+                                            }
+                                            Spacer()
+                                            Text("Exercise")
+                                            Text("History")
+                                            
+                                        }
+                                    }
+                                    .padding()
+                                }
+                            }
+                        }
                         
                         Spacer()
                     }
