@@ -46,6 +46,7 @@ struct ArcModeView: View {
                     VStack {
                         Handle()
                         Text(Exercise.exercises[indexForExercises].exerciseName)
+                            .font(.title3)
                         .padding()
                         
                         HStack(spacing: 50) {
