@@ -92,6 +92,7 @@
 		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
 		BF2CA07F293A68D600E0BAF8 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */; };
+		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -195,6 +196,7 @@
 		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
 		BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = squat.mp4; path = "../../../iOS/suia-materials/02-planning-a-paged-app/projects/starter/HIITFit/HIITFit/Videos/squat.mp4"; sourceTree = "<group>"; };
+		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +403,7 @@
 				7122D5102938B09D00BDF888 /* SuccessView.swift */,
 				7122D5172938BA8C00BDF888 /* ExerciseView.swift */,
 				7122D5252938C7EA00BDF888 /* RatingView.swift */,
+				BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */,
 			);
 			path = ArcMode;
 			sourceTree = "<group>";
@@ -660,6 +663,7 @@
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
 				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
 				71D2D5152936EE2B004229B3 /* FeedViewModel.swift in Sources */,
+				BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */,
 				71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */,
 				7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */,
 				7122D52A2938CB2D00BDF888 /* HistoryStoreDevData.swift in Sources */,

@@ -18,6 +18,7 @@ struct ArcModeView: View {
     let interval: TimeInterval = 0
     @State private var selectedTab = 0
     @State var lastExercise = false
+    @State var indexForExercises = 0
     
 //    @State private var sh
     
@@ -30,10 +31,10 @@ struct ArcModeView: View {
                 
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
-                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, index: index)
+                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, indexForExercises: $indexForExercises,  index: index)
                     }
                 }
-                .padding(.bottom, UIScreen.main.bounds.height * 0.30)
+                
             }
           
             
@@ -44,69 +45,69 @@ struct ArcModeView: View {
                 SlideOverCard {
                     VStack {
                         Handle()
-                        HStack {
-                            ZStack {
-                                ProgressView("0:00", value: 50, total: 100)
-                                
-                            }
-                            
-                                
-    
-                        }
+                        Text(Exercise.exercises[indexForExercises].exerciseName)
                         .padding()
                         
                         HStack(spacing: 50) {
-                            Button(action: {
-                                showingPopup = true
-                            }) {
-                                Image(systemName: "dumbbell")
-                                    .resizable()
-                                    .renderingMode(.template)
-                                    .foregroundColor(.white)
-                                    .frame(width: 20, height: 20)
-                                    
-                                    
-                            }
-                            .frame(width: 32, height: 32)
-                            .background(.gray)
-                            .clipShape(Circle())
+//                            Button(action: {
+//                                showingPopup = true
+//                            }) {
+//                                Image(systemName: "dumbbell")
+//                                    .resizable()
+//                                    .renderingMode(.template)
+//                                    .foregroundColor(.white)
+//                                    .frame(width: 20, height: 20)
+//
+//
+//                            }
+//                            .frame(width: 32, height: 32)
+//                            .background(.gray)
+//                            .clipShape(Circle())
                                 
-                            Button(action: {
-                                showingPopup = true
-                            }) {
-                                Image(systemName: "pencil.circle.fill")
-                                    .resizable()
-                                    .frame(width: 32, height: 32)
-                            }
-                            .foregroundColor(.gray)
+//                            Button(action: {
+//                                showingPopup = true
+//                            }) {
+//                                Image(systemName: "pencil.circle.fill")
+//                                    .resizable()
+//                                    .frame(width: 32, height: 32)
+//                            }
+//                            .foregroundColor(.gray)
                             
                                 
                             
-                                
                             Button(action: {
                                 showingOverview = true
                             }) {
-                                Image(systemName: "list.bullet.circle.fill")
+                                Image(systemName: "list.bullet")
                                     .resizable()
-                                    .frame(width: 32, height: 32)
+                                    .scaledToFill()
+                                    .frame(width: 16, height: 16)
+                                    .foregroundColor(.black)
                             }
-                            .foregroundColor(.gray)
+                            .padding(.horizontal, 10)
                             .sheet(isPresented: $showingOverview) {
                                 ArcModeOverview()
                             }
-                            
+                            ProgressView("0:00", value: 50, total: 100)
+                                .padding(.horizontal, -20)
+                                    
+              
                             Button(action: {
                                 selectedTab += 1
+                                indexForExercises += 1
                             }) {
-                                Image(systemName: "chevron.right.circle.fill")
+                                Image(systemName: "chevron.forward.circle.fill")
                                     .resizable()
-                                    .frame(width: 32, height: 32)
+                                    .renderingMode(.template)
+                                    .foregroundColor(.green)
                             }
-                            .foregroundColor(.green)
-                            
+                            .frame(width: 38, height: 38)
+                            .background(.white)
+                            .clipShape(Circle())
 
                         }
                         .padding()
+                        
                         Spacer()
                     }
                 }

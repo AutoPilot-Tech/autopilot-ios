@@ -14,12 +14,13 @@ struct ExerciseView: View {
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
     @Binding var slideTabShowing: Bool
     @State private var workoutPaused = false
-    
+    @Binding var indexForExercises: Int
    
     let index: Int
     let totalTime:TimeInterval = 0
     
     var body: some View {
+
         ZStack {
             if workoutPaused {
                 Text("Workout Paused")
@@ -29,7 +30,8 @@ struct ExerciseView: View {
                 Rectangle()
                     .zIndex(1)
                     .background(.black)
-                    .opacity(0.2)
+                    .opacity(0.4)
+                
             }
             
             Color.black
@@ -38,7 +40,6 @@ struct ExerciseView: View {
                 VStack {
                     Spacer()
                     ZStack {
-                        
                         if workoutPaused {
                             HStack {
                                 Button(action: {
@@ -116,7 +117,8 @@ struct ExerciseView: View {
                                 Text(Date().addingTimeInterval(totalTime), style: .timer)
                                     .font(.system(size: 40))
                                 .foregroundColor(.white)
-                                Text(Exercise.exercises[index].exerciseName)
+                                
+//                                Text(Exercise.exercises[index].exerciseName)
                                     .foregroundColor(.white)
                             }
                             Spacer()
@@ -148,6 +150,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false), index: 0)
+        ExerciseView(selectedTab: .constant(1), autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false), indexForExercises: .constant(0), index: 0)
     }
 }
