@@ -21,36 +21,95 @@ struct ExerciseView: View {
     
     var body: some View {
         ZStack {
+            if workoutPaused {
+                Text("Workout Paused")
+                    .zIndex(2)
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                Rectangle()
+                    .zIndex(1)
+                    .background(.black)
+                    .opacity(0.2)
+            }
+            
             Color.black
                 .ignoresSafeArea()
             GeometryReader { geometry in
                 VStack {
                     Spacer()
                     ZStack {
-                        HStack {
-                            Spacer()
-                            Button(action: {
-                                showingAlert = true
-                            }) {
-                                Image(systemName: "pause.circle.fill")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 32, height: 32)
-                                    .foregroundColor(.gray)
-                                    .symbolRenderingMode(.multicolor)
+                        
+                        if workoutPaused {
+                            HStack {
+                                Button(action: {
+                                    showingAlert.toggle()
+                                }) {
+                                    Image(systemName: "xmark")
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .foregroundColor(.white)
+                                        .frame(width: 14, height: 14)
+                                        
+                                        
+                                }
+                                .frame(width: 32, height: 32)
+                                .background(.gray)
+                                .clipShape(Circle())
+                                .padding()
+                                .alert(isPresented: $showingAlert) {
+                                    Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {
+                                        slideTabShowing = true
+                                        autopilotViewRouter.currentPage = .home
+                                    }))
+                                }
+                                .padding(.horizontal)
+                                .padding(.bottom, 25)
+                                Spacer()
+                                Button(action: {
+                                    workoutPaused.toggle()
+                                }) {
+                                    Image(systemName: "play.circle.fill")
+                                        .resizable()
+                                        .renderingMode(.template)
+                                        .foregroundColor(.gray)
+                                        .frame(width: 32, height: 32)
+                                        .background(.white)
+                                        .clipShape(Circle())
+                                        
+                                        
+                                }
+                                .zIndex(2)
+                                .padding()
+                                .padding(.bottom, 25)
+
+                            }
+                        } else {
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    workoutPaused.toggle()
+                                }) {
+                                    Image(systemName: "pause.circle.fill")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 32, height: 32)
+                                        .foregroundColor(.gray)
+                                        .symbolRenderingMode(.multicolor)
+                                    
+                                }
+                                .alert(isPresented: $showingAlert) {
+                                    Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {
+                                        slideTabShowing = true
+                                        autopilotViewRouter.currentPage = .home
+                                    }))
+                                }
+                                .padding(.horizontal)
+                                .padding(.bottom, 25)
+                                
                                 
                             }
-                            .alert(isPresented: $showingAlert) {
-                                Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {
-                                    slideTabShowing = true
-                                    autopilotViewRouter.currentPage = .home
-                                }))
-                            }
-                            .padding(.horizontal)
-                            .padding(.bottom, 25)
-                            
-                            
                         }
+                        
                         HStack {
                             Spacer()
                             VStack {
