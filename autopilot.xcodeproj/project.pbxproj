@@ -51,7 +51,6 @@
 		7122D5162938B66800BDF888 /* ArcModeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D5152938B66800BDF888 /* ArcModeViewRouter.swift */; };
 		7122D5182938BA8C00BDF888 /* ExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D5172938BA8C00BDF888 /* ExerciseView.swift */; };
 		7122D51D2938BEE700BDF888 /* sun-salute.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7122D51C2938BEE700BDF888 /* sun-salute.mp4 */; };
-		7122D5222938C09200BDF888 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7122D5212938BF1100BDF888 /* squat.mp4 */; };
 		7122D5232938C0B100BDF888 /* step-up.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7122D5202938BEF500BDF888 /* step-up.mp4 */; };
 		7122D5242938C0B300BDF888 /* burpee.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7122D51E2938BEED00BDF888 /* burpee.mp4 */; };
 		7122D5262938C7EA00BDF888 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D5252938C7EA00BDF888 /* RatingView.swift */; };
@@ -92,6 +91,7 @@
 		71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53829379DF8004229B3 /* CarouselView.swift */; };
 		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
+		BF2CA07F293A68D600E0BAF8 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,7 +161,6 @@
 		7122D51C2938BEE700BDF888 /* sun-salute.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sun-salute.mp4"; sourceTree = "<group>"; };
 		7122D51E2938BEED00BDF888 /* burpee.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = burpee.mp4; sourceTree = "<group>"; };
 		7122D5202938BEF500BDF888 /* step-up.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "step-up.mp4"; sourceTree = "<group>"; };
-		7122D5212938BF1100BDF888 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = squat.mp4; path = ../../../../Desktop/Videos/squat.mp4; sourceTree = "<group>"; };
 		7122D5252938C7EA00BDF888 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		7122D5272938CA2A00BDF888 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		7122D5292938CB2D00BDF888 /* HistoryStoreDevData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStoreDevData.swift; sourceTree = "<group>"; };
@@ -195,6 +194,7 @@
 		71D2D53829379DF8004229B3 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
+		BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = squat.mp4; path = "../../../iOS/suia-materials/02-planning-a-paged-app/projects/starter/HIITFit/HIITFit/Videos/squat.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -424,7 +424,7 @@
 		7122D51B2938BEE000BDF888 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				7122D5212938BF1100BDF888 /* squat.mp4 */,
+				BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */,
 				7122D5202938BEF500BDF888 /* step-up.mp4 */,
 				7122D51E2938BEED00BDF888 /* burpee.mp4 */,
 				7122D51C2938BEE700BDF888 /* sun-salute.mp4 */,
@@ -607,13 +607,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7122D5222938C09200BDF888 /* squat.mp4 in Resources */,
 				52A2B2CC293527B70061A712 /* Preview Assets.xcassets in Resources */,
 				7122D5232938C0B100BDF888 /* step-up.mp4 in Resources */,
 				52A2B2C9293527B70061A712 /* Assets.xcassets in Resources */,
 				7122D51D2938BEE700BDF888 /* sun-salute.mp4 in Resources */,
 				7122D5242938C0B300BDF888 /* burpee.mp4 in Resources */,
 				52F452542935FAD500406D3F /* GoogleService-Info.plist in Resources */,
+				BF2CA07F293A68D600E0BAF8 /* squat.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
