@@ -20,6 +20,12 @@ struct ArcModeView: View {
     @State var lastExercise = false
     @State var indexForExercises = 0
     
+    var progressInterval: ClosedRange<Date> {
+        let start = Date()
+        let end = start.addingTimeInterval(TimeInterval(Exercise.exercises[indexForExercises].duration))
+        return start...end
+    }
+    
 //    @State private var sh
     
     var body: some View {
@@ -89,7 +95,12 @@ struct ArcModeView: View {
                             .sheet(isPresented: $showingOverview) {
                                 ArcModeOverview()
                             }
-                            ProgressView("0:00", value: 50, total: 100)
+                            if #available(iOS 16.0, *) {
+                                ProgressView(timerInterval: progressInterval, countsDown: false)
+                            } else {
+                                // Fallback on earlier versions
+                                Text("Update to iOS 16 to see timer")
+                            }
                                     
               
                             Button(action: {
