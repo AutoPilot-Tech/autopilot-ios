@@ -36,25 +36,41 @@ struct ProfileActionButtonView: View {
             }
             
         } else {
-            HStack {
-                NavigationLink(destination: GenerateWorkoutView()) {
-                        Text("Make Workout")
-                            .frame(width: 180, height: 40)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
-                }
+            // if they are an admin.
+            if ((viewModel.user?.isAdmin) != nil) {
+                HStack {
+                    NavigationLink(destination: GenerateWorkoutView()) {
+                            Text("Make Workout")
+                                .frame(width: 180, height: 40)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                    }
 
+                    
+                    NavigationLink(destination: ChatView(user: profileViewModel.user)) {
+                            Text("Message")
+                                .frame(width: 180, height: 40)
+                                .background(Color.purple)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                    }
+
+                }
+            } else {
+                HStack {
                 
-                NavigationLink(destination: ChatView(user: profileViewModel.user)) {
-                        Text("Message")
-                            .frame(width: 180, height: 40)
-                            .background(Color.purple)
-                            .foregroundColor(.white)
-                            .cornerRadius(20)
-                }
+                    NavigationLink(destination: ChatView(user: profileViewModel.user)) {
+                            Text("Message")
+                                .frame(width: 360, height: 40)
+                                .background(Color.purple)
+                                .foregroundColor(.white)
+                                .cornerRadius(20)
+                    }
 
+                }
             }
+            
         }
         
     }
