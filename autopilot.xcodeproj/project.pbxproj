@@ -93,6 +93,7 @@
 		BF2CA07F293A68D600E0BAF8 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */; };
 		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
 		BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */; };
+		BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -197,6 +198,7 @@
 		BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = squat.mp4; path = "../../../iOS/suia-materials/02-planning-a-paged-app/projects/starter/HIITFit/HIITFit/Videos/squat.mp4"; sourceTree = "<group>"; };
 		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
 		BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -370,6 +372,7 @@
 				52A8D7072935851400460525 /* ProfileHeaderView.swift */,
 				52A8D7092935851B00460525 /* ProfileActionButtonView.swift */,
 				52A8D70B2935852800460525 /* FilterButtonView.swift */,
+				BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -702,6 +705,7 @@
 				71234FB329368FC000B2FEDC /* UserCell.swift in Sources */,
 				52A2B2FB293530C80061A712 /* Test.swift in Sources */,
 				52A8D70A2935851B00460525 /* ProfileActionButtonView.swift in Sources */,
+				BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */,
 				71D2D4F92936B885004229B3 /* SearchViewModel.swift in Sources */,
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
 				52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */,

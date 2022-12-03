@@ -37,12 +37,18 @@ struct ProfileActionButtonView: View {
             
         } else {
             HStack {
-                
+                NavigationLink(destination: GenerateWorkoutView()) {
+                        Text("Make Workout")
+                            .frame(width: 180, height: 40)
+                            .background(Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(20)
+                }
 
                 
                 NavigationLink(destination: ChatView(user: profileViewModel.user)) {
                         Text("Message")
-                            .frame(width: 360, height: 40)
+                            .frame(width: 180, height: 40)
                             .background(Color.purple)
                             .foregroundColor(.white)
                             .cornerRadius(20)
