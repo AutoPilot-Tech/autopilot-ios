@@ -42,7 +42,6 @@
 		7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */; };
 		7122D4FE2938470A00BDF888 /* FreeFlowArcMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */; };
 		7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FF29384AFA00BDF888 /* ArcModeView.swift */; };
-		7122D5062938504700BDF888 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D5052938504700BDF888 /* TimerView.swift */; };
 		7122D50A293860F700BDF888 /* AutopilotViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D509293860F700BDF888 /* AutopilotViewRouter.swift */; };
 		7122D50D2938A59A00BDF888 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D50C2938A59A00BDF888 /* Popup.swift */; };
 		7122D50F2938ACF700BDF888 /* ArcModeOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */; };
@@ -93,6 +92,7 @@
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
 		BF2CA07F293A68D600E0BAF8 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */; };
 		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
+		BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -151,7 +151,6 @@
 		7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCardContent.swift; sourceTree = "<group>"; };
 		7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeFlowArcMode.swift; sourceTree = "<group>"; };
 		7122D4FF29384AFA00BDF888 /* ArcModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeView.swift; sourceTree = "<group>"; };
-		7122D5052938504700BDF888 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		7122D509293860F700BDF888 /* AutopilotViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutopilotViewRouter.swift; sourceTree = "<group>"; };
 		7122D50C2938A59A00BDF888 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeOverview.swift; sourceTree = "<group>"; };
@@ -197,6 +196,7 @@
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
 		BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = squat.mp4; path = "../../../iOS/suia-materials/02-planning-a-paged-app/projects/starter/HIITFit/HIITFit/Videos/squat.mp4"; sourceTree = "<group>"; };
 		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
+		BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,12 +398,12 @@
 				7122D5142938B65900BDF888 /* ArcModeViewRouter */,
 				7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */,
 				7122D4FF29384AFA00BDF888 /* ArcModeView.swift */,
-				7122D5052938504700BDF888 /* TimerView.swift */,
 				7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */,
 				7122D5102938B09D00BDF888 /* SuccessView.swift */,
 				7122D5172938BA8C00BDF888 /* ExerciseView.swift */,
 				7122D5252938C7EA00BDF888 /* RatingView.swift */,
 				BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */,
+				BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */,
 			);
 			path = ArcMode;
 			sourceTree = "<group>";
@@ -641,6 +641,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */,
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
 				7122D5182938BA8C00BDF888 /* ExerciseView.swift in Sources */,
@@ -676,7 +677,6 @@
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
 				7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */,
-				7122D5062938504700BDF888 /* TimerView.swift in Sources */,
 				7122D5112938B09D00BDF888 /* SuccessView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				7122D5282938CA2A00BDF888 /* History.swift in Sources */,

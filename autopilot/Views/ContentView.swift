@@ -352,20 +352,7 @@ struct ContentView : View {
                                                             
                                                         }
                                                         .padding(.top, -50)
-                                                        NavigationLink(destination: GodView()) {
-                                                            VStack {
-                                                                Image(systemName: "magnifyingglass.circle")
-                                                                    .resizable()
-                                                                    .aspectRatio(contentMode: .fit)
-                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                    .symbolRenderingMode(.multicolor)
-                                                                    .foregroundColor(.pink)
-                                                                
-                                                                Text("Explore")
-                                                                    .font(.footnote)
-                                                            }
-                                                            .padding(.horizontal, -4)
-                                                        }
+                                                        
                                                         Spacer()
                                                     }
                                                     
