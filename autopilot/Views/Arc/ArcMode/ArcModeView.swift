@@ -30,11 +30,15 @@ struct ArcModeView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-           
+            TimerView()
+                .padding(.top, 115)
+                .zIndex(100)
+                .foregroundColor(.white)
             
 
             VStack {
                 
+
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
                         ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, indexForExercises: $indexForExercises,  index: index)

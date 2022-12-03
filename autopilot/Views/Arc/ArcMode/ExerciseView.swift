@@ -114,12 +114,13 @@ struct ExerciseView: View {
                         HStack {
                             Spacer()
                             VStack {
-                                Text(Date().addingTimeInterval(totalTime), style: .timer)
-                                    .font(.system(size: 40))
-                                .foregroundColor(.white)
+//                                Text(Date().addingTimeInterval(totalTime), style: .timer)
+//                                    .font(.system(size: 40))
+//                                .foregroundColor(.white)
+//                                TimerView()
                                 
 //                                Text(Exercise.exercises[index].exerciseName)
-                                    .foregroundColor(.white)
+//                                    .foregroundColor(.white)
                             }
                             Spacer()
                         }
