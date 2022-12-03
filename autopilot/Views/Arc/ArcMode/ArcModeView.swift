@@ -19,6 +19,7 @@ struct ArcModeView: View {
     @State private var selectedTab = 0
     @State var lastExercise = false
     @State var indexForExercises = 0
+    @State var timerIsRunning = true
     
     var progressInterval: ClosedRange<Date> {
         let start = Date()
@@ -30,10 +31,9 @@ struct ArcModeView: View {
     
     var body: some View {
         ZStack(alignment: .top) {
-            TimerView()
+            TimerView(timerIsRunning: $timerIsRunning)
                 .padding(.top, 115)
                 .zIndex(100)
-                .foregroundColor(.white)
             
 
             VStack {
@@ -41,7 +41,7 @@ struct ArcModeView: View {
 
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
-                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, indexForExercises: $indexForExercises,  index: index)
+                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, indexForExercises: $indexForExercises, timerIsRunning: $timerIsRunning,  index: index)
                     }
                 }
                 

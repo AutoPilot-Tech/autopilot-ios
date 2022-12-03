@@ -15,6 +15,7 @@ struct ExerciseView: View {
     @Binding var slideTabShowing: Bool
     @State private var workoutPaused = false
     @Binding var indexForExercises: Int
+    @Binding var timerIsRunning: Bool
    
     let index: Int
     let totalTime:TimeInterval = 0
@@ -67,6 +68,7 @@ struct ExerciseView: View {
                                 .padding(.bottom, 25)
                                 Spacer()
                                 Button(action: {
+                                    timerIsRunning.toggle()
                                     workoutPaused.toggle()
                                 }) {
                                     Image(systemName: "play.circle.fill")
@@ -88,6 +90,7 @@ struct ExerciseView: View {
                             HStack {
                                 Spacer()
                                 Button(action: {
+                                    timerIsRunning.toggle()
                                     workoutPaused.toggle()
                                 }) {
                                     Image(systemName: "pause.circle.fill")
@@ -151,6 +154,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false), indexForExercises: .constant(0), index: 0)
+        ExerciseView(selectedTab: .constant(1), autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false), indexForExercises: .constant(0), timerIsRunning: .constant(true), index: 0)
     }
 }

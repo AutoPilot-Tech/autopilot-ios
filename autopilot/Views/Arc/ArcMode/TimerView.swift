@@ -9,14 +9,20 @@ import SwiftUI
 
 struct TimerView: View {
     @State var timeRemaining = 0
+    @Binding var timerIsRunning: Bool
         let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
         var body: some View {
             Text("\(timeString(time: timeRemaining))")
+                .font(.system(size: 30))
+                .foregroundColor(.white)
                 .onReceive(timer) { _ in
-                    if timeRemaining >= 0 {
-                        timeRemaining += 1
+                    if timerIsRunning {
+                        if timeRemaining >= 0 {
+                            timeRemaining += 1
+                        }
                     }
+                    
                 }
         }
     
@@ -32,6 +38,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(timerIsRunning: .constant(true))
     }
 }
