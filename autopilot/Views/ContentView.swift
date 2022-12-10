@@ -182,6 +182,14 @@ struct ContentView : View {
                                                                 
                                                                 
                                                             }
+                                                            .navigationBarItems( trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
+                                                                KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
+                                                                    .resizable()
+                                                                    .scaledToFill()
+                                                                    .clipped()
+                                                                    .frame(width: 32, height: 32)
+                                                                    .cornerRadius(16)
+                                                            } )
                                                             .padding(.top, -60.0)
                                                             .frame(width: geometry.size.width, height: geometry.size.height/8)
                                                         case .explore:
@@ -256,7 +264,6 @@ struct ContentView : View {
                                                                 
                                                                 
                                                             }
-                                                            .padding(.top, -60.0)
                                                             .frame(width: geometry.size.width, height: geometry.size.height/8)
                                                        
 
@@ -373,14 +380,7 @@ struct ContentView : View {
                         }
                         
                     }
-                    .navigationBarItems( trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
-                        KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
-                            .resizable()
-                            .scaledToFill()
-                            .clipped()
-                            .frame(width: 32, height: 32)
-                            .cornerRadius(16)
-                    } )
+                    
                     
                     
                     
