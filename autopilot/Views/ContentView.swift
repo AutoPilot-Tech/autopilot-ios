@@ -126,6 +126,7 @@ struct ContentView : View {
                                                         }
                                                             // recommended tabs
                                                         switch autopilotViewRouter.currentPage {
+                                                            // MARK: - Home page
                                                         case .home:
                                                             VStack {
                                                                 HStack {
@@ -205,57 +206,59 @@ struct ContentView : View {
                                                                 
                                                                 
                                                                 HStack {
-                                                                        VStack {
-                                                                            Image(systemName: "calendar.circle.fill")
-                                                                                .resizable()
-                                                                                .aspectRatio(contentMode: .fit)
-                                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                .symbolRenderingMode(.multicolor)
-                                                                                .foregroundColor(.red)
-                                                                            
-                                                                            Text("See Schedule")
-                                                                                .font(.footnote)
-                                                                                .foregroundColor(.red)
-                                                                        }
-                                                                        .padding(.horizontal, -4)
-                                                                        .onTapGesture {
-                                                                            autopilotViewRouter.currentPage = .arcDetail
-                                                                        }
+                                                                    VStack {
+                                                                        Image(systemName: "calendar.circle.fill")
+                                                                            .resizable()
+                                                                            .aspectRatio(contentMode: .fit)
+                                                                            .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                            .symbolRenderingMode(.multicolor)
+                                                                            .foregroundColor(.red)
+                                                                        
+                                                                        Text("See Schedule")
+                                                                            .font(.footnote)
+                                                                            .foregroundColor(.red)
+                                                                    }
+                                                                    .padding(.horizontal, -4)
+                                                                    .onTapGesture {
+                                                                        autopilotViewRouter.currentPage = .arcDetail
+                                                                    }
                                                                     
                                                                     
-                                                                        VStack {
-                                                                            Image(systemName: "bolt.horizontal.circle.fill")
-                                                                                .resizable()
-                                                                                .aspectRatio(contentMode: .fit)
-                                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                .symbolRenderingMode(.multicolor)
-                                                                                .foregroundColor(.orange)
-                                                                            
-                                                                            Text("Tasks")
-                                                                                .font(.footnote)
-                                                                                .foregroundColor(.orange)
-                                                                        }
-                                                                        .padding(.horizontal, -4)
-                                                                        .onTapGesture {
-                                                                        autopilotViewRouter.currentPage = .explore
-                                                                        }
+                                                                    VStack {
+                                                                        Image(systemName: "bolt.horizontal.circle.fill")
+                                                                            .resizable()
+                                                                            .aspectRatio(contentMode: .fit)
+                                                                            .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                            .symbolRenderingMode(.multicolor)
+                                                                            .foregroundColor(.orange)
+                                                                        
+                                                                        Text("Tasks")
+                                                                            .font(.footnote)
+                                                                            .foregroundColor(.orange)
+                                                                    }
                                                                     
                                                                    
-                                                                    NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
-                                                                        VStack {
-                                                                            KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
-                                                                                .resizable()
-                                                                                .frame(width: 32, height: 32)
-                                                                                .scaledToFill()
-                                                                                .clipShape(Circle())
-                                                                                                                                            
-                                                                            Text("Profile")
-                                                                                .font(.footnote)
-                                                                                .foregroundColor(.blue)
+                                                                    
+                                                                    
+                                                                    HStack {
+                                                                        Spacer()
+                                                                        NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
+                                                                            VStack {
+                                                                                KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
+                                                                                    .resizable()
+                                                                                    .frame(width: 32, height: 32)
+                                                                                    .scaledToFill()
+                                                                                    .clipShape(Circle())
+                                                                       
+                                                                                Text("Profile")
+                                                                                    .font(.footnote)
+                                                                                    .foregroundColor(.blue)
+                                                                            }
+
                                                                         }
-                                                                        .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                        
-                                                                        }
+
+                                                                        Spacer()
+                                                                    }
                                                                         
                                                                     
                                                                     
@@ -273,10 +276,11 @@ struct ContentView : View {
                                                                     
                                                                     
                                                                 }
-                                                                
-                                                                .padding(.top, -80)
+                                                                .padding(.top, -80.0)
                                                             .frame(width: geometry.size.width, height: geometry.size.height/8)
                                                             }
+                                                            
+                                                            // MARK: - Explore
                                                         case .explore:
                                                             VStack {
                                                                 HStack {
@@ -424,15 +428,8 @@ struct ContentView : View {
                                                                     
                                                                     
                                                                 }
-                                                                .navigationBarItems( trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
-                                                                    KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
-                                                                        .resizable()
-                                                                        .scaledToFill()
-                                                                        .clipped()
-                                                                        .frame(width: 32, height: 32)
-                                                                        .cornerRadius(16)
-                                                                } )
-                                                                .padding(.top, -80)
+                                                                
+                                                                .padding(.top, -100)
                                                             .frame(width: geometry.size.width, height: geometry.size.height/8)
                                                             }
 
