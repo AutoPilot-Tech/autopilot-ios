@@ -90,7 +90,6 @@
 		71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53829379DF8004229B3 /* CarouselView.swift */; };
 		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
-		BF2CA07F293A68D600E0BAF8 /* squat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */; };
 		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
 		BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */; };
 		BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */; };
@@ -200,7 +199,6 @@
 		71D2D53829379DF8004229B3 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
-		BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = squat.mp4; path = "../../../iOS/suia-materials/02-planning-a-paged-app/projects/starter/HIITFit/HIITFit/Videos/squat.mp4"; sourceTree = "<group>"; };
 		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
 		BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWorkoutView.swift; sourceTree = "<group>"; };
@@ -443,7 +441,6 @@
 		7122D51B2938BEE000BDF888 /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				BF2CA07E293A68CF00E0BAF8 /* squat.mp4 */,
 				7122D5202938BEF500BDF888 /* step-up.mp4 */,
 				7122D51E2938BEED00BDF888 /* burpee.mp4 */,
 				7122D51C2938BEE700BDF888 /* sun-salute.mp4 */,
@@ -658,7 +655,6 @@
 				7122D51D2938BEE700BDF888 /* sun-salute.mp4 in Resources */,
 				7122D5242938C0B300BDF888 /* burpee.mp4 in Resources */,
 				52F452542935FAD500406D3F /* GoogleService-Info.plist in Resources */,
-				BF2CA07F293A68D600E0BAF8 /* squat.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
