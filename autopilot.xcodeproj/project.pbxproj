@@ -94,6 +94,11 @@
 		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
 		BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */; };
 		BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */; };
+		BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */; };
+		BFB1F5C1294AD61D00422BAE /* BenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */; };
+		BFB1F5C4294ADA6F00422BAE /* MadeForYouCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C3294ADA6F00422BAE /* MadeForYouCardView.swift */; };
+		BFB1F5C6294ADA8900422BAE /* MadeForYouCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C5294ADA8900422BAE /* MadeForYouCard.swift */; };
+		BFB1F5CA294ADCCC00422BAE /* AnimatedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C9294ADCCC00422BAE /* AnimatedCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -199,6 +204,11 @@
 		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
 		BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWorkoutView.swift; sourceTree = "<group>"; };
+		BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchPressView.swift; sourceTree = "<group>"; };
+		BFB1F5C3294ADA6F00422BAE /* MadeForYouCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYouCardView.swift; sourceTree = "<group>"; };
+		BFB1F5C5294ADA8900422BAE /* MadeForYouCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYouCard.swift; sourceTree = "<group>"; };
+		BFB1F5C9294ADCCC00422BAE /* AnimatedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -322,6 +332,8 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFB1F5C2294ADA2C00422BAE /* MadeForYou */,
+				BFB1F5BC294ACACE00422BAE /* Onboarding */,
 				7122D50129384B0600BDF888 /* Arc */,
 				71D2D50B2936D9D0004229B3 /* God */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
@@ -398,6 +410,7 @@
 		7122D50429384ED500BDF888 /* ArcMode */ = {
 			isa = PBXGroup;
 			children = (
+				BFB1F5BF294AD57400422BAE /* AnimatedViews */,
 				7122D5142938B65900BDF888 /* ArcModeViewRouter */,
 				7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */,
 				7122D4FF29384AFA00BDF888 /* ArcModeView.swift */,
@@ -496,6 +509,32 @@
 				71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */,
 			);
 			path = God;
+			sourceTree = "<group>";
+		};
+		BFB1F5BC294ACACE00422BAE /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		BFB1F5BF294AD57400422BAE /* AnimatedViews */ = {
+			isa = PBXGroup;
+			children = (
+				BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */,
+			);
+			path = AnimatedViews;
+			sourceTree = "<group>";
+		};
+		BFB1F5C2294ADA2C00422BAE /* MadeForYou */ = {
+			isa = PBXGroup;
+			children = (
+				BFB1F5C3294ADA6F00422BAE /* MadeForYouCardView.swift */,
+				BFB1F5C5294ADA8900422BAE /* MadeForYouCard.swift */,
+				BFB1F5C9294ADCCC00422BAE /* AnimatedCardView.swift */,
+			);
+			path = MadeForYou;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -644,9 +683,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */,
 				BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */,
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
+				BFB1F5C6294ADA8900422BAE /* MadeForYouCard.swift in Sources */,
 				7122D5182938BA8C00BDF888 /* ExerciseView.swift in Sources */,
 				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
@@ -670,6 +711,7 @@
 				BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */,
 				71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */,
 				7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */,
+				BFB1F5C1294AD61D00422BAE /* BenchPressView.swift in Sources */,
 				7122D52A2938CB2D00BDF888 /* HistoryStoreDevData.swift in Sources */,
 				71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */,
 				71D2D529293721AE004229B3 /* LazyView.swift in Sources */,
@@ -680,6 +722,7 @@
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
 				7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */,
+				BFB1F5CA294ADCCC00422BAE /* AnimatedCardView.swift in Sources */,
 				7122D5112938B09D00BDF888 /* SuccessView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				7122D5282938CA2A00BDF888 /* History.swift in Sources */,
@@ -695,6 +738,7 @@
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
+				BFB1F5C4294ADA6F00422BAE /* MadeForYouCardView.swift in Sources */,
 				71D2D5172936F486004229B3 /* ProfileViewModel.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */,

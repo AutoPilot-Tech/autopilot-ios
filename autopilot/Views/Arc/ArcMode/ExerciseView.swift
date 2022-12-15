@@ -16,6 +16,8 @@ struct ExerciseView: View {
     @State private var workoutPaused = false
     @Binding var indexForExercises: Int
     @Binding var timerIsRunning: Bool
+    @State private var playbackPosition = 0.0
+    @State private var playbackEnded = false
    
     let index: Int
     let totalTime:TimeInterval = 0
@@ -136,9 +138,22 @@ struct ExerciseView: View {
                     Spacer()
                     
                     if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
-                        VideoPlayer(player: AVPlayer(url: url))
-                            .frame(height: geometry.size.height * 0.45)
-                            .padding(.bottom, geometry.size.height * 0.30)
+                        let player = AVPlayer(url: url)
+                            
+                        VideoPlayer(player: player)
+                            
+                            .onAppear {
+                                player.play()
+                                NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
+                                    player.seek(to: .zero)
+                                    player.play()
+                                }
+                            }
+            
+
+//                            .frame(height: geometry.size.height * 0.45)
+//                            .padding(.bottom, geometry.size.height * 0.30)
+                        
                     } else {
                         Text("Couldn't find \(Exercise.exercises[index].videoName).mp4").foregroundColor(.red)
                     }

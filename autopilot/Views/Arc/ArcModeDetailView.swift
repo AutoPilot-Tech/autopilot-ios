@@ -14,7 +14,7 @@ struct ArcModeDetailView: View {
 
     var body: some View {
         ZStack {
-            
+            BackgroundView()
             VStack {
                 
                 

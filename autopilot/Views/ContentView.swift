@@ -36,13 +36,13 @@ struct ContentView : View {
                             Color.white
                                 .ignoresSafeArea()
 //                            BackgroundView()
-                            
+//
                             switch autopilotViewRouter.currentPage {
                             case .home:
                                 CarouselView(itemHeight: 400, views: [
                                 AnyView(
                                     
-                                    ArcCardContent().onTapGesture {
+                                    MadeForYou().onTapGesture {
                                         slideTabShowing = false
                                         autopilotViewRouter.currentPage = .arcDetail
                                     }
@@ -50,10 +50,26 @@ struct ContentView : View {
                                     
 
                                     ),
-                                AnyView(ArcCardContent()),
-                                AnyView(ArcCardContent()),
-                                AnyView(ArcCardContent()),
+                                AnyView(
+                                    
+                                    MadeForYou().onTapGesture {
+                                        slideTabShowing = false
+                                        autopilotViewRouter.currentPage = .arcDetail
+                                    }
 
+                                    
+
+                                    ),                                AnyView(ArcCardContent()),
+                                AnyView(
+                                    
+                                    MadeForYou().onTapGesture {
+                                        slideTabShowing = false
+                                        autopilotViewRouter.currentPage = .arcDetail
+                                    }
+
+                                    
+
+                                    )
                             ])
                                 .padding(.top, -UIScreen.main.bounds.height * 0.30)
                                 
@@ -91,7 +107,7 @@ struct ContentView : View {
                                                     
                                                     // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
                                                     Handle()
-    //                                                SearchBar(text: $searchText, placeholder: "What do you want to do?")
+                                                    SearchBar(text: $searchText, placeholder: "What do you want to do?")
                                                     // Tab Bar here
                                                     ScrollView {
                                                         HStack {
