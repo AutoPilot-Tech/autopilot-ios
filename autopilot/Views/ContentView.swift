@@ -107,7 +107,7 @@ struct ContentView : View {
                                                     
                                                     // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
                                                     Handle()
-                                                    SearchBar(text: $searchText, placeholder: "What do you want to do?")
+                                                    SearchBar(text: $searchText, placeholder: "What do you want to open?")
                                                     // Tab Bar here
                                                     ScrollView {
                                                         HStack {
@@ -127,87 +127,172 @@ struct ContentView : View {
                                                             // recommended tabs
                                                         switch autopilotViewRouter.currentPage {
                                                         case .home:
-                                                            HStack {
-                                                                    VStack {
-                                                                        Image(systemName: "play.circle.fill")
-                                                                            .resizable()
-                                                                            .aspectRatio(contentMode: .fit)
-                                                                            .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                            .symbolRenderingMode(.multicolor)
-                                                                            .foregroundColor(.blue)
-                                                                        
-                                                                        Text("Start Workout")
-                                                                            .font(.footnote)
-                                                                            .foregroundColor(.blue)
-                                                                    }
-                                                                    .padding(.horizontal, -4)
-                                                                    .onTapGesture {
-                                                                        autopilotViewRouter.currentPage = .arcDetail
-                                                                    }
-                                                                
-                                                                
-                                                                    VStack {
-                                                                        Image(systemName: "magnifyingglass.circle.fill")
-                                                                            .resizable()
-                                                                            .aspectRatio(contentMode: .fit)
-                                                                            .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                            .symbolRenderingMode(.multicolor)
-                                                                            .foregroundColor(.pink)
-                                                                        
-                                                                        Text("Go Public")
-                                                                            .font(.footnote)
-                                                                            .foregroundColor(.red)
-                                                                    }
-                                                                    .padding(.horizontal, -4)
-                                                                    .onTapGesture {
-                                                                    autopilotViewRouter.currentPage = .explore
-                                                                    }
-                                                                
-                                                               
-                                                                NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
-                                                                    VStack {
-                                                                            Image(systemName: "bubble.left.circle.fill")
+                                                            VStack {
+                                                                HStack {
+                                                                        VStack {
+                                                                            Image(systemName: "arrowtriangle.right.circle.fill")
                                                                                 .resizable()
                                                                                 .aspectRatio(contentMode: .fit)
                                                                                 .frame(width:geometry.size.width/3, height: geometry.size.height/28)
                                                                                 .symbolRenderingMode(.multicolor)
-                                                                                .foregroundColor(.green)
+                                                                                .foregroundColor(.blue)
                                                                             
-                                                                            Text("Text Coach")
+                                                                            Text("Start Workout")
                                                                                 .font(.footnote)
-                                                                                .foregroundColor(.green)
-
-                                                                                
+                                                                                .foregroundColor(.blue)
                                                                         }
-                                                                    .padding(.horizontal, -4)
+                                                                        .padding(.horizontal, -4)
+                                                                        .onTapGesture {
+                                                                            autopilotViewRouter.currentPage = .arcDetail
+                                                                        }
+                                                                    
+                                                                    
+                                                                        VStack {
+                                                                            Image(systemName: "network")
+                                                                                .resizable()
+                                                                                .aspectRatio(contentMode: .fit)
+                                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                                .symbolRenderingMode(.multicolor)
+                                                                                .foregroundColor(.cyan)
+                                                                            
+                                                                            Text("Explore")
+                                                                                .font(.footnote)
+                                                                                .foregroundColor(.blue)
+                                                                        }
+                                                                        .padding(.horizontal, -4)
+                                                                        .onTapGesture {
+                                                                        autopilotViewRouter.currentPage = .explore
+                                                                        }
+                                                                    
+                                                                   
+                                                                    NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
+                                                                        VStack {
+                                                                                Image(systemName: "bubble.left.circle.fill")
+                                                                                    .resizable()
+                                                                                    .aspectRatio(contentMode: .fit)
+                                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                                    .symbolRenderingMode(.multicolor)
+                                                                                    .foregroundColor(.green)
+                                                                                
+                                                                                Text("Text Coach")
+                                                                                    .font(.footnote)
+                                                                                    .foregroundColor(.green)
+
+                                                                                    
+                                                                            }
+                                                                        .padding(.horizontal, -4)
+                                                                    }
+                                                                        
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                        
+                                                                             
+                                                                    
+                                                                    Spacer()
+                                                                    
+                                                                    
+                                                                    
+                                                                    
                                                                 }
-                                                                    
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                
-                                                                    
-                                                                         
-                                                                
-                                                                Spacer()
-                                                                
-                                                                
-                                                                
-                                                                
-                                                            }
-                                                            .navigationBarItems( trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
-                                                                KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
-                                                                    .resizable()
-                                                                    .scaledToFill()
-                                                                    .clipped()
-                                                                    .frame(width: 32, height: 32)
-                                                                    .cornerRadius(16)
-                                                            } )
-                                                            .padding(.top, -60.0)
+                                                                .navigationBarItems( trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
+                                                                    KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
+                                                                        .resizable()
+                                                                        .scaledToFill()
+                                                                        .clipped()
+                                                                        .frame(width: 32, height: 32)
+                                                                        .cornerRadius(16)
+                                                                } )
+                                                                .padding(.top, -60.0)
                                                             .frame(width: geometry.size.width, height: geometry.size.height/8)
+                                                                
+                                                                
+                                                                HStack {
+                                                                        VStack {
+                                                                            Image(systemName: "calendar.circle.fill")
+                                                                                .resizable()
+                                                                                .aspectRatio(contentMode: .fit)
+                                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                                .symbolRenderingMode(.multicolor)
+                                                                                .foregroundColor(.red)
+                                                                            
+                                                                            Text("See Schedule")
+                                                                                .font(.footnote)
+                                                                                .foregroundColor(.red)
+                                                                        }
+                                                                        .padding(.horizontal, -4)
+                                                                        .onTapGesture {
+                                                                            autopilotViewRouter.currentPage = .arcDetail
+                                                                        }
+                                                                    
+                                                                    
+                                                                        VStack {
+                                                                            Image(systemName: "bolt.horizontal.circle.fill")
+                                                                                .resizable()
+                                                                                .aspectRatio(contentMode: .fit)
+                                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                                .symbolRenderingMode(.multicolor)
+                                                                                .foregroundColor(.orange)
+                                                                            
+                                                                            Text("Tasks")
+                                                                                .font(.footnote)
+                                                                                .foregroundColor(.orange)
+                                                                        }
+                                                                        .padding(.horizontal, -4)
+                                                                        .onTapGesture {
+                                                                        autopilotViewRouter.currentPage = .explore
+                                                                        }
+                                                                    
+                                                                   
+                                                                    NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
+                                                                        VStack {
+                                                                                Image(systemName: "person.circle.fill")
+                                                                                    .resizable()
+                                                                                    .aspectRatio(contentMode: .fit)
+                                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
+                                                                                    .symbolRenderingMode(.multicolor)
+                                                                                    .foregroundColor(.gray)
+                                                                                
+                                                                                Text("Go to Profile")
+                                                                                    .font(.footnote)
+                                                                                    .foregroundColor(.gray)
+
+                                                                                    
+                                                                            }
+                                                                        .padding(.horizontal, -4)
+                                                                    }
+                                                                        
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                        
+                                                                             
+                                                                    
+                                                                    Spacer()
+                                                                    
+                                                                    
+                                                                    
+                                                                    
+                                                                }
+                                                                .navigationBarItems( trailing: NavigationLink(destination: UserProfileView(user: viewModel.user ??  User(dictionary: fakeData))) {
+                                                                    KFImage(URL(string: viewModel.user?.profileImageUrl ?? ""))
+                                                                        .resizable()
+                                                                        .scaledToFill()
+                                                                        .clipped()
+                                                                        .frame(width: 32, height: 32)
+                                                                        .cornerRadius(16)
+                                                                } )
+                                                                .padding(.top, -80)
+                                                            .frame(width: geometry.size.width, height: geometry.size.height/8)
+                                                            }
                                                         case .explore:
                                                             HStack {
                                                                     VStack {
@@ -361,20 +446,20 @@ struct ContentView : View {
                                                         }
                                                         
                                                         
-                                                        HStack {
-                                                            
-                                                            HStack {
-                                                                Text("Shortcuts")
-                                                                    .frame(width: 115)
-                                                                    .font(.subheadline)
-                                                                    .foregroundColor(.gray)
-                                                                ComingSoon()
-                                                                
-                                                            }
-                                                            Spacer()
-                                                            
-                                                        }
-                                                        .padding(.top, -50)
+//                                                        HStack {
+//
+//                                                            HStack {
+//                                                                Text("Shortcuts")
+//                                                                    .frame(width: 115)
+//                                                                    .font(.subheadline)
+//                                                                    .foregroundColor(.gray)
+//                                                                ComingSoon()
+//
+//                                                            }
+//                                                            Spacer()
+//
+//                                                        }
+//                                                        .padding(.top, -50)
                                                         
                                                         Spacer()
                                                     }

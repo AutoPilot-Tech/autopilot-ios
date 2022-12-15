@@ -330,6 +330,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BFB1F5CB294AE9F700422BAE /* Tasks */,
 				BFB1F5C2294ADA2C00422BAE /* MadeForYou */,
 				BFB1F5BC294ACACE00422BAE /* Onboarding */,
 				7122D50129384B0600BDF888 /* Arc */,
@@ -532,6 +533,13 @@
 				BFB1F5C9294ADCCC00422BAE /* AnimatedCardView.swift */,
 			);
 			path = MadeForYou;
+			sourceTree = "<group>";
+		};
+		BFB1F5CB294AE9F700422BAE /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tasks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
