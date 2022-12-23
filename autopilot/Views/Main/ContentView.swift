@@ -28,47 +28,13 @@ struct ContentView : View {
                 // TODO: Send the height needed for tab bar, then add to current height
                     Group {
                         ZStack(alignment: Alignment.top) {
-                            Color.white
-                                .ignoresSafeArea()
-//                            BackgroundView()
-//
                             
                             if ((viewModel.user?.isAdmin) != false) {
                                 switch autopilotViewRouter.currentPage {
                                 case .home:
-                                    CarouselView(itemHeight: 400, views: [
-                                    AnyView(
-                                        
-                                        MadeForYou().onTapGesture {
-                                            slideTabShowing = false
-                                            autopilotViewRouter.currentPage = .arcDetail
-                                        }
+                                    HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                                        .padding(.bottom, UIScreen.main.bounds.height * 0.30)
 
-                                        
-
-                                        ),
-                                    AnyView(
-                                        
-                                        MadeForYou().onTapGesture {
-                                            slideTabShowing = false
-                                            autopilotViewRouter.currentPage = .arcDetail
-                                        }
-
-                                        
-
-                                        ),                                AnyView(ArcCardContent()),
-                                    AnyView(
-                                        
-                                        MadeForYou().onTapGesture {
-                                            slideTabShowing = false
-                                            autopilotViewRouter.currentPage = .arcDetail
-                                        }
-
-                                        
-
-                                        )
-                                ])
-                                    .padding(.top, -UIScreen.main.bounds.height * 0.30)
                                     
                                 case .arcDetail:
                                     ArcModeDetailView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
@@ -106,23 +72,11 @@ struct ContentView : View {
                                                         
                                                         // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
                                                         Handle()
-                                                        SearchBar(text: $searchText, placeholder: "What do you want to open?")
+                                                        SearchBar(text: $searchText, placeholder: "What tab do you want to open?")
                                                         // Tab Bar here
+                                                        RecommendedTabsHeader()
                                                         ScrollView {
-                                                            HStack {
-                                                                
-                                                                HStack {
-                                                                    Text("Recommended")
-                                                                        .font(.subheadline)
-                                                                        .foregroundColor(.gray)
-                                                                        .frame(width: 115)
-                                                                    .padding()
-                                                                    BetaTag()
-                                                                    
-                                                                }
-                                                                Spacer()
-                                                                
-                                                            }
+                                                            
                                                                 // recommended tabs
                                                             switch autopilotViewRouter.currentPage {
                                                                 // MARK: - Home page
@@ -506,21 +460,7 @@ struct ContentView : View {
                                                             }
                                                             
                                                             
-    //                                                        HStack {
-    //
-    //                                                            HStack {
-    //                                                                Text("Shortcuts")
-    //                                                                    .frame(width: 115)
-    //                                                                    .font(.subheadline)
-    //                                                                    .foregroundColor(.gray)
-    //                                                                ComingSoon()
-    //
-    //                                                            }
-    //                                                            Spacer()
-    //
-    //                                                        }
-    //                                                        .padding(.top, -50)
-                                                            
+
                                                             Spacer()
                                                         }
                                                         
@@ -578,32 +518,6 @@ struct ContentView : View {
     
 
 
-struct BetaTag: View {
-    var body: some View {
-        Text("Beta")
-            .fixedSize(horizontal: true, vertical: false)
-            .multilineTextAlignment(.center)
-            .padding()
-            .frame(width: 50, height: 20)
-            .background(Rectangle().fill(Color.blue.opacity(0.3)).shadow(radius: 3))
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .font(.system(size: 12, weight: .semibold))
-        
-    }
-}
 
-struct ComingSoon: View {
-    var body: some View {
-        Text("Coming Soon")
-            .fixedSize(horizontal: true, vertical: false)
-            .multilineTextAlignment(.center)
-            .padding()
-            .frame(width: 100, height: 20)
-            .background(Rectangle().fill(Color.blue.opacity(0.3)).shadow(radius: 3))
-            .foregroundColor(.white)
-            .cornerRadius(10)
-            .font(.system(size: 12, weight: .semibold))
-        
-    }
-}
+
+

@@ -101,6 +101,10 @@
 		BF83420129559375003A2DEE /* WorkoutsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83420029559375003A2DEE /* WorkoutsHeader.swift */; };
 		BF83420729559B64003A2DEE /* WorkoutCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83420629559B63003A2DEE /* WorkoutCircle.swift */; };
 		BF83420929559BBD003A2DEE /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83420829559BBD003A2DEE /* CalendarHeaderView.swift */; };
+		BF83422B2955ADD7003A2DEE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83422A2955ADD7003A2DEE /* HomeView.swift */; };
+		BF83422D2955B0EC003A2DEE /* RecommendedTabsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83422C2955B0EC003A2DEE /* RecommendedTabsHeader.swift */; };
+		BF83422F2955B223003A2DEE /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83422E2955B223003A2DEE /* ComingSoon.swift */; };
+		BF8342312955B25A003A2DEE /* BetaTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8342302955B25A003A2DEE /* BetaTag.swift */; };
 		BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */; };
 		BFB1F5C1294AD61D00422BAE /* BenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */; };
 /* End PBXBuildFile section */
@@ -215,6 +219,10 @@
 		BF83420029559375003A2DEE /* WorkoutsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsHeader.swift; sourceTree = "<group>"; };
 		BF83420629559B63003A2DEE /* WorkoutCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCircle.swift; sourceTree = "<group>"; };
 		BF83420829559BBD003A2DEE /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		BF83422A2955ADD7003A2DEE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BF83422C2955B0EC003A2DEE /* RecommendedTabsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTabsHeader.swift; sourceTree = "<group>"; };
+		BF83422E2955B223003A2DEE /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
+		BF8342302955B25A003A2DEE /* BetaTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaTag.swift; sourceTree = "<group>"; };
 		BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchPressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,7 +290,6 @@
 				52F452532935FAD500406D3F /* GoogleService-Info.plist */,
 				52A2B307293554790061A712 /* Models */,
 				52A2B300293543EC0061A712 /* TabBar */,
-				52A2B2F729352F7E0061A712 /* SlideOver */,
 				52A2B2C8293527B70061A712 /* Assets.xcassets */,
 				52A2B2CD293527B70061A712 /* Persistence.swift */,
 				52A2B2CF293527B70061A712 /* autopilot.xcdatamodeld */,
@@ -325,6 +332,9 @@
 				52A2B2F329352EDE0061A712 /* SlideOverCard.swift */,
 				52A2B2F529352F6C0061A712 /* Handle.swift */,
 				7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */,
+				BF83422C2955B0EC003A2DEE /* RecommendedTabsHeader.swift */,
+				BF83422E2955B223003A2DEE /* ComingSoon.swift */,
+				BF8342302955B25A003A2DEE /* BetaTag.swift */,
 			);
 			path = SlideOver;
 			sourceTree = "<group>";
@@ -340,6 +350,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				52A2B2F729352F7E0061A712 /* SlideOver */,
 				BF8341F229559273003A2DEE /* Workouts */,
 				BF8341ED29558AB1003A2DEE /* Main */,
 				BFB1F5CB294AE9F700422BAE /* Tasks */,
@@ -525,6 +536,7 @@
 				52A2B2C6293527B50061A712 /* ContentView.swift */,
 				BF8341EE29558B14003A2DEE /* NonAdminView.swift */,
 				BF8341F029558B3F003A2DEE /* AdminView.swift */,
+				BF83422A2955ADD7003A2DEE /* HomeView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -774,6 +786,7 @@
 				BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */,
 				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
+				BF8342312955B25A003A2DEE /* BetaTag.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
@@ -811,6 +824,7 @@
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				7122D5282938CA2A00BDF888 /* History.swift in Sources */,
 				BF8341FF29559355003A2DEE /* WorkoutRowView.swift in Sources */,
+				BF83422D2955B0EC003A2DEE /* RecommendedTabsHeader.swift in Sources */,
 				7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */,
 				7122D5132938B3F000BDF888 /* Exercise.swift in Sources */,
 				7122D50F2938ACF700BDF888 /* ArcModeOverview.swift in Sources */,
@@ -829,6 +843,7 @@
 				71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */,
 				BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */,
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
+				BF83422F2955B223003A2DEE /* ComingSoon.swift in Sources */,
 				BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */,
 				71D2D50D2936D9E2004229B3 /* GodFilterButtonView.swift in Sources */,
 				52F4524A2935EC0700406D3F /* LoginView.swift in Sources */,
@@ -843,6 +858,7 @@
 				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,
 				71234FB7293696A800B2FEDC /* ImagePicker.swift in Sources */,
 				BF83420729559B64003A2DEE /* WorkoutCircle.swift in Sources */,
+				BF83422B2955ADD7003A2DEE /* HomeView.swift in Sources */,
 				71234FAF2936716800B2FEDC /* AuthViewModel.swift in Sources */,
 				71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,

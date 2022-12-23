@@ -19,39 +19,9 @@ struct NonAdminView: View {
         Group {
             switch autopilotViewRouter.currentPage {
             case .home:
-                CarouselView(itemHeight: 400, views: [
-                AnyView(
-                    
-                    MadeForYou().onTapGesture {
-                        slideTabShowing = false
-                        autopilotViewRouter.currentPage = .arcDetail
-                    }
+                HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                    .padding(.bottom, UIScreen.main.bounds.height * 0.30)
 
-                    
-
-                    ),
-                AnyView(
-                    
-                    MadeForYou().onTapGesture {
-                        slideTabShowing = false
-                        autopilotViewRouter.currentPage = .arcDetail
-                    }
-
-                    
-
-                    ),                                AnyView(ArcCardContent()),
-                AnyView(
-                    
-                    MadeForYou().onTapGesture {
-                        slideTabShowing = false
-                        autopilotViewRouter.currentPage = .arcDetail
-                    }
-
-                    
-
-                    )
-            ])
-                .padding(.top, -UIScreen.main.bounds.height * 0.30)
                 
             case .arcDetail:
                 ArcModeDetailView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
@@ -94,20 +64,7 @@ struct NonAdminView: View {
                                     SearchBar(text: $searchText, placeholder: "What do you want to open?")
                                     // Tab Bar here
                                     ScrollView {
-                                        HStack {
-                                            
-                                            HStack {
-                                                Text("Recommended")
-                                                    .font(.subheadline)
-                                                    .foregroundColor(.gray)
-                                                    .frame(width: 115)
-                                                .padding()
-                                                BetaTag()
-                                                
-                                            }
-                                            Spacer()
-                                            
-                                        }
+                                        RecommendedTabsHeader()
                                             // recommended tabs
                                         switch autopilotViewRouter.currentPage {
                                             // MARK: - Home page (Recommended)
