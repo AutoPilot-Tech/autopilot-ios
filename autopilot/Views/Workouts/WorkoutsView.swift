@@ -14,7 +14,7 @@ struct WorkoutsView: View {
             CalendarHeaderView()
                 .padding(.top, 20)
             List {
-                ForEach(0..<100) {_ in
+                ForEach(0..<10) {_ in
                     WorkoutRowView()
                 }
             }

@@ -13,13 +13,16 @@ struct CalendarHeaderView: View {
             ForEach(0..<7) { index in
                 VStack {
                     Circle()
+                        .strokeBorder(.gray, lineWidth: 2)
                         .frame(width: 40, height: 40)
                         .overlay(
                             Text(self.dayOfWeek(for: index))
-                                .font(.caption)
-                                .foregroundColor(.white)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
                         )
-                        .foregroundColor(.gray)
+                        .foregroundColor(.white)
+                        
+
                 }
             }
         }
@@ -27,7 +30,7 @@ struct CalendarHeaderView: View {
 
     func dayOfWeek(for index: Int) -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "EE"
+        formatter.dateFormat = "EEEEE"
         let date = Calendar.current.date(byAdding: .day, value: index, to: startOfWeek())!
         return formatter.string(from: date)
     }
