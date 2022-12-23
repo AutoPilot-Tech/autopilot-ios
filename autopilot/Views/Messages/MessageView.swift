@@ -9,7 +9,7 @@ import SwiftUI
 import Kingfisher
 
 struct MessageView: View {
-    
+    @Binding var showTimestamps: Bool
     let message: Message
     
     var body: some View {
@@ -22,6 +22,20 @@ struct MessageView: View {
                     .clipShape(ChatBubble(isFromCurrentUser: true))
                     .foregroundColor(.white)
                     .padding(.horizontal)
+                    .offset(x: showTimestamps ? -60 : 0, y: 0)
+                    .animation(.easeInOut)
+                    .overlay(
+                                HStack {
+                                    Spacer()
+                                    Text(FORMATTED_TIMESTAMP(timestamp: message.timestamp))
+                                        .font(.footnote)
+                                        .foregroundColor(.gray)
+                                        .padding(8)
+                                        .opacity(showTimestamps ? 1 : 0)
+                                }
+                            )
+                
+                
             } else {
                 HStack {
                     KFImage(URL(string: message.user.profileImageUrl))

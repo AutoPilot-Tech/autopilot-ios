@@ -23,6 +23,17 @@ let FAKE_DATA = ["email": "fake@email.com",
             "profileImageUrl": "error",
             "uid": "error"]
 
+func FORMATTED_TIMESTAMP(timestamp: Timestamp) -> String {
+    let date = timestamp.dateValue()
+
+    let dateFormatter = DateFormatter()
+    dateFormatter.timeStyle = .short
+
+    let formattedTimestamp = dateFormatter.string(from: date)
+    return formattedTimestamp
+
+}
+
 
 
 

@@ -10,7 +10,8 @@ import SwiftUI
 struct ChatView: View {
     let user: User
     @ObservedObject var viewModel: ChatViewModel
-    
+    @State private var showTimestamps = false
+
     @State var messageText: String = ""
     
     
@@ -23,19 +24,56 @@ struct ChatView: View {
         
                 VStack {
                     
-                    ScrollView {
-                        VStack(alignment: .leading, spacing: 12) {
-                            ForEach(viewModel.messages) { message in
-                                MessageView(message: message)
+                    ScrollViewReader { scrollView in
+                            ScrollView {
+                                VStack(alignment: .leading, spacing: 12) {
+                                    ForEach(viewModel.messages, id: \.id) { message in
+                                        MessageView(showTimestamps: $showTimestamps, message: message)
+                                    }
+                                    
+                                }
+                            }
+                            .onAppear {
+                                // Find the latest message
+                                guard let latestMessage = viewModel.messages.last else { return }
+
+                                // Scroll to the corresponding MessageView
+                                scrollView.scrollTo(latestMessage.id)
+                            }
+                            .onChange(of: viewModel.messages) { messages in
+                                // Find the latest message
+                                guard let latestMessage = messages.last else { return }
+
+                                // Scroll to the corresponding MessageView
+                                scrollView.scrollTo(latestMessage.id)
                             }
                         }
-                    }
                     MessageInputView(messageText: $messageText, action: sendMessage)
                         .padding()
                     
                         
                     
                 }.navigationTitle(user.username)
+            .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
+                .onChanged { value in
+                    print(value.translation)
+                    switch(value.translation.width, value.translation.height) {
+                        case (...0, -30...30):
+                        // left
+                        if self.showTimestamps == false {
+                            self.showTimestamps.toggle()
+                        }
+                        case (0..., -30...30):
+                        // right
+                        if self.showTimestamps == true {
+                            self.showTimestamps.toggle()
+                        }
+                        case (-100...100, ...0):  print("up swipe")
+                        case (-100...100, 0...):  print("down swipe")
+                        default:  print("no clue")
+                    }
+                }
+            )
     }
     
     func sendMessage() {

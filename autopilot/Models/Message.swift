@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 
-struct Message: Identifiable {
+struct Message: Identifiable, Hashable {
     let text: String
     let user: User
     let toId: String
@@ -17,6 +17,14 @@ struct Message: Identifiable {
     let isFromCurrentUser: Bool
     let timestamp: Timestamp
     let id: String
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(id)
+        }
+
+    static func == (lhs: Message, rhs: Message) -> Bool {
+        return lhs.id == rhs.id
+    }
     
     var chatPartnerId: String { return isFromCurrentUser ? toId: fromId }
     
@@ -38,6 +46,8 @@ struct MockMessage: Identifiable {
     let imageName: String
     let messageText: String
     let isCurrentUser: Bool
+    
+    
 }
 
 
