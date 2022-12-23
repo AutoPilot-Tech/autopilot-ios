@@ -16,35 +16,43 @@ struct MessageView: View {
     
     var body: some View {
         HStack {
+            
             if message.isFromCurrentUser {
                 Spacer()
                 VStack(alignment: .trailing) {
-                    Text(message.text)
-                        .padding()
-                        .background(Color.blue)
-                        .clipShape(ChatBubble(isFromCurrentUser: true))
-                        .foregroundColor(.white)
-                        .padding(.horizontal)
-                        .offset(x: showTimestamps ? -60 : 0, y: 0)
-                        .animation(.easeInOut)
-                        .overlay(
-                                    HStack {
-                                        Spacer()
-                                        Text(FORMATTED_TIMESTAMP(timestamp: message.timestamp))
-                                            .font(.footnote)
-                                            .foregroundColor(.gray)
-                                            .padding(8)
-                                            .opacity(showTimestamps ? 1 : 0)
-                                    }
-                    )
-                    if message == viewModel.messages.last {
-                        Text("Delivered")
-                            .font(.caption)
-                            .foregroundColor(.gray)
-                            .padding(.horizontal, 15)
+                    if containsAtMostThreeEmojis(message: message.text) {
+                        Text(message.text)
+                            .font(.custom("Arial", size: 56))
+                            .padding(.horizontal)
+                    } else {
+                        Text(message.text)
+                            .padding()
+                            .background(Color.blue)
+                            .clipShape(ChatBubble(isFromCurrentUser: true))
+                            .foregroundColor(.white)
+                            .padding(.horizontal)
                             .offset(x: showTimestamps ? -60 : 0, y: 0)
-                        .animation(.easeInOut)
+                            .animation(.easeInOut)
+                            .overlay(
+                                        HStack {
+                                            Spacer()
+                                            Text(FORMATTED_TIMESTAMP(timestamp: message.timestamp))
+                                                .font(.footnote)
+                                                .foregroundColor(.gray)
+                                                .padding(8)
+                                                .opacity(showTimestamps ? 1 : 0)
+                                        }
+                        )
+                        if message == viewModel.messages.last {
+                            Text("Delivered")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                                .padding(.horizontal, 15)
+                                .offset(x: showTimestamps ? -60 : 0, y: 0)
+                            .animation(.easeInOut)
+                        }
                     }
+                    
                 }
                 
                 

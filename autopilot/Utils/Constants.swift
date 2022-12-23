@@ -34,6 +34,53 @@ func FORMATTED_TIMESTAMP(timestamp: Timestamp) -> String {
 
 }
 
+extension String {
+
+    func containsEmoji() -> Bool {
+        
+        for character in self {
+            var shouldCheckNextScalar = false
+            for scalar in character.unicodeScalars {
+               if shouldCheckNextScalar {
+                    if scalar == "\u{FE0F}" { // scalar that indicates that character should be displayed as emoji
+                        return true
+                    }
+                    shouldCheckNextScalar = false
+                }
+                
+                if scalar.properties.isEmoji {
+                    if scalar.properties.isEmojiPresentation {
+                        return true
+                    }
+                    shouldCheckNextScalar = true
+                }
+            }
+        }
+        
+        return false
+    }
+    
+    func containsAllEmojis() -> Bool {
+        for character in self {
+            for scalar in character.unicodeScalars {
+                if scalar.properties.isEmoji == false {
+                    return false
+                }
+            }
+        }
+        return true
+    }
+    
+}
+
+
+func containsAtMostThreeEmojis(message: String) -> Bool {
+    return message.count <= 3 && message.containsAllEmojis()
+    
+    
+}
+
+
 
 
 
