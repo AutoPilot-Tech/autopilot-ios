@@ -12,6 +12,8 @@ struct ChatView: View {
     @ObservedObject var viewModel: ChatViewModel
     @State private var showTimestamps = false
     @State private var keyboardHeight: CGFloat = 0
+    @State private var chatBlurAmount = 0.0
+
 
 
     @State var messageText: String = ""
@@ -30,7 +32,9 @@ struct ChatView: View {
                             ScrollView {
                                 VStack(alignment: .leading, spacing: 12) {
                                     ForEach(viewModel.messages, id: \.id) { message in
-                                        MessageView(viewModel: viewModel, showTimestamps: $showTimestamps, message: message)
+                                        MessageView(viewModel: viewModel, chatBlurAmount: $chatBlurAmount, showTimestamps: $showTimestamps, message: message)
+                                            
+
                                     }
                                     
                                 }
@@ -60,9 +64,14 @@ struct ChatView: View {
                         
                     
                 }
+                .blur(radius: chatBlurAmount)
                 .onTapGesture {
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
                     self.keyboardHeight = 0
+                    if self.chatBlurAmount > 0.0 {
+                        self.chatBlurAmount = 0.0
+
+                    }
                 }
                 .navigationTitle(user.username)
             .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)

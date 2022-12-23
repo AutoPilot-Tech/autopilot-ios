@@ -10,6 +10,7 @@ import Kingfisher
 
 struct MessageView: View {
     @ObservedObject var viewModel: ChatViewModel
+    @Binding var chatBlurAmount: Double
 
     @Binding var showTimestamps: Bool
     let message: Message
@@ -119,6 +120,12 @@ struct MessageView: View {
             }
             
         }
+        .gesture(
+            LongPressGesture()
+                .onEnded { _ in
+                    self.chatBlurAmount = 5.0
+                }
+        )
     }
 }
 
