@@ -60,6 +60,9 @@ struct ContentView : View {
                                     WorkoutsView()
                                         
 
+                                case .recommended:
+                                    HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                                        .padding(.bottom, UIScreen.main.bounds.height * 0.30)
                                 }
                                 if slideTabShowing {
                                     VStack {
@@ -82,37 +85,13 @@ struct ContentView : View {
                                                             case .home:
                                                                 VStack {
                                                                     HStack {
-                                                                            VStack {
-                                                                                Image(systemName: "arrowtriangle.right.circle.fill")
-                                                                                    .resizable()
-                                                                                    .aspectRatio(contentMode: .fit)
-                                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                    .symbolRenderingMode(.multicolor)
-                                                                                    .foregroundColor(.blue)
-                                                                                
-                                                                                Text("Start Focus")
-                                                                                    .font(.footnote)
-                                                                                    .foregroundColor(.blue)
-                                                                            }
-                                                                            .padding(.horizontal, -4)
-                                                                            .onTapGesture {
-                                                                                autopilotViewRouter.currentPage = .arcDetail
-                                                                            }
+                                                                        AppIcon(geometry: geometry, iconName: "arrowtriangle.right.circle.fill", appName: "Start Focus")
+                                                                        .onTapGesture {
+                                                                            autopilotViewRouter.currentPage = .arcDetail
+                                                                        }
                                                                         
                                                                         
-                                                                            VStack {
-                                                                                Image(systemName: "network")
-                                                                                    .resizable()
-                                                                                    .aspectRatio(contentMode: .fit)
-                                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                    .symbolRenderingMode(.multicolor)
-                                                                                    .foregroundColor(.cyan)
-                                                                                
-                                                                                Text("Explore")
-                                                                                    .font(.footnote)
-                                                                                    .foregroundColor(.blue)
-                                                                            }
-                                                                            .padding(.horizontal, -4)
+                                                                        AppIcon(geometry: geometry, iconName: "network", appName: "Explore")
                                                                             .onTapGesture {
                                                                             autopilotViewRouter.currentPage = .explore
                                                                             }

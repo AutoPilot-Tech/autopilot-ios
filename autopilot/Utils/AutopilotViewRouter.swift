@@ -25,6 +25,7 @@ enum Page {
     case profile
     case coachChat
     case workouts
+    case recommended
 }
 
 
@@ -32,4 +33,10 @@ enum RecommendedView {
     case home
     case explore
     case general
+    case arcDetail
+    case arcMode
+    case profile
+    case coachChat
+    case workouts
+    case recommended
 }

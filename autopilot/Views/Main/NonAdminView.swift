@@ -16,11 +16,11 @@ struct NonAdminView: View {
     @Binding var slideTabShowing: Bool // Bindable on other views
 
     var body: some View {
-        Group {
+        ZStack {
             switch autopilotViewRouter.currentPage {
             case .home:
-                HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
-                    .padding(.bottom, UIScreen.main.bounds.height * 0.30)
+                WorkoutsView()
+                    .padding(.top, UIScreen.main.bounds.height * 0.10)
 
                 
             case .arcDetail:
@@ -48,6 +48,10 @@ struct NonAdminView: View {
             case .workouts:
                 WorkoutsView()
                     .padding(.top, UIScreen.main.bounds.height * 0.10)
+            case .recommended:
+                HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                    .padding(.bottom, UIScreen.main.bounds.height * 0.30)
+                
                     
 
             }
@@ -71,39 +75,13 @@ struct NonAdminView: View {
                                         case .home:
                                             VStack {
                                                 HStack {
-                                                        VStack {
-                                                            Image(systemName: "arrowtriangle.right.circle.fill")
-                                                                .resizable()
-                                                                .aspectRatio(contentMode: .fit)
-                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                .symbolRenderingMode(.multicolor)
-                                                                .foregroundColor(.blue)
-                                                            
-                                                            Text("Quick Start")
-                                                                .font(.footnote)
-                                                                .foregroundColor(.blue)
-                                                        }
-                                                        .padding(.horizontal, -4)
+                                                    AppIcon(geometry: geometry, iconName: "arrowtriangle.right.circle.fill", appName: "Quick Start")
                                                         .onTapGesture {
                                                             autopilotViewRouter.currentPage = .arcDetail
                                                         }
-                                                    
-                                                    
-                                                        VStack {
-                                                            Image(systemName: "stopwatch.fill")
-                                                                .resizable()
-                                                                .aspectRatio(contentMode: .fit)
-                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                .symbolRenderingMode(.multicolor)
-                                                                .foregroundColor(.red)
-                                                            
-                                                            Text("See Workouts")
-                                                                .font(.footnote)
-                                                                .foregroundColor(.red)
-                                                        }
-                                                        .padding(.horizontal, -4)
+                                                    AppIcon(geometry: geometry, iconName: "heart.fill", appName: "For You")
                                                         .onTapGesture {
-                                                        autopilotViewRouter.currentPage = .workouts
+                                                        autopilotViewRouter.currentPage = .recommended
                                                         }
                                                     
                                                    
@@ -118,7 +96,7 @@ struct NonAdminView: View {
                                                                 
                                                                 Text("Text Coach")
                                                                     .font(.footnote)
-                                                                    .foregroundColor(.green)
+                                                                    .foregroundColor(.blue)
 
                                                                     
                                                             }

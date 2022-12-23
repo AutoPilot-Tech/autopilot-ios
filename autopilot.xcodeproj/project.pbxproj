@@ -105,6 +105,7 @@
 		BF83422D2955B0EC003A2DEE /* RecommendedTabsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83422C2955B0EC003A2DEE /* RecommendedTabsHeader.swift */; };
 		BF83422F2955B223003A2DEE /* ComingSoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83422E2955B223003A2DEE /* ComingSoon.swift */; };
 		BF8342312955B25A003A2DEE /* BetaTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8342302955B25A003A2DEE /* BetaTag.swift */; };
+		BF8342332955B829003A2DEE /* AppIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8342322955B829003A2DEE /* AppIcon.swift */; };
 		BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */; };
 		BFB1F5C1294AD61D00422BAE /* BenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */; };
 /* End PBXBuildFile section */
@@ -223,6 +224,7 @@
 		BF83422C2955B0EC003A2DEE /* RecommendedTabsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedTabsHeader.swift; sourceTree = "<group>"; };
 		BF83422E2955B223003A2DEE /* ComingSoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoon.swift; sourceTree = "<group>"; };
 		BF8342302955B25A003A2DEE /* BetaTag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BetaTag.swift; sourceTree = "<group>"; };
+		BF8342322955B829003A2DEE /* AppIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIcon.swift; sourceTree = "<group>"; };
 		BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchPressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,6 +337,7 @@
 				BF83422C2955B0EC003A2DEE /* RecommendedTabsHeader.swift */,
 				BF83422E2955B223003A2DEE /* ComingSoon.swift */,
 				BF8342302955B25A003A2DEE /* BetaTag.swift */,
+				BF8342322955B829003A2DEE /* AppIcon.swift */,
 			);
 			path = SlideOver;
 			sourceTree = "<group>";
@@ -783,6 +786,7 @@
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
 				7122D5182938BA8C00BDF888 /* ExerciseView.swift in Sources */,
+				BF8342332955B829003A2DEE /* AppIcon.swift in Sources */,
 				BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */,
 				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
