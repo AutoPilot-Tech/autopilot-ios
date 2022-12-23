@@ -236,6 +236,8 @@ struct ContentView : View {
                                                                             .font(.footnote)
                                                                             .foregroundColor(.orange)
                                                                     }
+                                                                    .padding(.horizontal, -4)
+
                                                                     
                                                                    
                                                                     
@@ -259,6 +261,8 @@ struct ContentView : View {
 
                                                                         Spacer()
                                                                     }
+                                                                    .padding(.horizontal, -4)
+
                                                                         
                                                                     
                                                                     

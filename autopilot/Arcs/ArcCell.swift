@@ -16,12 +16,7 @@ struct ArcCell: View {
             VStack(alignment: .leading) {
                 HStack(alignment: .top, spacing: 12) {
                     KFImage(URL(string: arc.profileImageUrl))
-                        .resizable()
-                        .scaledToFill()
-                        .clipped()
-                        .frame(width: 56, height: 56)
-                        .cornerRadius(56 / 2)
-                        .padding(.leading)
+                        
                     
                     VStack(alignment: .leading, spacing: 4) {
                         HStack {
