@@ -8,10 +8,26 @@
 import SwiftUI
 
 struct WorkoutsView: View {
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            CalendarHeaderView()
+                .padding(.top, 20)
+            List {
+                ForEach(0..<100) {_ in
+                    WorkoutRowView()
+                }
+            }
+        }
     }
 }
+
+
+
+
+
+
+
 
 struct WorkoutsView_Previews: PreviewProvider {
     static var previews: some View {

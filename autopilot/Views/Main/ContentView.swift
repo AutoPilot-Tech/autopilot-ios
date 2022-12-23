@@ -91,6 +91,8 @@ struct ContentView : View {
 
                                 case .profile:
                                     UserProfileView(user: viewModel.user ??  User(dictionary: FAKE_DATA))
+                                case .workouts:
+                                    WorkoutsView()
                                         
 
                                 }

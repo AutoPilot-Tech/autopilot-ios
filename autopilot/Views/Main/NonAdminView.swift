@@ -74,6 +74,10 @@ struct NonAdminView: View {
 
             case .profile:
                 UserProfileView(user: viewModel.user ??  User(dictionary: FAKE_DATA))
+                
+            case .workouts:
+                WorkoutsView()
+                    .padding(.top, UIScreen.main.bounds.height * 0.10)
                     
 
             }
@@ -142,7 +146,7 @@ struct NonAdminView: View {
                                                         }
                                                         .padding(.horizontal, -4)
                                                         .onTapGesture {
-                                                        autopilotViewRouter.currentPage = .explore
+                                                        autopilotViewRouter.currentPage = .workouts
                                                         }
                                                     
                                                    

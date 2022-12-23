@@ -97,6 +97,10 @@
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
 		BF8341FD295592E2003A2DEE /* WorkoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341FC295592E2003A2DEE /* WorkoutsViewModel.swift */; };
+		BF8341FF29559355003A2DEE /* WorkoutRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341FE29559355003A2DEE /* WorkoutRowView.swift */; };
+		BF83420129559375003A2DEE /* WorkoutsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83420029559375003A2DEE /* WorkoutsHeader.swift */; };
+		BF83420729559B64003A2DEE /* WorkoutCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83420629559B63003A2DEE /* WorkoutCircle.swift */; };
+		BF83420929559BBD003A2DEE /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83420829559BBD003A2DEE /* CalendarHeaderView.swift */; };
 		BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */; };
 		BFB1F5C1294AD61D00422BAE /* BenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */; };
 /* End PBXBuildFile section */
@@ -207,6 +211,10 @@
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		BF8341FC295592E2003A2DEE /* WorkoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewModel.swift; sourceTree = "<group>"; };
+		BF8341FE29559355003A2DEE /* WorkoutRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutRowView.swift; sourceTree = "<group>"; };
+		BF83420029559375003A2DEE /* WorkoutsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsHeader.swift; sourceTree = "<group>"; };
+		BF83420629559B63003A2DEE /* WorkoutCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCircle.swift; sourceTree = "<group>"; };
+		BF83420829559BBD003A2DEE /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
 		BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchPressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -525,6 +533,10 @@
 			isa = PBXGroup;
 			children = (
 				BF8341F329559280003A2DEE /* WorkoutsView.swift */,
+				BF8341FE29559355003A2DEE /* WorkoutRowView.swift */,
+				BF83420029559375003A2DEE /* WorkoutsHeader.swift */,
+				BF83420629559B63003A2DEE /* WorkoutCircle.swift */,
+				BF83420829559BBD003A2DEE /* CalendarHeaderView.swift */,
 			);
 			path = Workouts;
 			sourceTree = "<group>";
@@ -776,6 +788,7 @@
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
 				BF8341FD295592E2003A2DEE /* WorkoutsViewModel.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
+				BF83420129559375003A2DEE /* WorkoutsHeader.swift in Sources */,
 				7122D4FE2938470A00BDF888 /* FreeFlowArcMode.swift in Sources */,
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
 				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
@@ -797,6 +810,7 @@
 				7122D5112938B09D00BDF888 /* SuccessView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				7122D5282938CA2A00BDF888 /* History.swift in Sources */,
+				BF8341FF29559355003A2DEE /* WorkoutRowView.swift in Sources */,
 				7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */,
 				7122D5132938B3F000BDF888 /* Exercise.swift in Sources */,
 				7122D50F2938ACF700BDF888 /* ArcModeOverview.swift in Sources */,
@@ -809,6 +823,7 @@
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
+				BF83420929559BBD003A2DEE /* CalendarHeaderView.swift in Sources */,
 				71D2D5172936F486004229B3 /* ProfileViewModel.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */,
@@ -827,6 +842,7 @@
 				52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */,
 				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,
 				71234FB7293696A800B2FEDC /* ImagePicker.swift in Sources */,
+				BF83420729559B64003A2DEE /* WorkoutCircle.swift in Sources */,
 				71234FAF2936716800B2FEDC /* AuthViewModel.swift in Sources */,
 				71D2D52D29376AD5004229B3 /* CustomBlurView.swift in Sources */,
 				52A2B2F629352F6C0061A712 /* Handle.swift in Sources */,

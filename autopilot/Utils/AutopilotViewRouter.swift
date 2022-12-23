@@ -24,6 +24,7 @@ enum Page {
     case arcMode
     case profile
     case coachChat
+    case workouts
 }
 
 
