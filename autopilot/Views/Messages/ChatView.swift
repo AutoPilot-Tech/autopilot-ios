@@ -60,7 +60,10 @@ struct ChatView: View {
                         
                     
                 }
-
+                .onTapGesture {
+                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
+                    self.keyboardHeight = 0
+                }
                 .navigationTitle(user.username)
             .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
                 .onChanged { value in
