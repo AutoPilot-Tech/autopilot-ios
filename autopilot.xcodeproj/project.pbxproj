@@ -95,6 +95,8 @@
 		BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
+		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
+		BF8341FD295592E2003A2DEE /* WorkoutsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341FC295592E2003A2DEE /* WorkoutsViewModel.swift */; };
 		BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */; };
 		BFB1F5C1294AD61D00422BAE /* BenchPressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */; };
 /* End PBXBuildFile section */
@@ -203,6 +205,8 @@
 		BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWorkoutView.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
+		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
+		BF8341FC295592E2003A2DEE /* WorkoutsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewModel.swift; sourceTree = "<group>"; };
 		BFB1F5BD294ACAE000422BAE /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		BFB1F5C0294AD61D00422BAE /* BenchPressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenchPressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -328,6 +332,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF8341F229559273003A2DEE /* Workouts */,
 				BF8341ED29558AB1003A2DEE /* Main */,
 				BFB1F5CB294AE9F700422BAE /* Tasks */,
 				BFB1F5BC294ACACE00422BAE /* Onboarding */,
@@ -449,13 +454,13 @@
 		71234FAD2936715600B2FEDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				71234FAE2936716800B2FEDC /* AuthViewModel.swift */,
-				71D2D4F82936B885004229B3 /* SearchViewModel.swift */,
-				71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */,
-				71D2D5142936EE2B004229B3 /* FeedViewModel.swift */,
-				71D2D5162936F486004229B3 /* ProfileViewModel.swift */,
-				71D2D51C293702A2004229B3 /* ChatViewModel.swift */,
-				71D2D524293715E8004229B3 /* ConversationsViewModel.swift */,
+				BF8341FB295592CC003A2DEE /* Arc */,
+				BF8341FA295592C3003A2DEE /* Search */,
+				BF8341F9295592B5003A2DEE /* Auth */,
+				BF8341F8295592AA003A2DEE /* Profile */,
+				BF8341F7295592A3003A2DEE /* Feed */,
+				BF8341F629559291003A2DEE /* Messaging */,
+				BF8341F529559289003A2DEE /* Workouts */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -514,6 +519,71 @@
 				BF8341F029558B3F003A2DEE /* AdminView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BF8341F229559273003A2DEE /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				BF8341F329559280003A2DEE /* WorkoutsView.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		BF8341F529559289003A2DEE /* Workouts */ = {
+			isa = PBXGroup;
+			children = (
+				BF8341FC295592E2003A2DEE /* WorkoutsViewModel.swift */,
+			);
+			path = Workouts;
+			sourceTree = "<group>";
+		};
+		BF8341F629559291003A2DEE /* Messaging */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D524293715E8004229B3 /* ConversationsViewModel.swift */,
+				71D2D51C293702A2004229B3 /* ChatViewModel.swift */,
+			);
+			path = Messaging;
+			sourceTree = "<group>";
+		};
+		BF8341F7295592A3003A2DEE /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D5142936EE2B004229B3 /* FeedViewModel.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		BF8341F8295592AA003A2DEE /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D5162936F486004229B3 /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		BF8341F9295592B5003A2DEE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				71234FAE2936716800B2FEDC /* AuthViewModel.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		BF8341FA295592C3003A2DEE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D4F82936B885004229B3 /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		BF8341FB295592CC003A2DEE /* Arc */ = {
+			isa = PBXGroup;
+			children = (
+				71D2D5122936E4D2004229B3 /* UploadArcViewModel.swift */,
+			);
+			path = Arc;
 			sourceTree = "<group>";
 		};
 		BFB1F5BC294ACACE00422BAE /* Onboarding */ = {
@@ -689,6 +759,7 @@
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
 				52A2B30D293555370061A712 /* ChatBubble.swift in Sources */,
 				7122D5182938BA8C00BDF888 /* ExerciseView.swift in Sources */,
+				BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */,
 				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
@@ -703,6 +774,7 @@
 				7122D50D2938A59A00BDF888 /* Popup.swift in Sources */,
 				71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */,
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
+				BF8341FD295592E2003A2DEE /* WorkoutsViewModel.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
 				7122D4FE2938470A00BDF888 /* FreeFlowArcMode.swift in Sources */,
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
