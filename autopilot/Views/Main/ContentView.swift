@@ -37,6 +37,7 @@ struct ContentView : View {
                                 .ignoresSafeArea()
 //                            BackgroundView()
 //
+                            
                             switch autopilotViewRouter.currentPage {
                             case .home:
                                 CarouselView(itemHeight: 400, views: [
@@ -183,14 +184,6 @@ struct ContentView : View {
                                                                             }
                                                                         .padding(.horizontal, -4)
                                                                     }
-                                                                        
-                                                                    
-                                                                    
-                                                                    
-                                                                    
-                                                                    
-                                                                    
-                                                                    
                                                                         
                                                                              
                                                                     
