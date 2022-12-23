@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Kingfisher
+import UIKit
 
 struct MessageView: View {
     @ObservedObject var viewModel: ChatViewModel
@@ -124,6 +125,9 @@ struct MessageView: View {
             LongPressGesture()
                 .onEnded { _ in
                     self.chatBlurAmount = 5.0
+                    let impactFeedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+                    impactFeedbackGenerator.prepare()
+                    impactFeedbackGenerator.impactOccurred()
                 }
         )
     }
