@@ -17,6 +17,7 @@ class AuthViewModel: ObservableObject {
     @Published var error: Error?
     @EnvironmentObject var viewModel: AuthViewModel
     @Published var user: User?
+    @Published var isAdmin = false
     
     static let shared = AuthViewModel() // share the user property across the application
     
@@ -111,6 +112,7 @@ class AuthViewModel: ObservableObject {
         
         Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
             guard let data = snapshot?.data() else { return }
+            self.isAdmin = data["isAdmin"] as? Bool ?? false
             self.user = User(dictionary: data)
         }
     }

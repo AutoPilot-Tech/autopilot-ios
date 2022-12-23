@@ -61,7 +61,7 @@ struct NonAdminView: View {
                                     
                                     // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
                                     Handle()
-                                    SearchBar(text: $searchText, placeholder: "What do you want to open?")
+                                    SearchBar(text: $searchText, placeholder: "What tabs do you want to open?")
                                     // Tab Bar here
                                     ScrollView {
                                         RecommendedTabsHeader()

@@ -25,11 +25,10 @@ struct ContentView : View {
         Group {
             if (viewModel.userSession != nil) {
                 NavigationView {
-                // TODO: Send the height needed for tab bar, then add to current height
                     Group {
                         ZStack(alignment: Alignment.top) {
                             
-                            if ((viewModel.user?.isAdmin) != false) {
+                            if ((viewModel.isAdmin) != false) {
                                 switch autopilotViewRouter.currentPage {
                                 case .home:
                                     HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
