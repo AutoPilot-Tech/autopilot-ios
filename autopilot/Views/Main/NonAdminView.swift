@@ -86,136 +86,41 @@ struct NonAdminView: View {
                                                     
                                                    
                                                     NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
-                                                        VStack {
-                                                                Image(systemName: "bubble.left.circle.fill")
-                                                                    .resizable()
-                                                                    .aspectRatio(contentMode: .fit)
-                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                    .symbolRenderingMode(.multicolor)
-                                                                    .foregroundColor(.green)
-                                                                
-                                                                Text("Text Coach")
-                                                                    .font(.footnote)
-                                                                    .foregroundColor(.blue)
-
-                                                                    
-                                                            }
-                                                        .padding(.horizontal, -4)
+                                                        AppIcon(geometry: geometry, iconName: "bubble.left.circle.fill", appName: "Text Coach")
                                                     }
-                                                        
-                                                             
-                                                    
                                                     Spacer()
-                                                    
-                                                    
-                                                    
-                                                    
                                                 }
-                                                
                                                 .padding(.top, -60.0)
                                             .frame(width: geometry.size.width, height: geometry.size.height/8)
-                                                
-                                                
-                                            
-                                       
                                             }
                                             
-                                            // MARK: - Explore
+                                            // MARK: - Default (For bugs I guess)
                                        
 
                                         default:
-                                            HStack {
-                                                    VStack {
-                                                        Image(systemName: "play.circle.fill")
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fit)
-                                                            .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                            .symbolRenderingMode(.multicolor)
-                                                            .foregroundColor(.blue)
-                                                        
-                                                        Text("Focus")
-                                                            .font(.footnote)
-                                                            .foregroundColor(.blue)
-                                                    }
-                                                    .padding(.horizontal, -4)
-                                                    .onTapGesture {
-                                                        autopilotViewRouter.currentPage = .arcDetail
-                                                    }
-                                                
-                                                
-                                                    VStack {
-                                                        Image(systemName: "magnifyingglass.circle.fill")
-                                                            .resizable()
-                                                            .aspectRatio(contentMode: .fit)
-                                                            .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                            .symbolRenderingMode(.multicolor)
-                                                            .foregroundColor(.pink)
-                                                        
-                                                        Text("Explore")
-                                                            .font(.footnote)
-                                                            .foregroundColor(.pink)
-                                                    }
-                                                    .padding(.horizontal, -4)
-                                                    .onTapGesture {
-                                                    autopilotViewRouter.currentPage = .explore
-                                                    }
-                                                
-                                               
-                                                NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
-                                                    VStack {
-                                                            Image(systemName: "bubble.left.circle.fill")
-                                                                .resizable()
-                                                                .aspectRatio(contentMode: .fit)
-                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                .symbolRenderingMode(.multicolor)
-                                                                .foregroundColor(.green)
-                                                            
-                                                            Text("Your Coach")
-                                                                .font(.footnote)
-                                                                .foregroundColor(.green)
-
-                                                                
+                                            VStack {
+                                                HStack {
+                                                    AppIcon(geometry: geometry, iconName: "arrowtriangle.right.circle.fill", appName: "Quick Start")
+                                                        .onTapGesture {
+                                                            autopilotViewRouter.currentPage = .arcDetail
                                                         }
-                                                    .padding(.horizontal, -4)
+                                                    AppIcon(geometry: geometry, iconName: "heart.fill", appName: "For You")
+                                                        .onTapGesture {
+                                                        autopilotViewRouter.currentPage = .recommended
+                                                        }
+                                                    
+                                                   
+                                                    NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
+                                                        AppIcon(geometry: geometry, iconName: "bubble.left.circle.fill", appName: "Text Coach")
+                                                    }
+                                                    Spacer()
                                                 }
-                                                    
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                
-                                                    
-                                                         
-                                                
-                                                Spacer()
-                                                
-                                                
-                                                
-                                                
-                                            }
-                                            .padding(.top, -60.0)
+                                                .padding(.top, -60.0)
                                             .frame(width: geometry.size.width, height: geometry.size.height/8)
+                                            }
                                             
                                         }
-                                        
-                                        
-//                                                        HStack {
-//
-//                                                            HStack {
-//                                                                Text("Shortcuts")
-//                                                                    .frame(width: 115)
-//                                                                    .font(.subheadline)
-//                                                                    .foregroundColor(.gray)
-//                                                                ComingSoon()
-//
-//                                                            }
-//                                                            Spacer()
-//
-//                                                        }
-//                                                        .padding(.top, -50)
-                                        
+
                                         Spacer()
                                     }
                                     
