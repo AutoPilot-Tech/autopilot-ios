@@ -24,6 +24,18 @@ struct MessageView: View {
                         Text(message.text)
                             .font(.custom("Arial", size: 56))
                             .padding(.horizontal)
+                            .offset(x: showTimestamps ? -60 : 0, y: 0)
+                            .animation(.easeInOut)
+                            .overlay(
+                                        HStack {
+                                            Spacer()
+                                            Text(FORMATTED_TIMESTAMP(timestamp: message.timestamp))
+                                                .font(.footnote)
+                                                .foregroundColor(.gray)
+                                                .padding(8)
+                                                .opacity(showTimestamps ? 1 : 0)
+                                        }
+                        )
                     } else {
                         Text(message.text)
                             .padding()
@@ -58,20 +70,36 @@ struct MessageView: View {
                 
                 
             } else {
-                HStack {
-                    KFImage(URL(string: message.user.profileImageUrl))
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 40, height: 40)
-                        .clipShape(Circle())
-                    
-                    Text(message.text)
-                        .padding()
-                        .background(Color(.systemGray5))
-                        .clipShape(ChatBubble(isFromCurrentUser: false))
-                        .foregroundColor(.black)
-                    
-                }.padding(.horizontal)
+                if containsAtMostThreeEmojis(message: message.text) {
+                    HStack {
+                        KFImage(URL(string: message.user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                        
+                        Text(message.text)
+                            .font(.custom("Arial", size: 56))
+                            .padding(.horizontal)
+                        
+                    }.padding(.horizontal)
+                } else {
+                    HStack {
+                        KFImage(URL(string: message.user.profileImageUrl))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                        
+                        Text(message.text)
+                            .padding()
+                            .background(Color(.systemGray5))
+                            .clipShape(ChatBubble(isFromCurrentUser: false))
+                            .foregroundColor(.black)
+                        
+                    }.padding(.horizontal)
+                }
+                
                 Spacer()
             }
             
