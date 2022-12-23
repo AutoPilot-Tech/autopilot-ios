@@ -81,6 +81,14 @@ struct MessageView: View {
                         Text(message.text)
                             .font(.custom("Arial", size: 56))
                             .padding(.horizontal)
+                        Spacer()
+                        Text(FORMATTED_TIMESTAMP(timestamp: message.timestamp))
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                            .opacity(showTimestamps ? 1 : 0)
+                            .padding(.horizontal, -16)
+
+                        
                         
                     }.padding(.horizontal)
                 } else {
@@ -96,6 +104,13 @@ struct MessageView: View {
                             .background(Color(.systemGray5))
                             .clipShape(ChatBubble(isFromCurrentUser: false))
                             .foregroundColor(.black)
+                        Spacer()
+                        Text(FORMATTED_TIMESTAMP(timestamp: message.timestamp))
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                            .opacity(showTimestamps ? 1 : 0)
+                            .padding(.horizontal, -16)
+                            
                         
                     }.padding(.horizontal)
                 }
