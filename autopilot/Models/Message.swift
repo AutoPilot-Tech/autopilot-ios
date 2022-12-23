@@ -17,6 +17,7 @@ struct Message: Identifiable, Hashable {
     let isFromCurrentUser: Bool
     let timestamp: Timestamp
     let id: String
+    let status: String
     
     func hash(into hasher: inout Hasher) {
             hasher.combine(id)
@@ -36,6 +37,7 @@ struct Message: Identifiable, Hashable {
         self.isFromCurrentUser = fromId == Auth.auth().currentUser?.uid
         self.timestamp = dictionary["timestamp"] as? Timestamp ?? Timestamp(date: Date())
         self.id = dictionary["id"] as? String ?? ""
+        self.status = dictionary["status"] as? String ?? ""
     }
 }
 

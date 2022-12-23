@@ -59,11 +59,23 @@ class ChatViewModel: ObservableObject {
                     "id": messageID,
                     "fromId": currentUid,
                     "toId": user.id,
-                    "timestamp": Timestamp(date: Date())]
+                    "timestamp": Timestamp(date: Date()),
+                    "status": "delivered"
+        ]
         
         currentUserRef.setData(data)
         receivingUserRef.document(messageID).setData(data)
         receivingRecentRef.document(currentUid).setData(data)
         currentRecentRef.document(user.id).setData(data)
     }
+    
+    func markMessageAsDelivered(_ message: Message) {
+            // Update the status of the message to "delivered"
+        }
+
+    func markMessageAsRead(_ message: Message) {
+        // Update the status of the message to "read"
+    }
+    
+    
 }

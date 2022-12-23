@@ -11,6 +11,8 @@ struct ChatView: View {
     let user: User
     @ObservedObject var viewModel: ChatViewModel
     @State private var showTimestamps = false
+    @State private var keyboardHeight: CGFloat = 0
+
 
     @State var messageText: String = ""
     
@@ -28,11 +30,14 @@ struct ChatView: View {
                             ScrollView {
                                 VStack(alignment: .leading, spacing: 12) {
                                     ForEach(viewModel.messages, id: \.id) { message in
-                                        MessageView(showTimestamps: $showTimestamps, message: message)
+                                        MessageView(viewModel: viewModel, showTimestamps: $showTimestamps, message: message)
                                     }
                                     
                                 }
+                                .offset(y: -self.keyboardHeight)
+
                             }
+
                             .onAppear {
                                 // Find the latest message
                                 guard let latestMessage = viewModel.messages.last else { return }
@@ -47,13 +52,16 @@ struct ChatView: View {
                                 // Scroll to the corresponding MessageView
                                 scrollView.scrollTo(latestMessage.id)
                             }
+                        MessageInputView(messageText: $messageText, keyboardHeight: $keyboardHeight, action: sendMessage)
+                            .padding()
                         }
-                    MessageInputView(messageText: $messageText, action: sendMessage)
-                        .padding()
+                   
                     
                         
                     
-                }.navigationTitle(user.username)
+                }
+
+                .navigationTitle(user.username)
             .gesture(DragGesture(minimumDistance: 3.0, coordinateSpace: .local)
                 .onChanged { value in
                     print(value.translation)
