@@ -11,8 +11,10 @@ struct ChatView: View {
     let user: User
     @ObservedObject var viewModel: ChatViewModel
     @State private var showTimestamps = false
-    @State private var keyboardHeight: CGFloat = 0
+    @State private var keyboardHeight: CGFloat = UIScreen.main.bounds.height
     @State private var chatBlurAmount = 0.0
+    @State private var lastMessageHeight: CGFloat = 0
+    @State private var offsetAmount: CGFloat = 0
 
 
 
@@ -33,15 +35,28 @@ struct ChatView: View {
                     ScrollViewReader { scrollView in
                             ScrollView {
                                 VStack(alignment: .leading, spacing: 12) {
+                                    
                                     ForEach(viewModel.messages, id: \.id) { message in
                                         // NOTE: Ideally you would want to use the indexes and do something like
                                         // 0..<viewModel.count etc, but this interferes with the ScrollTo last message feature, for some odd reason.
+                                        
                                         MessageView(viewModel: viewModel, chatBlurAmount: $chatBlurAmount, showTimestamps: $showTimestamps, message: message)
 
                                     }
+                                    .onPreferenceChange(LastMessageHeightPreferenceKey.self) { value in
+                                        self.lastMessageHeight = value
+                                        print("DEBUG: last message height \(self.lastMessageHeight)")
+                                        print("DEBUG: keyboard height \(self.keyboardHeight)")
+                                        if self.lastMessageHeight < self.keyboardHeight {
+                                            self.offsetAmount = 0
+                                        } else {
+                                            self.offsetAmount = self.keyboardHeight
+                                        }
+                                    }
+                                    
                                     
                                 }
-                                .offset(y: -self.keyboardHeight)
+                                .offset(y: -offsetAmount)
                                 
 
                             }
@@ -58,7 +73,10 @@ struct ChatView: View {
                                 guard let latestMessage = messages.last else { return }
 
                                 // Scroll to the corresponding MessageView
+                                
                                 scrollView.scrollTo(latestMessage.id)
+                                
+                                
                             }
                         MessageInputView(viewModel: viewModel, messageText: $messageText, keyboardHeight: $keyboardHeight, action: sendMessage)
                             .padding()

@@ -9,9 +9,18 @@ import SwiftUI
 import Kingfisher
 import UIKit
 
+
+struct LastMessageHeightPreferenceKey: PreferenceKey {
+    static var defaultValue: CGFloat = 0
+    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+        value = nextValue()
+    }
+}
+
 struct MessageView: View {
     @ObservedObject var viewModel: ChatViewModel
     @Binding var chatBlurAmount: Double
+    @State private var height: CGFloat = 0
 
     @Binding var showTimestamps: Bool
     let message: Message
@@ -24,6 +33,9 @@ struct MessageView: View {
                 VStack(alignment: .trailing) {
                     if containsAtMostThreeEmojis(message: message.text) {
                         Text(message.text)
+                            .background(GeometryReader { geo in
+                                            Color.clear.preference(key: LastMessageHeightPreferenceKey.self, value: geo.frame(in: .global).midY)
+                                        })
                             .font(.custom("Arial", size: 56))
                             .padding(.horizontal)
                             .offset(x: showTimestamps ? -60 : 0, y: 0)
@@ -48,6 +60,9 @@ struct MessageView: View {
                         }
                     } else {
                         Text(message.text)
+                            .background(GeometryReader { geo in
+                                            Color.clear.preference(key: LastMessageHeightPreferenceKey.self, value: geo.frame(in: .global).midY)
+                                        })
                             .padding()
                             .background(Color.blue)
                             .clipShape(ChatBubble(isFromCurrentUser: true))
@@ -89,6 +104,9 @@ struct MessageView: View {
                             .clipShape(Circle())
                         
                         Text(message.text)
+                            .background(GeometryReader { geo in
+                                            Color.clear.preference(key: LastMessageHeightPreferenceKey.self, value: geo.frame(in: .global).midY)
+                                        })
                             .font(.custom("Arial", size: 56))
                             .padding(.horizontal)
                         Spacer()
@@ -110,6 +128,9 @@ struct MessageView: View {
                             .clipShape(Circle())
                         
                         Text(message.text)
+                            .background(GeometryReader { geo in
+                                            Color.clear.preference(key: LastMessageHeightPreferenceKey.self, value: geo.frame(in: .global).midY)
+                                        })
                             .padding()
                             .background(Color(.systemGray5))
                             .clipShape(ChatBubble(isFromCurrentUser: false))
