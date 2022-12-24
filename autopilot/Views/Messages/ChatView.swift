@@ -16,6 +16,8 @@ struct ChatView: View {
 
 
 
+
+
     @State var messageText: String = ""
     
     
@@ -32,13 +34,15 @@ struct ChatView: View {
                             ScrollView {
                                 VStack(alignment: .leading, spacing: 12) {
                                     ForEach(viewModel.messages, id: \.id) { message in
+                                        // NOTE: Ideally you would want to use the indexes and do something like
+                                        // 0..<viewModel.count etc, but this interferes with the ScrollTo last message feature, for some odd reason.
                                         MessageView(viewModel: viewModel, chatBlurAmount: $chatBlurAmount, showTimestamps: $showTimestamps, message: message)
-                                            
 
                                     }
                                     
                                 }
                                 .offset(y: -self.keyboardHeight)
+                                
 
                             }
 
@@ -56,7 +60,7 @@ struct ChatView: View {
                                 // Scroll to the corresponding MessageView
                                 scrollView.scrollTo(latestMessage.id)
                             }
-                        MessageInputView(messageText: $messageText, keyboardHeight: $keyboardHeight, action: sendMessage)
+                        MessageInputView(viewModel: viewModel, messageText: $messageText, keyboardHeight: $keyboardHeight, action: sendMessage)
                             .padding()
                         }
                    

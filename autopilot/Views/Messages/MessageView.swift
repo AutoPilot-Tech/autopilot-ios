@@ -38,6 +38,14 @@ struct MessageView: View {
                                                 .opacity(showTimestamps ? 1 : 0)
                                         }
                         )
+                        if message == viewModel.messages.last {
+                            Text("Delivered")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                                .padding(.horizontal, 15)
+                                .offset(x: showTimestamps ? -60 : 0, y: 0)
+                            .animation(.easeInOut)
+                        }
                     } else {
                         Text(message.text)
                             .padding()

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct MessageInputView: View {
+    @ObservedObject var viewModel: ChatViewModel
+
     @Binding var messageText: String
     @Binding var keyboardHeight: CGFloat
 
@@ -16,11 +18,13 @@ struct MessageInputView: View {
     
     var body: some View {
         HStack {
-            TextField("autoMessage", text: $messageText)
+            TextField("Type your message here...", text: $messageText)
                 .textFieldStyle(PlainTextFieldStyle())
                 .frame(minHeight: 30)
                 .onAppear {
                     NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
+                        // calculate the bottom edge of last message
+                        
                         let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.height ?? 0
                         self.keyboardHeight = keyboardHeight
                     }
