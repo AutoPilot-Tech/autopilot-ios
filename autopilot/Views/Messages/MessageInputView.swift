@@ -18,9 +18,25 @@ struct MessageInputView: View {
     
     var body: some View {
         HStack {
+            Button(action: {
+                            // Add your camera button action here
+                        }) {
+                            Image(systemName: "camera.fill")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 24, height: 24)
+                                .foregroundColor(.gray)
+                        }
+                        .padding(.horizontal)
+            
             TextField("Type your message here...", text: $messageText)
                 .textFieldStyle(PlainTextFieldStyle())
                 .frame(minHeight: 30)
+                .padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
+                .background(
+                    RoundedRectangle(cornerRadius: 16)
+                        .foregroundColor(Color.gray.opacity(0.1))
+                )
                 .onAppear {
                     NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
                         // calculate the bottom edge of last message
@@ -33,10 +49,13 @@ struct MessageInputView: View {
                     NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
                 }
             
-            Button(action: action) {
-//                Text("Send")
-//                    .bold()
-//                    .foregroundColor(.blue)
+            Button(action: {
+                if messageText != "" {
+                    action()
+                } else {
+                    print("DEBUG: Attempted to send an empty message, but it failed.")
+                }
+            }) {
                 Image(systemName: "arrow.up.circle.fill")
                     .resizable()
                     .scaledToFill()
