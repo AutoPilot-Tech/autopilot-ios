@@ -11,7 +11,7 @@ struct ChatView: View {
     let user: User
     @ObservedObject var viewModel: ChatViewModel
     @State private var showTimestamps = false
-    @State private var keyboardHeight: CGFloat = UIScreen.main.bounds.height
+    @State private var keyboardHeight: CGFloat = 0
     @State private var chatBlurAmount = 0.0
     @State private var lastMessageHeight: CGFloat = 0
     @State private var offsetAmount: CGFloat = 0
@@ -42,21 +42,16 @@ struct ChatView: View {
                                         
                                         MessageView(viewModel: viewModel, chatBlurAmount: $chatBlurAmount, showTimestamps: $showTimestamps, message: message)
 
-                                    }
-                                    .onPreferenceChange(LastMessageHeightPreferenceKey.self) { value in
-                                        self.lastMessageHeight = value
-                                        print("DEBUG: last message height \(self.lastMessageHeight)")
-                                        print("DEBUG: keyboard height \(self.keyboardHeight)")
-                                        if self.lastMessageHeight < self.keyboardHeight {
-                                            self.offsetAmount = 0
-                                        } else {
-                                            self.offsetAmount = self.keyboardHeight
+                                    }.onPreferenceChange(LastMessageHeightPreferenceKey.self) { value in
+                                        if value > self.lastMessageHeight {
+                                            self.lastMessageHeight = value
                                         }
                                     }
                                     
                                     
+                                    
                                 }
-                                .offset(y: -offsetAmount)
+                                .offset(y: (UIScreen.main.bounds.height - keyboardHeight) < lastMessageHeight ? -keyboardHeight : 0)
                                 
 
                             }
@@ -78,6 +73,8 @@ struct ChatView: View {
                                 
                                 
                             }
+                            
+                            
                         MessageInputView(viewModel: viewModel, messageText: $messageText, keyboardHeight: $keyboardHeight, action: sendMessage)
                             .padding()
                         }
