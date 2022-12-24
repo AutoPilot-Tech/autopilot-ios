@@ -15,6 +15,7 @@ struct ChatView: View {
     @State private var chatBlurAmount = 0.0
     @State private var lastMessageHeight: CGFloat = 0
     @State private var offsetAmount: CGFloat = 0
+    @State private var keyboardShowing: Bool = false
 
 
 
@@ -31,7 +32,6 @@ struct ChatView: View {
     var body: some View {
         
                 VStack {
-                    
                     ScrollViewReader { scrollView in
                             ScrollView {
                                 VStack(alignment: .leading, spacing: 12) {
@@ -52,6 +52,10 @@ struct ChatView: View {
                                     
                                 }
                                 .offset(y: (UIScreen.main.bounds.height - keyboardHeight) < lastMessageHeight ? -keyboardHeight : 0)
+                                
+                                // if lastmessage is like 600
+                                // then it is being covered by the keyboard.
+                                // once the keyboard is not showing, the value goes back to 800 or something.
                                 
 
                             }

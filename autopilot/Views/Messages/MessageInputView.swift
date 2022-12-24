@@ -25,6 +25,13 @@ struct MessageInputView: View {
     
     var body: some View {
         HStack {
+            Button(action: {}) {
+                Image(systemName: "photo.on.rectangle.angled")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 24, height: 24)
+                    .foregroundColor(.gray)
+            }
             Button(action: {
                             // Add your camera button action here
                         }) {
