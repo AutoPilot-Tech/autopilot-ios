@@ -28,6 +28,7 @@ enum Page {
     case recommended
     case tasks
     case workoutGen
+    case schedule
 }
 
 
@@ -43,4 +44,5 @@ enum RecommendedView {
     case recommended
     case tasks
     case workoutGen
+    case schedule
 }

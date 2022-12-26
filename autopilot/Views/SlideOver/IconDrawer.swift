@@ -44,7 +44,7 @@ struct IconDrawer: View {
                                 .symbolRenderingMode(.multicolor)
                                 .foregroundColor(.green)
                             
-                            Text("Post Arc")
+                            Text("Post")
                                 .font(.footnote)
                                 .foregroundColor(.green)
                         }
@@ -63,9 +63,9 @@ struct IconDrawer: View {
             // MARK: - Second Row
             HStack {
                 // Schedule
-                AppIcon(geometry: geometry, iconName: "calendar.circle.fill", appName: "See Schedule")
+                AppIcon(geometry: geometry, iconName: "calendar.circle.fill", appName: "Schedule")
                     .onTapGesture {
-                        autopilotViewRouter.currentPage = .arcDetail
+                        autopilotViewRouter.currentPage = .schedule
                     }
                 // Tasks
                 AppIcon(geometry: geometry, iconName: "bolt.horizontal.circle.fill", appName: "Tasks")
@@ -93,25 +93,25 @@ struct IconDrawer: View {
 
             }
             
-            .padding(.top, -100)
+            .padding(.top, -80)
         .frame(width: geometry.size.width, height: geometry.size.height/8)
             
             // MARK: - Third Row
             HStack {
-                AppIcon(geometry: geometry, iconName: "stopwatch.fill", appName: "My Workouts")
+                AppIcon(geometry: geometry, iconName: "stopwatch.fill", appName: "Workouts")
                     .onTapGesture {
                         autopilotViewRouter.currentPage = .workouts
                     }
-                AppIcon(geometry: geometry, iconName: "network", appName: "God Mode")
+                AppIcon(geometry: geometry, iconName: "network", appName: "God")
                     .onTapGesture {
                         autopilotViewRouter.currentPage = .explore
                     }
-                AppIcon(geometry: geometry, iconName: "pencil.circle.fill", appName: "Make Workout")
+                AppIcon(geometry: geometry, iconName: "pencil.circle.fill", appName: "Create")
                     .onTapGesture {
                         autopilotViewRouter.currentPage = .workoutGen
                     }
             }
-            .padding(.top, -150)
+            .padding(.top, -120)
         .frame(width: geometry.size.width, height: geometry.size.height/8)
         }
     }

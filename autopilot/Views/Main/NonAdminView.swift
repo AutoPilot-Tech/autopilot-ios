@@ -55,6 +55,8 @@ struct NonAdminView: View {
                 TasksView()
             case .workoutGen:
                 GenerateWorkoutView()
+            case .schedule:
+                ScheduleView()
             }
             if slideTabShowing {
                 VStack {
