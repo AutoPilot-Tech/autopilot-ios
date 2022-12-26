@@ -16,6 +16,9 @@ public class UIStateModel: ObservableObject {
 @main
 struct autopilotApp: App {
     let persistenceController = PersistenceController.shared
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+
     
     
     init() {
