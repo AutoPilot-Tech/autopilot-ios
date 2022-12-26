@@ -15,6 +15,7 @@ struct IconDrawer: View {
     let geometry: GeometryProxy
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
     @EnvironmentObject var viewModel: AuthViewModel
+    let isAdmin: Bool
 
     var body: some View {
         VStack {

@@ -33,33 +33,21 @@ struct ContentView : View {
                                 case .home:
                                     HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                         .padding(.bottom, UIScreen.main.bounds.height * 0.30)
-
-                                    
                                 case .arcDetail:
                                     ArcModeDetailView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
-                                       
-                                        
-
                                 case .arcMode:
                                     ArcModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
-                                        
-
                                 case .explore:
                                     VStack {
                                         GodView()
                                             .padding(.top, UIScreen.main.bounds.height * 0.10)
                                     }
-                                    
-
                                 case .coachChat:
                                     ChatView(user: COACH_MATTHEW)
-
                                 case .profile:
                                     UserProfileView(user: viewModel.user ??  User(dictionary: FAKE_DATA))
                                 case .workouts:
                                     WorkoutsView()
-                                        
-
                                 case .recommended:
                                     HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                         .padding(.bottom, UIScreen.main.bounds.height * 0.30)
@@ -111,34 +99,17 @@ struct ContentView : View {
                                 // user is just a fitness user.
                                 NonAdminView(autopilotViewRouter: AutopilotViewRouter.shared, slideTabShowing: $slideTabShowing)
                             }
-
-                            
                         }
-                        
                     }
-                    
-                    
-                    
-                    
                 }
-                
-                
             .edgesIgnoringSafeArea(.vertical)
             } else {
                 LoginView()
             }
-            
         }
-        
-                
-        
-        
-        
     }
 }
-    
-    
-    
+
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView(autopilotViewRouter: AutopilotViewRouter())

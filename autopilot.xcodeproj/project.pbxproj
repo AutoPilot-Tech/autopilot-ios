@@ -98,6 +98,7 @@
 		BF48CFEE2959A14B0009FBF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF48CFED2959A14B0009FBF9 /* GoogleService-Info.plist */; };
 		BF48CFF02959C9C00009FBF9 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFEF2959C9C00009FBF9 /* TasksView.swift */; };
 		BF48CFF22959CBA30009FBF9 /* IconDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF12959CBA30009FBF9 /* IconDrawer.swift */; };
+		BF48CFF42959D4870009FBF9 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF32959D4870009FBF9 /* IconRow.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -222,6 +223,7 @@
 		BF48CFED2959A14B0009FBF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF48CFEF2959C9C00009FBF9 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		BF48CFF12959CBA30009FBF9 /* IconDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDrawer.swift; sourceTree = "<group>"; };
+		BF48CFF32959D4870009FBF9 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -352,7 +354,9 @@
 				BF83422C2955B0EC003A2DEE /* RecommendedTabsHeader.swift */,
 				BF83422E2955B223003A2DEE /* ComingSoon.swift */,
 				BF8342302955B25A003A2DEE /* BetaTag.swift */,
+				BF48CFF12959CBA30009FBF9 /* IconDrawer.swift */,
 				BF8342322955B829003A2DEE /* AppIcon.swift */,
+				BF48CFF32959D4870009FBF9 /* IconRow.swift */,
 			);
 			path = SlideOver;
 			sourceTree = "<group>";
@@ -555,7 +559,6 @@
 				BF8341EE29558B14003A2DEE /* NonAdminView.swift */,
 				BF8341F029558B3F003A2DEE /* AdminView.swift */,
 				BF83422A2955ADD7003A2DEE /* HomeView.swift */,
-				BF48CFF12959CBA30009FBF9 /* IconDrawer.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -828,6 +831,7 @@
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
 				BF83420129559375003A2DEE /* WorkoutsHeader.swift in Sources */,
 				7122D4FE2938470A00BDF888 /* FreeFlowArcMode.swift in Sources */,
+				BF48CFF42959D4870009FBF9 /* IconRow.swift in Sources */,
 				71D2D5032936CCD7004229B3 /* ArcActionsView.swift in Sources */,
 				71D2D5132936E4D2004229B3 /* UploadArcViewModel.swift in Sources */,
 				71D2D5152936EE2B004229B3 /* FeedViewModel.swift in Sources */,
