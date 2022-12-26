@@ -63,6 +63,9 @@ struct ContentView : View {
                                 case .recommended:
                                     HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                         .padding(.bottom, UIScreen.main.bounds.height * 0.30)
+                                case .tasks:
+                                    TasksView()
+                                
                                 }
                                 if slideTabShowing {
                                     VStack {
@@ -124,45 +127,20 @@ struct ContentView : View {
                                                                         
                                                                     }
                                                                     
-                                                                    .padding(.top, -60.0)
+                                                                    .padding(.top, -40.0)
                                                                 .frame(width: geometry.size.width, height: geometry.size.height/8)
                                                                     
                                                                     
                                                                     HStack {
-                                                                        VStack {
-                                                                            Image(systemName: "calendar.circle.fill")
-                                                                                .resizable()
-                                                                                .aspectRatio(contentMode: .fit)
-                                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                .symbolRenderingMode(.multicolor)
-                                                                                .foregroundColor(.red)
-                                                                            
-                                                                            Text("See Schedule")
-                                                                                .font(.footnote)
-                                                                                .foregroundColor(.red)
-                                                                        }
-                                                                        .padding(.horizontal, -4)
+                                                                        AppIcon(geometry: geometry, iconName: "calendar.circle.fill", appName: "See Schedule")
                                                                         .onTapGesture {
                                                                             autopilotViewRouter.currentPage = .arcDetail
                                                                         }
                                                                         
-                                                                        
-                                                                        VStack {
-                                                                            Image(systemName: "bolt.horizontal.circle.fill")
-                                                                                .resizable()
-                                                                                .aspectRatio(contentMode: .fit)
-                                                                                .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                .symbolRenderingMode(.multicolor)
-                                                                                .foregroundColor(.orange)
-                                                                            
-                                                                            Text("Tasks")
-                                                                                .font(.footnote)
-                                                                                .foregroundColor(.orange)
-                                                                        }
-                                                                        .padding(.horizontal, -4)
-
-                                                                        
-                                                                       
+                                                                        AppIcon(geometry: geometry, iconName: "bolt.horizontal.circle.fill", appName: "Tasks")
+                                                                            .onTapGesture {
+                                                                                autopilotViewRouter.currentPage = .tasks
+                                                                            }
                                                                         
                                                                         
                                                                         HStack {
@@ -179,24 +157,11 @@ struct ContentView : View {
                                                                                         .font(.footnote)
                                                                                         .foregroundColor(.blue)
                                                                                 }
-
                                                                             }
-
                                                                             Spacer()
                                                                         }
                                                                         .padding(.horizontal, -4)
 
-                                                                            
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                        
-                                                                            
-                                                                                 
-                                                                        
                                                                         Spacer()
                                                                         
                                                                         
@@ -211,37 +176,14 @@ struct ContentView : View {
                                                             case .explore:
                                                                 VStack {
                                                                     HStack {
-                                                                            VStack {
-                                                                                Image(systemName: "arrowtriangle.right.circle.fill")
-                                                                                    .resizable()
-                                                                                    .aspectRatio(contentMode: .fit)
-                                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                    .symbolRenderingMode(.multicolor)
-                                                                                    .foregroundColor(.blue)
-                                                                                
-                                                                                Text("Focus")
-                                                                                    .font(.footnote)
-                                                                                    .foregroundColor(.blue)
-                                                                            }
-                                                                            .padding(.horizontal, -4)
+                                                                        
+                                                                        AppIcon(geometry: geometry, iconName: "arrowtriangle.right.circle.fill", appName: "Focus")
                                                                             .onTapGesture {
                                                                                 autopilotViewRouter.currentPage = .arcDetail
                                                                             }
                                                                         
+                                                                        AppIcon(geometry: geometry, iconName: "heart.fill", appName: "Home")
                                                                         
-                                                                            VStack {
-                                                                                Image(systemName: "heart.fill")
-                                                                                    .resizable()
-                                                                                    .aspectRatio(contentMode: .fit)
-                                                                                    .frame(width:geometry.size.width/3, height: geometry.size.height/28)
-                                                                                    .symbolRenderingMode(.hierarchical)
-                                                                                    .foregroundColor(.red)
-                                                                                
-                                                                                Text("Home")
-                                                                                    .font(.footnote)
-                                                                                    .foregroundColor(.red)
-                                                                            }
-                                                                            .padding(.horizontal, -4)
                                                                             .onTapGesture {
                                                                             autopilotViewRouter.currentPage = .home
                                                                             }
@@ -281,6 +223,8 @@ struct ContentView : View {
                                                                         
                                                                         
                                                                     }
+                                                                    .padding(.top, -40.0)
+                                                                .frame(width: geometry.size.width, height: geometry.size.height/8)
                                                                     
                                                                     
                                                                     

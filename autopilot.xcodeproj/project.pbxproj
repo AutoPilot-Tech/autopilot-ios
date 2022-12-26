@@ -96,6 +96,7 @@
 		BF48CFE829599B5B0009FBF9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = BF48CFE729599B5B0009FBF9 /* FirebaseMessaging */; };
 		BF48CFEA29599B5C0009FBF9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BF48CFE929599B5C0009FBF9 /* FirebaseStorage */; };
 		BF48CFEE2959A14B0009FBF9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF48CFED2959A14B0009FBF9 /* GoogleService-Info.plist */; };
+		BF48CFF02959C9C00009FBF9 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFEF2959C9C00009FBF9 /* TasksView.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -218,6 +219,7 @@
 		BF48CFEB2959A0540009FBF9 /* autopilot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = autopilot.entitlements; sourceTree = "<group>"; };
 		BF48CFEC2959A0590009FBF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		BF48CFED2959A14B0009FBF9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF48CFEF2959C9C00009FBF9 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -643,6 +645,7 @@
 		BFB1F5CB294AE9F700422BAE /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				BF48CFEF2959C9C00009FBF9 /* TasksView.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -806,6 +809,7 @@
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
 				BF8342312955B25A003A2DEE /* BetaTag.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
+				BF48CFF02959C9C00009FBF9 /* TasksView.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
 				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,

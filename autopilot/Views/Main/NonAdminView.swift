@@ -37,7 +37,6 @@ struct NonAdminView: View {
                     GodView()
                         .padding(.top, UIScreen.main.bounds.height * 0.14)
                 }
-                
 
             case .coachChat:
                 ChatView(user: COACH_MATTHEW)
@@ -52,8 +51,8 @@ struct NonAdminView: View {
                 HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                     .padding(.bottom, UIScreen.main.bounds.height * 0.30)
                 
-                    
-
+            case .tasks:
+                TasksView()
             }
             if slideTabShowing {
                 VStack {

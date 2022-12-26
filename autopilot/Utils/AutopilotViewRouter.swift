@@ -26,6 +26,7 @@ enum Page {
     case coachChat
     case workouts
     case recommended
+    case tasks
 }
 
 
@@ -39,4 +40,5 @@ enum RecommendedView {
     case coachChat
     case workouts
     case recommended
+    case tasks
 }
