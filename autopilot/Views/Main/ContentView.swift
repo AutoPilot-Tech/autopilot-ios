@@ -18,6 +18,8 @@ struct ContentView : View {
     @EnvironmentObject var viewModel: AuthViewModel
     @State private var isLoggedIn = true
     @State var slideTabShowing = true // Bindable on other views
+    @State var offset: CGFloat = 0
+    @State var keyboardHeight: CGFloat = 0
    
     
     
@@ -58,8 +60,50 @@ struct ContentView : View {
                                         // Bottom Sheet
                                         GeometryReader { geometry in
                                             VStack {
-                                                BottomSheet(searchText: $searchText)
+                                                BottomSheet(searchText: $searchText, offset: $offset, value: (-geometry.frame(in: .global).height + 160))
                                                     .offset(y: geometry.frame(in: .global).height - 160)
+                                                    .offset(y: offset + keyboardHeight)
+                                                    .gesture(DragGesture().onChanged({ (value) in
+                                                        withAnimation{
+                                                            // user is scrolling up
+                                                            if value.startLocation.y > geometry.frame(in: .global).midX{
+                                                                if value.translation.height < 0 && offset > (-geometry.frame(in: .global).height + 160){
+                                                                    offset = value.translation.height
+                                                                }
+                                                            }
+                                                            
+                                                            if value.startLocation.y < geometry.frame(in: .global).midX{
+                                                                if value.translation.height > 0 && offset < 0 {
+                                                                    offset = (-geometry.frame(in: .global).height + 160) + value.translation.height                                                                }
+                                                                
+                                                            }
+                                                        }
+                                                        
+                                                        
+                                                    }).onEnded({ (value) in
+                                                        withAnimation{
+                                                            // pulling up
+                                                            if value.startLocation.y > geometry.frame(in: .global).midX{
+                                                                if -value.translation.height > geometry.frame(in: .global).midX{
+                                                                    offset = (-geometry.frame(in: .global).height + 150)
+                                                                    return
+                                                                }
+                                                                
+                                                                offset = 0
+                                                            }
+                                                            
+                                                            if value.startLocation.y < geometry.frame(in: .global).midX{
+                                                                if value.translation.height < geometry.frame(in: .global).midX{
+                                                                    offset = (-geometry.frame(in: .global).height + 150)
+                                                                    return
+                                                                }
+                                                                
+                                                                offset = 0
+                                                                
+                                                            }
+                                                        }
+                                                        
+                                                    }))
                                             }
                                         }
                                         
@@ -73,6 +117,19 @@ struct ContentView : View {
                             }
                             .navigationBarTitle("")
                             .navigationBarHidden(true)
+                            .onAppear {
+                                NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { notification in
+                                    // calculate the bottom edge of last message
+                                    
+                                    let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect)?.height ?? 0
+                                    self.keyboardHeight = keyboardHeight
+                                }
+                            }
+                            .onDisappear {
+                                NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+                                self.keyboardHeight = 0
+                                print("offset is now: \(offset + keyboardHeight)")
+                            }
                         }
                     }
                     .edgesIgnoringSafeArea(.vertical)

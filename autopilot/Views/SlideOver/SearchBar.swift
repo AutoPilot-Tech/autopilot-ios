@@ -10,11 +10,14 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var text: String
     
+    
     let placeholder: String
     
     var body: some View {
         HStack {
-            TextField("", text: $text)
+            TextField("", text: $text) {
+                
+            }
                 .placeholder(when: text.isEmpty) {
                     Text(placeholder).foregroundColor(.gray)
                 }

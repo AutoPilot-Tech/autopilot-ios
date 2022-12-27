@@ -9,13 +9,35 @@ import SwiftUI
 
 struct BottomSheet: View {
     @Binding var searchText: String
+    @Binding var offset: CGFloat
+    var value: CGFloat
     
     
     var body: some View {
         VStack {
             Handle()
             HStack(spacing: 15) {
-                SearchBar(text: $searchText, placeholder: "What do you want to open?")
+                TextField("", text: $searchText) { status in
+                    withAnimation {
+                        offset = value
+                    }
+                }
+                    .placeholder(when: searchText.isEmpty) {
+                        Text("What do you want to open?").foregroundColor(.gray)
+                    }
+                    .foregroundColor(Color(.systemGray))
+                    .padding(8)
+                    .padding(.horizontal, 24)
+                    .background(.white)
+                    .cornerRadius(8)
+                    .overlay(
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.gray)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 8)
+                        }
+                        )
             }
             .padding(.horizontal)
            
@@ -36,8 +58,3 @@ struct BottomSheet: View {
     }
 }
 
-struct BottomSheet_Previews: PreviewProvider {
-    static var previews: some View {
-        BottomSheet(searchText: .constant(""))
-    }
-}
