@@ -23,6 +23,14 @@ struct GenerateWorkoutView: View {
     @State private var restIncrementer3 = 30
     @State private var restIncrementer4 = 30
     @State private var restIncrementer5 = 30
+    
+    // State variable for sets of block
+    @State private var setsBlock1 = 1
+    @State private var setsBlock2 = 1
+    @State private var setsBlock3 = 1
+    @State private var setsBlock4 = 1
+    @State private var setsBlock5 = 1
+
 
 
 
@@ -39,76 +47,86 @@ struct GenerateWorkoutView: View {
     let exercises = ["Exercise 1", "Exercise 2", "Exercise 3", "Exercise 4"]
     
     var body: some View {
-        Form {
-            // Workout name and description section
-            Section(header: Text("Workout name and description")) {
-                TextField("Workout name", text: $workoutName)
-                TextField("Workout description", text: $workoutDescription)
-            }
-            
-            Section(header: Text("Who is this workout for?")) {
-                Picker("Pick a User", selection: $targetUserOptions) {
-                    ForEach(targetUserOptions, id: \.self) { user in
-                        Text(user)
-                        
+        VStack {
+            Form {
+                // Workout name and description section
+                Section(header: Text("Workout name and description")) {
+                    TextField("Workout name", text: $workoutName)
+                    TextField("Workout description", text: $workoutDescription)
+                }
+                
+                Section(header: Text("Who is this workout for?")) {
+                    Picker("Pick a User", selection: $targetUserOptions) {
+                        ForEach(targetUserOptions, id: \.self) { user in
+                            Text(user)
+                            
+                        }
                     }
                 }
-            }
-            
-            Section(header: Text("What day is this for?")) {
-                DatePicker("Date", selection: $date, displayedComponents: .date)
-            }
-            
-            // Core Exercise Block 1 section
-            Section(header: Text("Core Exercise Block 1")) {
-                Picker("Exercise", selection: $coreExerciseBlock1) {
-                    ForEach(exercises, id: \.self) { exercise in
-                        Text(exercise)
-                    }
+                
+                Section(header: Text("What day is this for?")) {
+                    DatePicker("Date", selection: $date, displayedComponents: .date)
                 }
-                Stepper("Rest between sets: \(restIncrementer1)s", value: $restIncrementer1, in: 30...300, step: 5)
+                
+                // Core Exercise Block 1 section
+                Section(header: Text("Core Exercise Block 1")) {
+                    Picker("Exercise", selection: $coreExerciseBlock1) {
+                        ForEach(exercises, id: \.self) { exercise in
+                            Text(exercise)
+                        }
+                    }
+                    Stepper("Rest between sets: \(restIncrementer1)s", value: $restIncrementer1, in: 30...300, step: 5)
+                    
+                    Stepper("Number of Sets: \(setsBlock1)", value: $setsBlock1, in: 1...5, step: 1)
+                    
+                }
+                
+                // Core Exercise Block 2 section
+                Section(header: Text("Core Exercise Block 2")) {
+                    Picker("Exercise", selection: $coreExerciseBlock2) {
+                        ForEach(exercises, id: \.self) { exercise in
+                            Text(exercise)
+                        }
+                    }
+                    Stepper("Rest between sets: \(restIncrementer2)s", value: $restIncrementer2, in: 30...300, step: 5)
+                    Stepper("Number of Sets: \(setsBlock2)", value: $setsBlock2, in: 1...5, step: 1)
+                }
+                
+                // Secondary Block 1 section
+                Section(header: Text("Secondary Block 1")) {
+                    Picker("Exercise", selection: $secondaryBlock1) {
+                        ForEach(exercises, id: \.self) { exercise in
+                            Text(exercise)
+                        }
+                    }
+                    Stepper("Rest between sets: \(restIncrementer3)s", value: $restIncrementer3, in: 30...300, step: 5)
+                    Stepper("Number of Sets: \(setsBlock3)", value: $setsBlock3, in: 1...5, step: 1)
+                }
+                
+                // Accessory Block 1 section
+                Section(header: Text("Accessory Block 1")) {
+                    Picker("Exercise", selection: $accessoryBlock1) {
+                        ForEach(exercises, id: \.self) { exercise in
+                            Text(exercise)
+                        }
+                    }
+                    Stepper("Rest between sets: \(restIncrementer4)s", value: $restIncrementer4, in: 30...300, step: 5)
+                    Stepper("Number of Sets: \(setsBlock4)", value: $setsBlock4, in: 1...5, step: 1)
+                }
+                
+                // Accessory Block 2 section
+                Section(header: Text("Accessory Block 2")) {
+                    Picker("Exercise", selection: $accessoryBlock2) {
+                        ForEach(exercises, id: \.self) { exercise in
+                            Text(exercise)
+                        }
+                    }
+                    Stepper("Rest between sets: \(restIncrementer5)s", value: $restIncrementer5, in: 30...300, step: 5)
+                    Stepper("Number of Sets: \(setsBlock5)", value: $setsBlock5, in: 1...5, step: 1)
+                }
                 
             }
-            
-            // Core Exercise Block 2 section
-            Section(header: Text("Core Exercise Block 2")) {
-                Picker("Exercise", selection: $coreExerciseBlock2) {
-                    ForEach(exercises, id: \.self) { exercise in
-                        Text(exercise)
-                    }
-                }
-                Stepper("Rest between sets: \(restIncrementer2)s", value: $restIncrementer2, in: 30...300, step: 5)
-            }
-            
-            // Secondary Block 1 section
-            Section(header: Text("Secondary Block 1")) {
-                Picker("Exercise", selection: $secondaryBlock1) {
-                    ForEach(exercises, id: \.self) { exercise in
-                        Text(exercise)
-                    }
-                }
-                Stepper("Rest between sets: \(restIncrementer3)s", value: $restIncrementer3, in: 30...300, step: 5)
-            }
-            
-            // Accessory Block 1 section
-            Section(header: Text("Accessory Block 1")) {
-                Picker("Exercise", selection: $accessoryBlock1) {
-                    ForEach(exercises, id: \.self) { exercise in
-                        Text(exercise)
-                    }
-                }
-                Stepper("Rest between sets: \(restIncrementer4)s", value: $restIncrementer4, in: 30...300, step: 5)
-            }
-            
-            // Accessory Block 2 section
-            Section(header: Text("Accessory Block 2")) {
-                Picker("Exercise", selection: $accessoryBlock2) {
-                    ForEach(exercises, id: \.self) { exercise in
-                        Text(exercise)
-                    }
-                }
-                Stepper("Rest between sets: \(restIncrementer5)s", value: $restIncrementer5, in: 30...300, step: 5)
-            }
+           
         }
     }
 }
