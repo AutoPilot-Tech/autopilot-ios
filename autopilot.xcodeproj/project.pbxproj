@@ -498,6 +498,7 @@
 		71234FAD2936715600B2FEDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				BF48CFF8295A93690009FBF9 /* ArcMode */,
 				BF8341FB295592CC003A2DEE /* Arc */,
 				BF8341FA295592C3003A2DEE /* Search */,
 				BF8341F9295592B5003A2DEE /* Auth */,
@@ -561,6 +562,13 @@
 				BF48CFF62959D9920009FBF9 /* ScheduleView.swift */,
 			);
 			path = Schedule;
+			sourceTree = "<group>";
+		};
+		BF48CFF8295A93690009FBF9 /* ArcMode */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ArcMode;
 			sourceTree = "<group>";
 		};
 		BF8341ED29558AB1003A2DEE /* Main */ = {

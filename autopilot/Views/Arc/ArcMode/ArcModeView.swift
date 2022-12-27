@@ -103,7 +103,7 @@ struct ArcModeView: View {
                                 ProgressView(timerInterval: progressInterval, countsDown: false)
                             } else {
                                 // Fallback on earlier versions
-                                Text("Update to iOS 16 to see timer")
+                                ProgressView("Loading...", value: 50, total: 100)
                             }
                                     
               
@@ -132,7 +132,9 @@ struct ArcModeView: View {
                                     Spacer()
                                     HStack(spacing: 20) {
                                         VStack {
-                                            Button(action: {}) {
+                                            Button(action: {
+                                                showingPopup = true
+                                            }) {
                                                 Image(systemName: "dumbbell")
                                                 
                                             }
@@ -141,7 +143,9 @@ struct ArcModeView: View {
                                             Text("Weight")
                                         }
                                         VStack {
-                                            Button(action: {}) {
+                                            Button(action: {
+                                                showingPopup = true
+                                            }) {
                                                 Image(systemName: "square.stack.3d.up.fill")
                                                 
                                                 
@@ -151,7 +155,9 @@ struct ArcModeView: View {
                                             Text("Reps")
                                         }
                                         VStack {
-                                            Button(action: {}) {
+                                            Button(action: {
+                                                
+                                            }) {
                                                 Image(systemName: "restart.circle.fill")
                                                 
                                                 
@@ -161,7 +167,9 @@ struct ArcModeView: View {
                                             Text("Set")
                                         }
                                         VStack {
-                                            Button(action: {}) {
+                                            Button(action: {
+                                                showingPopup = true
+                                            }) {
                                                 Image(systemName: "info.circle.fill")
                                                 
                                                 

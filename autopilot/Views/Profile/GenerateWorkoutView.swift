@@ -18,7 +18,16 @@ struct GenerateWorkoutView: View {
     @State private var accessoryBlock2 = ""
     
     // Add a state variable for the rest incrementer
-    @State private var restIncrementer = 30
+    @State private var restIncrementer1 = 30
+    @State private var restIncrementer2 = 30
+    @State private var restIncrementer3 = 30
+    @State private var restIncrementer4 = 30
+    @State private var restIncrementer5 = 30
+
+
+
+
+
     
     @State private var targetUserOptions = ["Rachael Beard", "Matthew Molinar", "Caleb Ford"]
     
@@ -57,7 +66,8 @@ struct GenerateWorkoutView: View {
                         Text(exercise)
                     }
                 }
-                Stepper("Rest (seconds): \(restIncrementer)", value: $restIncrementer, in: 30...300, step: 5)
+                Stepper("Rest between sets: \(restIncrementer1)s", value: $restIncrementer1, in: 30...300, step: 5)
+                
             }
             
             // Core Exercise Block 2 section
@@ -67,7 +77,7 @@ struct GenerateWorkoutView: View {
                         Text(exercise)
                     }
                 }
-                Stepper("Rest (seconds): \(restIncrementer)", value: $restIncrementer, in: 30...300, step: 5)
+                Stepper("Rest between sets: \(restIncrementer2)s", value: $restIncrementer2, in: 30...300, step: 5)
             }
             
             // Secondary Block 1 section
@@ -77,7 +87,7 @@ struct GenerateWorkoutView: View {
                         Text(exercise)
                     }
                 }
-                Stepper("Rest (seconds): \(restIncrementer)", value: $restIncrementer, in: 30...300, step: 5)
+                Stepper("Rest between sets: \(restIncrementer3)s", value: $restIncrementer3, in: 30...300, step: 5)
             }
             
             // Accessory Block 1 section
@@ -87,7 +97,7 @@ struct GenerateWorkoutView: View {
                         Text(exercise)
                     }
                 }
-                Stepper("Rest (seconds): \(restIncrementer)", value: $restIncrementer, in: 30...300, step: 5)
+                Stepper("Rest between sets: \(restIncrementer4)s", value: $restIncrementer4, in: 30...300, step: 5)
             }
             
             // Accessory Block 2 section
@@ -97,7 +107,7 @@ struct GenerateWorkoutView: View {
                         Text(exercise)
                     }
                 }
-                Stepper("Rest (seconds): \(restIncrementer)", value: $restIncrementer, in: 30...300, step: 5)
+                Stepper("Rest between sets: \(restIncrementer5)s", value: $restIncrementer5, in: 30...300, step: 5)
             }
         }
     }
