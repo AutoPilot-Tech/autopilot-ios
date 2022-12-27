@@ -132,7 +132,7 @@ enum ExerciseOptions: Int, CaseIterable {
         case .birdDogs: return "Bird-Dogs"
         case .barbellSquats: return "Barbell-Squats"
         case .barbellBenchPress: return "Barbell-Bench-Press"
-        case .barbellBenchHipThrusts: return "Barbell-Bench-Hip-Thrusts"
+        case .barbellBenchHipThrusts: return "Barbell-Bench-Hip-geneThrusts"
             
             
     
