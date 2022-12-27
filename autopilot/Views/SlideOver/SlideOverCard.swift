@@ -23,26 +23,26 @@ struct SlideOverCard<Content: View> : View {
         
         return ZStack {
             VStack {
-                HStack {
-                    Spacer()
-                    NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
-                        VStack {
-                            Image("batman")
-                                .resizable()
-                                .scaledToFill()
-                                .clipShape(Circle())
-                                .overlay(NotificationNumLabel(number: $labelNumber))
-                                .frame(width: 56, height: 56)
-                        }
-                        
-                    }
-                        .padding()
-                        .offset(y: self.position.rawValue + 15 + self.dragState.translation.height)
-                        .animation(self.dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
-                        
-                    
-                    
-                }
+//                HStack {
+//                    Spacer()
+//                    NavigationLink(destination: ChatView(user: COACH_MATTHEW)) {
+//                        VStack {
+//                            Image("batman")
+//                                .resizable()
+//                                .scaledToFill()
+//                                .clipShape(Circle())
+//                                .overlay(NotificationNumLabel(number: $labelNumber))
+//                                .frame(width: 56, height: 56)
+//                        }
+//                        
+//                    }
+//                        .padding()
+//                        .offset(y: self.position.rawValue + 15 + self.dragState.translation.height)
+//                        .animation(self.dragState.isDragging ? nil : .interpolatingSpring(stiffness: 300.0, damping: 30.0, initialVelocity: 10.0))
+//                        
+//                    
+//                    
+//                }
                 Group {
                     self.content()
                 }

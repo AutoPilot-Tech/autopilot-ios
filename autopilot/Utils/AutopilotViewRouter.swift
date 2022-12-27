@@ -9,8 +9,8 @@ import SwiftUI
 
 
 class AutopilotViewRouter: ObservableObject {
-    @Published var currentPage: Page = .home
-    @Published var currentRecommended: RecommendedView = .home
+    @Published var currentPage: Page = .workouts
+    @Published var currentRecommended: RecommendedView = .workouts
     
     static let shared = AutopilotViewRouter()
 }

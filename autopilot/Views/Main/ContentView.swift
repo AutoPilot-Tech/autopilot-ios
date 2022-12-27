@@ -27,90 +27,44 @@ struct ContentView : View {
                 if #available(iOS 16.0, *) {
                     NavigationStack {
                         Group {
-                            ZStack(alignment: Alignment.top) {
-                                
+                            ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
                                 if ((viewModel.isAdmin) != false) {
                                     switch autopilotViewRouter.currentPage {
                                     case .home:
                                         HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
-                                            .padding(.bottom, UIScreen.main.bounds.height * 0.30)
-                                        
                                     case .arcDetail:
                                         ArcModeDetailView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                         
                                     case .arcMode:
                                         ArcModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
-                                        
                                     case .explore:
-                                        VStack {
-                                            GodView()
-                                                .padding(.top, UIScreen.main.bounds.height * 0.10)
-                                        }
-                                        
+                                        GodView()
                                     case .coachChat:
                                         ChatView(user: COACH_MATTHEW)
-                                        
                                     case .profile:
                                         UserProfileView(user: viewModel.user ??  User(dictionary: FAKE_DATA))
                                     case .workouts:
                                         WorkoutsView()
-                                            .padding(.top, UIScreen.main.bounds.height * 0.08)
-                                        
-                                        
                                     case .recommended:
                                         HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
-                                            .padding(.bottom, UIScreen.main.bounds.height * 0.30)
                                     case .tasks:
                                         TasksView()
-                                            .padding(.top, UIScreen.main.bounds.height * 0.08)
-                                        
                                     case .workoutGen:
                                         GenerateWorkoutView()
-                                            .padding(.top, UIScreen.main.bounds.height * 0.08)
-                                        
                                     case .schedule:
                                         ScheduleView()
-                                            .padding(.top, UIScreen.main.bounds.height * 0.08)
-                                        
-                                        
                                     }
                                     if slideTabShowing {
-                                        VStack {
-                                            SlideOverCard {
-                                                ZStack(alignment: .topTrailing) {
-                                                    
-                                                    GeometryReader { geometry in
-                                                        VStack {
-                                                            
-                                                            // for some reason Handle needs to go here... ideally it would need to be inside the SlideOverCard definition.
-                                                            Handle()
-                                                            SearchBar(text: $searchText, placeholder: "What tab do you want to open?")
-                                                            // Tab Bar here
-                                                            RecommendedTabsHeader()
-                                                            ScrollView {
-                                                                
-                                                                // recommended tabs
-                                                                switch autopilotViewRouter.currentPage {
-                                                                    // MARK: - Home page
-                                                                case .home:
-                                                                    IconDrawer(geometry: geometry, autopilotViewRouter: autopilotViewRouter, viewModel: _viewModel)
-                                                                    
-                                                                    // MARK: - Explore
-                                                                case .explore:
-                                                                    IconDrawer(geometry: geometry, autopilotViewRouter: autopilotViewRouter, viewModel: _viewModel)
-                                                                    
-                                                                default:
-                                                                    IconDrawer(geometry: geometry, autopilotViewRouter: autopilotViewRouter, viewModel: _viewModel)
-                                                                    
-                                                                }
-                                                                Spacer()
-                                                            }
-                                                            
-                                                        }
-                                                    }
-                                                }
+                                        // Bottom Sheet
+                                        GeometryReader { geometry in
+                                            VStack {
+                                                BottomSheet(searchText: $searchText)
+                                                    .offset(y: geometry.frame(in: .global).height - 160)
                                             }
                                         }
+                                        
+                                        
+                                        
                                     }
                                 } else {
                                     // user is just a fitness user.
@@ -138,7 +92,53 @@ struct ContentView : View {
                 .environmentObject(AuthViewModel())
         }
     }
+
+struct BlurView: UIViewRepresentable {
+    var style: UIBlurEffect.Style
+    func makeUIView(context: Context) -> UIVisualEffectView {
+        let view = UIVisualEffectView(effect: UIBlurEffect(style: style))
+        return view
+    }
     
+    func updateUIView(_ uiView: UIVisualEffectView, context: Context) {
+        return
+    }
+    
+    typealias UIViewType = UIVisualEffectView
+    
+}
+    
+
+struct NewAppIcon: View {
+    var body: some View {
+        VStack {
+            Image(systemName: "network")
+                .resizable()
+                .scaledToFill()
+                .frame(width: 32, height: 32)
+                .symbolRenderingMode(.multicolor)
+                .foregroundColor(.blue)
+            
+            Text("Workouts")
+                .font(.footnote)
+                .foregroundColor(.blue)
+            
+        }
+    }
+}
+
+
+struct NewAppIconRow: View {
+    var body: some View {
+        HStack(spacing: 65) {
+            NewAppIcon()
+            NewAppIcon()
+            NewAppIcon()
+
+        }
+        .padding()
+    }
+}
     
 
 

@@ -101,6 +101,7 @@
 		BF48CFF42959D4870009FBF9 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF32959D4870009FBF9 /* IconRow.swift */; };
 		BF48CFF72959D9920009FBF9 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF62959D9920009FBF9 /* ScheduleView.swift */; };
 		BF48CFFA295A9F3A0009FBF9 /* UploadToDoTrainingArcViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF9295A9F3A0009FBF9 /* UploadToDoTrainingArcViewModel.swift */; };
+		BF557FA2295ADF47001EC5F7 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FA1295ADF47001EC5F7 /* BottomSheet.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -228,6 +229,7 @@
 		BF48CFF32959D4870009FBF9 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
 		BF48CFF62959D9920009FBF9 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
 		BF48CFF9295A9F3A0009FBF9 /* UploadToDoTrainingArcViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadToDoTrainingArcViewModel.swift; sourceTree = "<group>"; };
+		BF557FA1295ADF47001EC5F7 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF557FA0295ADF34001EC5F7 /* BottomSheet */,
 				BF48CFF52959D98B0009FBF9 /* Schedule */,
 				52A2B2F729352F7E0061A712 /* SlideOver */,
 				BF8341F229559273003A2DEE /* Workouts */,
@@ -572,6 +575,14 @@
 				BF48CFF9295A9F3A0009FBF9 /* UploadToDoTrainingArcViewModel.swift */,
 			);
 			path = ArcMode;
+			sourceTree = "<group>";
+		};
+		BF557FA0295ADF34001EC5F7 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				BF557FA1295ADF47001EC5F7 /* BottomSheet.swift */,
+			);
+			path = BottomSheet;
 			sourceTree = "<group>";
 		};
 		BF8341ED29558AB1003A2DEE /* Main */ = {
@@ -887,6 +898,7 @@
 				71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */,
 				52F4524C2935EC0D00406D3F /* RegistrationView.swift in Sources */,
 				7122D50A293860F700BDF888 /* AutopilotViewRouter.swift in Sources */,
+				BF557FA2295ADF47001EC5F7 /* BottomSheet.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
