@@ -8,6 +8,7 @@
 import SwiftUI
 import Firebase
 
+// Sort of like our database. Cheaper and easier to store here.
 enum ExerciseOptions: Int, CaseIterable {
     case wallPushUps
     case vUps
@@ -30,6 +31,23 @@ enum ExerciseOptions: Int, CaseIterable {
     case facePull
     case facePullExternalRotation
     case dynamicHamstringStretch
+    case dumbbellStepUps
+    case dumbbellRows
+    case dumbbellHammerCurls
+    case dumbbellGobletSquats
+    case dumbbellFrenchPress
+    case dumbbellFlys
+    case dumbbellDeadlifts
+    case dumbbellCurls
+    case dumbbellBenchPress
+    case cossackSquats
+    case bottomUpSquats
+    case bodyweightSquats
+    case bodyweightHipThrusts
+    case birdDogs
+    case barbellSquats
+    case barbellBenchPress
+    case barbellBenchHipThrusts
     
     var exerciseName: String {
         switch self {
@@ -54,6 +72,23 @@ enum ExerciseOptions: Int, CaseIterable {
         case .facePull: return "Face Pulls"
         case .facePullExternalRotation: return "Face Pulls External Rotation"
         case .dynamicHamstringStretch: return "Dynamic Hamstring Stretch"
+        case .dumbbellStepUps: return "Dumbbell Step ups"
+        case .dumbbellRows: return "Dumbbell Rows"
+        case .dumbbellHammerCurls: return "Dumbbell Hammer Curls"
+        case .dumbbellGobletSquats: return "Dumbbell Goblet Squats"
+        case .dumbbellFrenchPress: return "Dumbbell French Press"
+        case .dumbbellFlys: return "Dumbbell Flys"
+        case .dumbbellDeadlifts: return "Dumbbell Deadlifts"
+        case .dumbbellCurls: return "Dumbbell Curls"
+        case .dumbbellBenchPress: return "Dumbbell Bench Press"
+        case .cossackSquats: return "Cossack Squats"
+        case .bottomUpSquats: return "Bottom Up Squats"
+        case .bodyweightSquats: return "Bodyweight Squats"
+        case .bodyweightHipThrusts: return "Bodyweight Hip Thrusts"
+        case .birdDogs: return "Bird Dogs"
+        case .barbellSquats: return "Barbell Squats"
+        case .barbellBenchPress: return "Barbell Bench Press"
+        case .barbellBenchHipThrusts: return "Barbell Bench Hip Thrusts"
     
         }
     }
@@ -81,6 +116,23 @@ enum ExerciseOptions: Int, CaseIterable {
         case .facePull: return "Face-Pull"
         case .facePullExternalRotation: return "Face-Pull-External-Rotation"
         case .dynamicHamstringStretch: return "Dynamic-Hamstring-Stretch"
+        case .dumbbellStepUps: return "Dumbbell-Step-Ups"
+        case .dumbbellRows: return "Dumbbell-Rows"
+        case .dumbbellHammerCurls: return "Dumbbell-Hammer-Curls"
+        case .dumbbellGobletSquats: return "Dumbbell-Goblet-Squats"
+        case .dumbbellFrenchPress: return "Dumbbell-French-Press"
+        case .dumbbellFlys: return "Dumbbell-Flys"
+        case .dumbbellDeadlifts: return "Dumbbell-Deadlifts"
+        case .dumbbellCurls: return "Dumbbell-Curls"
+        case .dumbbellBenchPress: return "Dumbbell-Bench-Press"
+        case .cossackSquats: return "Cossack-Squats"
+        case .bottomUpSquats: return "Bottom-Up-Squats"
+        case .bodyweightSquats: return "Bodyweight-Squats"
+        case .bodyweightHipThrusts: return "Bodyweight-Hip-Thrusts"
+        case .birdDogs: return "Bird-Dogs"
+        case .barbellSquats: return "Barbell-Squats"
+        case .barbellBenchPress: return "Barbell-Bench-Press"
+        case .barbellBenchHipThrusts: return "Barbell-Bench-Hip-Thrusts"
             
             
     
