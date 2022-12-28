@@ -106,7 +106,7 @@ struct ContentView : View {
                                                                         return
                                                                     } else if value.translation.height > 0 {
                                                                         // user is dragging down
-                                                                        offset = 100
+                                                                        offset = 120
                                                                         return
                                                                     }
                                                                     
@@ -190,23 +190,44 @@ struct NewAppIcon: View {
     var viewRouter: AutopilotViewRouter
     
     var body: some View {
-        Button(action: {
-            self.viewRouter.currentPage = self.destination
-        }, label: {
-            VStack {
-                Image(systemName: iconName)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 32, height: 32)
-                    .symbolRenderingMode(.multicolor)
-                    .foregroundColor(.blue)
-                
-                Text(appName)
-                    .font(.footnote)
-                    .foregroundColor(.blue)
-                
+        VStack {
+            if self.destination == .coachChat {
+                NavigationLink(destination: ChatView(user: COACH_MATTHEW), label: {
+                    VStack {
+                        Image(systemName: iconName)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 32, height: 32)
+                            .symbolRenderingMode(.multicolor)
+                            .foregroundColor(.blue)
+                        
+                        Text(appName)
+                            .font(.footnote)
+                            .foregroundColor(.blue)
+                        
+                    }
+                })
+            } else {
+                Button(action: {
+                    self.viewRouter.currentPage = self.destination
+                }, label: {
+                    VStack {
+                        Image(systemName: iconName)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 32, height: 32)
+                            .symbolRenderingMode(.multicolor)
+                            .foregroundColor(.blue)
+                        
+                        Text(appName)
+                            .font(.footnote)
+                            .foregroundColor(.blue)
+                        
+                    }
+            })
             }
-        })
+            
+        }
     }
 }
 

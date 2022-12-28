@@ -68,7 +68,9 @@ struct BottomSheet: View {
                         )
             }
             .padding(.horizontal)
-           
+            ShortcutsHeader()
+                .padding(.horizontal, 16)
+                .padding(.top, 4)
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 30) {
                     ForEach(0..<iconNames.count, id: \.self) { index in
