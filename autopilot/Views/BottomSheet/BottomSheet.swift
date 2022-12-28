@@ -54,7 +54,7 @@ struct BottomSheet: View {
                 } 
                 
                     .placeholder(when: searchText.isEmpty) {
-                        Text("What do you want to open?").foregroundColor(.gray)
+                        Text("What do you want to do?").foregroundColor(.gray)
                     }
                     .foregroundColor(Color(.systemGray))
                     .padding(8)

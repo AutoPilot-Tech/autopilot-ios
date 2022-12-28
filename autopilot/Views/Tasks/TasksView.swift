@@ -84,7 +84,6 @@ struct TasksView: View {
                                                 
                                             }
                                         }
-                                        .animation(.spring())
                                     }
                                 }
                 

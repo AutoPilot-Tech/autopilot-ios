@@ -108,6 +108,7 @@
 		BF557FAC295C7F4F001EC5F7 /* TasksUpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FAB295C7F4F001EC5F7 /* TasksUpcomingView.swift */; };
 		BF557FAF295C814E001EC5F7 /* ProjectsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FAE295C814E001EC5F7 /* ProjectsSectionHeader.swift */; };
 		BF557FB1295C8166001EC5F7 /* FavoritesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FB0295C8166001EC5F7 /* FavoritesSectionHeader.swift */; };
+		BF557FB3295C864E001EC5F7 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FB2295C864E001EC5F7 /* ProjectView.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -242,6 +243,7 @@
 		BF557FAB295C7F4F001EC5F7 /* TasksUpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksUpcomingView.swift; sourceTree = "<group>"; };
 		BF557FAE295C814E001EC5F7 /* ProjectsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsSectionHeader.swift; sourceTree = "<group>"; };
 		BF557FB0295C8166001EC5F7 /* FavoritesSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSectionHeader.swift; sourceTree = "<group>"; };
+		BF557FB2295C864E001EC5F7 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -711,6 +713,7 @@
 				BF557FA7295C7F38001EC5F7 /* TasksTodayView.swift */,
 				BF557FA9295C7F43001EC5F7 /* TasksInboxView.swift */,
 				BF557FAB295C7F4F001EC5F7 /* TasksUpcomingView.swift */,
+				BF557FB2295C864E001EC5F7 /* ProjectView.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -912,6 +915,7 @@
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
+				BF557FB3295C864E001EC5F7 /* ProjectView.swift in Sources */,
 				7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */,
 				7122D5112938B09D00BDF888 /* SuccessView.swift in Sources */,
 				BF557FA8295C7F38001EC5F7 /* TasksTodayView.swift in Sources */,
