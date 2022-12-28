@@ -21,7 +21,6 @@ struct ContentView : View {
     @State var slideTabShowing = true // Bindable on other views
     @State var offset: CGFloat = 0
     @State var keyboardHeight: CGFloat = 0
-    @State var keyboardShowing: Bool = false
 
    
     
@@ -32,7 +31,7 @@ struct ContentView : View {
                 if #available(iOS 16.0, *) {
                     NavigationStack {
                         Group {
-                            KeyboardHost(keyboardShowing: $keyboardShowing, offset: $offset, keyboardHeight: $keyboardHeight) {
+                            KeyboardHost(offset: $offset, keyboardHeight: $keyboardHeight) {
                                 ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom)) {
                                     if ((viewModel.isAdmin) != false) {
                                         switch autopilotViewRouter.currentPage {
@@ -73,6 +72,10 @@ struct ContentView : View {
                                                                 if value.startLocation.y > geometry.frame(in: .global).midX{
                                                                     if value.translation.height < 0 && offset > (-geometry.frame(in: .global).height + 160){
                                                                         offset = value.translation.height
+                                                                    } else {
+                                                                        // for Analytics:
+                                                                        // This will inform us if we need to make this feature.
+                                                                        print("user is scrolling to bottom state")
                                                                     }
                                                                 }
                                                                 
@@ -210,13 +213,11 @@ struct KeyboardHost<Content: View>: View {
     let content: Content
     @Binding var keyboardHeight: CGFloat
     @Binding var offset: CGFloat
-    @Binding var keyboardShowing: Bool
 
-    init(keyboardShowing: Binding<Bool>, offset: Binding<CGFloat>, keyboardHeight: Binding<CGFloat>, @ViewBuilder content: () -> Content) {
+    init( offset: Binding<CGFloat>, keyboardHeight: Binding<CGFloat>, @ViewBuilder content: () -> Content) {
             self.content = content()
             self._keyboardHeight = keyboardHeight
             self._offset = offset
-            self._keyboardShowing = keyboardShowing
         
         }
 
@@ -225,7 +226,6 @@ struct KeyboardHost<Content: View>: View {
         content
             .onReceive(Publishers.keyboardHeight) {
                 self.keyboardHeight = $0
-                print("Just toggled keyboardShowing to \(self.keyboardShowing)")
                 
             }
     }
