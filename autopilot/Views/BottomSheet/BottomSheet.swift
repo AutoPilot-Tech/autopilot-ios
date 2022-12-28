@@ -16,6 +16,9 @@ struct BottomSheet: View {
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
 
     var value: CGFloat
+    
+    // MARK: - Temporary Static Data
+    // Will be making this Recommended.
     var appNames: [String] = [
         "Start", "Workouts", "Coach", "Schedule", "Tasks", "Profile", "Settings", "God", "Create"
     ]
