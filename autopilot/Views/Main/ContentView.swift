@@ -64,7 +64,7 @@ struct ContentView : View {
                                             // Bottom Sheet
                                             GeometryReader { geometry in
                                                 VStack {
-                                                    BottomSheet(searchText: $searchText, offset: $offset, value: (-geometry.frame(in: .global).height + 160))
+                                                    BottomSheet(searchText: $searchText, offset: $offset, autopilotViewRouter: autopilotViewRouter, value: (-geometry.frame(in: .global).height + 160))
                                                         .offset(y: geometry.frame(in: .global).height - 160)
                                                         .offset(y: offset + keyboardHeight)
                                                         .gesture(DragGesture().onChanged({ (value) in
@@ -186,39 +186,32 @@ struct BlurView: UIViewRepresentable {
 struct NewAppIcon: View {
     var iconName: String
     var appName: String
+    var destination: Page
+    var viewRouter: AutopilotViewRouter
     
     var body: some View {
-        VStack {
-            Image(systemName: iconName)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 32, height: 32)
-                .symbolRenderingMode(.multicolor)
-                .foregroundColor(.blue)
-            
-            Text(appName)
-                .font(.footnote)
-                .foregroundColor(.blue)
-            
-        }
+        Button(action: {
+            self.viewRouter.currentPage = self.destination
+        }, label: {
+            VStack {
+                Image(systemName: iconName)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 32, height: 32)
+                    .symbolRenderingMode(.multicolor)
+                    .foregroundColor(.blue)
+                
+                Text(appName)
+                    .font(.footnote)
+                    .foregroundColor(.blue)
+                
+            }
+        })
     }
 }
 
 
-struct NewAppIconRow: View {
-    var iconNames: [String]
-    var appNames: [String]
-    
-    var body: some View {
-        HStack(spacing: 65) {
-            ForEach(0..<3, id: \.self) { index in
-                            NewAppIcon(iconName: self.iconNames[index], appName: self.appNames[index])
-                        }
 
-        }
-        .padding()
-    }
-}
 
 
 protocol KeyboardObserving: AnyObject {
