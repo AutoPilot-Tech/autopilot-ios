@@ -131,6 +131,7 @@ struct ContentView : View {
                                                                     }
                                                         }))
                                                 }
+                                                .offset(x: -10) // hacky fix to make the geometry reader eat a dick
                                             }
                                             
                                             
