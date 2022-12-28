@@ -108,13 +108,12 @@ struct ContentView : View {
                                                                     offset = 0
                                                                     
                                                                 }
-                                                                if offset == 0 {
-                                                                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                                                                        }
+                                                            
                                                             }
-                                                            
-                                                            
-                                                            
+                                                            if offset == 0 {
+                                                                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                                                                    }
+                                            
                                                         }))
                                                 }
                                             }
