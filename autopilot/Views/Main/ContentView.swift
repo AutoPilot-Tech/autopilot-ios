@@ -21,6 +21,7 @@ struct ContentView : View {
     @State var slideTabShowing = true // Bindable on other views
     @State var offset: CGFloat = 0
     @State var keyboardHeight: CGFloat = 0
+    
 
    
     
@@ -68,18 +69,27 @@ struct ContentView : View {
                                                         .offset(y: offset + keyboardHeight)
                                                         .gesture(DragGesture().onChanged({ (value) in
                                                             withAnimation{
-                                                                // user is scrolling up
+                                                                // user is scrolling from bottom
                                                                 if value.startLocation.y > geometry.frame(in: .global).midX{
-                                                                    if value.translation.height < 0 && offset > (-geometry.frame(in: .global).height + 160){
+//
+                                                                
+                                                                    if value.translation.height < 0 && offset > (-geometry.frame(in: .global).height + 160) {
                                                                         offset = value.translation.height
                                                                     } else {
-                                                                        // for Analytics:
-                                                                        // This will inform us if we need to make this feature.
-                                                                        print("user is scrolling to bottom state")
+
+                                                                        if offset == 100.0 {
+                                                                            return
+                                                                        } else {
+                                                                            // for Analytics:
+                                                                            // This will inform us if we need to make this feature.
+                                                                            offset = value.translation.height
+                                                                        }
+                                                                        
                                                                     }
                                                                 }
                                                                 
                                                                 if value.startLocation.y < geometry.frame(in: .global).midX{
+
                                                                     if value.translation.height > 0 && offset < 0 {
                                                                         offset = (-geometry.frame(in: .global).height + 160) + value.translation.height                                                                }
                                                                     
@@ -89,31 +99,36 @@ struct ContentView : View {
                                                             
                                                         }).onEnded({ (value) in
                                                             withAnimation{
-                                                                // pulling up
+                                                                // starting from bottom of the screen
                                                                 if value.startLocation.y > geometry.frame(in: .global).midX{
                                                                     if -value.translation.height > geometry.frame(in: .global).midX{
                                                                         offset = (-geometry.frame(in: .global).height + 150)
+                                                                        return
+                                                                    } else if value.translation.height > 0 {
+                                                                        // user is dragging down
+                                                                        offset = 100
                                                                         return
                                                                     }
                                                                     
                                                                     offset = 0
                                                                 }
                                                                 
+                                                                // starting from the top of screen
                                                                 if value.startLocation.y < geometry.frame(in: .global).midX{
+                                                                    
                                                                     if value.translation.height < geometry.frame(in: .global).midX{
                                                                         offset = (-geometry.frame(in: .global).height + 150)
                                                                         return
                                                                     }
                                                                     
                                                                     offset = 0
-                                                                    
+
                                                                 }
                                                             
                                                             }
                                                             if offset == 0 {
                                                                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                                                     }
-                                            
                                                         }))
                                                 }
                                             }
@@ -168,16 +183,19 @@ struct BlurView: UIViewRepresentable {
     
 
 struct NewAppIcon: View {
+    var iconName: String
+    var appName: String
+    
     var body: some View {
         VStack {
-            Image(systemName: "network")
+            Image(systemName: iconName)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 32, height: 32)
                 .symbolRenderingMode(.multicolor)
                 .foregroundColor(.blue)
             
-            Text("Workouts")
+            Text(appName)
                 .font(.footnote)
                 .foregroundColor(.blue)
             
@@ -187,11 +205,14 @@ struct NewAppIcon: View {
 
 
 struct NewAppIconRow: View {
+    var iconNames: [String]
+    var appNames: [String]
+    
     var body: some View {
         HStack(spacing: 65) {
-            NewAppIcon()
-            NewAppIcon()
-            NewAppIcon()
+            ForEach(0..<3, id: \.self) { index in
+                            NewAppIcon(iconName: self.iconNames[index], appName: self.appNames[index])
+                        }
 
         }
         .padding()

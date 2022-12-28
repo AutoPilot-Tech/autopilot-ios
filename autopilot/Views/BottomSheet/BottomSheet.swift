@@ -11,6 +11,12 @@ struct BottomSheet: View {
     @Binding var searchText: String
     @Binding var offset: CGFloat
     var value: CGFloat
+    var appNames: [String] = [
+        "Start Workout", "Workouts", "Text Coach", "Schedule", "Tasks", "Profile", "Settings", "God", "Create"
+    ]
+    var iconNames: [String] = [
+        "play.circle.fill", "stopwatch.fill", "bubble.right.fill", "calendar.circle.fill", "bolt.horizontal.circle.fill", "person.circle.fill", "gear", "network", "pencil.circle.fill"
+    ]
     
     var body: some View {
         VStack {
@@ -48,12 +54,11 @@ struct BottomSheet: View {
            
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    ForEach(0..<3) { _ in
-                        NewAppIconRow()
-                            .background(.white)
-                            .cornerRadius(10)
-                            
-                    }
+                    ForEach(Array(stride(from: 0, to: iconNames.count, by: 3)), id: \.self) { index in
+                                        NewAppIconRow(iconNames: Array(self.iconNames[index..<index+3]), appNames: Array(self.appNames[index..<index+3]))
+                                            .background(.white)
+                                            .cornerRadius(10)
+                                    }
                 }
                 .padding(.top)
             }
