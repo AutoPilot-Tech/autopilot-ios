@@ -12,16 +12,21 @@ struct BottomSheet: View {
     @Binding var offset: CGFloat
     var value: CGFloat
     
-    
     var body: some View {
         VStack {
             Handle()
             HStack(spacing: 15) {
                 TextField("", text: $searchText) { status in
                     withAnimation {
-                        offset = value
+                        if status {
+                            print("just ran")
+                            offset = value
+                        } else {
+                            offset = 0
+                        }
                     }
-                }
+                } 
+                
                     .placeholder(when: searchText.isEmpty) {
                         Text("What do you want to open?").foregroundColor(.gray)
                     }
