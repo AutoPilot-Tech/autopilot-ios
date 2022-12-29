@@ -14,46 +14,72 @@ struct TimerView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
         var body: some View {
-            HStack {
-                Button(action: {
-//                    showingAlert.toggle()
-                }) {
-                    Image(systemName: "xmark")
-                        .resizable()
-                        .renderingMode(.template)
+            VStack {
+                HStack {
+                    Button(action: {
+    //                    showingAlert.toggle()
+                    }) {
+                        Image(systemName: "xmark")
+                            .resizable()
+                            .renderingMode(.template)
+                            .foregroundColor(.white)
+                            .frame(width: 14, height: 14)
+                            
+                            
+                    }
+                    .frame(width: 26, height: 26)
+                    .background(.gray)
+                    .clipShape(Circle())
+                    .opacity(workoutIsPaused ? 1 : 0) // modify this.
+                    Spacer()
+                    Text("\(timeString(time: timeRemaining))")
+                        .font(.system(size: 30))
                         .foregroundColor(.white)
-                        .frame(width: 14, height: 14)
-                        
-                        
-                }
-                .frame(width: 26, height: 26)
-                .background(.gray)
-                .clipShape(Circle())
-                .opacity(workoutIsPaused ? 1 : 0) // modify this.
-                Spacer()
-                Text("\(timeString(time: timeRemaining))")
-                    .font(.system(size: 30))
-                    .foregroundColor(.white)
-                    .onReceive(timer) { _ in
-                        if timerIsRunning {
-                            if timeRemaining >= 0 {
-                                timeRemaining += 1
+                        .onReceive(timer) { _ in
+                            if timerIsRunning {
+                                if timeRemaining >= 0 {
+                                    timeRemaining += 1
+                                }
                             }
-                        }
-                        
-                }
-                Spacer()
-                Button(action: {
-                    timerIsRunning.toggle()
-                    workoutIsPaused.toggle()
-                }) {
-                    Image(systemName: workoutIsPaused ? "play.circle.fill" : "pause.circle.fill")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 26, height: 26)
-                        .foregroundColor(.gray)
-                        .symbolRenderingMode(.multicolor)
+                            
+                    }
+                    Spacer()
                     
+                    
+                    Button(action: {
+                        timerIsRunning.toggle()
+                        workoutIsPaused.toggle()
+                    }) {
+                        Image(systemName: workoutIsPaused ? "play.circle.fill" : "pause.circle.fill")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 26, height: 26)
+                            .foregroundColor(.gray)
+                            .symbolRenderingMode(.multicolor)
+                        
+                    }
+                    .overlay(
+                        Button(action: {
+    //                        timerIsRunning.toggle()
+    //                        workoutIsPaused.toggle()
+                        }) {
+                            Image(systemName: "gearshape.circle.fill")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 26, height: 26)
+                                .foregroundColor(.gray)
+                                .symbolRenderingMode(.multicolor)
+                            
+                        }
+                            .offset(x: -50)
+                    )
+                    
+                }
+                HStack {
+                    Spacer()
+                    Text("46 MIN LEFT")
+                        .foregroundColor(.white)
+                    Spacer()
                 }
             }
             

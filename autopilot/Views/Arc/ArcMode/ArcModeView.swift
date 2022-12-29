@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ArcModeView: View {
 //    @EnvironmentObject var workoutOverview: OverviewStore
@@ -38,7 +39,26 @@ struct ArcModeView: View {
             VStack {
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
-                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, workoutIsPaused: $workoutIsPaused, indexForExercises: $indexForExercises, timerIsRunning: $timerIsRunning,  index: index)
+                        VStack {
+                            if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
+                                let player = AVPlayer(url: url)
+                                    
+                                VideoPlayer(player: player)
+                                    .disabled(true)
+                                    .onAppear {
+                                        player.play()
+                                        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
+                                            player.seek(to: .zero)
+                                            player.play()
+                                        }
+                                    }
+                    
+
+                     
+                            } else {
+                                Text("Couldn't find \(Exercise.exercises[index].videoName).mp4").foregroundColor(.red)
+                            }
+                        }
                     }
                 }
                 

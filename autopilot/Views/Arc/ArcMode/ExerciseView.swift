@@ -43,7 +43,7 @@ struct ExerciseView: View {
                         let player = AVPlayer(url: url)
                             
                         VideoPlayer(player: player)
-                            
+                            .disabled(true)
                             .onAppear {
                                 player.play()
                                 NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
