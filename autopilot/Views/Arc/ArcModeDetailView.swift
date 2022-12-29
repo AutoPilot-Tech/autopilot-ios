@@ -29,6 +29,7 @@ struct ArcModeDetailView: View {
                     Spacer()
                     Button(action: {
                         autopilotViewRouter.currentPage = .arcMode
+                        self.slideTabShowing = false
                     } ) {
                         VStack {
                             Image(systemName: "play.fill")

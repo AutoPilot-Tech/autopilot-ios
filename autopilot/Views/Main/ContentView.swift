@@ -92,7 +92,6 @@ struct ContentView : View {
 
                                                                     if value.translation.height > 0 && offset < 0 {
                                                                         offset = (-geometry.frame(in: .global).height + 160) + value.translation.height                                                                }
-                                                                    
                                                                 }
                                                             }
                                                             

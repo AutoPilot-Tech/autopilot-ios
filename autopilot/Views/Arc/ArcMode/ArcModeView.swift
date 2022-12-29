@@ -20,6 +20,7 @@ struct ArcModeView: View {
     @State var lastExercise = false
     @State var indexForExercises = 0
     @State var timerIsRunning = true
+    @State var workoutIsPaused = false
     
     var progressInterval: ClosedRange<Date> {
         let start = Date()
@@ -27,30 +28,22 @@ struct ArcModeView: View {
         return start...end
     }
     
-//    @State private var sh
     
     var body: some View {
         ZStack(alignment: .top) {
-            TimerView(timerIsRunning: $timerIsRunning)
-                .padding(.top, 115)
+            TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused)
                 .zIndex(100)
             
 
             VStack {
-                
-
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
-                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, indexForExercises: $indexForExercises, timerIsRunning: $timerIsRunning,  index: index)
+                        ExerciseView(selectedTab: $selectedTab, autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing, workoutIsPaused: $workoutIsPaused, indexForExercises: $indexForExercises, timerIsRunning: $timerIsRunning,  index: index)
                     }
                 }
                 
             }
-          
-            
-            
 
-            
             VStack {
                 SlideOverCard {
                     VStack {
@@ -60,32 +53,7 @@ struct ArcModeView: View {
                         .padding()
                         
                         HStack(spacing: 25) {
-//                            Button(action: {
-//                                showingPopup = true
-//                            }) {
-//                                Image(systemName: "dumbbell")
-//                                    .resizable()
-//                                    .renderingMode(.template)
-//                                    .foregroundColor(.white)
-//                                    .frame(width: 20, height: 20)
-//
-//
-//                            }
-//                            .frame(width: 32, height: 32)
-//                            .background(.gray)
-//                            .clipShape(Circle())
-                                
-//                            Button(action: {
-//                                showingPopup = true
-//                            }) {
-//                                Image(systemName: "pencil.circle.fill")
-//                                    .resizable()
-//                                    .frame(width: 32, height: 32)
-//                            }
-//                            .foregroundColor(.gray)
-                            
-                                
-                            
+    
                             Button(action: {
                                 showingOverview = true
                             }) {
