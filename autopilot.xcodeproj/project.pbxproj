@@ -109,6 +109,7 @@
 		BF557FAF295C814E001EC5F7 /* ProjectsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FAE295C814E001EC5F7 /* ProjectsSectionHeader.swift */; };
 		BF557FB1295C8166001EC5F7 /* FavoritesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FB0295C8166001EC5F7 /* FavoritesSectionHeader.swift */; };
 		BF557FB3295C864E001EC5F7 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FB2295C864E001EC5F7 /* ProjectView.swift */; };
+		BF70BC1A295EB8D900175957 /* BlackGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC19295EB8D900175957 /* BlackGradient.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -244,6 +245,7 @@
 		BF557FAE295C814E001EC5F7 /* ProjectsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsSectionHeader.swift; sourceTree = "<group>"; };
 		BF557FB0295C8166001EC5F7 /* FavoritesSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSectionHeader.swift; sourceTree = "<group>"; };
 		BF557FB2295C864E001EC5F7 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		BF70BC19295EB8D900175957 /* BlackGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackGradient.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 				7122D5252938C7EA00BDF888 /* RatingView.swift */,
 				BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */,
 				BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */,
+				BF70BC19295EB8D900175957 /* BlackGradient.swift */,
 			);
 			path = ArcMode;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 				BF8342312955B25A003A2DEE /* BetaTag.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				BF48CFF02959C9C00009FBF9 /* TasksView.swift in Sources */,
+				BF70BC1A295EB8D900175957 /* BlackGradient.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
 				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,

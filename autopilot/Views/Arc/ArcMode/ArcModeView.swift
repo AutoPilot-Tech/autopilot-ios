@@ -31,11 +31,6 @@ struct ArcModeView: View {
     
     
     var body: some View {
-        ZStack(alignment: .top) {
-            TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused)
-                .zIndex(100)
-            
-
             VStack {
                 TabView(selection: $selectedTab) {
                     ForEach(0 ..< Exercise.exercises.count) { index in
@@ -44,7 +39,9 @@ struct ArcModeView: View {
                                 let player = AVPlayer(url: url)
                                     
                                 VideoPlayer(player: player)
+                                    .edgesIgnoringSafeArea(.all)
                                     .disabled(true)
+                                    .offset(y: -100)
                                     .onAppear {
                                         player.play()
                                         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
@@ -59,12 +56,36 @@ struct ArcModeView: View {
                                 Text("Couldn't find \(Exercise.exercises[index].videoName).mp4").foregroundColor(.red)
                             }
                         }
+                        
                     }
                 }
                 
+                
             }
+            .overlay(
+              BlackGradient()
+            )
+            .overlay {
+                if workoutIsPaused {
+                    Text("Workout Paused")
+                        .zIndex(2)
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                    Rectangle()
+                        .zIndex(1)
+                        .background(.black)
+                        .opacity(0.4)
+                    
+                }
+            }
+            .overlay(alignment: .top) {
+                TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused)
+                    .padding(.horizontal)
+            }
+            
+            
 
-            VStack {
+            .overlay {
                 SlideOverCard {
                     VStack {
                         Handle()
@@ -185,19 +206,20 @@ struct ArcModeView: View {
                         Spacer()
                     }
                 }
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
+                .popup(isPresented: $showingPopup) {
+                    ZStack {
+                        Color.blue.frame(width: 200, height: 100)
+                        Text("Hi!")
+                    }
+                }
+                
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
-//            .navigationTitle(timerValue)
-//            .navigationBarTitleDisplayMode(.inline)
             
-        }
-        .popup(isPresented: $showingPopup) {
-            ZStack {
-                Color.blue.frame(width: 200, height: 100)
-                Text("Hi!")
-            }
-        }
+            
+        
+        
     }
 }
 
@@ -206,4 +228,8 @@ struct ArcModeView_Previews: PreviewProvider {
         ArcModeView(autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false))
     }
 }
+
+
+
+
 

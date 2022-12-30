@@ -136,8 +136,7 @@ struct ContentView : View {
                                             
                                             
                                         }
-                                    } else {
-                                        // user is just a fitness user.
+                                    } else {                                        
                                         NonAdminView(autopilotViewRouter: AutopilotViewRouter.shared, slideTabShowing: $slideTabShowing)
                                     }
                                 }

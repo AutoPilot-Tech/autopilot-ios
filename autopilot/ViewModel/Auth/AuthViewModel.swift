@@ -109,9 +109,13 @@ class AuthViewModel: ObservableObject {
     
     func fetchUser() {
         guard let uid = userSession?.uid else { return }
-        print("User is \(uid)")
+        print("DEBUG: User is \(uid)")
         
-        Firestore.firestore().collection("users").document(uid).getDocument { snapshot, _ in
+        Firestore.firestore().collection("users").document(uid).getDocument { snapshot, error in
+            if let error = error {
+                print("DEBUG: Failed to get user from firebase: \(error.localizedDescription)")
+                return
+            }
             guard let data = snapshot?.data() else { return }
             self.isAdmin = data["isAdmin"] as? Bool ?? false
             self.user = User(dictionary: data)
