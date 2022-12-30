@@ -21,11 +21,12 @@ struct TimerView: View {
                     Button(action: {
     //                    showingAlert.toggle()
                     }) {
-                        Image(systemName: routineStatus == .paused ? "xmark" : routineStatus == .running ? "" : routineStatus == .notrunning ? "" : routineStatus == .loading ? "" : "")
+                        Image(systemName: routineStatus == .paused ? "xmark" : routineStatus == .running ? "xmark" : routineStatus == .notrunning ? "xmark" : routineStatus == .loading ? "xmark" : "xmark")
                             .resizable()
                             .renderingMode(.template)
                             .foregroundColor(.white)
                             .frame(width: 14, height: 14)
+                            .opacity(routineStatus == .notrunning ? 0 : routineStatus == .loading ? 0 : routineStatus == .running ? 0 : 1)
                             
                             
                     }
@@ -70,12 +71,13 @@ struct TimerView: View {
                             }
                         
                     }) {
-                        Image(systemName: routineStatus == .paused ? "play.circle.fill" : routineStatus == .running ? "pause.circle.fill" : routineStatus == .notrunning ? "" : routineStatus == .loading ? "" : "")
+                        Image(systemName: routineStatus == .paused ? "play.circle.fill" : routineStatus == .running ? "pause.circle.fill" : routineStatus == .notrunning ? "play.circle.fill" : routineStatus == .loading ? "play.circle.fill" : "play.circle.fill")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 26, height: 26)
                             .foregroundColor(.gray)
                             .symbolRenderingMode(.multicolor)
+                            .opacity(routineStatus == .notrunning ? 0 : routineStatus == .loading ? 0 : 1)
                         
                     }
                     .overlay(
@@ -83,7 +85,7 @@ struct TimerView: View {
     //                        timerIsRunning.toggle()
     //                        workoutIsPaused.toggle()
                         }) {
-                            Image(systemName: routineStatus == .paused ? "gearshape.circle.fill" : routineStatus == .running ? "" : routineStatus == .notrunning ? "" : routineStatus == .loading ? "" : "")
+                            Image(systemName: "gearshape.circle.fill")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 26, height: 26)
@@ -91,7 +93,9 @@ struct TimerView: View {
                                 .symbolRenderingMode(.multicolor)
                             
                         }
+                            .opacity(routineStatus == .paused ? 1 : 0)
                             .offset(x: -50)
+                        
                     )
                     
                 }

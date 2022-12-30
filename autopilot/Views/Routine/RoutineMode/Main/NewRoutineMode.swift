@@ -95,10 +95,10 @@ struct NewRoutineMode: View {
                
            
         }
-        
-       .overlay(
-         BlackGradient()
-       )
+        .overlay(alignment: .top) {
+            BlackGradient()
+                .frame(width: UIScreen.main.bounds.width, height: 300)
+        }
        .overlay(alignment: .top) {
            TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused, routineStatus: $routineStatus)
                .padding(.horizontal)
