@@ -8,7 +8,7 @@
 import SwiftUI
 import AVKit
 
-struct ArcModeView: View {
+struct RoutineModeView: View {
 //    @EnvironmentObject var workoutOverview: OverviewStore
     @State private var showingOverview = false
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
@@ -223,9 +223,9 @@ struct ArcModeView: View {
     }
 }
 
-struct ArcModeView_Previews: PreviewProvider {
+struct RoutineModeView_Previews: PreviewProvider {
     static var previews: some View {
-        ArcModeView(autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false))
+        RoutineModeView(autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false))
     }
 }
 

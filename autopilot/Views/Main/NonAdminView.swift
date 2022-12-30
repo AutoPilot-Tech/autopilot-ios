@@ -29,7 +29,7 @@ struct NonAdminView: View {
                     
 
             case .arcMode:
-                ArcModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                RoutineModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                     
 
             case .explore:

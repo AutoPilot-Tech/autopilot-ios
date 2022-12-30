@@ -42,7 +42,7 @@ struct ContentView : View {
                                             ArcModeDetailView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                             
                                         case .arcMode:
-                                            ArcModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                                            RoutineModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                         case .explore:
                                             GodView()
                                         case .coachChat:
