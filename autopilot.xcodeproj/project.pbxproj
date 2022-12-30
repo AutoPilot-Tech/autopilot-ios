@@ -407,7 +407,7 @@
 				BF8341ED29558AB1003A2DEE /* Main */,
 				BFB1F5CB294AE9F700422BAE /* Tasks */,
 				BFB1F5BC294ACACE00422BAE /* Onboarding */,
-				7122D50129384B0600BDF888 /* Arc */,
+				7122D50129384B0600BDF888 /* Routine */,
 				71D2D50B2936D9D0004229B3 /* God */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52F452482935EBFA00406D3F /* Authentication */,
@@ -471,13 +471,13 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		7122D50129384B0600BDF888 /* Arc */ = {
+		7122D50129384B0600BDF888 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
 				7122D50429384ED500BDF888 /* RoutineMode */,
 				7122D4F82938409200BDF888 /* ArcModeDetailView.swift */,
 			);
-			path = Arc;
+			path = Routine;
 			sourceTree = "<group>";
 		};
 		7122D50429384ED500BDF888 /* RoutineMode */ = {
