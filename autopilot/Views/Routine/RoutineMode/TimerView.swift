@@ -11,6 +11,8 @@ struct TimerView: View {
     @State var timeRemaining = 0
     @Binding var timerIsRunning: Bool
     @Binding var workoutIsPaused: Bool
+    @Binding var routineStatus: RoutineStatus
+    
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
         var body: some View {
@@ -19,7 +21,7 @@ struct TimerView: View {
                     Button(action: {
     //                    showingAlert.toggle()
                     }) {
-                        Image(systemName: "xmark")
+                        Image(systemName: routineStatus == .paused ? "xmark" : routineStatus == .running ? "" : routineStatus == .notrunning ? "" : routineStatus == .loading ? "" : "")
                             .resizable()
                             .renderingMode(.template)
                             .foregroundColor(.white)
@@ -32,6 +34,12 @@ struct TimerView: View {
                     .clipShape(Circle())
                     .opacity(workoutIsPaused ? 1 : 0) // modify this.
                     Spacer()
+                    switch routineStatus {
+                    case .notrunning:
+                        Text("48 MIN")
+                            .foregroundColor(.white)
+                            .font(.headline)
+                    default:
                     Text("\(timeString(time: timeRemaining))")
                         .font(.system(size: 30))
                         .foregroundColor(.white)
@@ -43,14 +51,26 @@ struct TimerView: View {
                             }
                             
                     }
+                    }
+                    
                     Spacer()
                     
                     
                     Button(action: {
                         timerIsRunning.toggle()
                         workoutIsPaused.toggle()
+                        
+                        switch routineStatus {
+                        case .running:
+                            routineStatus = .paused
+                        case .paused:
+                            routineStatus = .running
+                        default:
+                            routineStatus = .error
+                            }
+                        
                     }) {
-                        Image(systemName: workoutIsPaused ? "play.circle.fill" : "pause.circle.fill")
+                        Image(systemName: routineStatus == .paused ? "play.circle.fill" : routineStatus == .running ? "pause.circle.fill" : routineStatus == .notrunning ? "" : routineStatus == .loading ? "" : "")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 26, height: 26)
@@ -63,7 +83,7 @@ struct TimerView: View {
     //                        timerIsRunning.toggle()
     //                        workoutIsPaused.toggle()
                         }) {
-                            Image(systemName: "gearshape.circle.fill")
+                            Image(systemName: routineStatus == .paused ? "gearshape.circle.fill" : routineStatus == .running ? "" : routineStatus == .notrunning ? "" : routineStatus == .loading ? "" : "")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 26, height: 26)
@@ -76,11 +96,18 @@ struct TimerView: View {
                     
                 }
                 HStack {
-                    Spacer()
-                    Text("46 MIN LEFT")
-                        .foregroundColor(.white)
-                    Spacer()
+                    switch routineStatus {
+                    case .notrunning:
+                        Text("")
+                    default:
+                        Spacer()
+                        Text("46 MIN LEFT")
+                            .foregroundColor(.white)
+                        Spacer()
+                    }
+                    
                 }
+                
             }
             
         }
@@ -97,6 +124,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timerIsRunning: .constant(true), workoutIsPaused: .constant(true))
+        TimerView(timerIsRunning: .constant(true), workoutIsPaused: .constant(true), routineStatus: .constant(.notrunning))
     }
 }

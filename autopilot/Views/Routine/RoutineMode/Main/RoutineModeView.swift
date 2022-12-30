@@ -79,8 +79,9 @@ struct RoutineModeView: View {
                 }
             }
             .overlay(alignment: .top) {
-                TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused)
-                    .padding(.horizontal)
+//                TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused)
+//                    .padding(.horizontal)
+                Text("48 MIN")
             }
             
             

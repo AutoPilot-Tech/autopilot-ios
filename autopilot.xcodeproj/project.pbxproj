@@ -113,6 +113,8 @@
 		BF70BC1C295EBA3E00175957 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1B295EBA3E00175957 /* Routine.swift */; };
 		BF70BC1E295EBCC200175957 /* RoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1D295EBCC200175957 /* RoutineViewModel.swift */; };
 		BF70BC20295F65DD00175957 /* IndividualTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */; };
+		BF70BC24295F860600175957 /* dumbbell-benchpress-vertical.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */; };
+		BF70BC26295F867400175957 /* NewRoutineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC25295F867400175957 /* NewRoutineMode.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -252,6 +254,8 @@
 		BF70BC1B295EBA3E00175957 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		BF70BC1D295EBCC200175957 /* RoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewModel.swift; sourceTree = "<group>"; };
 		BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTaskView.swift; sourceTree = "<group>"; };
+		BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dumbbell-benchpress-vertical.mp4"; sourceTree = "<group>"; };
+		BF70BC25295F867400175957 /* NewRoutineMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoutineMode.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -325,6 +329,7 @@
 		52A2B2C3293527B50061A712 /* autopilot */ = {
 			isa = PBXGroup;
 			children = (
+				BF70BC22295F85F800175957 /* VerticalVideos */,
 				BF48CFED2959A14B0009FBF9 /* GoogleService-Info.plist */,
 				BF48CFEC2959A0590009FBF9 /* Info.plist */,
 				BF48CFEB2959A0540009FBF9 /* autopilot.entitlements */,
@@ -624,8 +629,17 @@
 			isa = PBXGroup;
 			children = (
 				7122D4FF29384AFA00BDF888 /* RoutineModeView.swift */,
+				BF70BC25295F867400175957 /* NewRoutineMode.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BF70BC22295F85F800175957 /* VerticalVideos */ = {
+			isa = PBXGroup;
+			children = (
+				BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */,
+			);
+			path = VerticalVideos;
 			sourceTree = "<group>";
 		};
 		BF8341ED29558AB1003A2DEE /* Main */ = {
@@ -857,6 +871,7 @@
 			files = (
 				52A2B2CC293527B70061A712 /* Preview Assets.xcassets in Resources */,
 				7122D5232938C0B100BDF888 /* step-up.mp4 in Resources */,
+				BF70BC24295F860600175957 /* dumbbell-benchpress-vertical.mp4 in Resources */,
 				52A2B2C9293527B70061A712 /* Assets.xcassets in Resources */,
 				7122D51D2938BEE700BDF888 /* sun-salute.mp4 in Resources */,
 				7122D5242938C0B300BDF888 /* burpee.mp4 in Resources */,
@@ -979,6 +994,7 @@
 				BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */,
 				71D2D4F92936B885004229B3 /* SearchViewModel.swift in Sources */,
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
+				BF70BC26295F867400175957 /* NewRoutineMode.swift in Sources */,
 				52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */,
 				BF557FAA295C7F43001EC5F7 /* TasksInboxView.swift in Sources */,
 				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,

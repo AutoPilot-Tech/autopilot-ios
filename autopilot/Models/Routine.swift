@@ -45,6 +45,11 @@ enum ActivityType {
     case rest(duration: Int)
     case upnext
     case other
+    // case task
+    // case event
+    // case selfcare
+    // case habitbuilder
+    // TODO: There will not be an activity type of "habit" until we can accurately quantify habits. Habits are much harder to quantify. Routines are "habit builders"
 }
 
 
