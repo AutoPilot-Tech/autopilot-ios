@@ -84,3 +84,30 @@ struct Activity {
         }
     }
 }
+
+
+extension Routine {
+    static let MOCK_ROUTINE = [
+        Activity(types: [.coach]), // coach
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        Activity(types: [.rest(duration: 45)]), // rest
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        Activity(types: [.rest(duration: 45)]), // rest
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        // TODO: add .coach to an exercise (the coach is giving instructions during exercise). Data structure supports this, but the UI might not at the moment.
+        Activity(types: [.rest(duration: 90), .upnext]), //resting, and upnext to next block
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.rest(duration: 90)]), //resting
+        Activity(types: [.ready]), // get ready!
+        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.rest(duration: 90)]), //resting
+        Activity(types: [.ready]), // get ready!
+        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.rest(duration: 90)]) //resting
+]
+        
+}
