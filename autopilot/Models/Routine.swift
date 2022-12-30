@@ -11,33 +11,25 @@ import SwiftUI
 // MARK: - ROUTINE STATUS
 
 enum RoutineStatus {
-    case notrunning
-    case loading
-    case running
-    case error
+    case notrunning // before user hits start.
+    case loading // before the routine begins - coach remarks.
+    case running // the routine.
+    case paused // user hits pause.
+    case error // errors or unexpected behavior.
 }
 
-// MARK: - ROUTINE DATA TYPE
+// MARK: - ROUTINE DATA TYPE / VIEW MODEL
 
 class Routine: ObservableObject {
     @Published var elapsedTime: Double = 0
     @Published var currentActivity: Activity?
     @Published var routineStatus: RoutineStatus = .notrunning
+    @Published var timeRemaining: Double = 0
     
-    // Activities
+    // Activities - RoutineModeView will loop through these and display them for their duration.
     @Published var routine: [Activity] = []
     
-    func start() {
-            // Start the timer and update the elapsed time
-        }
-
-        func pause() {
-            // Pause the timer
-        }
-
-        func save() {
-            // Save the attempted routine to the database
-        }
+   
 }
 
 

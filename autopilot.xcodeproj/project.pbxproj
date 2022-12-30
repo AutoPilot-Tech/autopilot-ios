@@ -112,6 +112,7 @@
 		BF70BC1A295EB8D900175957 /* BlackGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC19295EB8D900175957 /* BlackGradient.swift */; };
 		BF70BC1C295EBA3E00175957 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1B295EBA3E00175957 /* Routine.swift */; };
 		BF70BC1E295EBCC200175957 /* RoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1D295EBCC200175957 /* RoutineViewModel.swift */; };
+		BF70BC20295F65DD00175957 /* IndividualTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -250,6 +251,7 @@
 		BF70BC19295EB8D900175957 /* BlackGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackGradient.swift; sourceTree = "<group>"; };
 		BF70BC1B295EBA3E00175957 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		BF70BC1D295EBCC200175957 /* RoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewModel.swift; sourceTree = "<group>"; };
+		BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTaskView.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -723,6 +725,7 @@
 				BF557FA9295C7F43001EC5F7 /* TasksInboxView.swift */,
 				BF557FAB295C7F4F001EC5F7 /* TasksUpcomingView.swift */,
 				BF557FB2295C864E001EC5F7 /* ProjectView.swift */,
+				BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -953,6 +956,7 @@
 				71D2D5172936F486004229B3 /* ProfileViewModel.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */,
+				BF70BC20295F65DD00175957 /* IndividualTaskView.swift in Sources */,
 				BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */,
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
 				BF83422F2955B223003A2DEE /* ComingSoon.swift in Sources */,
