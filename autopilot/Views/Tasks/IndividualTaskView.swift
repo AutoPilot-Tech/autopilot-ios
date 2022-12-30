@@ -14,6 +14,7 @@ import SwiftUI
 // TODO: When the user clicks this - it expands into a RoutineModeView that has a RoutineStatus of .notrunning
 
 // TODO: If that is the case, we would need an AutoPilotNavigator to store state of where the user was in the app. Fuck SwiftUI navigator
+
 struct IndividualTaskView: View {
     var body: some View {
         VStack {
