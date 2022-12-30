@@ -143,7 +143,7 @@ enum ExerciseOptions: Int, CaseIterable {
 }
 
 // Upload ToDo Training Arc
-class UploadToDoTrainingArcViewModel: ObservableObject {
+class UploadToDoTrainingRoutineViewModel: ObservableObject {
     
     
     
