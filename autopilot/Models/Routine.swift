@@ -7,9 +7,22 @@
 import Foundation
 import SwiftUI
 
+
+// MARK: - ROUTINE STATUS
+
+enum RoutineStatus {
+    case notrunning
+    case loading
+    case running
+    case error
+}
+
+// MARK: - ROUTINE DATA TYPE
+
 class Routine: ObservableObject {
     @Published var elapsedTime: Double = 0
     @Published var currentActivity: Activity?
+    @Published var routineStatus: RoutineStatus = .notrunning
     
     // Activities
     @Published var routine: [Activity] = []
@@ -27,6 +40,12 @@ class Routine: ObservableObject {
         }
 }
 
+
+
+
+// MARK: - ACTIVITY DATA TYPE
+
+
 enum ActivityType {
     case coach
     case ready
@@ -35,6 +54,7 @@ enum ActivityType {
     case upnext
     case other
 }
+
 
 struct Activity {
     var name: String?
@@ -85,6 +105,7 @@ struct Activity {
     }
 }
 
+// MARK: - TEST ROUTINE
 
 extension Routine {
     static let MOCK_ROUTINE = [
@@ -111,3 +132,6 @@ extension Routine {
 ]
         
 }
+
+
+
