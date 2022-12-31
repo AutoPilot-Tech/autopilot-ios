@@ -13,7 +13,6 @@ struct NonAdminView: View {
     @EnvironmentObject var viewModel: AuthViewModel
     @State var searchText = ""
 
-    @Binding var slideTabShowing: Bool // Bindable on other views
 
     var body: some View {
         ZStack {
@@ -24,12 +23,12 @@ struct NonAdminView: View {
 
                 
             case .arcDetail:
-                ArcModeDetailView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                ArcModeDetailView(autopilotViewRouter: autopilotViewRouter)
                    
                     
 
             case .arcMode:
-                RoutineModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                RoutineModeView(autopilotViewRouter: autopilotViewRouter)
                     
 
             case .explore:
@@ -48,7 +47,7 @@ struct NonAdminView: View {
                 WorkoutsView()
                     .padding(.top, UIScreen.main.bounds.height * 0.10)
             case .recommended:
-                HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                HomeView(autopilotViewRouter: autopilotViewRouter)
                     .padding(.bottom, UIScreen.main.bounds.height * 0.30)
                 
             case .tasks:
@@ -58,7 +57,7 @@ struct NonAdminView: View {
             case .schedule:
                 ScheduleView()
             }
-            if slideTabShowing {
+            if autopilotViewRouter.slideTabShowing {
                 VStack {
                     SlideOverCard {
                         ZStack(alignment: .topTrailing) {

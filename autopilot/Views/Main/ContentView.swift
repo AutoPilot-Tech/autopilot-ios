@@ -18,7 +18,6 @@ struct ContentView : View {
     @State var heartFilled = false
     @EnvironmentObject var viewModel: AuthViewModel
     @State private var isLoggedIn = true
-    @State var slideTabShowing = true // Bindable on other views
     @State var offset: CGFloat = 0
     @State var keyboardHeight: CGFloat = 0
     
@@ -37,12 +36,12 @@ struct ContentView : View {
                                     if ((viewModel.isAdmin) != false) {
                                         switch autopilotViewRouter.currentPage {
                                         case .home:
-                                            HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                                            HomeView(autopilotViewRouter: autopilotViewRouter)
                                         case .arcDetail:
-                                            NewRoutineMode(viewModel: Routine())
+                                            NewRoutineMode(viewModel: Routine(), viewRouter: autopilotViewRouter)
                                             
                                         case .arcMode:
-                                            RoutineModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                                            RoutineModeView(autopilotViewRouter: autopilotViewRouter)
                                         case .explore:
                                             GodView()
                                         case .coachChat:
@@ -52,7 +51,7 @@ struct ContentView : View {
                                         case .workouts:
                                             WorkoutsView()
                                         case .recommended:
-                                            HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
+                                            HomeView(autopilotViewRouter: autopilotViewRouter)
                                         case .tasks:
                                             TasksView()
                                         case .workoutGen:
@@ -60,7 +59,7 @@ struct ContentView : View {
                                         case .schedule:
                                             ScheduleView()
                                         }
-                                        if slideTabShowing {
+                                        if autopilotViewRouter.slideTabShowing {
                                             // Bottom Sheet
                                             GeometryReader { geometry in
                                                 VStack {
@@ -137,7 +136,7 @@ struct ContentView : View {
                                             
                                         }
                                     } else {                                        
-                                        NonAdminView(autopilotViewRouter: AutopilotViewRouter.shared, slideTabShowing: $slideTabShowing)
+                                        NonAdminView(autopilotViewRouter: AutopilotViewRouter.shared)
                                     }
                                 }
                                 .navigationBarTitle("")
@@ -208,6 +207,9 @@ struct NewAppIcon: View {
             } else {
                 Button(action: {
                     self.viewRouter.currentPage = self.destination
+                    if self.destination == .arcDetail {
+                        viewRouter.slideTabShowing = false
+                    }
                 }, label: {
                     VStack {
                         Image(systemName: iconName)

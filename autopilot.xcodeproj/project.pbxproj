@@ -85,6 +85,7 @@
 		71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53829379DF8004229B3 /* CarouselView.swift */; };
 		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
+		BF0A9CD429609F1B00AE586B /* RoutineBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */; };
 		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
 		BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */; };
 		BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */; };
@@ -230,6 +231,7 @@
 		71D2D53829379DF8004229B3 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
+		BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineBottomSheet.swift; sourceTree = "<group>"; };
 		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
 		BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWorkoutView.swift; sourceTree = "<group>"; };
@@ -630,6 +632,7 @@
 			children = (
 				7122D4FF29384AFA00BDF888 /* RoutineModeView.swift */,
 				BF70BC25295F867400175957 /* NewRoutineMode.swift */,
+				BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -901,6 +904,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF48CFDD29599A2F0009FBF9 /* AppDelegate.swift in Sources */,
+				BF0A9CD429609F1B00AE586B /* RoutineBottomSheet.swift in Sources */,
 				BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */,
 				BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */,
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,

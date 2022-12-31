@@ -12,7 +12,6 @@ struct RoutineModeView: View {
 //    @EnvironmentObject var workoutOverview: OverviewStore
     @State private var showingOverview = false
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
-    @Binding var slideTabShowing: Bool
     @State private var showingAlert = false
     @State private var showingPopup = false
     @State var timerValue: String = "0:00"
@@ -226,7 +225,7 @@ struct RoutineModeView: View {
 
 struct RoutineModeView_Previews: PreviewProvider {
     static var previews: some View {
-        RoutineModeView(autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false))
+        RoutineModeView(autopilotViewRouter: AutopilotViewRouter())
     }
 }
 

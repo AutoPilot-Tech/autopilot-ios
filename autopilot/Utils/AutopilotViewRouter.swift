@@ -11,6 +11,7 @@ import SwiftUI
 class AutopilotViewRouter: ObservableObject {
     @Published var currentPage: Page = .workouts
     @Published var currentRecommended: RecommendedView = .workouts
+    @Published var slideTabShowing: Bool = true
     
     static let shared = AutopilotViewRouter()
 }

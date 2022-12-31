@@ -13,6 +13,8 @@ struct TimerView: View {
     @Binding var workoutIsPaused: Bool
     @Binding var routineStatus: RoutineStatus
     var timerValue: Int
+    @State var showingAlert: Bool = false
+    @ObservedObject var autopilotViewRouter: AutopilotViewRouter
     
 
 
@@ -25,7 +27,7 @@ struct TimerView: View {
             VStack {
                 HStack {
                     Button(action: {
-    //                    showingAlert.toggle()
+                        showingAlert.toggle()
                     }) {
                         Image(systemName: routineStatus == .paused ? "xmark" : routineStatus == .running ? "xmark" : routineStatus == .notrunning ? "xmark" : routineStatus == .loading ? "xmark" : "xmark")
                             .resizable()
@@ -40,6 +42,12 @@ struct TimerView: View {
                     .background(.gray)
                     .clipShape(Circle())
                     .opacity(workoutIsPaused ? 1 : 0) // modify this.
+                    .alert(isPresented: $showingAlert) {
+                                                        Alert(title: Text("Quit workout?"), message: Text("Your progress won't be saved."), primaryButton: .default(Text("Cancel"), action: {}), secondaryButton: .destructive(Text("Quit"), action: {
+                                                            autopilotViewRouter.slideTabShowing = true
+                                                            autopilotViewRouter.currentPage = .home
+                                                        }))
+                                                    }
                     Spacer()
                     switch routineStatus {
                     case .notrunning:
@@ -133,6 +141,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timerIsRunning: .constant(true), workoutIsPaused: .constant(true), routineStatus: .constant(.notrunning), timerValue: Routine().timerValue)
+        TimerView(timerIsRunning: .constant(true), workoutIsPaused: .constant(true), routineStatus: .constant(.notrunning), timerValue: Routine().timerValue, autopilotViewRouter: AutopilotViewRouter())
     }
 }

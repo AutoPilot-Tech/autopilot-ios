@@ -12,7 +12,6 @@ struct ExerciseView: View {
     @Binding var selectedTab: Int
     @State private var showingAlert = false
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
-    @Binding var slideTabShowing: Bool
     @Binding var workoutIsPaused: Bool
     @Binding var indexForExercises: Int
     @Binding var timerIsRunning: Bool
@@ -68,6 +67,6 @@ struct ExerciseView: View {
 
 struct ExerciseView_Previews: PreviewProvider {
     static var previews: some View {
-        ExerciseView(selectedTab: .constant(1), autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false), workoutIsPaused: .constant(false), indexForExercises: .constant(0), timerIsRunning: .constant(true), index: 0)
+        ExerciseView(selectedTab: .constant(1), autopilotViewRouter: AutopilotViewRouter(), workoutIsPaused: .constant(false), indexForExercises: .constant(0), timerIsRunning: .constant(true), index: 0)
     }
 }

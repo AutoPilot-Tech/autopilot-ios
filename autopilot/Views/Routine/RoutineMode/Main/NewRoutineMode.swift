@@ -13,6 +13,10 @@ struct NewRoutineMode: View {
     @State var workoutIsPaused = false
     @State var routineStatus: RoutineStatus = .notrunning
     @ObservedObject var viewModel: Routine
+    @State private var bottomSheetOffset: CGFloat = 1000
+    @State private var playButtonOffset: CGFloat = -60
+    @ObservedObject var viewRouter: AutopilotViewRouter
+
     
     var body: some View {
         VStack(spacing: 0) {
@@ -34,9 +38,11 @@ struct NewRoutineMode: View {
                             Text(viewModel.routineName)
                                 .font(Font.system(size: 20))
                                 .bold()
+                                .opacity(routineStatus == .notrunning ? 1 : 0)
                             Text(viewModel.routineCaption)
                                 .font(Font.system(size: 40))
                                 .bold()
+                                .opacity(routineStatus == .notrunning ? 1 : 0)
                         }
                         .foregroundColor(.white)
                     }
@@ -58,6 +64,8 @@ struct NewRoutineMode: View {
                Spacer()
                Button(action: {
                    self.routineStatus = .running
+                   self.bottomSheetOffset = 140
+                   self.playButtonOffset = 0
                }) {
                    VStack {
                        Spacer()
@@ -78,7 +86,9 @@ struct NewRoutineMode: View {
                .frame(width: 90, height: 90)
                .background(.blue)
                .clipShape(Circle())
-               .offset(y: -60)
+               .offset(y: self.playButtonOffset)
+               .animation(.spring())
+
                Spacer()
                Image(systemName: "list.bullet")
                    .resizable()
@@ -101,14 +111,21 @@ struct NewRoutineMode: View {
                 .frame(width: UIScreen.main.bounds.width, height: 300)
         }
        .overlay(alignment: .top) {
-           TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused, routineStatus: $routineStatus, timerValue: viewModel.timerValue)
+           TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused, routineStatus: $routineStatus, timerValue: viewModel.timerValue, autopilotViewRouter: viewRouter )
                .padding(.horizontal)
        }
+       .overlay(alignment: .bottom) {
+           RoutineBottomSheet()
+               .offset(y: bottomSheetOffset)
+               .animation(.spring())
+
+       }
+        
     }
 }
 
 struct NewRoutineMode_Previews: PreviewProvider {
     static var previews: some View {
-        NewRoutineMode(viewModel: Routine())
+        NewRoutineMode(viewModel: Routine(), viewRouter: AutopilotViewRouter())
     }
 }

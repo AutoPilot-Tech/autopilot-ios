@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ArcModeDetailView: View {
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
-    @Binding var slideTabShowing: Bool
     @State var searchText = ""
 
     var body: some View {
@@ -29,7 +28,7 @@ struct ArcModeDetailView: View {
                     Spacer()
                     Button(action: {
                         autopilotViewRouter.currentPage = .arcMode
-                        self.slideTabShowing = false
+                        autopilotViewRouter.slideTabShowing = false
                     } ) {
                         VStack {
                             Image(systemName: "play.fill")
@@ -59,7 +58,7 @@ struct ArcModeDetailView: View {
             
                 
             .navigationBarItems( leading: Button(action: {
-                self.slideTabShowing = true
+                autopilotViewRouter.slideTabShowing = true
                 autopilotViewRouter.currentPage = .home
             }) {
                 Image(systemName: "x.square.fill")
@@ -71,6 +70,6 @@ struct ArcModeDetailView: View {
 
 struct ArcModeDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ArcModeDetailView(autopilotViewRouter: AutopilotViewRouter(), slideTabShowing: .constant(false))
+        ArcModeDetailView(autopilotViewRouter: AutopilotViewRouter())
     }
 }
