@@ -39,7 +39,7 @@ struct ContentView : View {
                                         case .home:
                                             HomeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)
                                         case .arcDetail:
-                                            NewRoutineMode()
+                                            NewRoutineMode(viewModel: Routine())
                                             
                                         case .arcMode:
                                             RoutineModeView(autopilotViewRouter: autopilotViewRouter, slideTabShowing: $slideTabShowing)

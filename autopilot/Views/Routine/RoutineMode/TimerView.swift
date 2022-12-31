@@ -12,8 +12,14 @@ struct TimerView: View {
     @Binding var timerIsRunning: Bool
     @Binding var workoutIsPaused: Bool
     @Binding var routineStatus: RoutineStatus
+    var timerValue: Int
     
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+
+
+    
+    
+        let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
         var body: some View {
             VStack {
@@ -41,11 +47,11 @@ struct TimerView: View {
                             .foregroundColor(.white)
                             .font(.headline)
                     default:
-                    Text("\(timeString(time: timeRemaining))")
+                        Text("\(timeString(time: timeRemaining))")
                         .font(.system(size: 30))
                         .foregroundColor(.white)
                         .onReceive(timer) { _ in
-                            if timerIsRunning {
+                            if routineStatus == .running {
                                 if timeRemaining >= 0 {
                                     timeRemaining += 1
                                 }
@@ -116,11 +122,10 @@ struct TimerView: View {
             
         }
     
-    func timeString(time: Int) -> String {
-        let hours = Int(time) / 3600
-        let minutes = Int(time) / 60 % 60
-        let seconds = Int(time)
-        return String(format:"%02i:%02i:%02i", hours, minutes, seconds)
+    private func timeString(time: Int) -> String {
+        let minutes = time / 60 % 60
+        let seconds = time % 60
+        return String(format: "%02d:%02d", minutes, seconds)
     }
 }
 
@@ -128,6 +133,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(timerIsRunning: .constant(true), workoutIsPaused: .constant(true), routineStatus: .constant(.notrunning))
+        TimerView(timerIsRunning: .constant(true), workoutIsPaused: .constant(true), routineStatus: .constant(.notrunning), timerValue: Routine().timerValue)
     }
 }

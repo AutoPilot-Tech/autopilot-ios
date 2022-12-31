@@ -12,10 +12,11 @@ struct NewRoutineMode: View {
     @State var timerIsRunning = false
     @State var workoutIsPaused = false
     @State var routineStatus: RoutineStatus = .notrunning
+    @ObservedObject var viewModel: Routine
     
     var body: some View {
         VStack(spacing: 0) {
-            if let url = Bundle.main.url(forResource: "dumbbell-benchpress-vertical", withExtension: "mp4") {
+            if let url = Bundle.main.url(forResource: "step-up", withExtension: "mp4") {
                 let player = AVPlayer(url: url)
 
                 VideoPlayer(player: player)
@@ -30,10 +31,10 @@ struct NewRoutineMode: View {
                     }
                     .overlay {
                         VStack {
-                            Text("Friday's Workout")
+                            Text(viewModel.routineName)
                                 .font(Font.system(size: 20))
                                 .bold()
-                            Text("Gang Shit 😭🤩")
+                            Text(viewModel.routineCaption)
                                 .font(Font.system(size: 40))
                                 .bold()
                         }
@@ -100,7 +101,7 @@ struct NewRoutineMode: View {
                 .frame(width: UIScreen.main.bounds.width, height: 300)
         }
        .overlay(alignment: .top) {
-           TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused, routineStatus: $routineStatus)
+           TimerView(timerIsRunning: $timerIsRunning, workoutIsPaused: $workoutIsPaused, routineStatus: $routineStatus, timerValue: viewModel.timerValue)
                .padding(.horizontal)
        }
     }
@@ -108,6 +109,6 @@ struct NewRoutineMode: View {
 
 struct NewRoutineMode_Previews: PreviewProvider {
     static var previews: some View {
-        NewRoutineMode()
+        NewRoutineMode(viewModel: Routine())
     }
 }

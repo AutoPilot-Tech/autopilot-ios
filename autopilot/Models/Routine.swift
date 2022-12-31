@@ -21,13 +21,53 @@ enum RoutineStatus {
 // MARK: - ROUTINE DATA TYPE / VIEW MODEL
 
 class Routine: ObservableObject {
+    // Create a timer source
+    var timerSource: DispatchSourceTimer?
+    private var isPaused = false  // for the Dispatch timer
     @Published var elapsedTime: Double = 0
     @Published var currentActivity: Activity?
     @Published var routineStatus: RoutineStatus = .notrunning
     @Published var timeRemaining: Double = 0
+    @Published var timerValue: Int = 0
+
     
     // Activities - RoutineModeView will loop through these and display them for their duration.
-    @Published var routine: [Activity] = []
+    @Published var routine: [Activity] = [
+        Activity(types: [.coach]), // coach
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        Activity(types: [.rest(duration: 45)]), // rest
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        Activity(types: [.rest(duration: 45)]), // rest
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        // TODO: add .coach to an exercise (the coach is giving instructions during exercise). Data structure supports this, but the UI might not at the moment.
+        Activity(types: [.rest(duration: 90), .upnext]), //resting, and upnext to next block
+        Activity(types: [.ready]), // ready
+        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.rest(duration: 90)]), //resting
+        Activity(types: [.ready]), // get ready!
+        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.rest(duration: 90)]), //resting
+        Activity(types: [.ready]), // get ready!
+        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.rest(duration: 90)]) //resting
+]
+    @Published var routineName: String
+    @Published var routineCaption: String
+    
+    init() {
+        routineName = "Friday's Workout"
+        routineCaption = "Gang Shit!"
+    }
+
+    
+    
+
+      
+    
+    
     
    
 }
