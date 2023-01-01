@@ -21,43 +21,54 @@ struct RoutineModeView: View {
     @State var indexForExercises = 0
     @State var timerIsRunning = true
     @State var workoutIsPaused = false
+    var viewModel = Routine()
+    
     
     var progressInterval: ClosedRange<Date> {
         let start = Date()
-        let end = start.addingTimeInterval(TimeInterval(Exercise.exercises[indexForExercises].duration))
+        let end = start.addingTimeInterval(TimeInterval(30))
         return start...end
     }
     
     
     var body: some View {
             VStack {
-                TabView(selection: $selectedTab) {
-                    ForEach(0 ..< Exercise.exercises.count) { index in
-                        VStack {
-                            if let url = Bundle.main.url(forResource: Exercise.exercises[index].videoName, withExtension: "mp4") {
-                                let player = AVPlayer(url: url)
-                                    
-                                VideoPlayer(player: player)
-                                    .edgesIgnoringSafeArea(.all)
-                                    .disabled(true)
-                                    .offset(y: -100)
-                                    .onAppear {
-                                        player.play()
-                                        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
-                                            player.seek(to: .zero)
-                                            player.play()
-                                        }
-                                    }
-                    
 
-                     
-                            } else {
-                                Text("Couldn't find \(Exercise.exercises[index].videoName).mp4").foregroundColor(.red)
+                if let url = Bundle.main.url(forResource: viewModel.routine[viewModel.activityIndex].videoName, withExtension: "mp4") {
+                    let player = AVPlayer(url: url)
+                        
+                    VideoPlayer(player: player)
+                        .edgesIgnoringSafeArea(.all)
+                        .disabled(true)
+                        .offset(y: -100)
+                        .onAppear {
+                            player.play()
+                            NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
+                                player.seek(to: .zero)
+                                player.play()
                             }
                         }
-                        
-                    }
+                        .onReceive(viewModel.$activityIndex) { newValue in
+                            if let url = Bundle.main.url(forResource: viewModel.routine[newValue].videoName, withExtension: "mp4") {
+                                                    player.replaceCurrentItem(with: AVPlayerItem(url: url))
+                                                    player.play()
+                                                    NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: nil, queue: .main) { _ in
+                                                        player.seek(to: .zero)
+                                                        player.play()
+                                                    }
+                                        }
+                        }
+        
+
+         
+                } else {
+                    Text("Couldn't find \(viewModel.routine[viewModel.activityIndex].videoName ?? "").mp4").foregroundColor(.red)
                 }
+                        
+                        
+                    
+                 
+                
                 
                 
             }
@@ -89,7 +100,7 @@ struct RoutineModeView: View {
                 SlideOverCard {
                     VStack {
                         Handle()
-                        Text(Exercise.exercises[indexForExercises].exerciseName)
+                        Text(viewModel.routine[viewModel.activityIndex].name ?? "Rest")
                             .font(.title3)
                         .padding()
                         
@@ -118,7 +129,7 @@ struct RoutineModeView: View {
               
                             Button(action: {
                                 selectedTab += 1
-                                indexForExercises += 1
+                                viewModel.activityIndex += 1
                             }) {
                                 Image(systemName: "chevron.forward.circle.fill")
                                     .resizable()

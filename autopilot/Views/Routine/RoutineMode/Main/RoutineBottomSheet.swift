@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct RoutineBottomSheet: View {
+    @Binding var selectedTab: Int
+    @Binding var activityIndex: Int
+    @ObservedObject var viewModel: Routine
+    
     var body: some View    {
         VStack {
             Handle()
@@ -25,7 +29,7 @@ struct RoutineBottomSheet: View {
 
                 HStack {
                     Spacer()
-                    Text("Prayer Stretch")
+                    Text(viewModel.routine[activityIndex].name ?? "Rest")
                         .foregroundColor(.black)
                         .font(.body)
                         
@@ -49,7 +53,10 @@ struct RoutineBottomSheet: View {
                     }
                     
                     Spacer()
-                    Button(action: {}) {
+                    Button(action: {
+                        self.activityIndex += 1
+                        self.selectedTab += 1
+                    }) {
                         Image(systemName: "checkmark.circle.fill")
                             .resizable()
                             .scaledToFill()
@@ -118,6 +125,6 @@ struct RoutineBottomSheet: View {
 
 struct RoutineBottomSheet_Previews: PreviewProvider {
     static var previews: some View {
-        RoutineBottomSheet()
+        RoutineBottomSheet(selectedTab: .constant(0), activityIndex: .constant(0), viewModel: Routine())
     }
 }

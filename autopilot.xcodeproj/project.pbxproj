@@ -86,6 +86,44 @@
 		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
 		BF0A9CD429609F1B00AE586B /* RoutineBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */; };
+		BF0A9D492961521E00AE586B /* Hip-Lifts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D232961521B00AE586B /* Hip-Lifts.mp4 */; };
+		BF0A9D4A2961521E00AE586B /* Tripod-Dumbbell-Rows.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D242961521B00AE586B /* Tripod-Dumbbell-Rows.mp4 */; };
+		BF0A9D4B2961521E00AE586B /* Plank.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D252961521C00AE586B /* Plank.mp4 */; };
+		BF0A9D4C2961521E00AE586B /* Bodyweight-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D262961521C00AE586B /* Bodyweight-Squats.mp4 */; };
+		BF0A9D4D2961521E00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D272961521C00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 */; };
+		BF0A9D4E2961521E00AE586B /* Barbell-Bench-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D282961521C00AE586B /* Barbell-Bench-Press.mp4 */; };
+		BF0A9D4F2961521E00AE586B /* Face-Pull.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D292961521C00AE586B /* Face-Pull.mp4 */; };
+		BF0A9D502961521E00AE586B /* Incline-Pushups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2A2961521C00AE586B /* Incline-Pushups.mp4 */; };
+		BF0A9D512961521E00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2B2961521C00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 */; };
+		BF0A9D522961521E00AE586B /* Dumbbell-Bench-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2C2961521C00AE586B /* Dumbbell-Bench-Press.mp4 */; };
+		BF0A9D532961521E00AE586B /* Dumbbell-French-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2D2961521C00AE586B /* Dumbbell-French-Press.mp4 */; };
+		BF0A9D542961521E00AE586B /* Dumbbell-Flys.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2E2961521C00AE586B /* Dumbbell-Flys.mp4 */; };
+		BF0A9D552961521E00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2F2961521C00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 */; };
+		BF0A9D562961521E00AE586B /* Bodyweight-Hip-Thrusts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D302961521C00AE586B /* Bodyweight-Hip-Thrusts.mp4 */; };
+		BF0A9D572961521E00AE586B /* Incline-Dumbbell-Curls.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D312961521C00AE586B /* Incline-Dumbbell-Curls.mp4 */; };
+		BF0A9D582961521E00AE586B /* Barbell-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D322961521C00AE586B /* Barbell-Squats.mp4 */; };
+		BF0A9D592961521E00AE586B /* V-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D332961521C00AE586B /* V-Ups.mp4 */; };
+		BF0A9D5A2961521E00AE586B /* Face-Pull-External-Rotation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D342961521C00AE586B /* Face-Pull-External-Rotation.mp4 */; };
+		BF0A9D5B2961521E00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D352961521C00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 */; };
+		BF0A9D5C2961521E00AE586B /* Seated-Arnold-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D362961521C00AE586B /* Seated-Arnold-Press.mp4 */; };
+		BF0A9D5D2961521E00AE586B /* Lateral-Hip-Openers.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D372961521C00AE586B /* Lateral-Hip-Openers.mp4 */; };
+		BF0A9D5E2961521E00AE586B /* Step-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D382961521C00AE586B /* Step-Ups.mp4 */; };
+		BF0A9D5F2961521E00AE586B /* High-Plank-Sholder-Taps.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D392961521C00AE586B /* High-Plank-Sholder-Taps.mp4 */; };
+		BF0A9D602961521E00AE586B /* Wall-Push-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3A2961521C00AE586B /* Wall-Push-Ups.mp4 */; };
+		BF0A9D612961521E00AE586B /* Dumbbell-Goblet-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3B2961521C00AE586B /* Dumbbell-Goblet-Squats.mp4 */; };
+		BF0A9D622961521E00AE586B /* Lat-Pulldown.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3C2961521C00AE586B /* Lat-Pulldown.mp4 */; };
+		BF0A9D632961521E00AE586B /* Dumbbell-Hammer-Curls.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3D2961521C00AE586B /* Dumbbell-Hammer-Curls.mp4 */; };
+		BF0A9D642961521E00AE586B /* Side-Plank.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3E2961521C00AE586B /* Side-Plank.mp4 */; };
+		BF0A9D652961521E00AE586B /* Dumbbell-Curls.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3F2961521C00AE586B /* Dumbbell-Curls.mp4 */; };
+		BF0A9D662961521E00AE586B /* Cossack-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D402961521C00AE586B /* Cossack-Squats.mp4 */; };
+		BF0A9D672961521E00AE586B /* Dumbbell-Deadlifts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D412961521C00AE586B /* Dumbbell-Deadlifts.mp4 */; };
+		BF0A9D682961521E00AE586B /* Kettlebell-Goblet-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D422961521C00AE586B /* Kettlebell-Goblet-Squats.mp4 */; };
+		BF0A9D692961521E00AE586B /* Dumbbell-Step-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D432961521C00AE586B /* Dumbbell-Step-Ups.mp4 */; };
+		BF0A9D6A2961521E00AE586B /* Dumbbell-Rows.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D442961521C00AE586B /* Dumbbell-Rows.mp4 */; };
+		BF0A9D6B2961521E00AE586B /* Dynamic-Hamstring-Stretch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D452961521C00AE586B /* Dynamic-Hamstring-Stretch.mp4 */; };
+		BF0A9D6C2961521E00AE586B /* Pushups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D462961521C00AE586B /* Pushups.mp4 */; };
+		BF0A9D6D2961521E00AE586B /* Bottom-Up-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D472961521C00AE586B /* Bottom-Up-Squats.mp4 */; };
+		BF0A9D6E2961521E00AE586B /* Bird-Dogs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D482961521C00AE586B /* Bird-Dogs.mp4 */; };
 		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
 		BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */; };
 		BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */; };
@@ -232,6 +270,44 @@
 		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
 		BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineBottomSheet.swift; sourceTree = "<group>"; };
+		BF0A9D232961521B00AE586B /* Hip-Lifts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hip-Lifts.mp4"; sourceTree = "<group>"; };
+		BF0A9D242961521B00AE586B /* Tripod-Dumbbell-Rows.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tripod-Dumbbell-Rows.mp4"; sourceTree = "<group>"; };
+		BF0A9D252961521C00AE586B /* Plank.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Plank.mp4; sourceTree = "<group>"; };
+		BF0A9D262961521C00AE586B /* Bodyweight-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bodyweight-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D272961521C00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barbell-Bench-Hip-Thrusts.mp4"; sourceTree = "<group>"; };
+		BF0A9D282961521C00AE586B /* Barbell-Bench-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barbell-Bench-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D292961521C00AE586B /* Face-Pull.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Face-Pull.mp4"; sourceTree = "<group>"; };
+		BF0A9D2A2961521C00AE586B /* Incline-Pushups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Incline-Pushups.mp4"; sourceTree = "<group>"; };
+		BF0A9D2B2961521C00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4"; sourceTree = "<group>"; };
+		BF0A9D2C2961521C00AE586B /* Dumbbell-Bench-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Bench-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D2D2961521C00AE586B /* Dumbbell-French-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-French-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D2E2961521C00AE586B /* Dumbbell-Flys.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Flys.mp4"; sourceTree = "<group>"; };
+		BF0A9D2F2961521C00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D302961521C00AE586B /* Bodyweight-Hip-Thrusts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bodyweight-Hip-Thrusts.mp4"; sourceTree = "<group>"; };
+		BF0A9D312961521C00AE586B /* Incline-Dumbbell-Curls.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Incline-Dumbbell-Curls.mp4"; sourceTree = "<group>"; };
+		BF0A9D322961521C00AE586B /* Barbell-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barbell-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D332961521C00AE586B /* V-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "V-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D342961521C00AE586B /* Face-Pull-External-Rotation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Face-Pull-External-Rotation.mp4"; sourceTree = "<group>"; };
+		BF0A9D352961521C00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Goblet-Dumbbell-Split-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D362961521C00AE586B /* Seated-Arnold-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seated-Arnold-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D372961521C00AE586B /* Lateral-Hip-Openers.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lateral-Hip-Openers.mp4"; sourceTree = "<group>"; };
+		BF0A9D382961521C00AE586B /* Step-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D392961521C00AE586B /* High-Plank-Sholder-Taps.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "High-Plank-Sholder-Taps.mp4"; sourceTree = "<group>"; };
+		BF0A9D3A2961521C00AE586B /* Wall-Push-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wall-Push-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D3B2961521C00AE586B /* Dumbbell-Goblet-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Goblet-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D3C2961521C00AE586B /* Lat-Pulldown.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lat-Pulldown.mp4"; sourceTree = "<group>"; };
+		BF0A9D3D2961521C00AE586B /* Dumbbell-Hammer-Curls.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Hammer-Curls.mp4"; sourceTree = "<group>"; };
+		BF0A9D3E2961521C00AE586B /* Side-Plank.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Side-Plank.mp4"; sourceTree = "<group>"; };
+		BF0A9D3F2961521C00AE586B /* Dumbbell-Curls.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Curls.mp4"; sourceTree = "<group>"; };
+		BF0A9D402961521C00AE586B /* Cossack-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cossack-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D412961521C00AE586B /* Dumbbell-Deadlifts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Deadlifts.mp4"; sourceTree = "<group>"; };
+		BF0A9D422961521C00AE586B /* Kettlebell-Goblet-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kettlebell-Goblet-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D432961521C00AE586B /* Dumbbell-Step-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Step-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D442961521C00AE586B /* Dumbbell-Rows.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Rows.mp4"; sourceTree = "<group>"; };
+		BF0A9D452961521C00AE586B /* Dynamic-Hamstring-Stretch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dynamic-Hamstring-Stretch.mp4"; sourceTree = "<group>"; };
+		BF0A9D462961521C00AE586B /* Pushups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pushups.mp4; sourceTree = "<group>"; };
+		BF0A9D472961521C00AE586B /* Bottom-Up-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bottom-Up-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D482961521C00AE586B /* Bird-Dogs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bird-Dogs.mp4"; sourceTree = "<group>"; };
 		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
 		BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWorkoutView.swift; sourceTree = "<group>"; };
@@ -331,6 +407,7 @@
 		52A2B2C3293527B50061A712 /* autopilot */ = {
 			isa = PBXGroup;
 			children = (
+				BF0A9D222961521B00AE586B /* downloaded-workout-videos */,
 				BF70BC22295F85F800175957 /* VerticalVideos */,
 				BF48CFED2959A14B0009FBF9 /* GoogleService-Info.plist */,
 				BF48CFEC2959A0590009FBF9 /* Info.plist */,
@@ -590,6 +667,52 @@
 				71D2D50C2936D9E2004229B3 /* GodFilterButtonView.swift */,
 			);
 			path = God;
+			sourceTree = "<group>";
+		};
+		BF0A9D222961521B00AE586B /* downloaded-workout-videos */ = {
+			isa = PBXGroup;
+			children = (
+				BF0A9D232961521B00AE586B /* Hip-Lifts.mp4 */,
+				BF0A9D242961521B00AE586B /* Tripod-Dumbbell-Rows.mp4 */,
+				BF0A9D252961521C00AE586B /* Plank.mp4 */,
+				BF0A9D262961521C00AE586B /* Bodyweight-Squats.mp4 */,
+				BF0A9D272961521C00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 */,
+				BF0A9D282961521C00AE586B /* Barbell-Bench-Press.mp4 */,
+				BF0A9D292961521C00AE586B /* Face-Pull.mp4 */,
+				BF0A9D2A2961521C00AE586B /* Incline-Pushups.mp4 */,
+				BF0A9D2B2961521C00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 */,
+				BF0A9D2C2961521C00AE586B /* Dumbbell-Bench-Press.mp4 */,
+				BF0A9D2D2961521C00AE586B /* Dumbbell-French-Press.mp4 */,
+				BF0A9D2E2961521C00AE586B /* Dumbbell-Flys.mp4 */,
+				BF0A9D2F2961521C00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 */,
+				BF0A9D302961521C00AE586B /* Bodyweight-Hip-Thrusts.mp4 */,
+				BF0A9D312961521C00AE586B /* Incline-Dumbbell-Curls.mp4 */,
+				BF0A9D322961521C00AE586B /* Barbell-Squats.mp4 */,
+				BF0A9D332961521C00AE586B /* V-Ups.mp4 */,
+				BF0A9D342961521C00AE586B /* Face-Pull-External-Rotation.mp4 */,
+				BF0A9D352961521C00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 */,
+				BF0A9D362961521C00AE586B /* Seated-Arnold-Press.mp4 */,
+				BF0A9D372961521C00AE586B /* Lateral-Hip-Openers.mp4 */,
+				BF0A9D382961521C00AE586B /* Step-Ups.mp4 */,
+				BF0A9D392961521C00AE586B /* High-Plank-Sholder-Taps.mp4 */,
+				BF0A9D3A2961521C00AE586B /* Wall-Push-Ups.mp4 */,
+				BF0A9D3B2961521C00AE586B /* Dumbbell-Goblet-Squats.mp4 */,
+				BF0A9D3C2961521C00AE586B /* Lat-Pulldown.mp4 */,
+				BF0A9D3D2961521C00AE586B /* Dumbbell-Hammer-Curls.mp4 */,
+				BF0A9D3E2961521C00AE586B /* Side-Plank.mp4 */,
+				BF0A9D3F2961521C00AE586B /* Dumbbell-Curls.mp4 */,
+				BF0A9D402961521C00AE586B /* Cossack-Squats.mp4 */,
+				BF0A9D412961521C00AE586B /* Dumbbell-Deadlifts.mp4 */,
+				BF0A9D422961521C00AE586B /* Kettlebell-Goblet-Squats.mp4 */,
+				BF0A9D432961521C00AE586B /* Dumbbell-Step-Ups.mp4 */,
+				BF0A9D442961521C00AE586B /* Dumbbell-Rows.mp4 */,
+				BF0A9D452961521C00AE586B /* Dynamic-Hamstring-Stretch.mp4 */,
+				BF0A9D462961521C00AE586B /* Pushups.mp4 */,
+				BF0A9D472961521C00AE586B /* Bottom-Up-Squats.mp4 */,
+				BF0A9D482961521C00AE586B /* Bird-Dogs.mp4 */,
+			);
+			name = "downloaded-workout-videos";
+			path = "../../Desktop/downloaded-workout-videos";
 			sourceTree = "<group>";
 		};
 		BF48CFF52959D98B0009FBF9 /* Schedule */ = {
@@ -872,13 +995,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0A9D602961521E00AE586B /* Wall-Push-Ups.mp4 in Resources */,
+				BF0A9D6A2961521E00AE586B /* Dumbbell-Rows.mp4 in Resources */,
+				BF0A9D552961521E00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 in Resources */,
+				BF0A9D5C2961521E00AE586B /* Seated-Arnold-Press.mp4 in Resources */,
+				BF0A9D642961521E00AE586B /* Side-Plank.mp4 in Resources */,
+				BF0A9D522961521E00AE586B /* Dumbbell-Bench-Press.mp4 in Resources */,
 				52A2B2CC293527B70061A712 /* Preview Assets.xcassets in Resources */,
+				BF0A9D662961521E00AE586B /* Cossack-Squats.mp4 in Resources */,
+				BF0A9D4F2961521E00AE586B /* Face-Pull.mp4 in Resources */,
 				7122D5232938C0B100BDF888 /* step-up.mp4 in Resources */,
 				BF70BC24295F860600175957 /* dumbbell-benchpress-vertical.mp4 in Resources */,
+				BF0A9D572961521E00AE586B /* Incline-Dumbbell-Curls.mp4 in Resources */,
+				BF0A9D502961521E00AE586B /* Incline-Pushups.mp4 in Resources */,
+				BF0A9D692961521E00AE586B /* Dumbbell-Step-Ups.mp4 in Resources */,
+				BF0A9D542961521E00AE586B /* Dumbbell-Flys.mp4 in Resources */,
+				BF0A9D612961521E00AE586B /* Dumbbell-Goblet-Squats.mp4 in Resources */,
+				BF0A9D562961521E00AE586B /* Bodyweight-Hip-Thrusts.mp4 in Resources */,
+				BF0A9D6B2961521E00AE586B /* Dynamic-Hamstring-Stretch.mp4 in Resources */,
+				BF0A9D5E2961521E00AE586B /* Step-Ups.mp4 in Resources */,
+				BF0A9D5F2961521E00AE586B /* High-Plank-Sholder-Taps.mp4 in Resources */,
+				BF0A9D672961521E00AE586B /* Dumbbell-Deadlifts.mp4 in Resources */,
+				BF0A9D4A2961521E00AE586B /* Tripod-Dumbbell-Rows.mp4 in Resources */,
+				BF0A9D4E2961521E00AE586B /* Barbell-Bench-Press.mp4 in Resources */,
+				BF0A9D5A2961521E00AE586B /* Face-Pull-External-Rotation.mp4 in Resources */,
+				BF0A9D6C2961521E00AE586B /* Pushups.mp4 in Resources */,
 				52A2B2C9293527B70061A712 /* Assets.xcassets in Resources */,
+				BF0A9D4B2961521E00AE586B /* Plank.mp4 in Resources */,
+				BF0A9D4D2961521E00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 in Resources */,
 				7122D51D2938BEE700BDF888 /* sun-salute.mp4 in Resources */,
+				BF0A9D6D2961521E00AE586B /* Bottom-Up-Squats.mp4 in Resources */,
+				BF0A9D622961521E00AE586B /* Lat-Pulldown.mp4 in Resources */,
+				BF0A9D5D2961521E00AE586B /* Lateral-Hip-Openers.mp4 in Resources */,
+				BF0A9D512961521E00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 in Resources */,
+				BF0A9D5B2961521E00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 in Resources */,
 				7122D5242938C0B300BDF888 /* burpee.mp4 in Resources */,
+				BF0A9D652961521E00AE586B /* Dumbbell-Curls.mp4 in Resources */,
+				BF0A9D532961521E00AE586B /* Dumbbell-French-Press.mp4 in Resources */,
+				BF0A9D6E2961521E00AE586B /* Bird-Dogs.mp4 in Resources */,
+				BF0A9D682961521E00AE586B /* Kettlebell-Goblet-Squats.mp4 in Resources */,
+				BF0A9D4C2961521E00AE586B /* Bodyweight-Squats.mp4 in Resources */,
+				BF0A9D582961521E00AE586B /* Barbell-Squats.mp4 in Resources */,
 				BF48CFEE2959A14B0009FBF9 /* GoogleService-Info.plist in Resources */,
+				BF0A9D632961521E00AE586B /* Dumbbell-Hammer-Curls.mp4 in Resources */,
+				BF0A9D592961521E00AE586B /* V-Ups.mp4 in Resources */,
+				BF0A9D492961521E00AE586B /* Hip-Lifts.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

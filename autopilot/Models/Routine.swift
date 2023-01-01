@@ -29,29 +29,30 @@ class Routine: ObservableObject {
     @Published var routineStatus: RoutineStatus = .notrunning
     @Published var timeRemaining: Double = 0
     @Published var timerValue: Int = 0
+    @Published var activityIndex = 0
 
     
     // Activities - RoutineModeView will loop through these and display them for their duration.
     @Published var routine: [Activity] = [
         Activity(types: [.coach]), // coach
         Activity(types: [.ready]), // ready
-        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        Activity(types: [.exercise(name: "Dumbbell-Bench-Press", reps: 12, duration: 0, isTimed: false)]), // coach
         Activity(types: [.rest(duration: 45)]), // rest
         Activity(types: [.ready]), // ready
-        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        Activity(types: [.exercise(name: "Dumbbell-Bench-Press", reps: 12, duration: 0, isTimed: false)]), // coach
         Activity(types: [.rest(duration: 45)]), // rest
         Activity(types: [.ready]), // ready
-        Activity(types: [.exercise(name: "Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // coach
+        Activity(types: [.exercise(name: "Dumbbell-Bench-Press", reps: 12, duration: 0, isTimed: false)]), // coach
         // TODO: add .coach to an exercise (the coach is giving instructions during exercise). Data structure supports this, but the UI might not at the moment.
         Activity(types: [.rest(duration: 90), .upnext]), //resting, and upnext to next block
         Activity(types: [.ready]), // ready
-        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.exercise(name: "Incline-Dumbbell-Press", reps: 12, duration: 0, isTimed: false)]), // exercise
         Activity(types: [.rest(duration: 90)]), //resting
         Activity(types: [.ready]), // get ready!
-        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.exercise(name: "Incline-Dumbbell-Press", reps: 12, duration: 0, isTimed: false)]), // exercise
         Activity(types: [.rest(duration: 90)]), //resting
         Activity(types: [.ready]), // get ready!
-        Activity(types: [.exercise(name: "Incline Dumbbell Bench Press", reps: 12, duration: 0, isTimed: false)]), // exercise
+        Activity(types: [.exercise(name: "Incline-Dumbbell-Press", reps: 12, duration: 0, isTimed: false)]), // exercise
         Activity(types: [.rest(duration: 90)]) //resting
 ]
     @Published var routineName: String
@@ -98,6 +99,7 @@ struct Activity {
     var reps: Int?
     var duration: Int?
     var isTimed: Bool?
+    var videoName: String?
     
 
     init(types: [ActivityType]) {
@@ -109,6 +111,7 @@ struct Activity {
                 self.reps = 0
                 self.duration = duration
                 self.isTimed = true
+                self.videoName = "Dumbbell-Bench-Press"
                 
                 // handle other cases
             case .coach:
@@ -116,17 +119,21 @@ struct Activity {
                 self.reps = 0
                 self.duration = 30
                 self.isTimed = true
+                self.videoName = "Dumbbell-Bench-Press"
+
                 
             case .ready:
                 self.name = "Get ready"
                 self.reps = 0
                 self.duration = 0
                 self.isTimed = true
+                self.videoName = "Dumbbell-Bench-Press"
             case .upnext:
                 self.name = "Up next"
                 self.reps = 0
                 self.duration = 0
                 self.isTimed = true
+                self.videoName = "Dumbbell-Bench-Press"
             case .other:
                 self.name = "Other"
                 self.reps = 0
@@ -137,6 +144,7 @@ struct Activity {
                 self.reps = reps
                 self.duration = duration
                 self.isTimed = isTimed
+                self.videoName = name
             }
         }
     }
