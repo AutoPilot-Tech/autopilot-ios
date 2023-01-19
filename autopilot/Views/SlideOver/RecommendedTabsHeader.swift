@@ -26,6 +26,24 @@ struct RecommendedTabsHeader: View {
     }
 }
 
+struct ShortcutsHeader: View {
+    var body: some View {
+        HStack {
+            
+            HStack {
+                Text("Shortcuts")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+//                    .frame(width: 150)
+                BetaTag()
+                
+            }
+            Spacer()
+            
+        }
+    }
+}
+
 struct RecommendedTabsHeader_Previews: PreviewProvider {
     static var previews: some View {
         RecommendedTabsHeader()

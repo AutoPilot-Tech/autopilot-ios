@@ -40,7 +40,7 @@
 		7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4F82938409200BDF888 /* ArcModeDetailView.swift */; };
 		7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */; };
 		7122D4FE2938470A00BDF888 /* FreeFlowArcMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */; };
-		7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FF29384AFA00BDF888 /* ArcModeView.swift */; };
+		7122D50029384AFA00BDF888 /* RoutineModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D4FF29384AFA00BDF888 /* RoutineModeView.swift */; };
 		7122D50A293860F700BDF888 /* AutopilotViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D509293860F700BDF888 /* AutopilotViewRouter.swift */; };
 		7122D50D2938A59A00BDF888 /* Popup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D50C2938A59A00BDF888 /* Popup.swift */; };
 		7122D50F2938ACF700BDF888 /* ArcModeOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */; };
@@ -85,6 +85,45 @@
 		71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53829379DF8004229B3 /* CarouselView.swift */; };
 		71D2D53B2937A0FF004229B3 /* ArcCardContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */; };
 		71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2D53C2937A916004229B3 /* MadeForYou.swift */; };
+		BF0A9CD429609F1B00AE586B /* RoutineBottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */; };
+		BF0A9D492961521E00AE586B /* Hip-Lifts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D232961521B00AE586B /* Hip-Lifts.mp4 */; };
+		BF0A9D4A2961521E00AE586B /* Tripod-Dumbbell-Rows.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D242961521B00AE586B /* Tripod-Dumbbell-Rows.mp4 */; };
+		BF0A9D4B2961521E00AE586B /* Plank.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D252961521C00AE586B /* Plank.mp4 */; };
+		BF0A9D4C2961521E00AE586B /* Bodyweight-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D262961521C00AE586B /* Bodyweight-Squats.mp4 */; };
+		BF0A9D4D2961521E00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D272961521C00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 */; };
+		BF0A9D4E2961521E00AE586B /* Barbell-Bench-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D282961521C00AE586B /* Barbell-Bench-Press.mp4 */; };
+		BF0A9D4F2961521E00AE586B /* Face-Pull.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D292961521C00AE586B /* Face-Pull.mp4 */; };
+		BF0A9D502961521E00AE586B /* Incline-Pushups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2A2961521C00AE586B /* Incline-Pushups.mp4 */; };
+		BF0A9D512961521E00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2B2961521C00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 */; };
+		BF0A9D522961521E00AE586B /* Dumbbell-Bench-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2C2961521C00AE586B /* Dumbbell-Bench-Press.mp4 */; };
+		BF0A9D532961521E00AE586B /* Dumbbell-French-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2D2961521C00AE586B /* Dumbbell-French-Press.mp4 */; };
+		BF0A9D542961521E00AE586B /* Dumbbell-Flys.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2E2961521C00AE586B /* Dumbbell-Flys.mp4 */; };
+		BF0A9D552961521E00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D2F2961521C00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 */; };
+		BF0A9D562961521E00AE586B /* Bodyweight-Hip-Thrusts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D302961521C00AE586B /* Bodyweight-Hip-Thrusts.mp4 */; };
+		BF0A9D572961521E00AE586B /* Incline-Dumbbell-Curls.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D312961521C00AE586B /* Incline-Dumbbell-Curls.mp4 */; };
+		BF0A9D582961521E00AE586B /* Barbell-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D322961521C00AE586B /* Barbell-Squats.mp4 */; };
+		BF0A9D592961521E00AE586B /* V-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D332961521C00AE586B /* V-Ups.mp4 */; };
+		BF0A9D5A2961521E00AE586B /* Face-Pull-External-Rotation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D342961521C00AE586B /* Face-Pull-External-Rotation.mp4 */; };
+		BF0A9D5B2961521E00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D352961521C00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 */; };
+		BF0A9D5C2961521E00AE586B /* Seated-Arnold-Press.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D362961521C00AE586B /* Seated-Arnold-Press.mp4 */; };
+		BF0A9D5D2961521E00AE586B /* Lateral-Hip-Openers.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D372961521C00AE586B /* Lateral-Hip-Openers.mp4 */; };
+		BF0A9D5E2961521E00AE586B /* Step-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D382961521C00AE586B /* Step-Ups.mp4 */; };
+		BF0A9D5F2961521E00AE586B /* High-Plank-Sholder-Taps.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D392961521C00AE586B /* High-Plank-Sholder-Taps.mp4 */; };
+		BF0A9D602961521E00AE586B /* Wall-Push-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3A2961521C00AE586B /* Wall-Push-Ups.mp4 */; };
+		BF0A9D612961521E00AE586B /* Dumbbell-Goblet-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3B2961521C00AE586B /* Dumbbell-Goblet-Squats.mp4 */; };
+		BF0A9D622961521E00AE586B /* Lat-Pulldown.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3C2961521C00AE586B /* Lat-Pulldown.mp4 */; };
+		BF0A9D632961521E00AE586B /* Dumbbell-Hammer-Curls.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3D2961521C00AE586B /* Dumbbell-Hammer-Curls.mp4 */; };
+		BF0A9D642961521E00AE586B /* Side-Plank.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3E2961521C00AE586B /* Side-Plank.mp4 */; };
+		BF0A9D652961521E00AE586B /* Dumbbell-Curls.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D3F2961521C00AE586B /* Dumbbell-Curls.mp4 */; };
+		BF0A9D662961521E00AE586B /* Cossack-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D402961521C00AE586B /* Cossack-Squats.mp4 */; };
+		BF0A9D672961521E00AE586B /* Dumbbell-Deadlifts.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D412961521C00AE586B /* Dumbbell-Deadlifts.mp4 */; };
+		BF0A9D682961521E00AE586B /* Kettlebell-Goblet-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D422961521C00AE586B /* Kettlebell-Goblet-Squats.mp4 */; };
+		BF0A9D692961521E00AE586B /* Dumbbell-Step-Ups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D432961521C00AE586B /* Dumbbell-Step-Ups.mp4 */; };
+		BF0A9D6A2961521E00AE586B /* Dumbbell-Rows.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D442961521C00AE586B /* Dumbbell-Rows.mp4 */; };
+		BF0A9D6B2961521E00AE586B /* Dynamic-Hamstring-Stretch.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D452961521C00AE586B /* Dynamic-Hamstring-Stretch.mp4 */; };
+		BF0A9D6C2961521E00AE586B /* Pushups.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D462961521C00AE586B /* Pushups.mp4 */; };
+		BF0A9D6D2961521E00AE586B /* Bottom-Up-Squats.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D472961521C00AE586B /* Bottom-Up-Squats.mp4 */; };
+		BF0A9D6E2961521E00AE586B /* Bird-Dogs.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF0A9D482961521C00AE586B /* Bird-Dogs.mp4 */; };
 		BF2CA081293AADA200E0BAF8 /* ArcModeSlideOver.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */; };
 		BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */; };
 		BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */; };
@@ -100,6 +139,21 @@
 		BF48CFF22959CBA30009FBF9 /* IconDrawer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF12959CBA30009FBF9 /* IconDrawer.swift */; };
 		BF48CFF42959D4870009FBF9 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF32959D4870009FBF9 /* IconRow.swift */; };
 		BF48CFF72959D9920009FBF9 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF62959D9920009FBF9 /* ScheduleView.swift */; };
+		BF48CFFA295A9F3A0009FBF9 /* UploadToDoTrainingRoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48CFF9295A9F3A0009FBF9 /* UploadToDoTrainingRoutineViewModel.swift */; };
+		BF557FA2295ADF47001EC5F7 /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FA1295ADF47001EC5F7 /* BottomSheet.swift */; };
+		BF557FA6295C49B2001EC5F7 /* DummyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FA5295C49B2001EC5F7 /* DummyView.swift */; };
+		BF557FA8295C7F38001EC5F7 /* TasksTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FA7295C7F38001EC5F7 /* TasksTodayView.swift */; };
+		BF557FAA295C7F43001EC5F7 /* TasksInboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FA9295C7F43001EC5F7 /* TasksInboxView.swift */; };
+		BF557FAC295C7F4F001EC5F7 /* TasksUpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FAB295C7F4F001EC5F7 /* TasksUpcomingView.swift */; };
+		BF557FAF295C814E001EC5F7 /* ProjectsSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FAE295C814E001EC5F7 /* ProjectsSectionHeader.swift */; };
+		BF557FB1295C8166001EC5F7 /* FavoritesSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FB0295C8166001EC5F7 /* FavoritesSectionHeader.swift */; };
+		BF557FB3295C864E001EC5F7 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF557FB2295C864E001EC5F7 /* ProjectView.swift */; };
+		BF70BC1A295EB8D900175957 /* BlackGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC19295EB8D900175957 /* BlackGradient.swift */; };
+		BF70BC1C295EBA3E00175957 /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1B295EBA3E00175957 /* Routine.swift */; };
+		BF70BC1E295EBCC200175957 /* RoutineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1D295EBCC200175957 /* RoutineViewModel.swift */; };
+		BF70BC20295F65DD00175957 /* IndividualTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */; };
+		BF70BC24295F860600175957 /* dumbbell-benchpress-vertical.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */; };
+		BF70BC26295F867400175957 /* NewRoutineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC25295F867400175957 /* NewRoutineMode.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -171,7 +225,7 @@
 		7122D4F82938409200BDF888 /* ArcModeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeDetailView.swift; sourceTree = "<group>"; };
 		7122D4FB2938424500BDF888 /* SlideOverCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOverCardContent.swift; sourceTree = "<group>"; };
 		7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeFlowArcMode.swift; sourceTree = "<group>"; };
-		7122D4FF29384AFA00BDF888 /* ArcModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeView.swift; sourceTree = "<group>"; };
+		7122D4FF29384AFA00BDF888 /* RoutineModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineModeView.swift; sourceTree = "<group>"; };
 		7122D509293860F700BDF888 /* AutopilotViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutopilotViewRouter.swift; sourceTree = "<group>"; };
 		7122D50C2938A59A00BDF888 /* Popup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Popup.swift; sourceTree = "<group>"; };
 		7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeOverview.swift; sourceTree = "<group>"; };
@@ -215,6 +269,45 @@
 		71D2D53829379DF8004229B3 /* CarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		71D2D53A2937A0FF004229B3 /* ArcCardContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcCardContent.swift; sourceTree = "<group>"; };
 		71D2D53C2937A916004229B3 /* MadeForYou.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MadeForYou.swift; sourceTree = "<group>"; };
+		BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineBottomSheet.swift; sourceTree = "<group>"; };
+		BF0A9D232961521B00AE586B /* Hip-Lifts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hip-Lifts.mp4"; sourceTree = "<group>"; };
+		BF0A9D242961521B00AE586B /* Tripod-Dumbbell-Rows.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tripod-Dumbbell-Rows.mp4"; sourceTree = "<group>"; };
+		BF0A9D252961521C00AE586B /* Plank.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Plank.mp4; sourceTree = "<group>"; };
+		BF0A9D262961521C00AE586B /* Bodyweight-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bodyweight-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D272961521C00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barbell-Bench-Hip-Thrusts.mp4"; sourceTree = "<group>"; };
+		BF0A9D282961521C00AE586B /* Barbell-Bench-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barbell-Bench-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D292961521C00AE586B /* Face-Pull.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Face-Pull.mp4"; sourceTree = "<group>"; };
+		BF0A9D2A2961521C00AE586B /* Incline-Pushups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Incline-Pushups.mp4"; sourceTree = "<group>"; };
+		BF0A9D2B2961521C00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4"; sourceTree = "<group>"; };
+		BF0A9D2C2961521C00AE586B /* Dumbbell-Bench-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Bench-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D2D2961521C00AE586B /* Dumbbell-French-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-French-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D2E2961521C00AE586B /* Dumbbell-Flys.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Flys.mp4"; sourceTree = "<group>"; };
+		BF0A9D2F2961521C00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D302961521C00AE586B /* Bodyweight-Hip-Thrusts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bodyweight-Hip-Thrusts.mp4"; sourceTree = "<group>"; };
+		BF0A9D312961521C00AE586B /* Incline-Dumbbell-Curls.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Incline-Dumbbell-Curls.mp4"; sourceTree = "<group>"; };
+		BF0A9D322961521C00AE586B /* Barbell-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Barbell-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D332961521C00AE586B /* V-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "V-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D342961521C00AE586B /* Face-Pull-External-Rotation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Face-Pull-External-Rotation.mp4"; sourceTree = "<group>"; };
+		BF0A9D352961521C00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Goblet-Dumbbell-Split-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D362961521C00AE586B /* Seated-Arnold-Press.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Seated-Arnold-Press.mp4"; sourceTree = "<group>"; };
+		BF0A9D372961521C00AE586B /* Lateral-Hip-Openers.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lateral-Hip-Openers.mp4"; sourceTree = "<group>"; };
+		BF0A9D382961521C00AE586B /* Step-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Step-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D392961521C00AE586B /* High-Plank-Sholder-Taps.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "High-Plank-Sholder-Taps.mp4"; sourceTree = "<group>"; };
+		BF0A9D3A2961521C00AE586B /* Wall-Push-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wall-Push-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D3B2961521C00AE586B /* Dumbbell-Goblet-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Goblet-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D3C2961521C00AE586B /* Lat-Pulldown.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lat-Pulldown.mp4"; sourceTree = "<group>"; };
+		BF0A9D3D2961521C00AE586B /* Dumbbell-Hammer-Curls.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Hammer-Curls.mp4"; sourceTree = "<group>"; };
+		BF0A9D3E2961521C00AE586B /* Side-Plank.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Side-Plank.mp4"; sourceTree = "<group>"; };
+		BF0A9D3F2961521C00AE586B /* Dumbbell-Curls.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Curls.mp4"; sourceTree = "<group>"; };
+		BF0A9D402961521C00AE586B /* Cossack-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cossack-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D412961521C00AE586B /* Dumbbell-Deadlifts.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Deadlifts.mp4"; sourceTree = "<group>"; };
+		BF0A9D422961521C00AE586B /* Kettlebell-Goblet-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kettlebell-Goblet-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D432961521C00AE586B /* Dumbbell-Step-Ups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Step-Ups.mp4"; sourceTree = "<group>"; };
+		BF0A9D442961521C00AE586B /* Dumbbell-Rows.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dumbbell-Rows.mp4"; sourceTree = "<group>"; };
+		BF0A9D452961521C00AE586B /* Dynamic-Hamstring-Stretch.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Dynamic-Hamstring-Stretch.mp4"; sourceTree = "<group>"; };
+		BF0A9D462961521C00AE586B /* Pushups.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pushups.mp4; sourceTree = "<group>"; };
+		BF0A9D472961521C00AE586B /* Bottom-Up-Squats.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bottom-Up-Squats.mp4"; sourceTree = "<group>"; };
+		BF0A9D482961521C00AE586B /* Bird-Dogs.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bird-Dogs.mp4"; sourceTree = "<group>"; };
 		BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcModeSlideOver.swift; sourceTree = "<group>"; };
 		BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		BF2CA084293AE4A000E0BAF8 /* GenerateWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateWorkoutView.swift; sourceTree = "<group>"; };
@@ -226,6 +319,21 @@
 		BF48CFF12959CBA30009FBF9 /* IconDrawer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconDrawer.swift; sourceTree = "<group>"; };
 		BF48CFF32959D4870009FBF9 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
 		BF48CFF62959D9920009FBF9 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		BF48CFF9295A9F3A0009FBF9 /* UploadToDoTrainingRoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadToDoTrainingRoutineViewModel.swift; sourceTree = "<group>"; };
+		BF557FA1295ADF47001EC5F7 /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
+		BF557FA5295C49B2001EC5F7 /* DummyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyView.swift; sourceTree = "<group>"; };
+		BF557FA7295C7F38001EC5F7 /* TasksTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTodayView.swift; sourceTree = "<group>"; };
+		BF557FA9295C7F43001EC5F7 /* TasksInboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksInboxView.swift; sourceTree = "<group>"; };
+		BF557FAB295C7F4F001EC5F7 /* TasksUpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksUpcomingView.swift; sourceTree = "<group>"; };
+		BF557FAE295C814E001EC5F7 /* ProjectsSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsSectionHeader.swift; sourceTree = "<group>"; };
+		BF557FB0295C8166001EC5F7 /* FavoritesSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesSectionHeader.swift; sourceTree = "<group>"; };
+		BF557FB2295C864E001EC5F7 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
+		BF70BC19295EB8D900175957 /* BlackGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackGradient.swift; sourceTree = "<group>"; };
+		BF70BC1B295EBA3E00175957 /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
+		BF70BC1D295EBCC200175957 /* RoutineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineViewModel.swift; sourceTree = "<group>"; };
+		BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTaskView.swift; sourceTree = "<group>"; };
+		BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dumbbell-benchpress-vertical.mp4"; sourceTree = "<group>"; };
+		BF70BC25295F867400175957 /* NewRoutineMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoutineMode.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -299,6 +407,8 @@
 		52A2B2C3293527B50061A712 /* autopilot */ = {
 			isa = PBXGroup;
 			children = (
+				BF0A9D222961521B00AE586B /* downloaded-workout-videos */,
+				BF70BC22295F85F800175957 /* VerticalVideos */,
 				BF48CFED2959A14B0009FBF9 /* GoogleService-Info.plist */,
 				BF48CFEC2959A0590009FBF9 /* Info.plist */,
 				BF48CFEB2959A0540009FBF9 /* autopilot.entitlements */,
@@ -374,13 +484,14 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF557FA0295ADF34001EC5F7 /* BottomSheet */,
 				BF48CFF52959D98B0009FBF9 /* Schedule */,
 				52A2B2F729352F7E0061A712 /* SlideOver */,
 				BF8341F229559273003A2DEE /* Workouts */,
 				BF8341ED29558AB1003A2DEE /* Main */,
 				BFB1F5CB294AE9F700422BAE /* Tasks */,
 				BFB1F5BC294ACACE00422BAE /* Onboarding */,
-				7122D50129384B0600BDF888 /* Arc */,
+				7122D50129384B0600BDF888 /* Routine */,
 				71D2D50B2936D9D0004229B3 /* God */,
 				52A2B2F8293530060061A712 /* BackgroundView.swift */,
 				52F452482935EBFA00406D3F /* Authentication */,
@@ -418,6 +529,7 @@
 				71D2D5042936CCFE004229B3 /* Arc.swift */,
 				7122D5122938B3F000BDF888 /* Exercise.swift */,
 				7122D5272938CA2A00BDF888 /* History.swift */,
+				BF70BC1B295EBA3E00175957 /* Routine.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -443,30 +555,31 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		7122D50129384B0600BDF888 /* Arc */ = {
+		7122D50129384B0600BDF888 /* Routine */ = {
 			isa = PBXGroup;
 			children = (
-				7122D50429384ED500BDF888 /* ArcMode */,
+				7122D50429384ED500BDF888 /* RoutineMode */,
 				7122D4F82938409200BDF888 /* ArcModeDetailView.swift */,
 			);
-			path = Arc;
+			path = Routine;
 			sourceTree = "<group>";
 		};
-		7122D50429384ED500BDF888 /* ArcMode */ = {
+		7122D50429384ED500BDF888 /* RoutineMode */ = {
 			isa = PBXGroup;
 			children = (
+				BF70BC21295F675500175957 /* Main */,
 				BFB1F5BF294AD57400422BAE /* AnimatedViews */,
 				7122D5142938B65900BDF888 /* ArcModeViewRouter */,
 				7122D4FD2938470A00BDF888 /* FreeFlowArcMode.swift */,
-				7122D4FF29384AFA00BDF888 /* ArcModeView.swift */,
 				7122D50E2938ACF700BDF888 /* ArcModeOverview.swift */,
 				7122D5102938B09D00BDF888 /* SuccessView.swift */,
 				7122D5172938BA8C00BDF888 /* ExerciseView.swift */,
 				7122D5252938C7EA00BDF888 /* RatingView.swift */,
 				BF2CA080293AADA200E0BAF8 /* ArcModeSlideOver.swift */,
 				BF2CA082293AD1AA00E0BAF8 /* TimerView.swift */,
+				BF70BC19295EB8D900175957 /* BlackGradient.swift */,
 			);
-			path = ArcMode;
+			path = RoutineMode;
 			sourceTree = "<group>";
 		};
 		7122D50B2938A57A00BDF888 /* Popup */ = {
@@ -498,7 +611,7 @@
 		71234FAD2936715600B2FEDC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				BF48CFF8295A93690009FBF9 /* ArcMode */,
+				BF48CFF8295A93690009FBF9 /* RoutineMode */,
 				BF8341FB295592CC003A2DEE /* Arc */,
 				BF8341FA295592C3003A2DEE /* Search */,
 				BF8341F9295592B5003A2DEE /* Auth */,
@@ -556,6 +669,52 @@
 			path = God;
 			sourceTree = "<group>";
 		};
+		BF0A9D222961521B00AE586B /* downloaded-workout-videos */ = {
+			isa = PBXGroup;
+			children = (
+				BF0A9D232961521B00AE586B /* Hip-Lifts.mp4 */,
+				BF0A9D242961521B00AE586B /* Tripod-Dumbbell-Rows.mp4 */,
+				BF0A9D252961521C00AE586B /* Plank.mp4 */,
+				BF0A9D262961521C00AE586B /* Bodyweight-Squats.mp4 */,
+				BF0A9D272961521C00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 */,
+				BF0A9D282961521C00AE586B /* Barbell-Bench-Press.mp4 */,
+				BF0A9D292961521C00AE586B /* Face-Pull.mp4 */,
+				BF0A9D2A2961521C00AE586B /* Incline-Pushups.mp4 */,
+				BF0A9D2B2961521C00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 */,
+				BF0A9D2C2961521C00AE586B /* Dumbbell-Bench-Press.mp4 */,
+				BF0A9D2D2961521C00AE586B /* Dumbbell-French-Press.mp4 */,
+				BF0A9D2E2961521C00AE586B /* Dumbbell-Flys.mp4 */,
+				BF0A9D2F2961521C00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 */,
+				BF0A9D302961521C00AE586B /* Bodyweight-Hip-Thrusts.mp4 */,
+				BF0A9D312961521C00AE586B /* Incline-Dumbbell-Curls.mp4 */,
+				BF0A9D322961521C00AE586B /* Barbell-Squats.mp4 */,
+				BF0A9D332961521C00AE586B /* V-Ups.mp4 */,
+				BF0A9D342961521C00AE586B /* Face-Pull-External-Rotation.mp4 */,
+				BF0A9D352961521C00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 */,
+				BF0A9D362961521C00AE586B /* Seated-Arnold-Press.mp4 */,
+				BF0A9D372961521C00AE586B /* Lateral-Hip-Openers.mp4 */,
+				BF0A9D382961521C00AE586B /* Step-Ups.mp4 */,
+				BF0A9D392961521C00AE586B /* High-Plank-Sholder-Taps.mp4 */,
+				BF0A9D3A2961521C00AE586B /* Wall-Push-Ups.mp4 */,
+				BF0A9D3B2961521C00AE586B /* Dumbbell-Goblet-Squats.mp4 */,
+				BF0A9D3C2961521C00AE586B /* Lat-Pulldown.mp4 */,
+				BF0A9D3D2961521C00AE586B /* Dumbbell-Hammer-Curls.mp4 */,
+				BF0A9D3E2961521C00AE586B /* Side-Plank.mp4 */,
+				BF0A9D3F2961521C00AE586B /* Dumbbell-Curls.mp4 */,
+				BF0A9D402961521C00AE586B /* Cossack-Squats.mp4 */,
+				BF0A9D412961521C00AE586B /* Dumbbell-Deadlifts.mp4 */,
+				BF0A9D422961521C00AE586B /* Kettlebell-Goblet-Squats.mp4 */,
+				BF0A9D432961521C00AE586B /* Dumbbell-Step-Ups.mp4 */,
+				BF0A9D442961521C00AE586B /* Dumbbell-Rows.mp4 */,
+				BF0A9D452961521C00AE586B /* Dynamic-Hamstring-Stretch.mp4 */,
+				BF0A9D462961521C00AE586B /* Pushups.mp4 */,
+				BF0A9D472961521C00AE586B /* Bottom-Up-Squats.mp4 */,
+				BF0A9D482961521C00AE586B /* Bird-Dogs.mp4 */,
+			);
+			name = "downloaded-workout-videos";
+			path = "../../Desktop/downloaded-workout-videos";
+			sourceTree = "<group>";
+		};
 		BF48CFF52959D98B0009FBF9 /* Schedule */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,11 +723,49 @@
 			path = Schedule;
 			sourceTree = "<group>";
 		};
-		BF48CFF8295A93690009FBF9 /* ArcMode */ = {
+		BF48CFF8295A93690009FBF9 /* RoutineMode */ = {
 			isa = PBXGroup;
 			children = (
+				BF48CFF9295A9F3A0009FBF9 /* UploadToDoTrainingRoutineViewModel.swift */,
+				BF70BC1D295EBCC200175957 /* RoutineViewModel.swift */,
 			);
-			path = ArcMode;
+			path = RoutineMode;
+			sourceTree = "<group>";
+		};
+		BF557FA0295ADF34001EC5F7 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+				BF557FA1295ADF47001EC5F7 /* BottomSheet.swift */,
+				BF557FA5295C49B2001EC5F7 /* DummyView.swift */,
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
+		BF557FAD295C8143001EC5F7 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				BF557FAE295C814E001EC5F7 /* ProjectsSectionHeader.swift */,
+				BF557FB0295C8166001EC5F7 /* FavoritesSectionHeader.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		BF70BC21295F675500175957 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7122D4FF29384AFA00BDF888 /* RoutineModeView.swift */,
+				BF70BC25295F867400175957 /* NewRoutineMode.swift */,
+				BF0A9CD329609F1B00AE586B /* RoutineBottomSheet.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BF70BC22295F85F800175957 /* VerticalVideos */ = {
+			isa = PBXGroup;
+			children = (
+				BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */,
+			);
+			path = VerticalVideos;
 			sourceTree = "<group>";
 		};
 		BF8341ED29558AB1003A2DEE /* Main */ = {
@@ -670,7 +867,13 @@
 		BFB1F5CB294AE9F700422BAE /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
+				BF557FAD295C8143001EC5F7 /* Headers */,
 				BF48CFEF2959C9C00009FBF9 /* TasksView.swift */,
+				BF557FA7295C7F38001EC5F7 /* TasksTodayView.swift */,
+				BF557FA9295C7F43001EC5F7 /* TasksInboxView.swift */,
+				BF557FAB295C7F4F001EC5F7 /* TasksUpcomingView.swift */,
+				BF557FB2295C864E001EC5F7 /* ProjectView.swift */,
+				BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
@@ -792,12 +995,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF0A9D602961521E00AE586B /* Wall-Push-Ups.mp4 in Resources */,
+				BF0A9D6A2961521E00AE586B /* Dumbbell-Rows.mp4 in Resources */,
+				BF0A9D552961521E00AE586B /* Neutral-Grip-Incline-Dumbbell-Bench-Press.mp4 in Resources */,
+				BF0A9D5C2961521E00AE586B /* Seated-Arnold-Press.mp4 in Resources */,
+				BF0A9D642961521E00AE586B /* Side-Plank.mp4 in Resources */,
+				BF0A9D522961521E00AE586B /* Dumbbell-Bench-Press.mp4 in Resources */,
 				52A2B2CC293527B70061A712 /* Preview Assets.xcassets in Resources */,
+				BF0A9D662961521E00AE586B /* Cossack-Squats.mp4 in Resources */,
+				BF0A9D4F2961521E00AE586B /* Face-Pull.mp4 in Resources */,
 				7122D5232938C0B100BDF888 /* step-up.mp4 in Resources */,
+				BF70BC24295F860600175957 /* dumbbell-benchpress-vertical.mp4 in Resources */,
+				BF0A9D572961521E00AE586B /* Incline-Dumbbell-Curls.mp4 in Resources */,
+				BF0A9D502961521E00AE586B /* Incline-Pushups.mp4 in Resources */,
+				BF0A9D692961521E00AE586B /* Dumbbell-Step-Ups.mp4 in Resources */,
+				BF0A9D542961521E00AE586B /* Dumbbell-Flys.mp4 in Resources */,
+				BF0A9D612961521E00AE586B /* Dumbbell-Goblet-Squats.mp4 in Resources */,
+				BF0A9D562961521E00AE586B /* Bodyweight-Hip-Thrusts.mp4 in Resources */,
+				BF0A9D6B2961521E00AE586B /* Dynamic-Hamstring-Stretch.mp4 in Resources */,
+				BF0A9D5E2961521E00AE586B /* Step-Ups.mp4 in Resources */,
+				BF0A9D5F2961521E00AE586B /* High-Plank-Sholder-Taps.mp4 in Resources */,
+				BF0A9D672961521E00AE586B /* Dumbbell-Deadlifts.mp4 in Resources */,
+				BF0A9D4A2961521E00AE586B /* Tripod-Dumbbell-Rows.mp4 in Resources */,
+				BF0A9D4E2961521E00AE586B /* Barbell-Bench-Press.mp4 in Resources */,
+				BF0A9D5A2961521E00AE586B /* Face-Pull-External-Rotation.mp4 in Resources */,
+				BF0A9D6C2961521E00AE586B /* Pushups.mp4 in Resources */,
 				52A2B2C9293527B70061A712 /* Assets.xcassets in Resources */,
+				BF0A9D4B2961521E00AE586B /* Plank.mp4 in Resources */,
+				BF0A9D4D2961521E00AE586B /* Barbell-Bench-Hip-Thrusts.mp4 in Resources */,
 				7122D51D2938BEE700BDF888 /* sun-salute.mp4 in Resources */,
+				BF0A9D6D2961521E00AE586B /* Bottom-Up-Squats.mp4 in Resources */,
+				BF0A9D622961521E00AE586B /* Lat-Pulldown.mp4 in Resources */,
+				BF0A9D5D2961521E00AE586B /* Lateral-Hip-Openers.mp4 in Resources */,
+				BF0A9D512961521E00AE586B /* Seated-Dumbbell-Overhand-Press-Neutral-Grip.mp4 in Resources */,
+				BF0A9D5B2961521E00AE586B /* Goblet-Dumbbell-Split-Squats.mp4 in Resources */,
 				7122D5242938C0B300BDF888 /* burpee.mp4 in Resources */,
+				BF0A9D652961521E00AE586B /* Dumbbell-Curls.mp4 in Resources */,
+				BF0A9D532961521E00AE586B /* Dumbbell-French-Press.mp4 in Resources */,
+				BF0A9D6E2961521E00AE586B /* Bird-Dogs.mp4 in Resources */,
+				BF0A9D682961521E00AE586B /* Kettlebell-Goblet-Squats.mp4 in Resources */,
+				BF0A9D4C2961521E00AE586B /* Bodyweight-Squats.mp4 in Resources */,
+				BF0A9D582961521E00AE586B /* Barbell-Squats.mp4 in Resources */,
 				BF48CFEE2959A14B0009FBF9 /* GoogleService-Info.plist in Resources */,
+				BF0A9D632961521E00AE586B /* Dumbbell-Hammer-Curls.mp4 in Resources */,
+				BF0A9D592961521E00AE586B /* V-Ups.mp4 in Resources */,
+				BF0A9D492961521E00AE586B /* Hip-Lifts.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,6 +1065,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF48CFDD29599A2F0009FBF9 /* AppDelegate.swift in Sources */,
+				BF0A9CD429609F1B00AE586B /* RoutineBottomSheet.swift in Sources */,
 				BFB1F5BE294ACAE000422BAE /* OnboardingView.swift in Sources */,
 				BF2CA083293AD1AA00E0BAF8 /* TimerView.swift in Sources */,
 				52A2B2CE293527B70061A712 /* Persistence.swift in Sources */,
@@ -832,9 +1075,12 @@
 				BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */,
 				71D2D5052936CCFE004229B3 /* Arc.swift in Sources */,
 				52A2B2FD293535BE0061A712 /* SearchBar.swift in Sources */,
+				BF557FA6295C49B2001EC5F7 /* DummyView.swift in Sources */,
+				BF48CFFA295A9F3A0009FBF9 /* UploadToDoTrainingRoutineViewModel.swift in Sources */,
 				BF8342312955B25A003A2DEE /* BetaTag.swift in Sources */,
 				71234FB52936926C00B2FEDC /* SearchView.swift in Sources */,
 				BF48CFF02959C9C00009FBF9 /* TasksView.swift in Sources */,
+				BF70BC1A295EB8D900175957 /* BlackGradient.swift in Sources */,
 				71D2D4FF2936CCB7004229B3 /* ArcCell.swift in Sources */,
 				71D2D51D293702A2004229B3 /* ChatViewModel.swift in Sources */,
 				71D2D525293715E8004229B3 /* ConversationsViewModel.swift in Sources */,
@@ -844,9 +1090,11 @@
 				52F4524E2935EEF400406D3F /* CustomTextField.swift in Sources */,
 				71234FB1293688C700B2FEDC /* User.swift in Sources */,
 				7122D50D2938A59A00BDF888 /* Popup.swift in Sources */,
+				BF557FAF295C814E001EC5F7 /* ProjectsSectionHeader.swift in Sources */,
 				71D2D4FC2936B9DB004229B3 /* Constants.swift in Sources */,
 				52F452472935E39600406D3F /* NotificationNumLabel.swift in Sources */,
 				BF8341FD295592E2003A2DEE /* WorkoutsViewModel.swift in Sources */,
+				BF557FAC295C7F4F001EC5F7 /* TasksUpcomingView.swift in Sources */,
 				71D2D5012936CCC9004229B3 /* ArcDetailView.swift in Sources */,
 				BF83420129559375003A2DEE /* WorkoutsHeader.swift in Sources */,
 				7122D4FE2938470A00BDF888 /* FreeFlowArcMode.swift in Sources */,
@@ -858,22 +1106,27 @@
 				71D2D5192936FD2D004229B3 /* ConversationsView.swift in Sources */,
 				7122D4FC2938424500BDF888 /* SlideOverCardContent.swift in Sources */,
 				BFB1F5C1294AD61D00422BAE /* BenchPressView.swift in Sources */,
+				BF70BC1C295EBA3E00175957 /* Routine.swift in Sources */,
 				7122D52A2938CB2D00BDF888 /* HistoryStoreDevData.swift in Sources */,
 				71D2D50A2936D9A1004229B3 /* GodView.swift in Sources */,
 				71D2D529293721AE004229B3 /* LazyView.swift in Sources */,
 				52A8D7082935851400460525 /* ProfileHeaderView.swift in Sources */,
+				BF557FB1295C8166001EC5F7 /* FavoritesSectionHeader.swift in Sources */,
 				52F452502935EEFD00406D3F /* TextArea.swift in Sources */,
 				71D2D52F29377443004229B3 /* GlassMorphicCard.swift in Sources */,
 				52A2B2C5293527B50061A712 /* autopilotApp.swift in Sources */,
 				52A2B302293553A50061A712 /* ChatView.swift in Sources */,
 				71D2D5082936D7A0004229B3 /* FeedView.swift in Sources */,
+				BF557FB3295C864E001EC5F7 /* ProjectView.swift in Sources */,
 				7122D4F92938409200BDF888 /* ArcModeDetailView.swift in Sources */,
 				7122D5112938B09D00BDF888 /* SuccessView.swift in Sources */,
+				BF557FA8295C7F38001EC5F7 /* TasksTodayView.swift in Sources */,
 				52A8D70C2935852800460525 /* FilterButtonView.swift in Sources */,
 				7122D5282938CA2A00BDF888 /* History.swift in Sources */,
 				BF8341FF29559355003A2DEE /* WorkoutRowView.swift in Sources */,
+				BF70BC1E295EBCC200175957 /* RoutineViewModel.swift in Sources */,
 				BF83422D2955B0EC003A2DEE /* RecommendedTabsHeader.swift in Sources */,
-				7122D50029384AFA00BDF888 /* ArcModeView.swift in Sources */,
+				7122D50029384AFA00BDF888 /* RoutineModeView.swift in Sources */,
 				BF48CFF22959CBA30009FBF9 /* IconDrawer.swift in Sources */,
 				7122D5132938B3F000BDF888 /* Exercise.swift in Sources */,
 				7122D50F2938ACF700BDF888 /* ArcModeOverview.swift in Sources */,
@@ -883,6 +1136,7 @@
 				71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */,
 				52F4524C2935EC0D00406D3F /* RegistrationView.swift in Sources */,
 				7122D50A293860F700BDF888 /* AutopilotViewRouter.swift in Sources */,
+				BF557FA2295ADF47001EC5F7 /* BottomSheet.swift in Sources */,
 				52A2B2D1293527B70061A712 /* autopilot.xcdatamodeld in Sources */,
 				71D2D53929379DF8004229B3 /* CarouselView.swift in Sources */,
 				52A2B2FF293543A80061A712 /* TabBarIcon.swift in Sources */,
@@ -890,6 +1144,7 @@
 				71D2D5172936F486004229B3 /* ProfileViewModel.swift in Sources */,
 				52A2B3092935548B0061A712 /* Message.swift in Sources */,
 				71D2D53D2937A916004229B3 /* MadeForYou.swift in Sources */,
+				BF70BC20295F65DD00175957 /* IndividualTaskView.swift in Sources */,
 				BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */,
 				52A8D7062935842200460525 /* UserProfileView.swift in Sources */,
 				BF83422F2955B223003A2DEE /* ComingSoon.swift in Sources */,
@@ -904,7 +1159,9 @@
 				BF2CA085293AE4A000E0BAF8 /* GenerateWorkoutView.swift in Sources */,
 				71D2D4F92936B885004229B3 /* SearchViewModel.swift in Sources */,
 				52A2B2F429352EDE0061A712 /* SlideOverCard.swift in Sources */,
+				BF70BC26295F867400175957 /* NewRoutineMode.swift in Sources */,
 				52F452522935F2C500406D3F /* CustomSecureField.swift in Sources */,
+				BF557FAA295C7F43001EC5F7 /* TasksInboxView.swift in Sources */,
 				52A2B30B293554DB0061A712 /* MessageView.swift in Sources */,
 				71234FB7293696A800B2FEDC /* ImagePicker.swift in Sources */,
 				BF83420729559B64003A2DEE /* WorkoutCircle.swift in Sources */,

@@ -9,14 +9,13 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var autopilotViewRouter: AutopilotViewRouter
-    @Binding var slideTabShowing: Bool
     var body: some View {
         VStack {
             CarouselView(itemHeight: 400, views: [
             AnyView(
                 
                 MadeForYou().onTapGesture {
-                    slideTabShowing = false
+                    autopilotViewRouter.slideTabShowing = false
                     autopilotViewRouter.currentPage = .arcDetail
                 }
 
@@ -26,7 +25,7 @@ struct HomeView: View {
             AnyView(
                 
                 MadeForYou().onTapGesture {
-                    slideTabShowing = false
+                    autopilotViewRouter.slideTabShowing = false
                     autopilotViewRouter.currentPage = .arcDetail
                 }
 
@@ -36,7 +35,7 @@ struct HomeView: View {
             AnyView(
                 
                 MadeForYou().onTapGesture {
-                    slideTabShowing = false
+                    autopilotViewRouter.slideTabShowing = false
                     autopilotViewRouter.currentPage = .arcDetail
                 }
 

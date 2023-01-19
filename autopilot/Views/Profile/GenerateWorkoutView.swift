@@ -30,6 +30,8 @@ struct GenerateWorkoutView: View {
     @State private var setsBlock3 = 1
     @State private var setsBlock4 = 1
     @State private var setsBlock5 = 1
+    
+    
 
 
 
@@ -71,8 +73,8 @@ struct GenerateWorkoutView: View {
                 // Core Exercise Block 1 section
                 Section(header: Text("Core Exercise Block 1")) {
                     Picker("Exercise", selection: $coreExerciseBlock1) {
-                        ForEach(exercises, id: \.self) { exercise in
-                            Text(exercise)
+                        ForEach(ExerciseOptions.allCases, id: \.self) { exercise in
+                            Text(exercise.exerciseName)
                         }
                     }
                     Stepper("Rest between sets: \(restIncrementer1)s", value: $restIncrementer1, in: 30...300, step: 5)

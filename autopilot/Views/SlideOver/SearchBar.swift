@@ -10,11 +10,14 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var text: String
     
+    
     let placeholder: String
     
     var body: some View {
         HStack {
-            TextField("", text: $text)
+            TextField("", text: $text) {
+                
+            }
                 .placeholder(when: text.isEmpty) {
                     Text(placeholder).foregroundColor(.gray)
                 }
@@ -25,7 +28,7 @@ struct SearchBar: View {
                 .cornerRadius(8)
                 .overlay(
                     HStack {
-                        Image(systemName: "network")
+                        Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 8)
