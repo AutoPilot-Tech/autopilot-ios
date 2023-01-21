@@ -66,6 +66,8 @@ struct ContentView : View {
                                             GeometryReader { geometry in
                                                 VStack {
                                                     BottomSheet(searchText: $searchText, offset: $offset, autopilotViewRouter: autopilotViewRouter, value: (-geometry.frame(in: .global).height + 160))
+                                                        
+
                                                         .offset(y: geometry.frame(in: .global).height - 160)
                                                         .offset(y: offset + keyboardHeight)
                                                         .gesture(DragGesture().onChanged({ (value) in
