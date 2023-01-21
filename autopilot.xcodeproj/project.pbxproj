@@ -154,6 +154,7 @@
 		BF70BC20295F65DD00175957 /* IndividualTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */; };
 		BF70BC24295F860600175957 /* dumbbell-benchpress-vertical.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */; };
 		BF70BC26295F867400175957 /* NewRoutineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70BC25295F867400175957 /* NewRoutineMode.swift */; };
+		BF7A14E5297BBD99008F4B1D /* Workspace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7A14E4297BBD99008F4B1D /* Workspace.swift */; };
 		BF8341EF29558B14003A2DEE /* NonAdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341EE29558B14003A2DEE /* NonAdminView.swift */; };
 		BF8341F129558B3F003A2DEE /* AdminView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F029558B3F003A2DEE /* AdminView.swift */; };
 		BF8341F429559280003A2DEE /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8341F329559280003A2DEE /* WorkoutsView.swift */; };
@@ -334,6 +335,7 @@
 		BF70BC1F295F65DD00175957 /* IndividualTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndividualTaskView.swift; sourceTree = "<group>"; };
 		BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dumbbell-benchpress-vertical.mp4"; sourceTree = "<group>"; };
 		BF70BC25295F867400175957 /* NewRoutineMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRoutineMode.swift; sourceTree = "<group>"; };
+		BF7A14E4297BBD99008F4B1D /* Workspace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workspace.swift; sourceTree = "<group>"; };
 		BF8341EE29558B14003A2DEE /* NonAdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonAdminView.swift; sourceTree = "<group>"; };
 		BF8341F029558B3F003A2DEE /* AdminView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminView.swift; sourceTree = "<group>"; };
 		BF8341F329559280003A2DEE /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
@@ -484,6 +486,7 @@
 		52A2B303293553A90061A712 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BF7A14E3297BBD8A008F4B1D /* Workspace */,
 				BF557FA0295ADF34001EC5F7 /* BottomSheet */,
 				BF48CFF52959D98B0009FBF9 /* Schedule */,
 				52A2B2F729352F7E0061A712 /* SlideOver */,
@@ -766,6 +769,14 @@
 				BF70BC23295F860200175957 /* dumbbell-benchpress-vertical.mp4 */,
 			);
 			path = VerticalVideos;
+			sourceTree = "<group>";
+		};
+		BF7A14E3297BBD8A008F4B1D /* Workspace */ = {
+			isa = PBXGroup;
+			children = (
+				BF7A14E4297BBD99008F4B1D /* Workspace.swift */,
+			);
+			path = Workspace;
 			sourceTree = "<group>";
 		};
 		BF8341ED29558AB1003A2DEE /* Main */ = {
@@ -1133,6 +1144,7 @@
 				52A2B3062935541C0061A712 /* MessageInputView.swift in Sources */,
 				52A2B2F9293530060061A712 /* BackgroundView.swift in Sources */,
 				7122D5162938B66800BDF888 /* ArcModeViewRouter.swift in Sources */,
+				BF7A14E5297BBD99008F4B1D /* Workspace.swift in Sources */,
 				71D2D50F2936DFFA004229B3 /* NewArcView.swift in Sources */,
 				52F4524C2935EC0D00406D3F /* RegistrationView.swift in Sources */,
 				7122D50A293860F700BDF888 /* AutopilotViewRouter.swift in Sources */,

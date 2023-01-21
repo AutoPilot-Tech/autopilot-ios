@@ -9,7 +9,7 @@ import SwiftUI
 
 
 class AutopilotViewRouter: ObservableObject {
-    @Published var currentPage: Page = .workouts
+    @Published var currentPage: Page = .workspace
     @Published var currentRecommended: RecommendedView = .workouts
     @Published var slideTabShowing: Bool = true
     
@@ -30,6 +30,7 @@ enum Page {
     case tasks
     case workoutGen
     case schedule
+    case workspace
 }
 
 

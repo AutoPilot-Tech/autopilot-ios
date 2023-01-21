@@ -58,6 +58,8 @@ struct ContentView : View {
                                             GenerateWorkoutView()
                                         case .schedule:
                                             ScheduleView()
+                                        case .workspace:
+                                            Workspace()
                                         }
                                         if autopilotViewRouter.slideTabShowing {
                                             // Bottom Sheet

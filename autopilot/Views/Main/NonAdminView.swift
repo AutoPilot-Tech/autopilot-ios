@@ -56,6 +56,11 @@ struct NonAdminView: View {
                 GenerateWorkoutView()
             case .schedule:
                 ScheduleView()
+            case .workspace:
+                VStack {
+                    Text("hi")
+                }
+                
             }
             if autopilotViewRouter.slideTabShowing {
                 VStack {
@@ -136,3 +141,8 @@ struct NonAdminView: View {
     }
 }
 
+struct NonAdminView_Previews: PreviewProvider {
+    static var previews: some View {
+        NonAdminView(autopilotViewRouter: AutopilotViewRouter())
+    }
+}
